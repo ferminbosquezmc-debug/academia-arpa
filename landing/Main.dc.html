@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Academia de Música ARPA</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,500;0,700;1,500&family=Jost:wght@400;500;600&display=swap">
+<style>
+body{margin:0;background:#0a0908;font-family:'Jost',system-ui,sans-serif;color:#f4efe3}
+a{color:#f2a31b}a:hover{color:#ffc857}
+h1,h2,h3,p{margin:0}
+html{scroll-behavior:smooth}
+section{scroll-margin-top:150px}
+nav a{flex:none;white-space:nowrap}
+nav::-webkit-scrollbar{display:none}
+</style>
+</helmet>
+<div style="background:#0a0908;color:#f4efe3;font-family:'Jost',system-ui,sans-serif;line-height:1.55">
+
+<!-- Barra superior -->
+<header style="position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:rgba(10,9,8,.96);backdrop-filter:blur(8px);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 32px;padding:10px max(20px,5vw);border-bottom:1px solid #2a2619">
+<a href="#inicio" style="display:flex;align-items:center;gap:14px;text-decoration:none;color:#f4efe3">
+<img src="/_blob/5de1b0de8a30ea77ebad35ff89651859" alt="Logo de ARP Music Academy" style="width:56px;height:56px;object-fit:cover;border-radius:50%">
+<span style="display:flex;flex-direction:column"><span style="font-family:'Bodoni Moda',serif;font-weight:700;font-size:20px;letter-spacing:.02em">Academia de Música ARPA</span><span style="font-size:13px;color:#c9bfa6;letter-spacing:.14em">AMA · PANAMÁ</span></span>
+</a>
+<nav aria-label="Menú principal" style="display:flex;flex-wrap:nowrap;gap:8px 26px;align-items:center;font-size:16px;min-width:0;max-width:100%;overflow-x:auto;scrollbar-width:none">
+<sc-for list="{{menu}}" as="m" hint-placeholder-count="6">
+<a href="{{m.href}}" aria-current="{{m.actual}}" style="color:{{m.color}};text-decoration:none;padding:10px 0 8px;border-bottom:2px solid {{m.borde}};font-weight:{{m.peso}}">{{m.texto}}</a>
+</sc-for>
+<a href="#contacto" style="background:#f2a31b;color:#0a0908;text-decoration:none;font-weight:600;padding:12px 22px;border-radius:999px">Quiero inscribirme</a>
+</nav>
+</header>
+
+<!-- Portada -->
+<section id="inicio" style="display:flex;flex-wrap:wrap;align-items:center;gap:40px;padding:72px max(20px,5vw);background:radial-gradient(ellipse 60% 70% at 78% 40%,#3a2808 0%,#0a0908 70%)">
+<div style="flex:1 1 440px;min-width:0;display:flex;flex-direction:column;gap:24px">
+<p style="font-size:14px;letter-spacing:.2em;color:#f2a31b;font-weight:500">PRESENCIAL · EN LÍNEA · HÍBRIDA</p>
+<h1 style="font-family:'Bodoni Moda',serif;font-weight:700;font-size:clamp(40px,6vw,76px);line-height:1.05;text-wrap:balance">Aprende música paso a paso, con método y sin presión.</h1>
+<p style="font-size:20px;color:#d9d0ba;max-width:560px">Una academia que empieza en Panamá y quiere llegar a toda Latinoamérica. Clases cortas, mucha práctica y la meta de que cada alumno aprenda de verdad.</p>
+<div style="display:flex;flex-wrap:wrap;gap:14px;margin-top:8px">
+<a href="#contacto" style="background:#f2a31b;color:#0a0908;text-decoration:none;font-weight:600;font-size:18px;padding:16px 30px;border-radius:999px">Quiero inscribirme</a>
+<a href="#programas" style="border:1px solid #f2a31b;color:#f4efe3;text-decoration:none;font-size:18px;padding:15px 30px;border-radius:999px">Ver programas</a>
+</div>
+</div>
+<div style="flex:1 1 320px;min-width:0;display:flex;justify-content:center">
+<img src="/_blob/5de1b0de8a30ea77ebad35ff89651859" alt="Arpa dorada con las letras AMA, logo de ARP Music Academy" style="width:100%;max-width:460px;aspect-ratio:1/1;object-fit:cover;border-radius:50%;box-shadow:0 0 120px rgba(242,163,27,.28)">
+</div>
+</section>
+
+<!-- Programas -->
+<section id="programas" style="padding:88px max(20px,5vw);border-top:1px solid #2a2619">
+<div style="display:flex;flex-direction:column;gap:12px;max-width:760px">
+<p style="font-size:14px;letter-spacing:.2em;color:#f2a31b;font-weight:500">PROGRAMAS</p>
+<h2 style="font-family:'Bodoni Moda',serif;font-weight:700;font-size:clamp(32px,4.4vw,52px);line-height:1.1;text-wrap:balance">Elige tu instrumento o tu voz</h2>
+<p style="font-size:19px;color:#d9d0ba">Empezamos por la guitarra. Los demás programas se abren por etapas.</p>
+<p style="font-size:14px;color:#c9bfa6">Las imágenes son ilustraciones provisionales; se cambiarán por fotos de la academia.</p>
+</div>
+<div style="display:flex;flex-wrap:wrap;gap:20px;margin-top:40px">
+<sc-for list="{{programas}}" as="p" hint-placeholder-count="6">
+<div style="flex:1 1 300px;min-width:0;box-sizing:border-box;border:1px solid {{p.borde}};border-radius:20px;padding:28px;display:flex;flex-direction:column;gap:12px;background:{{p.fondo}}">
+<img src="{{p.img}}" alt="{{p.alt}}" style="width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:14px;margin-bottom:6px;border:1px solid #2a2619">
+<h3 style="font-family:'Bodoni Moda',serif;font-weight:700;font-size:28px">{{p.nombre}}</h3>
+<p style="font-size:17px;color:#d9d0ba">{{p.texto}}</p>
+<p style="margin-top:auto;padding-top:8px"><span style="display:inline-block;font-size:14px;font-weight:600;padding:6px 14px;border-radius:999px;background:{{p.etqFondo}};color:{{p.etqColor}}">{{p.estado}}</span></p>
+</div>
+</sc-for>
+</div>
+</section>
+
+<!-- Niveles -->
+<section id="niveles" style="padding:88px max(20px,5vw);background:#100e0a;border-top:1px solid #2a2619">
+<div style="display:flex;flex-direction:column;gap:12px;max-width:760px">
+<p style="font-size:14px;letter-spacing:.2em;color:#f2a31b;font-weight:500">TRES NIVELES</p>
+<h2 style="font-family:'Bodoni Moda',serif;font-weight:700;font-size:clamp(32px,4.4vw,52px);line-height:1.1;text-wrap:balance">Cada nivel dura tres meses</h2>
+<p style="font-size:19px;color:#d9d0ba">Doce semanas por nivel, con una lección por semana. Además del instrumento, estudias teoría, oído, historia y formación ministerial.</p>
+</div>
+<div style="display:flex;flex-wrap:wrap;gap:20px;margin-top:40px">
+<sc-for list="{{niveles}}" as="n" hint-placeholder-count="3">
+<div style="flex:1 1 320px;min-width:0;box-sizing:border-box;border:1px solid #3a3321;border-radius:20px;padding:30px;display:flex;flex-direction:column;gap:14px;background:#0a0908">
+<p style="font-size:14px;letter-spacing:.16em;color:#f2a31b;font-weight:600">{{n.meses}}</p>
+<h3 style="font-family:'Bodoni Moda',serif;font-weight:700;font-size:32px;line-height:1.1">{{n.nombre}}</h3>
+<p style="font-size:17px;color:#d9d0ba">{{n.texto}}</p>
+<ul style="margin:6px 0 0;padding-left:20px;display:flex;flex-direction:column;gap:6px;color:#f4efe3;font-size:16px">
+<sc-for list="{{n.materias}}" as="m" hint-placeholder-count="5"><li>{{m}}</li></sc-for>
+</ul>
+</div>
+</sc-for>
+</div>
+</section>
+
+<!-- Método -->
+<section id="metodo" style="padding:88px max(20px,5vw);border-top:1px solid #2a2619">
+<div style="display:flex;flex-wrap:wrap;gap:48px">
+<div style="flex:1 1 360px;min-width:0;display:flex;flex-direction:column;gap:16px">
+<p style="font-size:14px;letter-spacing:.2em;color:#f2a31b;font-weight:500">CÓMO APRENDES</p>
+<h2 style="font-family:'Bodoni Moda',serif;font-weight:700;font-size:clamp(32px,4.4vw,52px);line-height:1.1;text-wrap:balance">Todos pasan. Todos aprenden.</h2>
+<p style="font-size:19px;color:#d9d0ba">Una lección no termina cuando la ves. Termina cuando demuestras lo que aprendiste. Si te equivocas en la prueba, corriges y vuelves a intentar con la explicación al lado.</p>
+<p style="font-size:19px;color:#d9d0ba">Pocos minutos todos los días rinden más que una sola hora a la semana. Por eso cada lección trae un plan de práctica de siete días.</p>
+</div>
+<div style="flex:1 1 380px;min-width:0;display:flex;flex-direction:column;gap:12px">
+<sc-for list="{{pasos}}" as="s" hint-placeholder-count="5">
+<div style="display:flex;align-items:flex-start;gap:18px;border:1px solid #3a3321;border-radius:16px;padding:18px 22px">
+<span style="flex:none;width:40px;height:40px;border-radius:50%;background:#f2a31b;color:#0a0908;font-weight:600;font-size:18px;display:flex;align-items:center;justify-content:center">{{s.n}}</span>
+<div style="min-width:0"><h3 style="font-size:20px;font-weight:600">{{s.titulo}}</h3><p style="font-size:16px;color:#d9d0ba">{{s.texto}}</p></div>
+</div>
+</sc-for>
+</div>
+</div>
+</section>
+
+<!-- Carreras -->
+<section id="carreras" style="padding:88px max(20px,5vw);background:#100e0a;border-top:1px solid #2a2619">
+<div style="display:flex;flex-direction:column;gap:12px;max-width:760px">
+<p style="font-size:14px;letter-spacing:.2em;color:#f2a31b;font-weight:500">CARRERAS EN PREPARACIÓN</p>
+<h2 style="font-family:'Bodoni Moda',serif;font-weight:700;font-size:clamp(32px,4.4vw,52px);line-height:1.1;text-wrap:balance">Más allá del instrumento</h2>
+<p style="font-size:19px;color:#d9d0ba">Tres caminos para quienes quieren trabajar en el sonido y la creación musical. Estamos preparando sus planes.</p>
+</div>
+<div style="display:flex;flex-wrap:wrap;gap:20px;margin-top:40px">
+<sc-for list="{{carreras}}" as="c" hint-placeholder-count="3">
+<div style="flex:1 1 300px;min-width:0;box-sizing:border-box;border:1px solid #3a3321;border-radius:20px;padding:28px;display:flex;flex-direction:column;gap:12px;background:#0a0908">
+<img src="{{c.img}}" alt="{{c.alt}}" style="width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:14px;margin-bottom:6px;border:1px solid #2a2619">
+<h3 style="font-family:'Bodoni Moda',serif;font-weight:700;font-size:28px;line-height:1.1">{{c.nombre}}</h3>
+<p style="font-size:17px;color:#d9d0ba">{{c.texto}}</p>
+<p style="font-size:15px;color:#c9bfa6">{{c.temas}}</p>
+</div>
+</sc-for>
+</div>
+</section>
+
+<!-- Fundadores -->
+<section id="fundadores" style="padding:88px max(20px,5vw);border-top:1px solid #2a2619">
+<div style="display:flex;flex-wrap:wrap;gap:48px;align-items:center">
+<div style="flex:1 1 320px;min-width:0;display:flex;justify-content:center">
+<img src="/_blob/c07f31792b45241b3cde2444df2a6dd2" alt="Dawn de Bosquez y Fermín Bósquez McKenzie, fundadores de la academia" style="width:100%;max-width:480px;aspect-ratio:1000/1094;object-fit:cover;border-radius:24px;border:1px solid #3a3321">
+</div>
+<div style="flex:1 1 400px;min-width:0;display:flex;flex-direction:column;gap:20px">
+<p style="font-size:14px;letter-spacing:.2em;color:#f2a31b;font-weight:500">LOS FUNDADORES</p>
+<h2 style="font-family:'Bodoni Moda',serif;font-weight:700;font-size:clamp(32px,4.4vw,52px);line-height:1.1;text-wrap:balance">Más de 30 años formando ministros de música</h2>
+<p style="font-size:19px;color:#d9d0ba">Dawn y Fermín llevan décadas formando ministros de música. La academia nace de esa experiencia: enseñar con método, con paciencia y con el corazón puesto en servir.</p>
+<div style="display:flex;flex-wrap:wrap;gap:16px">
+<div style="flex:1 1 240px;min-width:0;border:1px solid #3a3321;border-radius:16px;padding:20px 22px;display:flex;flex-direction:column;gap:6px">
+<h3 style="font-family:'Bodoni Moda',serif;font-weight:700;font-size:24px">Dawn de Bosquez</h3>
+<p style="font-size:14px;letter-spacing:.12em;color:#f2a31b;font-weight:500">COFUNDADORA · MINISTRA DE MÚSICA</p>
+<p style="font-size:16px;color:#d9d0ba">Ministra de música con más de 30 años de trayectoria en la formación de ministros.</p>
+</div>
+<div style="flex:1 1 240px;min-width:0;border:1px solid #3a3321;border-radius:16px;padding:20px 22px;display:flex;flex-direction:column;gap:6px">
+<h3 style="font-family:'Bodoni Moda',serif;font-weight:700;font-size:24px">Fermín Bósquez McKenzie</h3>
+<p style="font-size:14px;letter-spacing:.12em;color:#f2a31b;font-weight:500">COFUNDADOR · MÚSICO Y COMPOSITOR</p>
+<p style="font-size:16px;color:#d9d0ba">Panameño. Músico y compositor de gospel caribeño y merengue, con más de 30 años en la formación de ministros de música.</p>
+</div>
+</div>
+<p style="font-size:14px;color:#c9bfa6">Reseña provisional. El currículum completo de cada fundador se agregará aquí.</p>
+</div>
+</div>
+</section>
+
+<!-- Equipo -->
+<section id="equipo" style="padding:88px max(20px,5vw);background:#100e0a;border-top:1px solid #2a2619">
+<div style="display:flex;flex-direction:column;gap:12px;max-width:760px">
+<p style="font-size:14px;letter-spacing:.2em;color:#f2a31b;font-weight:500">EQUIPO</p>
+<h2 style="font-family:'Bodoni Moda',serif;font-weight:700;font-size:clamp(32px,4.4vw,52px);line-height:1.1;text-wrap:balance">Docentes y cuerpo administrativo</h2>
+<p style="font-size:19px;color:#d9d0ba">Las personas que te acompañan en cada nivel. Estamos formando el equipo; aquí irán sus fotos y reseñas.</p>
+</div>
+<div style="display:flex;flex-wrap:wrap;gap:20px;margin-top:40px">
+<sc-for list="{{equipo}}" as="e" hint-placeholder-count="6">
+<div style="flex:1 1 260px;min-width:0;box-sizing:border-box;border:1px solid {{e.borde}};border-radius:20px;padding:28px;display:flex;flex-direction:column;align-items:flex-start;gap:12px;background:#0a0908">
+<div style="width:88px;height:88px;border-radius:50%;border:1px dashed {{e.borde}};display:flex;align-items:center;justify-content:center;font-family:'Bodoni Moda',serif;font-weight:700;font-size:34px;color:{{e.color}}">{{e.inicial}}</div>
+<h3 style="font-family:'Bodoni Moda',serif;font-weight:700;font-size:24px;line-height:1.15">{{e.nombre}}</h3>
+<p style="font-size:14px;letter-spacing:.12em;color:#f2a31b;font-weight:500">{{e.rol}}</p>
+<p style="font-size:16px;color:#d9d0ba">{{e.texto}}</p>
+<p style="margin-top:auto;padding-top:6px"><span style="display:inline-block;font-size:13px;font-weight:600;padding:5px 12px;border-radius:999px;border:1px solid #3a3321;color:#c9bfa6">{{e.estado}}</span></p>
+</div>
+</sc-for>
+</div>
+<p style="font-size:14px;color:#c9bfa6;margin-top:24px">Información provisional. Los nombres entre corchetes se reemplazarán cuando se confirme el equipo.</p>
+</section>
+
+<!-- Contacto -->
+<section id="contacto" style="padding:88px max(20px,5vw);border-top:1px solid #2a2619;background:radial-gradient(ellipse 70% 90% at 20% 100%,#2c1f07 0%,#0a0908 70%)">
+<div style="display:flex;flex-wrap:wrap;gap:48px;align-items:flex-start">
+<div style="flex:1 1 360px;min-width:0;display:flex;flex-direction:column;gap:16px">
+<p style="font-size:14px;letter-spacing:.2em;color:#f2a31b;font-weight:500">INSCRIPCIONES</p>
+<h2 style="font-family:'Bodoni Moda',serif;font-weight:700;font-size:clamp(32px,4.4vw,52px);line-height:1.1;text-wrap:balance">Empieza tu primer nivel</h2>
+<p style="font-size:19px;color:#d9d0ba">Escríbenos y te contamos fechas, horarios y modalidad. Cuéntanos qué instrumento quieres aprender y si ya tocaste antes.</p>
+</div>
+<div style="flex:1 1 360px;min-width:0;display:flex;flex-direction:column;gap:14px">
+<div style="border:1px solid #3a3321;border-radius:16px;padding:20px 24px"><p style="font-size:14px;letter-spacing:.14em;color:#c9bfa6">CORREO</p><p style="font-size:20px">[correo de la academia]</p></div>
+<div style="border:1px solid #3a3321;border-radius:16px;padding:20px 24px"><p style="font-size:14px;letter-spacing:.14em;color:#c9bfa6">WHATSAPP</p><p style="font-size:20px">[número de WhatsApp]</p></div>
+<div style="border:1px solid #3a3321;border-radius:16px;padding:20px 24px"><p style="font-size:14px;letter-spacing:.14em;color:#c9bfa6">UBICACIÓN</p><p style="font-size:20px">Panamá · [dirección o ciudad de las clases]</p></div>
+</div>
+</div>
+</section>
+
+<!-- Pie -->
+<footer style="padding:40px max(20px,5vw);border-top:1px solid #2a2619;display:flex;flex-wrap:wrap;gap:16px 40px;justify-content:space-between;align-items:center">
+<div style="display:flex;align-items:center;gap:14px;min-width:0">
+<img src="/_blob/5de1b0de8a30ea77ebad35ff89651859" alt="" style="width:48px;height:48px;object-fit:cover;border-radius:50%">
+<p style="font-size:15px;color:#c9bfa6">Academia de Música ARPA (AMA) · ARP Music Academy<br>Fundada por Dawn de Bosquez y Fermín Bósquez McKenzie</p>
+</div>
+<div style="display:flex;flex-wrap:wrap;align-items:center;gap:12px 24px">
+<a href="https://claude.ai/artifact/WJNwYKDShseYxAFLTbHmxS" target="_blank" rel="noopener" style="background:#f2a31b;color:#0a0908;text-decoration:none;font-weight:600;font-size:16px;padding:12px 22px;border-radius:999px">Entrar a la academia</a>
+<a href="#inicio" style="font-size:16px;padding:10px 0">Volver al inicio</a>
+</div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":4300}}'>
+class Component extends DCLogic {
+componentDidMount() {
+const ids = ['programas', 'niveles', 'metodo', 'carreras', 'fundadores', 'equipo', 'contacto'];
+this._upd = () => {
+let best = '';
+ids.forEach((i) => {
+const el = document.getElementById(i);
+if (el && el.getBoundingClientRect().top <= 190) best = i;
+});
+if (best !== ((this.state && this.state.active) || '')) this.setState({ active: best });
+};
+document.addEventListener('scroll', this._upd, true);
+window.addEventListener('resize', this._upd);
+setTimeout(this._upd, 50);
+}
+componentWillUnmount() {
+document.removeEventListener('scroll', this._upd, true);
+window.removeEventListener('resize', this._upd);
+}
+renderVals() {
+const activo = (this.state && this.state.active) || '';
+const item = (id, texto) => ({
+href: '#' + id, texto,
+actual: id === activo ? 'true' : 'false',
+color: id === activo ? '#f2a31b' : '#f4efe3',
+borde: id === activo ? '#f2a31b' : 'transparent',
+peso: id === activo ? 600 : 400
+});
+const IMG = {
+'Guitarra': '/_blob/3efe1330fd1a5f68b7944724befd2b37',
+'Piano': '/_blob/ede007a33cf439c7ba08a860a0c6b80f',
+'Canto': '/_blob/2e1bce7e890dda2afa03492bc706c14b',
+'Bajo': '/_blob/5b25db064245ad3b8b04a3f873ff4b45',
+'Batería': '/_blob/6d737815dc68d36147f32b03872a0972',
+'Formación ministerial': '/_blob/13bfda840ffda97f84f56b57d2a8699e'
+};
+const prog = (nombre, texto, estado, on) => ({
+nombre, texto, estado,
+img: IMG[nombre],
+alt: 'Ilustración provisional: ' + nombre,
+borde: on ? '#f2a31b' : '#3a3321',
+fondo: on ? '#1a1405' : '#0f0d09',
+etqFondo: on ? '#f2a31b' : 'transparent',
+etqColor: on ? '#0a0908' : '#c9bfa6'
+});
+return {
+menu: [
+item('programas', 'Programas'),
+item('niveles', 'Niveles'),
+item('metodo', 'Cómo aprendes'),
+item('carreras', 'Carreras'),
+item('fundadores', 'Fundadores'),
+item('equipo', 'Equipo')
+],
+programas: [
+prog('Guitarra', 'Acordes, ritmo, escalas, arpegios y tocar con otros. Lecciones con diagramas y práctica guiada.', 'Disponible · Niveles 1 y 2', true),
+prog('Piano', 'Teclado, manos juntas, acordes y acompañamiento.', 'Próximamente', false),
+prog('Canto', 'Respiración, afinación, fraseo y presencia en vivo.', 'Próximamente', false),
+prog('Bajo', 'Pulso, raíces y líneas que sostienen a la banda.', 'Próximamente', false),
+prog('Batería', 'Coordinación, ritmos base y trabajo con el bajo.', 'Próximamente', false),
+prog('Formación ministerial', 'Carácter, servicio en equipo y alabanza, junto al estudio musical.', 'Incluida en cada nivel', true)
+],
+niveles: [
+{ meses: 'MESES 1 A 3', nombre: 'Nivel 1 · Fundamentos', texto: 'Primeros pasos: leer, escuchar y tocar o cantar con seguridad.', materias: ['Instrumento o canto I', 'Teoría musical I', 'Entrenamiento auditivo I', 'Historia de la música I', 'Formación ministerial I'] },
+{ meses: 'MESES 4 A 6', nombre: 'Nivel 2 · Desarrollo', texto: 'Más técnica, armonía y primeras experiencias en conjunto.', materias: ['Instrumento o canto II', 'Teoría y armonía I', 'Entrenamiento auditivo II', 'Historia de la música II', 'Ensamble y práctica en conjunto', 'Formación ministerial II'] },
+{ meses: 'MESES 7 A 9', nombre: 'Nivel 3 · Dominio y liderazgo', texto: 'Interpretar con criterio, crear y dirigir.', materias: ['Instrumento o canto III', 'Armonía y composición', 'Historia de la música III', 'Producción musical y audio', 'Dirección musical', 'Liderazgo ministerial'] }
+],
+pasos: [
+{ n: '1', titulo: 'Ver', texto: 'Una clase corta en video o audio.' },
+{ n: '2', titulo: 'Leer', texto: 'Gráficos y la explicación escrita.' },
+{ n: '3', titulo: 'Practicar', texto: 'Ejercicios con metrónomo, paso a paso.' },
+{ n: '4', titulo: 'Prueba', texto: 'Si fallas, corriges y aprendes por qué.' },
+{ n: '5', titulo: 'Entregar', texto: 'Muestras lo que sabes hacer.' }
+],
+equipo: [
+{ inicial: 'D', nombre: 'Dawn de Bosquez', rol: 'DIRECCIÓN MUSICAL Y DOCENCIA', texto: 'Ministra de música con más de 30 años formando ministros.', estado: 'Foto próximamente', borde: '#f2a31b', color: '#f2a31b' },
+{ inicial: 'F', nombre: 'Fermín Bósquez McKenzie', rol: 'DIRECCIÓN GENERAL Y DOCENCIA', texto: 'Músico y compositor. Lidera la organización de la academia y su plataforma digital.', estado: 'Foto próximamente', borde: '#f2a31b', color: '#f2a31b' },
+{ inicial: '?', nombre: '[Nombre del docente de guitarra]', rol: 'DOCENTE DE GUITARRA', texto: 'Acompaña a los alumnos de los niveles 1 y 2 de guitarra.', estado: 'Por confirmar', borde: '#3a3321', color: '#c9bfa6' },
+{ inicial: '?', nombre: '[Nombre del docente de piano]', rol: 'DOCENTE DE PIANO', texto: 'Teclado, acordes y acompañamiento.', estado: 'Por confirmar', borde: '#3a3321', color: '#c9bfa6' },
+{ inicial: '?', nombre: '[Nombre del docente de canto]', rol: 'DOCENTE DE CANTO', texto: 'Técnica vocal, afinación y fraseo.', estado: 'Por confirmar', borde: '#3a3321', color: '#c9bfa6' },
+{ inicial: '?', nombre: '[Nombre de la persona administrativa]', rol: 'COORDINACIÓN ADMINISTRATIVA', texto: 'Inscripciones, horarios y atención a las familias.', estado: 'Por confirmar', borde: '#3a3321', color: '#c9bfa6' }
+],
+carreras: [
+{ img: '/_blob/f6cf7b7be96bdcbcc83123cbb237a32e', alt: 'Ilustración provisional: consola de sonido con auriculares', nombre: 'Audiotécnica', texto: 'Aprende cómo funciona el sonido, los micrófonos y la consola, y cómo montar un buen sonido en vivo.', temas: 'Sonido en vivo · mezcla · acústica · grabación' },
+{ img: '/_blob/a37643c70da975ba64001e9b24552f30', alt: 'Ilustración provisional: pantalla de producción musical con pistas de audio', nombre: 'Producción musical', texto: 'Graba, arregla y mezcla tus propias canciones desde cero, de la idea al archivo final.', temas: 'Estación de trabajo digital · arreglos · mezcla · derechos de autor' },
+{ img: '/_blob/2afa4d7f19c8a925cd43a8f0bcf7a0b7', alt: 'Ilustración provisional: onda de sonido conectada a una red de inteligencia artificial', nombre: 'Música e inteligencia artificial', texto: 'Usa la inteligencia artificial como ayudante creativo, con criterio, ética y respeto por los derechos de autor.', temas: 'Ideas y letras · acompañamientos · práctica asistida · licencias' }
+]
+};
+}
+}
+</script>
+</body>
+</html>
