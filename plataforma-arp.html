@@ -958,6 +958,11 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!$('#help').hidden)
 applyMode();home();
 
 // ===== Colorear notas (cifrado y tradicional) en cualquier texto =====
+/* Cómo marcar el contenido:
+   <n>Sol</n>, <n>G7</n>, <n>Fa♯</n>  → se pinta SIEMPRE con el color de su nota raíz.
+   <span data-nn>…</span>               → NUNCA se pinta lo que está dentro.
+   Sin marca, el pintor automático decide por el texto (respaldo). Usa <n> cuando una
+   nota pueda confundirse con una palabra («La», «Si», «Mi», «A», «E»). */
 (function(){
 const NS='(?:Do|Re|Mi|Fa|Sol|La|Si)',NL='[A-G]',AC='[♯♭]?',CH='[A-G][♯♭]?(?:maj7|m7|m|7|5)',ITEM='(?:'+CH+'|'+NS+AC+'|'+NL+AC+')',B='(?<![\\p{L}\\d])',E='(?![\\p{L}\\d♯♭])';
 const BIG=new RegExp(B+'(?:'+NS+AC+'(?:\\s+'+NS+AC+'){2,}|'+ITEM+'(?:\\s*[,–\\-→=·]\\s*'+ITEM+'|\\s+y\\s+'+ITEM+')+|'+CH+'|(?:Mi|La|Si)[♯♭]?\\s*\\([A-G][♯♭]?\\)|(?:Do|Re|Fa|Sol)[♯♭]?|'+NS+'[♯♭]|[A-G][♯♭]|(?<=[\\p{Ll}\\d),(]\\s)(?:Mi|La|Si)|(?<!\\.)[B-DFG](?!\\.[A-Z]\\.)|(?<=(?:acorde|nota|cuerda|con|luego|desde)\\s)[AE]|'+NS+'(?=\\s(?:mayor|menor|pentatónica|natural)))'+'(?![\\p{L}\\d♯♭])','gu');
@@ -967,6 +972,7 @@ const root=t=>{const m=t.match(/^(Do|Re|Mi|Fa|Sol|La|Si|[A-G])([♯♭]?)/);retu
 const mk=t=>{const c=root(t);if(!c)return null;const s=document.createElement('span');s.className='nt';s.style.cssText='background:'+c+';color:'+ntx(c);s.textContent=t;return s};
 const skip='svg,script,style,input,textarea,.nt,.tag,[data-nn],#kb,#help-fab,#week';
 function paint(r){
+ r.querySelectorAll('n').forEach(e=>{const t=e.textContent.trim(),s=mk(t);if(s){s.dataset.mark='';e.replaceWith(s)}else e.replaceWith(e.textContent)});
  const w=document.createTreeWalker(r,NodeFilter.SHOW_TEXT,{acceptNode:n=>{const p=n.parentElement;return p&&!p.closest(skip)&&/[A-G]|Do|Re|Mi|Fa|Sol|La|Si/.test(n.nodeValue)?1:2}}),L=[];
  while(w.nextNode())L.push(w.currentNode);
  L.forEach(n=>{const v=n.nodeValue,p=n.parentElement;
