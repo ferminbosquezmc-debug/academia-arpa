@@ -161,6 +161,16 @@ nav button[aria-current=page]{background:rgba(242,163,27,.14);border-radius:14px
 .km .em{font-size:44px;line-height:1}.km b{font-size:16px;line-height:1.2}
 .km .ks{font-size:18px;letter-spacing:2px}.km.now{border-color:var(--gold);box-shadow:0 0 0 3px rgba(242,163,27,.25)}.km.d{border-color:#5fbf7a}
 .kp{display:flex;justify-content:center;gap:12px;margin:12px 0}.kp span{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;background:var(--line);font:700 22px Jost,sans-serif}.kp span:first-child{background:var(--gold);color:#000}
+.atrow{display:flex;align-items:center;gap:14px;width:100%;text-align:left;color:var(--ivory)}.atrow .em{font-size:34px;line-height:1}
+.atst{display:inline-block;font:600 13px Jost,system-ui,sans-serif;font-weight:600;border-radius:99px;padding:4px 10px;border:1px solid var(--line);white-space:nowrap}
+.atst.bloqueado{color:var(--mute)}.atst.disponible{color:#7fd197;border-color:#5fbf7a}.atst.progreso{color:#000;background:var(--gold);border-color:var(--gold)}.atst.completado{color:#000;background:#5fbf7a;border-color:#5fbf7a}
+.atm{display:flex;align-items:center;gap:12px;width:100%;text-align:left;padding:12px 4px;border-bottom:1px solid var(--line);min-height:56px;color:var(--ivory)}
+.atm .ic{flex:none;width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:var(--line);font-size:16px}
+.atm.ok .ic{background:#5fbf7a;color:#000}.atm.now .ic{background:var(--gold);color:#000}.atm.lock{opacity:.6}
+.atm small{display:block;color:var(--mute);font-size:13px}.atm .ev{font-weight:600}
+.atmet{display:flex;height:16px;border-radius:99px;overflow:hidden;margin-top:10px}.atmet i{display:block;height:100%}
+.atleg{display:grid;grid-template-columns:28px 1fr auto;gap:6px 8px;align-items:center;margin-top:10px;font-size:14px}
+.lrb{margin-top:10px}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}.cf{display:none}}
 </style>
 </head>
@@ -228,6 +238,11 @@ nav button[aria-current=page]{background:rgba(242,163,27,.14);border-radius:14px
   <button class="link" data-go="clases" style="font-size:16px;min-height:44px;margin-top:12px">📚 Ver todas las clases</button>
 </section>
 
+<section class="view" id="v-asig" hidden>
+  <button class="link" data-go="clases" style="font-size:16px;min-height:44px">⬅ Volver a Clases</button>
+  <div id="at-body"></div>
+</section>
+
 <section class="view" id="v-biblioteca" hidden>
   <h2>Biblioteca</h2>
   <p class="mute">Guía rápida, ejercicios y materiales. Guarda con la estrella los que quieras repasar.</p>
@@ -272,7 +287,22 @@ const ntx=c=>{const L=lum(c);return (L+.05)/.05>=1.05/(L+.05)?'#000':'#fff'}; /*
 const mkc=m=>{const c=nc(m[2]);return c?'fill="'+c+'" stroke="'+(m[3]||'none')+'" stroke-width="2.5"':'fill="'+(m[3]||'#f2a31b')+'"'};
 const mkt=m=>{const c=nc(m[2]);return c?ntx(c):'#000'};
 const noteLegendHtml=()=>NORD.map(n=>{const c=nc(n);return '<span style="background:'+c+';color:'+ntx(c)+';border-radius:99px;padding:5px 12px;font-weight:700;font-size:14px">'+n+'</span>'}).join('');
-const AUD='Materia de todas las carreras. El músico aprende los principios del sonido para entenderse y trabajar en equipo con el ingeniero de sonido local.';
+/* ===================== AUDIO TÉCNICA BÁSICA PARA MÚSICOS =====================
+ Asignatura existente (antes «Audiotécnica para músicos»). Conserva su lugar en LEV y sus claves originales:
+ Nivel 1 → posición 5, claves '0-5-0'…'0-5-4' y '0-5-ev'; Nivel 2 → posición 6, '1-6-0'…'1-6-4' y '1-6-ev';
+ Nivel 3 → posición 6, '2-6-0'…'2-6-3' y '2-6-ev'. atSi(nivel) devuelve la posición.
+ Para cargar el contenido de una semana, agrega su objeto en ATC (ver el esquema junto a ATC más abajo). */
+const AT_NAME='Audio Técnica Básica para Músicos';
+const AUD='Asignatura de todas las carreras para cantantes, instrumentistas, directores y equipos de alabanza. En 14 semanas y 3 niveles aprendes los fundamentos del sonido, a usar bien tu equipo y a comunicarte con el técnico o ingeniero de sonido.';
+const AT_RULES={aprobar:70}; /* % mínimo en un intento de la evaluación de nivel. Intentos ilimitados; la nota del nivel es el mejor intento. */
+const AT_MET=[['📖','Teoría',30],['🎬','Demostraciones',20],['🎚️','Prácticas',35],['✅','Evaluación y retroalimentación',15]];
+const AT=[
+ {n:'Fundamentos del sonido',ev:'Evaluación del Nivel 1',m:['Introducción al mundo del sonido','Tipos de micrófonos y sus aplicaciones','Uso correcto de los micrófonos','Cableado y conexiones de audio','Conociendo la consola de sonido']},
+ {n:'Control y procesamiento del audio',ev:'Evaluación del Nivel 2',m:['Flujo de señal y estructura de ganancia','Fundamentos de ecualización (EQ)','Ecualización práctica de voces e instrumentos','Monitoreo personal y mezcla de escenario','Efectos básicos del sonido']},
+ {n:'Aplicación profesional y trabajo en equipo',ev:'Proyecto práctico y evaluación final',proj:1,m:['Acoples, problemas y soluciones','Comunicación, empatía y trabajo en equipo','Preparación y prueba de sonido (Soundcheck)','Evaluación y práctica final']}
+];
+const atSi=l=>LEV[l].s.findIndex(x=>x[2]===AUD); /* posición de la asignatura en cada nivel */
+const atWeek=(l,i)=>AT.slice(0,l).reduce((a,x)=>a+x.m.length,0)+i+1; /* semana 1 a 14 */
 const IAD='Materia de todas las carreras. Componer, arreglar y practicar con inteligencia artificial, y aplicarla con criterio en tu lugar de trabajo.';
 const LEV=[
 {n:'Nivel 1 · Fundamentos',d:'Primeros pasos: leer, escuchar y tocar o cantar con seguridad.',s:[
@@ -281,7 +311,7 @@ const LEV=[
 ['Entrenamiento auditivo I',['Pulso y compás al escuchar','Alto, bajo e igual','Intervalos de segunda y tercera','Cantar una melodía de oído']],
 ['Historia de la música I',['La música en la Antigüedad y en la Biblia','Canto gregoriano y música medieval','El Renacimiento','Cómo ha cambiado la música sacra']],
 ['Formación ministerial I',['El corazón del adorador','Fundamentos bíblicos de la alabanza','Servir en equipo','Disciplina y puntualidad']],
-['Audiotécnica para músicos I',['Cómo viaja tu sonido: del instrumento a la consola y los parlantes','El ingeniero de sonido: su trabajo y por qué es tu aliado','Micrófonos, cables y cajas directas: cuida tu equipo','La prueba de sonido: llegar a tiempo, en silencio y preparado'],AUD],
+[AT_NAME+' · Nivel 1',AT[0].m,AUD],
 ['Inteligencia artificial aplicada a la música I',['Qué es la IA y cómo se usa hoy en la música','Practicar con IA: acompañamientos, transcripción y oído','Cómo pedir bien: instrucciones (prompts) musicales','Ética: lo que la IA no debe reemplazar'],IAD]]},
 {n:'Nivel 2 · Desarrollo',d:'Más técnica, armonía y primeras experiencias en conjunto.',s:[
 ['Instrumento o canto II',['Técnica y repertorio intermedio','Acompañamiento y dinámica','Tocar o cantar con pista','Presentación ante la clase']],
@@ -290,7 +320,7 @@ const LEV=[
 ['Historia de la música II',['Barroco','Clasicismo y Romanticismo','Música latinoamericana y caribeña','Del himno al gospel']],
 ['Ensamble y práctica en conjunto',['Escuchar y ajustar al grupo','Voces y armonías','Ensayo de un tema','Presentación en conjunto']],
 ['Formación ministerial II',['El arte de componer canciones','Deberes y derechos de los ministros','Sanidad emocional y autoestima','Preparar un repertorio de servicio']],
-['Audiotécnica para músicos II',['Monitores y retornos: cómo pedir lo que necesitas','Hablar el mismo idioma: ganancia, ecualización, retorno y acople','Tu volumen en escena: amplificador, batería y voces','Cuando algo falla: resolver sin culpas ni discusiones'],AUD],
+[AT_NAME+' · Nivel 2',AT[1].m,AUD],
 ['Inteligencia artificial aplicada a la música II',['Componer con IA: ideas, letras y melodías','Arreglos y pistas de acompañamiento con IA','Crear canciones completas con IA: alcances y límites','Derechos de autor y licencias de lo creado con IA'],IAD]]},
 {n:'Nivel 3 · Dominio y liderazgo',d:'Interpretar con criterio, crear y dirigir.',s:[
 ['Instrumento o canto III',['Repertorio avanzado','Interpretación y expresión','Improvisación básica','Recital de nivel']],
@@ -299,7 +329,7 @@ const LEV=[
 ['Producción musical',['Grabación básica en casa','Edición y mezcla','Arreglo y producción de una canción','Derechos de autor y licencias']],
 ['Dirección musical',['Dirigir un coro o una banda','Armar un repertorio y un ensayo','Comunicación con el equipo','Preparar un servicio completo']],
 ['Liderazgo ministerial',['Carácter y mentoría','Cuidar y formar a otros','Visión y planificación del ministerio musical','Proyecto final de servicio']],
-['Audiotécnica para músicos III',['Leer la sala: acústica, volumen y público','Tu lista de canales y rider técnico','Ensayo en equipo con el ingeniero de sonido','Proyecto: coordinar el sonido de un servicio completo'],AUD],
+[AT_NAME+' · Nivel 3',AT[2].m,AUD],
 ['Inteligencia artificial aplicada a la música III',['Tu flujo de trabajo: persona + IA','La IA en tu lugar de trabajo: iglesia, estudio, escenario y clases','Proyecto creativo: una canción con apoyo de IA','Presentación final y uso responsable en el ministerio'],IAD]]}
 ];
 const INSN={piano:'Piano',guitarra:'Guitarra',bajo:'Bajo',bateria:'Batería',canto:'Canto',produccion:'Producción musical'};
@@ -314,7 +344,7 @@ INS.produccion=[['Qué es una estación de trabajo digital (DAW)','Ritmo y MIDI'
 const AVAIL={guitarra:1},LAV=[1,1,0];
 const getInst=l=>{const v=S.inst[l]||S.inst[l-1]||S.inst[l-2];return AVAIL[v]?v:(!v||l===0?'guitarra':null)};
 function subj(l,si){if(si!==0)return LEV[l].s[si];const k=getInst(l);return k?[INSN[k]+' '+['I','II','III'][l],INS[k][l]]:null}
-const RES=[['Calentamiento vocal de cinco minutos','Canto'],['Escalas mayores en el piano','Piano'],['Acordes abiertos de guitarra','Guitarra'],['Figuras rítmicas y compás','Teoría'],['Intervalos paso a paso','Entrenamiento auditivo'],['Línea de tiempo: del Renacimiento al siglo XX','Historia'],['Grabar tu voz en casa: guía básica','Producción'],['Cómo preparar un ensayo de alabanza','Ministerial'],['Guía para componer tu primera canción','Ministerial'],['Cómo trabajar con el ingeniero de sonido: guía rápida','Audiotécnica'],['Qué pedir en tus retornos y cómo pedirlo','Audiotécnica'],['Herramientas de IA para músicos: primeros pasos','Inteligencia artificial'],['Componer con IA de forma ética','Inteligencia artificial']];
+const RES=[['Calentamiento vocal de cinco minutos','Canto'],['Escalas mayores en el piano','Piano'],['Acordes abiertos de guitarra','Guitarra'],['Figuras rítmicas y compás','Teoría'],['Intervalos paso a paso','Entrenamiento auditivo'],['Línea de tiempo: del Renacimiento al siglo XX','Historia'],['Grabar tu voz en casa: guía básica','Producción'],['Cómo preparar un ensayo de alabanza','Ministerial'],['Guía para componer tu primera canción','Ministerial'],['Cómo trabajar con el ingeniero de sonido: guía rápida','Audio Técnica Básica para Músicos'],['Qué pedir en tus retornos y cómo pedirlo','Audio Técnica Básica para Músicos'],['Herramientas de IA para músicos: primeros pasos','Inteligencia artificial'],['Componer con IA de forma ética','Inteligencia artificial']];
 let S={name:'',done:{},min:{},saved:{},lvl:0,open:{},inst:{},lec:{},prof:{},ls:{},cur:''};
 try{Object.assign(S,JSON.parse(localStorage.getItem('arp')||'{}'))}catch(e){}
 S.ls=S.ls||{};if(S.lec&&S.lec.step!==undefined&&!S.ls['0-1-0'])S.ls['0-1-0']=S.lec;
@@ -398,8 +428,8 @@ function toast(t){const e=$('#toast');e.textContent=t;e.classList.add('on');setT
 function go(v){
  applyMode();if(typeof mmStop==='function')mmStop();try{window.speechSynthesis&&speechSynthesis.cancel();saying=false}catch(e){}
  document.querySelectorAll('.view').forEach(x=>x.hidden=x.id!=='v-'+v);
- document.querySelectorAll('nav button').forEach(b=>(b.dataset.go===v||(v==='leccion'&&b.dataset.go===(LD[S.cur]&&LD[S.cur].kidm?'ninos':'clases')))?b.setAttribute('aria-current','page'):b.removeAttribute('aria-current'));
- if(v==='home')home();if(v==='clases')clases();if(v==='ninos')ninos();if(v==='biblioteca')biblio();if(v==='leccion'){S.last=S.cur;save();lec()}if(v==='perfil')perfil();
+ document.querySelectorAll('nav button').forEach(b=>(b.dataset.go===v||(v==='asig'&&b.dataset.go==='clases')||(v==='leccion'&&b.dataset.go===(LD[S.cur]&&LD[S.cur].kidm?'ninos':'clases')))?b.setAttribute('aria-current','page'):b.removeAttribute('aria-current'));
+ if(v==='home')home();if(v==='clases')clases();if(v==='ninos')ninos();if(v==='asig')atView();if(v==='biblioteca')biblio();if(v==='leccion'){S.last=S.cur;save();lec()}if(v==='perfil')perfil();
  window.scrollTo(0,0);
 }
 document.addEventListener('click',e=>{const g=e.target.closest('[data-go]');if(g)go(g.dataset.go)});
@@ -431,7 +461,7 @@ function home(){if(!LAV[S.lvl])S.lvl=0;applyMode();
  if(K&&!(S.last&&LD[S.last]&&!S.done[S.last])){const km=KIDK.find(k=>!S.done[k]);if(km)nx='<h3>Tu próxima misión 🎯</h3><p class="mute" style="margin:6px 0 12px">'+LD[km].ico+' '+LD[km].t+'</p><button class="btn" id="fin" data-k="'+km+'">▶ Empezar la misión</button>'}
  if(!nx&&S.last&&LD[S.last]&&!S.done[S.last])nx='<h3>'+(K?'Sigue tu misión 🎯':'Continúa donde lo dejaste')+'</h3><p class="mute" style="margin:6px 0 12px">'+LD[S.last].t+'</p><button class="btn" id="fin" data-k="'+S.last+'">'+(K?'▶ ¡Vamos!':'▶ Continuar la lección')+'</button>';
  let first=null;
- for(let si=0;si<LEV[S.lvl].s.length&&!nx;si++){const x=subj(S.lvl,si);if(!x)continue;const i=x[1].findIndex((_,j)=>LD[lk(S.lvl,si,j)]&&!S.done[lk(S.lvl,si,j)]);if(i>-1)nx='<h3>'+(K?'Tu próxima misión 🎯':'Tu siguiente lección')+'</h3><p class="mute" style="margin:6px 0 12px">'+x[0]+': '+x[1][i]+'</p><button class="btn" id="fin" data-k="'+lk(S.lvl,si,i)+'">'+(K?'▶ Empezar la misión':'▶ Abrir la lección')+'</button>'}
+ for(let si=0;si<LEV[S.lvl].s.length&&!nx;si++){const x=subj(S.lvl,si);if(!x)continue;const i=x[1].findIndex((_,j)=>{const k=lk(S.lvl,si,j);return LD[k]&&!S.done[k]&&!(LD[k].at&&(atLocked(k)||atModDone(k)))});if(i>-1)nx='<h3>'+(K?'Tu próxima misión 🎯':'Tu siguiente lección')+'</h3><p class="mute" style="margin:6px 0 12px">'+x[0]+': '+x[1][i]+'</p><button class="btn" id="fin" data-k="'+lk(S.lvl,si,i)+'">'+(K?'▶ Empezar la misión':'▶ Abrir la lección')+'</button>'}
  $('#next').innerHTML=nx||'<h3>Completaste las lecciones disponibles</h3><p class="mute">Pronto habrá más. Tu docente confirmará cuándo pasas al siguiente nivel.</p>';
  const f=$('#fin');if(f)f.onclick=()=>{if(LD[f.dataset.k]){S.cur=f.dataset.k;go('leccion');return}S.done[f.dataset.k]=true;save();toast('Lección completada');home()};
  /* Empieza aquí (solo mientras no hayas completado nada) */
@@ -465,7 +495,7 @@ function clases(){
    c+=(l?'<button class="wk'+(d?' d':'')+(now?' now':'')+'" data-k="'+l[0]+'" aria-label="'+esc(lab)+'">':'<div class="wk rp" role="img" aria-label="'+lab+'">')+'<span class="wn" aria-hidden="true">'+ic+'</span><small aria-hidden="true">Sem '+w+'</small>'+(l?'</button>':'</div>')}
   return '<div class="card"><h3>🗺️ Ruta de 3 meses</h3><p class="mute" style="font-size:14px">Una lección por semana. Toca una semana para abrirla.</p><div class="wkg">'+c+'</div><p class="mute" style="font-size:13px;margin-top:8px;text-align:center">⭐ hecha · ▶ ahora · 🔁 repaso</p></div>'})();
  const carr='<div class="card"><h3>Carrera en preparación</h3><p class="mute" style="font-size:14px;margin:4px 0 8px">Temas propuestos; el plan oficial lo definirá la academia.</p>'+['produccion'].map(k=>'<details class="sub" style="margin-top:8px"><summary><span class="grow">'+INSN[k]+'</span><span class="tag">En preparación</span></summary>'+INS[k].map((a,i)=>'<p style="margin-top:8px"><b>Nivel '+(i+1)+'</b></p><ul style="padding-left:20px;margin:2px 0">'+a.map(t=>'<li style="font-size:14px">'+t+'</li>').join('')+'</ul>').join('')+'</details>').join('')+'</div>';
- const rows=L.s.map((_,si)=>{const x=subj(S.lvl,si);if(!x)return '';
+ const rows=L.s.map((_,si)=>{const x=subj(S.lvl,si);if(!x)return '';if(si===atSi(S.lvl))return atRow(S.lvl);
   const ks=x[1].map((t,i)=>[lk(S.lvl,si,i),t]).filter(a=>LD[a[0]]);
   if(!ks.length)return x[2]?'<details class="card sub"><summary><span class="grow">'+x[0]+'</span><span class="tag">🚧 En preparación</span></summary><p class="mute" style="font-size:14px;margin:2px 0 6px">'+x[2]+'</p><ul style="padding-left:20px;margin:2px 0 12px">'+x[1].map(t=>'<li style="font-size:15px;margin-top:4px">'+t+'</li>').join('')+'</ul></details>':'<div class="card"><div class="row"><span class="grow st">'+x[0]+'</span><span class="tag">🚧 En preparación</span></div></div>';
   const d=ks.filter(a=>S.done[a[0]]).length,o=S.lvl+'-'+si;
@@ -905,6 +935,51 @@ function ninos(){
   return '<section class="kw" aria-label="'+esc(w.m)+'"><div class="kw-h"><span class="em" aria-hidden="true">'+(I.ico||'🌟')+'</span><div><h3>'+esc(w.m)+'</h3><small>'+(I.sub?esc(I.sub)+' · ':'')+'⭐ '+st+' de '+w.ks.length*3+'</small></div></div><div class="kmg">'
   +w.ks.map(k=>{const D=LD[k],n=kStars(k),d=S.done[k];return '<button class="km'+(d?' d':'')+(k===cur?' now':'')+'" data-k="'+k+'" aria-label="'+esc(D.t)+': '+n+' de 3 estrellas'+(k===cur?', siguiente misión':'')+'"><span class="em" aria-hidden="true">'+D.ico+'</span><b>'+D.t+'</b><span class="ks" aria-hidden="true">'+'⭐'.repeat(n)+'☆'.repeat(3-n)+'</span></button>'}).join('')+'</div></section>'}).join('');
 }
+/* ----- Audio Técnica Básica para Músicos: contenido, progreso y vista ----- */
+/* ATC: contenido de cada semana y evaluación, por clave. Mientras una clave no tenga contenido, aparece «Contenido pendiente».
+ Semana (claves: Nivel 1 '0-5-0'…'0-5-4' · Nivel 2 '1-6-0'…'1-6-4' · Nivel 3 '2-6-0'…'2-6-3'):
+  { intro:'HTML de presentación', obj:['objetivo',…], demos:[['Título del video o audio','enlace opcional'],…],
+    lecciones:[{t:'Título',html:'HTML'},…], ej:'HTML con ejemplos del entorno musical', ilus:()=>'HTML de diagramas',
+    act:['actividad práctica',…], glos:[['término','definición'],…],
+    q:[[pregunta,[opciones],índice correcto,'retroalimentación'],…]  (10 preguntas),
+    res:'HTML del resumen', e:'qué entrega el estudiante' }
+ Evaluación de nivel ('0-5-ev', '1-6-ev', '2-6-ev'):
+  { intro:'HTML', q:[…], proyecto:'HTML (solo Nivel 3)', e:'qué entrega' } */
+const ATC={};
+const atKeys=l=>AT[l].m.map((_,i)=>l+'-'+atSi(l)+'-'+i),atEv=l=>l+'-'+atSi(l)+'-ev';
+const atBest=(L,Q)=>{const all=(L.hist||[]).map(h=>h.score/h.total);if(typeof L.score==='number')all.push(L.score/Q.length);return all.length?Math.round(Math.max(...all)*100):null};
+const atModDone=k=>{const L=S.ls[k]||{},D=LD[k];return !!S.done[k]||(!!D&&solved(L,D.q)&&(L.status==='review'||L.status==='ok'))};
+const atEvPass=l=>{const k=atEv(l),D=LD[k],L=S.ls[k]||{};if(!D)return false;const b=atBest(L,D.q);return b!==null&&b>=AT_RULES.aprobar&&(!AT[l].proj||L.status==='review'||L.status==='ok')};
+const atLvlLocked=l=>l>0&&!atEvPass(l-1);
+function atLocked(k){const[l,,i]=k.split('-');if(atLvlLocked(+l))return true;if(i==='ev')return !atKeys(+l).every(atModDone);return +i>0&&!atModDone(atKeys(+l)[+i-1])}
+function atLvlState(l){if(atLvlLocked(l))return 'bloqueado';if(atEvPass(l))return 'completado';return atKeys(l).concat(atEv(l)).some(k=>S.ls[k]&&(S.ls[k].step>0||typeof S.ls[k].score==='number'))?'progreso':'disponible'}
+const AT_STN={bloqueado:'🔒 Bloqueado',disponible:'🟢 Disponible',progreso:'▶ En progreso',completado:'✅ Completado'};
+function atStats(){let w=0,ev=0,lt=0,ld=0,grades=[];AT.forEach((L0,l)=>{atKeys(l).forEach(k=>{if(atModDone(k))w++;const C=ATC[k];if(C&&C.lecciones){lt+=C.lecciones.length;ld+=Object.values((S.ls[k]||{}).lr||{}).filter(Boolean).length}});const D=LD[atEv(l)],b=D?atBest(S.ls[atEv(l)]||{},D.q):null;grades.push(b);if(atEvPass(l))ev++});return{w,ev,lt,ld,grades,p:Math.round((w+ev)/(14+3)*100)}}
+function atLesson(k){const C=ATC[k],[l,,i]=k.split('-'),isEv=i==='ev',L0=AT[+l];
+ const t=isEv?L0.ev:L0.m[+i],sub=AT_NAME+' · Nivel '+(+l+1)+(isEv?' · Evaluación':' · Semana '+atWeek(+l,+i));
+ const card=(h,c)=>'<div class="card"><h3>'+h+'</h3>'+c+'</div>';
+ return {at:1,retry:1,icon:isEv?'🏁':'🎚️',t,s:sub,q:C.q||[],e:C.e||'Escribe con tus palabras qué aprendiste y cómo lo aplicarás con tu equipo.',
+  o:(C.obj||[]).join(' '),g:(C.lecciones||[]).map(x=>'<h3>'+x.t+'</h3>'+x.html).join(''),
+  ver:()=>(C.intro?card('Presentación',C.intro):'')+(C.obj?card('🎯 Objetivos de aprendizaje','<ul style="padding-left:20px;margin:8px 0 0">'+C.obj.map(o=>'<li style="margin-top:6px">'+o+'</li>').join('')+'</ul>'):'')+(C.proyecto?card('🛠️ Proyecto práctico',C.proyecto):'')+(C.demos||[]).map(d=>'<div class="ph">🎬 '+d[0]+(d[1]?'<br><a class="link" href="'+esc(d[1])+'" target="_blank" rel="noopener">Abrir</a>':'<br><small>Demostración en preparación</small>')+'</div>').join(''),
+  leer:(K,L)=>(C.ilus?C.ilus():'')+(C.lecciones||[]).map((x,j)=>{const r=(L.lr||{})[j];return '<div class="card"><h3>Lección '+(j+1)+' · '+x.t+'</h3>'+x.html+'<button class="btn '+(r?'':'ghost ')+'lrb" data-lr="'+j+'" aria-pressed="'+!!r+'">'+(r?'✓ Lección leída':'Marcar como leída')+'</button></div>'}).join('')+(C.ej?card('🎤 Ejemplos en la música',C.ej):'')+(C.glos?card('📖 Glosario',C.glos.map(g=>'<div class="gl"><b>'+g[0]+'</b>: '+g[1]+'</div>').join('')):''),
+  p:()=>card('🎚️ Actividades prácticas',C.act?'<ol style="padding-left:20px;margin:8px 0 0">'+C.act.map(a=>'<li style="margin-top:8px">'+a+'</li>').join('')+'</ol>':'<p class="mute">Esta evaluación no tiene actividades aparte.</p>'),
+  fin:()=>C.res?card('🧭 Resumen de lo aprendido',C.res):''}}
+const atLoad=()=>{AT.forEach((_,l)=>atKeys(l).concat(atEv(l)).forEach(k=>{if(ATC[k])LD[k]=atLesson(k);else delete LD[k]}))};
+atLoad();
+function atRow(l){const st=atLvlState(l);return '<button class="card atrow" data-go="asig" aria-label="'+AT_NAME+', nivel '+(l+1)+' de la asignatura: '+AT_STN[st].replace(/^\S+ /,'')+'"><span class="em" aria-hidden="true">🎚️</span><span class="grow"><span class="st" style="display:block">'+AT_NAME+'</span><small class="mute">Nivel '+(l+1)+' de la asignatura · '+AT[l].m.length+' semanas</small></span><span class="atst '+st+'">'+AT_STN[st]+'</span></button>'}
+function atView(){const T=atStats();
+ const head='<h2>🎚️ '+AT_NAME+'</h2><p class="mute">'+AUD+'</p>'
+ +'<div class="card row"><svg width="84" height="84" viewBox="0 0 84 84" aria-hidden="true"><circle cx="42" cy="42" r="34" fill="none" stroke="#2b2417" stroke-width="8"/><circle cx="42" cy="42" r="34" fill="none" stroke="#f2a31b" stroke-width="8" stroke-linecap="round" stroke-dasharray="213.6" stroke-dashoffset="'+(213.6*(1-T.p/100))+'" transform="rotate(-90 42 42)"/><text x="42" y="48" text-anchor="middle" fill="#fbf7ef" font-size="18" font-weight="600">'+T.p+'%</text></svg><div class="grow"><h3>Tu progreso</h3><p class="mute">Semanas: '+T.w+' de 14 · Evaluaciones aprobadas: '+T.ev+' de 3'+(T.lt?' · Lecciones leídas: '+T.ld+' de '+T.lt:'')+'</p></div></div>'
+ +'<div class="card"><h3>Cómo se aprende</h3><div class="atmet" aria-hidden="true">'+AT_MET.map((m,i)=>'<i style="width:'+m[2]+'%;background:'+['#f2a31b','#ffc857','#5fbf7a','#6fb1ff'][i]+'"></i>').join('')+'</div><div class="atleg">'+AT_MET.map(m=>'<span aria-hidden="true">'+m[0]+'</span><span>'+m[1]+'</span><b>'+m[2]+' %</b>').join('')+'</div></div>';
+ const lv=AT.map((L0,l)=>{const st=atLvlState(l),g=T.grades[l],cur=atKeys(l).find(k=>!atModDone(k));
+  const mods=atKeys(l).map((k,i)=>{const done=atModDone(k),lock=atLocked(k),has=!!LD[k],now=!done&&!lock&&k===cur;const ic=done?'✓':lock?'🔒':has?'▶':'🚧';const est=done?'Completada':lock?(has?'Bloqueada':'Bloqueada · contenido pendiente'):has?(now?'Disponible: sigue aquí':'Disponible'):'Contenido pendiente';
+   return '<button class="atm'+(done?' ok':'')+(now&&has?' now':'')+(lock?' lock':'')+'" data-atk="'+k+'" aria-label="Semana '+atWeek(l,i)+': '+esc(L0.m[i])+'. '+est+'"><span class="ic" aria-hidden="true">'+ic+'</span><span class="grow">Semana '+atWeek(l,i)+' · '+L0.m[i]+'<small>'+est+'</small></span></button>'}).join('');
+  const ek=atEv(l),elock=atLocked(ek),epass=atEvPass(l),ehas=!!LD[ek];
+  const ev='<button class="atm'+(epass?' ok':'')+(elock?' lock':'')+'" data-atk="'+ek+'" aria-label="'+L0.ev+'. '+(epass?'Aprobada':elock?'Bloqueada':ehas?'Disponible':'Contenido pendiente')+'"><span class="ic" aria-hidden="true">'+(epass?'✓':elock?'🔒':ehas?'🏁':'🚧')+'</span><span class="grow ev">'+L0.ev+'<small>'+(epass?'Aprobada · '+g+' %':elock?'Se abre al completar las '+L0.m.length+' semanas':ehas?(g!==null?'Mejor resultado: '+g+' % · se aprueba con '+AT_RULES.aprobar+' %':'Se aprueba con '+AT_RULES.aprobar+' %'):'Contenido pendiente')+'</small></span></button>';
+  return '<details class="card sub" data-ato="'+l+'"'+(st!=='bloqueado'&&st!=='completado'||S.open['at'+l]?' open':'')+'><summary><span class="grow">Nivel '+(l+1)+' · '+L0.n+'<span class="mute" style="display:block">'+L0.m.length+' semanas'+(L0.proj?' · proyecto práctico':'')+(g!==null?' · nota: '+g+' %':'')+'</span></span><span class="atst '+st+'">'+AT_STN[st]+'</span></summary>'+mods+ev+'</details>'}).join('');
+ $('#at-body').innerHTML=head+lv+'<p class="mute" style="margin-top:12px;font-size:14px">Completa las semanas en orden. Al aprobar la evaluación de un nivel se abre el siguiente. Puedes reintentar las evaluaciones.</p>'}
+$('#at-body').addEventListener('click',e=>{const b=e.target.closest('[data-atk]');if(!b)return;const k=b.dataset.atk;if(atLocked(k)){toast('🔒 Completa primero lo anterior');return}if(!LD[k]){toast('🚧 Contenido en preparación');return}S.cur=k;go('leccion')});
+$('#at-body').addEventListener('toggle',e=>{const o=e.target.dataset&&e.target.dataset.ato;if(o!==undefined){S.open['at'+o]=e.target.open;save()}},true);
 $('#kn-worlds').addEventListener('click',e=>{const b=e.target.closest('[data-k]');if(b&&LD[b.dataset.k]){S.cur=b.dataset.k;go('leccion')}});
 $('#ref').innerHTML=refSheet();
 if(DLD){const b=document.getElementById('dl-ref');if(b)b.hidden=false}
@@ -917,7 +992,8 @@ function glossCard(D){
  return '<div class="card">'+say+(g.length?'<h3 style="margin-top:16px">'+(kid()?'Palabras nuevas 📖':'Vocabulario de la lección')+'</h3>'+g.map(x=>'<div class="gl"><b>'+x[0]+'</b>: '+x[1]+'</div>').join(''):'')+'</div>';
 }
 function lec(){
- {const b=$('#lec-back'),km=LD[S.cur]&&LD[S.cur].kidm;b.dataset.go=km?'ninos':'clases';b.textContent=km?'⬅ Volver a Misiones':'⬅ Volver a Clases'}
+ {const b=$('#lec-back'),km=LD[S.cur]&&LD[S.cur].kidm,am=LD[S.cur]&&LD[S.cur].at;b.dataset.go=km?'ninos':am?'asig':'clases';b.textContent=km?'⬅ Volver a Misiones':am?'⬅ Volver a la asignatura':'⬅ Volver a Clases'}
+ if(LD[S.cur]&&LD[S.cur].at&&atLocked(S.cur)){$('#lec-t').textContent=LD[S.cur].t;$('#lec-s').textContent=LD[S.cur].s;$('#steps').innerHTML='';$('#lec-body').innerHTML='<div class="card"><h3>🔒 Todavía bloqueada</h3><p class="mute" style="margin:6px 0 12px">Completa las semanas anteriores en orden para abrir esta.</p><button class="btn" data-go="asig">Ver la asignatura</button></div>';return}
  if(MM.t&&MM.k!==S.cur)mmStop();
  const K=S.cur||'0-1-0',D=LD[K],L=(S.ls[K]=S.ls[K]||{});L.step=L.step||0;
  $('#lec-t').textContent=D.t;$('#lec-s').textContent=D.s;
@@ -925,8 +1001,10 @@ function lec(){
  const nx=i=>'<button class="btn" data-st="'+i+'" style="margin-top:16px">▶ Siguiente: '+SL[i].toLowerCase()+'</button>';
  const sayB=(w)=>'<button class="btn ghost say" data-say="'+w+'">🔊 Escuchar esta página</button>';
  const Q=D.q,graded=typeof L.score==='number',ans=L.ans||[],fx=L.fix||{};let b='';
- if(L.step===0)b='<div class="card"><h3>'+(kid()?'Tu misión de hoy 🎯':'Lo que aprenderás')+'</h3><p class="mute" style="margin-top:6px">'+D.o+'</p>'+sayB('o')+'</div><div class="ph">Aquí irá el video de la clase<br><small>De 5 a 10 minutos</small></div><div class="ph">Aquí irá el audio de la clase<br><small>Para repasar sin video</small></div>'+nx(1);
- if(L.step===1)b=(D.z?D.z():'')+glossCard(D)+'<details class="card guide"'+(D.z&&!D.kidm?'':' open')+'><summary style="min-height:44px;cursor:pointer;color:var(--gold)">'+(D.z?'Ver la explicación escrita':'Explicación')+'</summary>'+(typeof D.g==='function'?D.g():D.g)+'</details>'+helpCard(K)+nx(2);
+ if(L.step===0&&D.ver)b=D.ver()+nx(1);
+ else if(L.step===0)b='<div class="card"><h3>'+(kid()?'Tu misión de hoy 🎯':'Lo que aprenderás')+'</h3><p class="mute" style="margin-top:6px">'+D.o+'</p>'+sayB('o')+'</div><div class="ph">Aquí irá el video de la clase<br><small>De 5 a 10 minutos</small></div><div class="ph">Aquí irá el audio de la clase<br><small>Para repasar sin video</small></div>'+nx(1);
+ if(L.step===1&&D.leer)b=D.leer(K,L)+helpCard(K)+nx(2);
+ else if(L.step===1)b=(D.z?D.z():'')+glossCard(D)+'<details class="card guide"'+(D.z&&!D.kidm?'':' open')+'><summary style="min-height:44px;cursor:pointer;color:var(--gold)">'+(D.z?'Ver la explicación escrita':'Explicación')+'</summary>'+(typeof D.g==='function'?D.g():D.g)+'</details>'+helpCard(K)+nx(2);
  if(L.step===2)b=D.p()+helpCard(K)+nx(3);
  if(L.step===3){const left=Q.filter((q,i)=>ans[i]!==q[2]&&!fx[i]).length;
   b='<div class="card"><h3>'+(kid()?'¡Reto de la lección! 🏁':'Prueba de la lección')+'</h3><p class="mute">Si fallas alguna, verás una explicación y podrás corregirla. Aquí todos pueden aprender y pasar.</p>'+Q.map((q,i)=>{const first=ans[i]===q[2],f=fx[i],pend=graded&&!first&&!f;
@@ -934,12 +1012,13 @@ function lec(){
   if(!graded)b+=Q.every((_,i)=>ans[i]!==undefined)?'<button class="btn" id="grade" style="margin-top:16px">Calificar</button>':'<p class="mute" style="margin-top:16px">Responde todas las preguntas.</p>';
   else if(left)b+='<p style="margin-top:18px"><b>Primer intento: '+L.score+' de '+Q.length+'.</b> Te falta corregir '+left+'. Lee la explicación y elige otra respuesta.</p>';
   else{const fc=Object.keys(fx).length;b+='<p style="margin-top:18px"><b>Dominaste la prueba.</b> '+L.score+' a la primera'+(fc?' y '+fc+' corregida'+(fc>1?'s':''):'')+'. Lo importante es que lo aprendiste.</p>'+nx(4)}
+  if(D.retry&&graded)b+='<p class="mute" style="margin-top:14px;font-size:14px">Intentos: '+((L.hist||[]).length+1)+(L.hist&&L.hist.length?' · Mejor resultado: '+atBest(L,Q)+' %':'')+'</p><button class="btn ghost" id="retry" style="margin-top:8px">🔁 Reintentar desde cero</button>';
   b+='</div>'}
  if(L.step===4){
   if(!solved(L,Q))b='<div class="card"><h3>Primero termina la prueba</h3><p class="mute" style="margin:6px 0 12px">La entrega se abre cuando termines la prueba y corrijas lo que falte.</p><button class="btn ghost" data-st="3">Ir a la prueba</button></div>';
-  else if(L.status==='ok')b='<div class="card"><h3>Lección aprobada</h3><p class="mute" style="margin:6px 0 12px">Comentario de ejemplo del docente: «Tu explicación es clara. Sigue practicando con constancia.»</p><button class="btn" data-go="clases">Volver a Clases</button></div>';
-  else if(L.status==='review')b='<div class="card"><h3>Respuesta guardada</h3><p class="mute" style="margin:6px 0">Tu respuesta: '+esc(L.text||'')+'</p><p>Esta versión la guarda solo en este dispositivo. En la versión final se enviará a tu docente, que la revisará y te dejará un comentario.</p><button class="btn ghost" id="okdemo" style="margin-top:14px">Ver cómo se ve la aprobación (demo)</button></div>';
-  else b='<div class="card"><h3>Demuestra lo aprendido</h3><p class="mute" style="margin-top:6px">'+D.e+'</p>'+(D.v?'<p class="mute" style="margin-top:8px;font-size:14px">En la versión final también subirás un video o audio tocando; tu docente lo escuchará y te dará un comentario.</p>':'')+'<textarea id="ta" aria-label="Tu respuesta" placeholder="Escribe tu respuesta aquí">'+esc(L.text||'')+'</textarea><p class="mute" style="font-size:14px"><span id="cnt">'+(L.text||'').trim().length+'</span> de 40 caracteres como mínimo</p><button class="btn" id="send" style="margin-top:10px"'+((L.text||'').trim().length<40?' disabled':'')+'>Guardar mi respuesta</button></div>'}
+  else if(L.status==='ok')b=(D.fin?D.fin():'')+'<div class="card"><h3>Lección aprobada</h3><p class="mute" style="margin:6px 0 12px">Comentario de ejemplo del docente: «Tu explicación es clara. Sigue practicando con constancia.»</p><button class="btn" data-go="clases">Volver a Clases</button></div>';
+  else if(L.status==='review')b=(D.fin?D.fin():'')+'<div class="card"><h3>Respuesta guardada</h3><p class="mute" style="margin:6px 0">Tu respuesta: '+esc(L.text||'')+'</p><p>Esta versión la guarda solo en este dispositivo. En la versión final se enviará a tu docente, que la revisará y te dejará un comentario.</p><button class="btn ghost" id="okdemo" style="margin-top:14px">Ver cómo se ve la aprobación (demo)</button></div>';
+  else b=(D.fin?D.fin():'')+'<div class="card"><h3>Demuestra lo aprendido</h3><p class="mute" style="margin-top:6px">'+D.e+'</p>'+(D.v?'<p class="mute" style="margin-top:8px;font-size:14px">En la versión final también subirás un video o audio tocando; tu docente lo escuchará y te dará un comentario.</p>':'')+'<textarea id="ta" aria-label="Tu respuesta" placeholder="Escribe tu respuesta aquí">'+esc(L.text||'')+'</textarea><p class="mute" style="font-size:14px"><span id="cnt">'+(L.text||'').trim().length+'</span> de 40 caracteres como mínimo</p><button class="btn" id="send" style="margin-top:10px"'+((L.text||'').trim().length<40?' disabled':'')+'>Guardar mi respuesta</button></div>'}
  $('#lec-body').innerHTML=b;
 }
 $('#v-leccion').addEventListener('click',e=>{const t=e.target;let x;const K=S.cur||'0-1-0',Q=LD[K].q,L=(S.ls[K]=S.ls[K]||{});
@@ -956,6 +1035,8 @@ $('#v-leccion').addEventListener('click',e=>{const t=e.target;let x;const K=S.cu
   save();lec()}
  else if(t.closest('#grade')){L.score=Q.filter((q,i)=>L.ans[i]===q[2]).length;save();lec();if(L.score===Q.length){party();toast(kid()?'¡Perfecto! Ganaste ⭐':'¡Perfecto!')}}
  else if(t.closest('#send')){L.status='review';save();lec()}
+ else if(t.closest('#retry')){L.hist=L.hist||[];L.hist.push({score:L.score,total:Q.length,fecha:dkey(new Date())});delete L.ans;delete L.score;delete L.fix;save();lec();window.scrollTo(0,0)}
+ else if(x=t.closest('[data-lr]')){L.lr=L.lr||{};L.lr[x.dataset.lr]=!L.lr[x.dataset.lr];save();lec()}
  else if(t.closest('#okdemo')){L.status='ok';S.done[K]=true;save();lec();party();toast(kid()?'¡Misión cumplida! +3 ⭐':'Lección aprobada')}
 });
 $('#v-leccion').addEventListener('keydown',e=>{const x=e.target.closest&&e.target.closest('.fbd');if(x&&(e.key==='Enter'||e.key===' ')){e.preventDefault();fbPlay(x.dataset.fb,x)}});
