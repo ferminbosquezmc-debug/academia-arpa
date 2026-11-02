@@ -20,7 +20,8 @@ const { chromium } = require('playwright');
     // Desbloquea todo lo anterior: semanas hechas y evaluaciones aprobadas
     const [l] = k.split('-').map(Number);
     for (let n = 0; n <= l; n++) {
-      atKeys(n).forEach(x => { if (x !== k && (n < l || atKeys(n).indexOf(x) < atKeys(n).indexOf(k))) S.done[x] = true; });
+      const pos = /-ev$/.test(k) ? Infinity : atKeys(n).indexOf(k);
+      atKeys(n).forEach(x => { if (x !== k && (n < l || atKeys(n).indexOf(x) < pos)) S.done[x] = true; });
       if (n < l && LD[atEv(n)]) { const Q = LD[atEv(n)].q; S.ls[atEv(n)] = { ans: Q.map(q => q[2]), score: Q.length, fix: {}, status: 'review' }; }
     }
     S.mode = 'adult'; S.cur = k; go('leccion');
