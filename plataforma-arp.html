@@ -152,6 +152,15 @@ nav button[aria-current=page]{background:rgba(242,163,27,.14);border-radius:14px
 .mm .dots{margin:10px 0}
 .mm [data-mm=go]{min-width:160px}
 .fbd{cursor:pointer;outline:none}.fbd:focus-visible circle{stroke:#fff;stroke-width:3}
+/* Zona Exploradores */
+.kw{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:16px;margin-top:14px}
+.kw-h{display:flex;align-items:center;gap:12px}.kw-h .em{font-size:40px;line-height:1}.kw-h h3{font-size:24px}
+.kw-h small{display:block;color:var(--mute);font-size:14px}
+.kmg{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:12px}
+.km{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;min-height:132px;padding:12px 8px;border:2px solid var(--line);border-radius:18px;background:#0b0905;text-align:center;color:var(--ivory)}
+.km .em{font-size:44px;line-height:1}.km b{font-size:16px;line-height:1.2}
+.km .ks{font-size:18px;letter-spacing:2px}.km.now{border-color:var(--gold);box-shadow:0 0 0 3px rgba(242,163,27,.25)}.km.d{border-color:#5fbf7a}
+.kp{display:flex;justify-content:center;gap:12px;margin:12px 0}.kp span{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;background:var(--line);font:700 22px Jost,sans-serif}.kp span:first-child{background:var(--gold);color:#000}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}.cf{display:none}}
 </style>
 </head>
@@ -213,6 +222,12 @@ nav button[aria-current=page]{background:rgba(242,163,27,.14);border-radius:14px
   </div>
 </section>
 
+<section class="view" id="v-ninos" hidden>
+  <div class="kh"><h2>🚀 Zona Exploradores</h2><p class="mute" id="kn-sub">Misiones cortas para aprender música jugando.</p></div>
+  <div id="kn-worlds"></div>
+  <button class="link" data-go="clases" style="font-size:16px;min-height:44px;margin-top:12px">📚 Ver todas las clases</button>
+</section>
+
 <section class="view" id="v-biblioteca" hidden>
   <h2>Biblioteca</h2>
   <p class="mute">Guía rápida, ejercicios y materiales. Guarda con la estrella los que quieras repasar.</p>
@@ -224,7 +239,7 @@ nav button[aria-current=page]{background:rgba(242,163,27,.14);border-radius:14px
 </section>
 
 <section class="view" id="v-leccion" hidden>
-  <button class="link" data-go="clases" style="font-size:16px;min-height:44px">⬅ Volver a Clases</button>
+  <button class="link" id="lec-back" data-go="clases" style="font-size:16px;min-height:44px">⬅ Volver a Clases</button>
   <h2 id="lec-t"></h2>
   <p class="mute" id="lec-s"></p>
   <div class="chips" id="steps" role="group" aria-label="Pasos de la lección"></div>
@@ -238,7 +253,7 @@ nav button[aria-current=page]{background:rgba(242,163,27,.14);border-radius:14px
 <div id="toast" role="status" aria-live="polite"></div>
 <nav aria-label="Principal">
   <button data-go="home" aria-current="page"><span class="ne" aria-hidden="true">🏠</span>Inicio</button>
-  <button data-go="clases"><span class="ne" aria-hidden="true">📚</span>Clases</button>
+  <button data-go="clases" id="nav-cl"><span class="ne" aria-hidden="true">📚</span><span class="nl">Clases</span></button>
   <button data-go="practica"><span class="ne" aria-hidden="true">🎵</span>Práctica</button>
   <button data-go="biblioteca"><span class="ne" aria-hidden="true">📖</span>Biblioteca</button>
   <button data-go="perfil"><span class="ne" aria-hidden="true">👤</span>Perfil</button>
@@ -307,7 +322,9 @@ const save=()=>{try{localStorage.setItem('arp',JSON.stringify(S))}catch(e){}};
 const dkey=d=>d.getFullYear()+'-'+(d.getMonth()+1)+'-'+d.getDate();
 /* ===== Modo, estrellas, insignias, diccionario, lectura en voz alta ===== */
 const kid=()=>S.mode==='kid';
-const applyMode=()=>{document.body.classList.toggle('kid',kid());document.body.classList.toggle('big',!!S.big)};
+const applyMode=()=>{document.body.classList.toggle('kid',kid());document.body.classList.toggle('big',!!S.big);
+ /* En modo Explorador, la pestaña Clases lleva a las misiones */
+ const n=document.getElementById('nav-cl');if(n){n.dataset.go=kid()?'ninos':'clases';n.querySelector('.ne').textContent=kid()?'🚀':'📚';n.querySelector('.nl').textContent=kid()?'Misiones':'Clases'}};
 const EMO={piano:'🎹',guitarra:'🎸',bajo:'🎸',bateria:'🥁',canto:'🎤',produccion:'🎧'};
 const STPK=['¡Mira!','Lee','Practica','¡Reto!','Muéstranos'];
 const GLOSS=[
@@ -381,8 +398,8 @@ function toast(t){const e=$('#toast');e.textContent=t;e.classList.add('on');setT
 function go(v){
  applyMode();if(typeof mmStop==='function')mmStop();try{window.speechSynthesis&&speechSynthesis.cancel();saying=false}catch(e){}
  document.querySelectorAll('.view').forEach(x=>x.hidden=x.id!=='v-'+v);
- document.querySelectorAll('nav button').forEach(b=>(b.dataset.go===v||(v==='leccion'&&b.dataset.go==='clases'))?b.setAttribute('aria-current','page'):b.removeAttribute('aria-current'));
- if(v==='home')home();if(v==='clases')clases();if(v==='biblioteca')biblio();if(v==='leccion'){S.last=S.cur;save();lec()}if(v==='perfil')perfil();
+ document.querySelectorAll('nav button').forEach(b=>(b.dataset.go===v||(v==='leccion'&&b.dataset.go===(LD[S.cur]&&LD[S.cur].kidm?'ninos':'clases')))?b.setAttribute('aria-current','page'):b.removeAttribute('aria-current'));
+ if(v==='home')home();if(v==='clases')clases();if(v==='ninos')ninos();if(v==='biblioteca')biblio();if(v==='leccion'){S.last=S.cur;save();lec()}if(v==='perfil')perfil();
  window.scrollTo(0,0);
 }
 document.addEventListener('click',e=>{const g=e.target.closest('[data-go]');if(g)go(g.dataset.go)});
@@ -411,7 +428,8 @@ function home(){if(!LAV[S.lvl])S.lvl=0;applyMode();
  $('#badges').innerHTML='<h3>'+(K?'Tus insignias 🏅':'Logros')+'</h3><div class="bdgs">'+badges().map(b=>'<div class="bdg'+(b[2]?' on':'')+'"><span class="em">'+b[0]+'</span>'+b[1]+'</div>').join('')+'</div><p class="mute" style="font-size:13px;margin-top:10px">Son premios para motivarte; no son certificados de la academia.</p>';
  /* Siguiente lección */
  let nx='';
- if(S.last&&LD[S.last]&&!S.done[S.last])nx='<h3>'+(K?'Sigue tu misión 🎯':'Continúa donde lo dejaste')+'</h3><p class="mute" style="margin:6px 0 12px">'+LD[S.last].t+'</p><button class="btn" id="fin" data-k="'+S.last+'">'+(K?'▶ ¡Vamos!':'▶ Continuar la lección')+'</button>';
+ if(K&&!(S.last&&LD[S.last]&&!S.done[S.last])){const km=KIDK.find(k=>!S.done[k]);if(km)nx='<h3>Tu próxima misión 🎯</h3><p class="mute" style="margin:6px 0 12px">'+LD[km].ico+' '+LD[km].t+'</p><button class="btn" id="fin" data-k="'+km+'">▶ Empezar la misión</button>'}
+ if(!nx&&S.last&&LD[S.last]&&!S.done[S.last])nx='<h3>'+(K?'Sigue tu misión 🎯':'Continúa donde lo dejaste')+'</h3><p class="mute" style="margin:6px 0 12px">'+LD[S.last].t+'</p><button class="btn" id="fin" data-k="'+S.last+'">'+(K?'▶ ¡Vamos!':'▶ Continuar la lección')+'</button>';
  let first=null;
  for(let si=0;si<LEV[S.lvl].s.length&&!nx;si++){const x=subj(S.lvl,si);if(!x)continue;const i=x[1].findIndex((_,j)=>LD[lk(S.lvl,si,j)]&&!S.done[lk(S.lvl,si,j)]);if(i>-1)nx='<h3>'+(K?'Tu próxima misión 🎯':'Tu siguiente lección')+'</h3><p class="mute" style="margin:6px 0 12px">'+x[0]+': '+x[1][i]+'</p><button class="btn" id="fin" data-k="'+lk(S.lvl,si,i)+'">'+(K?'▶ Empezar la misión':'▶ Abrir la lección')+'</button>'}
  $('#next').innerHTML=nx||'<h3>Completaste las lecciones disponibles</h3><p class="mute">Pronto habrá más. Tu docente confirmará cuándo pasas al siguiente nivel.</p>';
@@ -843,6 +861,51 @@ const refBody=()=>pills()+cuerdasC()+chords(['E7','A7','Em','Am','Dm','C','G','F
 const refSheet=()=>'<details class="card sub"><summary><span class="grow">Hoja de referencia · Guitarra Nivel 1</span></summary><p class="mute" style="font-size:14px;margin-bottom:8px">Notas, cuerdas, acordes y figuras en una sola página.</p>'+refBody()+'<button class="btn ghost" id="dl-ref" hidden style="margin:14px 0 8px">Descargar hoja de referencia</button></details>';
 const refDoc=()=>'<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Hoja de referencia · Guitarra Nivel 1 · AMA</title><style>:root{--gold:#f2a31b;--gold2:#ffc857;--ivory:#fbf7ef;--mute:#a79f8e;--card:#13110d;--line:#2b2417}body{background:#000;color:#fbf7ef;font:16px/1.5 system-ui,sans-serif;max-width:720px;margin:0 auto;padding:20px 16px}h1,h3{font-family:Georgia,serif;font-weight:600;margin:0}h1{font-size:28px}.mute{color:var(--mute);margin:0}.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px;margin-top:14px}.tag{font-size:12px;color:var(--gold);border:1px solid var(--line);border-radius:99px;padding:2px 10px}p{margin:6px 0 0}</style></head><body><h1>Academia de Música ARPA (AMA)</h1><p class="mute">Hoja de referencia · Guitarra, Nivel 1</p>'+refBody()+'</body></html>';
 Object.keys(LD).forEach(k=>{if(/guitarra/.test(k))LD[k].icon=licon(LD[k].t)});
+/* ===================== ZONA EXPLORADORES (niños desde 9 años) =====================
+ Para agregar una misión, copia un objeto de KIDS y cambia sus campos:
+   m   mundo al que pertenece (las misiones con el mismo m se agrupan; el orden es el de la lista)
+   ico símbolo grande de la misión          t  título corto
+   o   la misión en una frase: «Vas a…»
+   g   explicación corta en HTML. Escribe las notas con <n>…</n>: <n>Sol</n>, <n>G7</n>
+   z   gráficos (función). Puedes usar fb, chords, rhythm, staff, pills, keys, snames, ladder…
+   p   práctica (función). tasks([...],1) agrega el metrónomo con el tempo que diga el texto
+   q   preguntas: [pregunta, [opciones], índice de la correcta, explicación si falla]
+   e   qué debe mostrar o contar al docente
+ Cada misión se guarda en LD como 'k-0', 'k-1'… y usa los mismos 5 pasos de la lección.
+ Datos de cada mundo (símbolo y subtítulo) en KWORLD; si falta, se usa 🌟. */
+const KWORLD={
+ 'Mundo 1 · El ritmo':{ico:'🥁',sub:'Sentir el pulso y llevar el tiempo'},
+ 'Mundo 2 · La guitarra':{ico:'🎸',sub:'Conocer tu instrumento'}
+};
+const kPulse=()=>'<div class="card"><h3>Cuenta conmigo</h3><div class="kp" aria-hidden="true">'+[1,2,3,4].map(n=>'<span>'+n+'</span>').join('')+'</div><p class="mute" style="text-align:center;font-size:14px">Cada círculo es un aplauso. El 1, en dorado, es el más fuerte.</p></div>';
+const KIDS=[
+{m:'Mundo 1 · El ritmo',ico:'❤️',t:'El pulso: el corazón de la música',
+ o:'Vas a sentir el pulso y aplaudir junto al metrónomo sin adelantarte.',
+ g:'<p>La música tiene un <b>pulso</b>, como tu corazón: golpes que se repiten siempre iguales.</p><p>Pon la mano en tu pecho. ¿Sientes «pum, pum, pum»? Eso es un pulso.</p><p>El <b>metrónomo</b> hace «tic» en cada pulso. Tu reto es aplaudir justo en el tic.</p>',
+ z:kPulse,
+ p:()=>tasks(['Escucha el metrónomo sin hacer nada durante cuatro tics.','Aplaude en cada tic y cuenta en voz alta: 1, 2, 3, 4.','Aplaude fuerte en el 1 y suave en el 2, el 3 y el 4.','Camina por la sala: un paso en cada tic.'],1),
+ q:[['¿Qué es el pulso?',['Golpes que se repiten siempre iguales','Una nota muy aguda','Un tipo de guitarra'],0,'El pulso es como el latido de tu corazón: siempre parejo.'],['¿Qué hace el metrónomo?',['Marca el pulso con un tic','Afina la guitarra','Toca la canción por ti'],0,'El metrónomo hace tic en cada pulso para que no te adelantes.'],['Al contar 1, 2, 3, 4, ¿cuál marcamos más fuerte?',['El 1','El 3','Todos igual'],0,'El 1 es el inicio del grupo; por eso lo marcamos más fuerte.']],
+ e:'Cuéntanos: ¿pudiste aplaudir junto al tic? ¿En qué número te costó más?'},
+{m:'Mundo 2 · La guitarra',ico:'🎸',t:'Las seis cuerdas',
+ o:'Vas a conocer las seis cuerdas de la guitarra y decir su nombre.',
+ g:'<p>La guitarra tiene <b>seis cuerdas</b>. La más gruesa suena grave, como un oso. La más delgada suena aguda, como un pajarito.</p><p>Sin pisar nada, de la gruesa a la delgada, suenan así: <n>Mi</n> · <n>La</n> · <n>Re</n> · <n>Sol</n> · <n>Si</n> · <n>Mi</n>.</p>',
+ z:()=>fb(4,[[6,0,'E'],[5,0,'A'],[4,0,'D'],[3,0,'G'],[2,0,'B'],[1,0,'E']],'Toca un punto para escuchar cada cuerda.'),
+ p:()=>tasks(['Toca la cuerda más gruesa y di su nombre: Mi.','Toca las seis cuerdas, de la gruesa a la delgada, diciendo su nombre.','Con el metrónomo, toca una cuerda en cada tic.'],1),
+ q:[['¿Cuántas cuerdas tiene la guitarra?',['Seis','Cuatro','Diez'],0,'Cuenta las cuerdas: son seis.'],['La cuerda más gruesa suena…',['Grave','Aguda'],0,'Lo grueso suena grave, como un oso; lo delgado suena agudo, como un pajarito.'],['¿Cómo se llama la cuerda más delgada?',['Mi','La','Re'],0,'Las dos cuerdas de las orillas se llaman Mi: la más gruesa y la más delgada.']],
+ e:'Escribe o graba los nombres de las seis cuerdas, de la más gruesa a la más delgada.'}
+];
+const KIDK=KIDS.map((d,i)=>{const k='k-'+i;LD[k]=Object.assign({s:'Zona Exploradores · '+d.m,kidm:1,icon:d.ico,v:1},d);return k});
+/* Estrellas de una misión: ⭐ prueba superada · ⭐ respuesta entregada · ⭐ aprobada por el docente */
+const kStars=k=>{const L=S.ls[k]||{};return (solved(L,LD[k].q)?1:0)+(L.status==='review'||L.status==='ok'?1:0)+(L.status==='ok'?1:0)};
+function ninos(){
+ const W=[];KIDK.forEach(k=>{const m=LD[k].m;let w=W.find(x=>x.m===m);if(!w)W.push(w={m,ks:[]});w.ks.push(k)});
+ const cur=KIDK.find(k=>!S.done[k]);
+ $('#kn-sub').textContent=(S.name?S.name+', e':'E')+'lige una misión. Cada una te da hasta 3 estrellas.';
+ $('#kn-worlds').innerHTML=W.map(w=>{const I=KWORLD[w.m]||{},st=w.ks.reduce((a,k)=>a+kStars(k),0);
+  return '<section class="kw" aria-label="'+esc(w.m)+'"><div class="kw-h"><span class="em" aria-hidden="true">'+(I.ico||'🌟')+'</span><div><h3>'+esc(w.m)+'</h3><small>'+(I.sub?esc(I.sub)+' · ':'')+'⭐ '+st+' de '+w.ks.length*3+'</small></div></div><div class="kmg">'
+  +w.ks.map(k=>{const D=LD[k],n=kStars(k),d=S.done[k];return '<button class="km'+(d?' d':'')+(k===cur?' now':'')+'" data-k="'+k+'" aria-label="'+esc(D.t)+': '+n+' de 3 estrellas'+(k===cur?', siguiente misión':'')+'"><span class="em" aria-hidden="true">'+D.ico+'</span><b>'+D.t+'</b><span class="ks" aria-hidden="true">'+'⭐'.repeat(n)+'☆'.repeat(3-n)+'</span></button>'}).join('')+'</div></section>'}).join('');
+}
+$('#kn-worlds').addEventListener('click',e=>{const b=e.target.closest('[data-k]');if(b&&LD[b.dataset.k]){S.cur=b.dataset.k;go('leccion')}});
 $('#ref').innerHTML=refSheet();
 if(DLD){const b=document.getElementById('dl-ref');if(b)b.hidden=false}
 $('#ref').addEventListener('click',async e=>{if(!e.target.closest('#dl-ref')||!DLD)return;try{await DLD.save({filename:'hoja-referencia-guitarra-nivel-1.html',data:refDoc()});toast('Hoja guardada')}catch(err){if(!err||err.code!=='declined')toast('No se pudo guardar la hoja')}});
@@ -854,6 +917,7 @@ function glossCard(D){
  return '<div class="card">'+say+(g.length?'<h3 style="margin-top:16px">'+(kid()?'Palabras nuevas 📖':'Vocabulario de la lección')+'</h3>'+g.map(x=>'<div class="gl"><b>'+x[0]+'</b>: '+x[1]+'</div>').join(''):'')+'</div>';
 }
 function lec(){
+ {const b=$('#lec-back'),km=LD[S.cur]&&LD[S.cur].kidm;b.dataset.go=km?'ninos':'clases';b.textContent=km?'⬅ Volver a Misiones':'⬅ Volver a Clases'}
  if(MM.t&&MM.k!==S.cur)mmStop();
  const K=S.cur||'0-1-0',D=LD[K],L=(S.ls[K]=S.ls[K]||{});L.step=L.step||0;
  $('#lec-t').textContent=D.t;$('#lec-s').textContent=D.s;
@@ -862,7 +926,7 @@ function lec(){
  const sayB=(w)=>'<button class="btn ghost say" data-say="'+w+'">🔊 Escuchar esta página</button>';
  const Q=D.q,graded=typeof L.score==='number',ans=L.ans||[],fx=L.fix||{};let b='';
  if(L.step===0)b='<div class="card"><h3>'+(kid()?'Tu misión de hoy 🎯':'Lo que aprenderás')+'</h3><p class="mute" style="margin-top:6px">'+D.o+'</p>'+sayB('o')+'</div><div class="ph">Aquí irá el video de la clase<br><small>De 5 a 10 minutos</small></div><div class="ph">Aquí irá el audio de la clase<br><small>Para repasar sin video</small></div>'+nx(1);
- if(L.step===1)b=(D.z?D.z():'')+glossCard(D)+'<details class="card guide"'+(D.z?'':' open')+'><summary style="min-height:44px;cursor:pointer;color:var(--gold)">'+(D.z?'Ver la explicación escrita':'Explicación')+'</summary>'+(typeof D.g==='function'?D.g():D.g)+'</details>'+helpCard(K)+nx(2);
+ if(L.step===1)b=(D.z?D.z():'')+glossCard(D)+'<details class="card guide"'+(D.z&&!D.kidm?'':' open')+'><summary style="min-height:44px;cursor:pointer;color:var(--gold)">'+(D.z?'Ver la explicación escrita':'Explicación')+'</summary>'+(typeof D.g==='function'?D.g():D.g)+'</details>'+helpCard(K)+nx(2);
  if(L.step===2)b=D.p()+helpCard(K)+nx(3);
  if(L.step===3){const left=Q.filter((q,i)=>ans[i]!==q[2]&&!fx[i]).length;
   b='<div class="card"><h3>'+(kid()?'¡Reto de la lección! 🏁':'Prueba de la lección')+'</h3><p class="mute">Si fallas alguna, verás una explicación y podrás corregirla. Aquí todos pueden aprender y pasar.</p>'+Q.map((q,i)=>{const first=ans[i]===q[2],f=fx[i],pend=graded&&!first&&!f;
@@ -939,7 +1003,7 @@ function helpOpen(){
  const b=$('#help-b');
  b.innerHTML='<div class="row"><h3 class="grow" id="help-t">¿Cómo se usa? 🤔</h3><button class="btn ghost" id="help-x" aria-label="Cerrar la ayuda">✕ Cerrar</button></div>'
  +'<p class="mute">Toca los dibujos de abajo. Todo se hace con un toque.</p>'
- +'<div class="legend"><span class="em">🏠</span><span><b>Inicio</b>: aquí ves qué sigue.</span><span class="em">📚</span><span><b>Clases</b>: tus lecciones.</span><span class="em">🎵</span><span><b>Práctica</b>: metrónomo, teclado y cronómetro.</span><span class="em">📖</span><span><b>Biblioteca</b>: guías y palabras de música.</span><span class="em">👤</span><span><b>Perfil</b>: tus datos y tu modo.</span></div>'
+ +'<div class="legend"><span class="em">🏠</span><span><b>Inicio</b>: aquí ves qué sigue.</span><span class="em">📚</span><span><b>Clases</b>: tus lecciones.</span><span class="em">🚀</span><span><b>Misiones</b>: en modo Explorador, lecciones cortas para niños.</span><span class="em">🎵</span><span><b>Práctica</b>: metrónomo, teclado y cronómetro.</span><span class="em">📖</span><span><b>Biblioteca</b>: guías y palabras de música.</span><span class="em">👤</span><span><b>Perfil</b>: tus datos y tu modo.</span></div>'
  +'<h3 style="margin-top:18px">Qué significan los dibujos</h3>'
  +'<div class="legend"><span class="em">▶</span><span>Tocar para abrir o empezar</span><span class="em">✅</span><span>Terminado</span><span class="em">🔊</span><span>Escuchar el texto en voz alta</span><span class="em">⭐</span><span>Estrellas que ganas al avanzar</span><span class="em">🚧</span><span>Pronto estará listo</span><span class="em">⬅</span><span>Volver atrás</span></div>'
  +'<h3 style="margin-top:18px">Los colores de las notas</h3><p class="mute" style="margin-top:4px">Cada nota tiene siempre el mismo color, en el diapasón, el teclado y el pentagrama.</p><div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:8px">'+noteLegendHtml()+'</div>'
