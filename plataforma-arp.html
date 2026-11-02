@@ -19,7 +19,7 @@ button{cursor:pointer;border:0;background:none}
 :focus-visible{outline:2px solid var(--gold2);outline-offset:3px}
 .view[hidden]{display:none}
 .hero{text-align:center;padding:18px 0 8px;background:radial-gradient(ellipse at 50% 30%,rgba(242,163,27,.18),transparent 65%)}
-.logo{width:min(230px,62vw);height:auto;display:block;margin:0 auto 6px}
+.logo{width:min(150px,40vw);height:auto;display:block;margin:0 auto 6px}
 .hero h1{font-size:36px}
 .link{color:var(--gold);text-decoration:underline;text-underline-offset:3px;font-size:14px;padding:6px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px;margin-top:14px}
@@ -122,10 +122,6 @@ body.big{font-size:20px}
 .ne{font-size:26px;line-height:1}
 nav button{font-size:13px;min-height:66px;gap:2px}
 nav button[aria-current=page]{background:rgba(242,163,27,.14);border-radius:14px;font-weight:600}
-.tiles{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px}
-.tile{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;min-height:104px;border:1px solid var(--line);border-radius:18px;background:var(--card);font-size:1.1rem;font-weight:600;text-align:center;padding:10px}
-.tile .em{font-size:40px;line-height:1}
-.tile:active,.tile:hover{border-color:var(--gold)}
 .prog3{display:flex;align-items:center;gap:10px;margin:6px 0 2px;font-weight:600}
 .legend{display:grid;grid-template-columns:36px 1fr;gap:6px 12px;align-items:center;margin-top:12px}
 .legend .em{font-size:26px;text-align:center}
@@ -162,17 +158,16 @@ nav button[aria-current=page]{background:rgba(242,163,27,.14);border-radius:14px
   <div class="card" id="mode" hidden></div>
   <div class="card" id="start" hidden></div>
   <div class="card" id="next" style="border-color:var(--gold)"></div>
-  <div class="tiles" id="tiles"><button class="tile" data-go="clases"><span class="em">📚</span>Mis clases</button><button class="tile" data-go="practica"><span class="em">🎵</span>Practicar</button><button class="tile" data-go="biblioteca"><span class="em">📖</span>Palabras y guías</button><button class="tile" data-go="perfil"><span class="em">👤</span>Mi perfil</button></div>
   <div class="card row">
     <svg width="84" height="84" viewBox="0 0 84 84" aria-hidden="true"><circle cx="42" cy="42" r="34" fill="none" stroke="#2b2417" stroke-width="8"/><circle id="ring" cx="42" cy="42" r="34" fill="none" stroke="#f2a31b" stroke-width="8" stroke-linecap="round" stroke-dasharray="213.6" stroke-dashoffset="213.6" transform="rotate(-90 42 42)"/><text id="pct" x="42" y="48" text-anchor="middle" fill="#fbf7ef" font-size="18" font-weight="600">0%</text></svg>
     <div class="grow"><h3 id="prog-h">Tu avance</h3><p class="mute" id="prog-txt"></p></div>
   </div>
-  <div class="card" id="badges"></div>
   <div class="card">
     <div class="row"><h3 class="grow" id="wk-h">Práctica de esta semana</h3><span class="mute" id="wk-total"></span></div>
     <div class="week" id="week"></div>
-    <button class="btn ghost" data-go="practica" style="margin-top:14px">Practicar ahora</button>
+    <button class="btn ghost" data-go="practica" style="margin-top:14px">🎵 Practicar ahora</button>
   </div>
+  <div class="card" id="badges"></div>
 </section>
 
 <section class="view" id="v-clases" hidden>
