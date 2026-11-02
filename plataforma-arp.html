@@ -235,7 +235,8 @@ const NCOL={Do:'#e53935',Re:'#fb8c00',Mi:'#fdd835',Fa:'#43a047',Sol:'#4fc3f7',La
 const hx=c=>[1,3,5].map(i=>parseInt(c.substr(i,2),16));
 const mixc=(a,b)=>'#'+hx(a).map((v,i)=>Math.round((v+hx(b)[i])/2).toString(16).padStart(2,'0')).join('');
 function nc(n){const m=String(n).trim().match(/^(Do|Re|Mi|Fa|Sol|La|Si|[A-G])([♯♭#]?)$/);if(!m)return null;const b=NEN[m[1]]||m[1],i=NORD.indexOf(b),c=NCOL[b];if(m[2]==='♯'||m[2]==='#')return mixc(c,NCOL[NORD[(i+1)%7]]);if(m[2]==='♭')return mixc(c,NCOL[NORD[(i+6)%7]]);return c}
-const ntx=c=>{const[r,g,b]=hx(c);return (r*299+g*587+b*114)/1000>150?'#000':'#fff'};
+const lum=c=>hx(c).map(v=>{v/=255;return v<=.03928?v/12.92:Math.pow((v+.055)/1.055,2.4)}).reduce((a,v,i)=>a+v*[.2126,.7152,.0722][i],0);
+const ntx=c=>{const L=lum(c);return (L+.05)/.05>=1.05/(L+.05)?'#000':'#fff'}; /* negro o blanco: el de mayor contraste */
 const mkc=m=>{const c=nc(m[2]);return c?'fill="'+c+'" stroke="'+(m[3]||'none')+'" stroke-width="2.5"':'fill="'+(m[3]||'#f2a31b')+'"'};
 const mkt=m=>{const c=nc(m[2]);return c?ntx(c):'#000'};
 const noteLegendHtml=()=>NORD.map(n=>{const c=nc(n);return '<span style="background:'+c+';color:'+ntx(c)+';border-radius:99px;padding:5px 12px;font-weight:700;font-size:14px">'+n+'</span>'}).join('');
