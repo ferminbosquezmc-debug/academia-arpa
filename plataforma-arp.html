@@ -171,6 +171,27 @@ nav button[aria-current=page]{background:rgba(242,163,27,.14);border-radius:14px
 .atmet{display:flex;height:16px;border-radius:99px;overflow:hidden;margin-top:10px}.atmet i{display:block;height:100%}
 .atleg{display:grid;grid-template-columns:28px 1fr auto;gap:6px 8px;align-items:center;margin-top:10px;font-size:14px}
 .lrb{margin-top:10px}
+.atinfo summary{font:600 21px/1.2 "Cormorant Garamond",Georgia,serif}
+.atchips{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}.atchips span{font-size:14px;border:1px solid var(--line);border-radius:99px;padding:5px 11px;background:#0b0905}
+.ath4{margin:14px 0 4px;font-size:15px;color:var(--gold2)}
+.atnext{margin-top:12px;padding:10px 12px;border-radius:12px;background:#1c1608;border:1px solid var(--gold);font-size:15px}
+.atl-h{display:flex;align-items:center;gap:12px}.atl-n{flex:none;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;font:700 20px Jost,sans-serif;background:var(--gold);color:#000}
+.atl-bloqueado .atl-n{background:var(--line);color:var(--mute)}.atl-completado .atl-n{background:#5fbf7a}
+.atl-bloqueado{opacity:.75}
+.atobj{margin-top:8px}.atwl summary{cursor:pointer;color:var(--gold);min-height:44px;display:flex;align-items:center;font-weight:600}
+.atobj summary,.atw-t summary{cursor:pointer;color:var(--gold);min-height:44px;display:flex;align-items:center}
+.atobj ul,.atw-t ul{padding-left:20px;margin:4px 0 6px;font-size:15px}
+.atws{display:grid;grid-template-columns:minmax(0,1fr);gap:10px;margin-top:10px}
+@media (min-width:600px){.atws{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.atw{border:1px solid var(--line);border-radius:16px;padding:14px;background:#0b0905;display:flex;flex-direction:column}
+.atw.now{border-color:var(--gold);box-shadow:0 0 0 3px rgba(242,163,27,.22)}.atw.ok{border-color:#5fbf7a}.atw.lock{opacity:.8}
+.atw-h{display:flex;align-items:center;gap:10px}.atw-n{flex:none;width:40px;height:40px;border-radius:12px;display:grid;place-items:center;font:700 18px Jost,sans-serif;background:var(--line)}
+.atw.now .atw-n{background:var(--gold);color:#000}.atw.ok .atw-n{background:#5fbf7a;color:#000}
+.atw h4{margin:0;font:600 19px/1.15 "Cormorant Garamond",Georgia,serif}
+.atw-d{font-size:14px;color:var(--mute);margin-top:8px}
+.atw-f{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.atst.pend{color:#e0a46a;border-color:#7a5a2a}
+.atev{border-style:dashed}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}.cf{display:none}}
 </style>
 </head>
@@ -293,13 +314,48 @@ const noteLegendHtml=()=>NORD.map(n=>{const c=nc(n);return '<span style="backgro
  Nivel 3 → posición 6, '2-6-0'…'2-6-3' y '2-6-ev'. atSi(nivel) devuelve la posición.
  Para cargar el contenido de una semana, agrega su objeto en ATC (ver el esquema junto a ATC más abajo). */
 const AT_NAME='Audio Técnica Básica para Músicos';
-const AUD='Asignatura de todas las carreras para cantantes, instrumentistas, directores y equipos de alabanza. En 14 semanas y 3 niveles aprendes los fundamentos del sonido, a usar bien tu equipo y a comunicarte con el técnico o ingeniero de sonido.';
-const AT_RULES={aprobar:70}; /* % mínimo en un intento de la evaluación de nivel. Intentos ilimitados; la nota del nivel es el mejor intento. */
+const AUD='Formación virtual teórico-práctica de 14 semanas en 3 niveles, para cantantes, músicos, directores e integrantes de agrupaciones musicales. Nivel de entrada: principiante.';
+/* ===== Configuración académica =====
+ Reglas de evaluación de cada asignatura. Se cambian aquí o, sin tocar el código, guardando en el navegador la
+ clave 'arp-config' con el mismo formato (por ejemplo, desde el futuro panel administrativo):
+   {"asignaturas":{"audio-tecnica":{"aprobar":75,"intentos":3}}}
+ aprobar: % mínimo en un intento de la evaluación de nivel (0 a 100).  intentos: máximo por evaluación (0 = ilimitados).
+ La nota del nivel es el mejor intento. */
+const ACAD_DEF={asignaturas:{'audio-tecnica':{aprobar:70,intentos:0}}};
+const ACAD=(()=>{const c=JSON.parse(JSON.stringify(ACAD_DEF));try{const o=JSON.parse(localStorage.getItem('arp-config')||'{}');Object.entries(o.asignaturas||{}).forEach(([k,v])=>{const r=c.asignaturas[k]=c.asignaturas[k]||{};if(Number.isFinite(+v.aprobar)&&+v.aprobar>=0&&+v.aprobar<=100)r.aprobar=+v.aprobar;if(Number.isInteger(+v.intentos)&&+v.intentos>=0)r.intentos=+v.intentos})}catch(e){}return c})();
+const atRule=()=>ACAD.asignaturas['audio-tecnica'];
 const AT_MET=[['📖','Teoría',30],['🎬','Demostraciones',20],['🎚️','Prácticas',35],['✅','Evaluación y retroalimentación',15]];
+const AT_INFO={modalidad:'Formación virtual teórico-práctica',entrada:'Principiante',
+ para:['Cantantes','Músicos e instrumentistas','Directores musicales','Integrantes de agrupaciones musicales','Personas interesadas en los fundamentos técnicos del sonido'],
+ obj:'Enseñar a los músicos los fundamentos del sonido, el manejo de micrófonos, conexiones, consolas, procesamiento de audio, monitoreo y comunicación con los técnicos de sonido, para que puedan desenvolverse con mayor seguridad y conocimiento en ensayos, presentaciones y eventos musicales.'};
+/* AT: niveles. n nombre · d descripción · obj objetivos · ev evaluación · proj proyecto final · m títulos de las semanas · tm temas de cada semana */
 const AT=[
- {n:'Fundamentos del sonido',ev:'Evaluación del Nivel 1',m:['Introducción al mundo del sonido','Tipos de micrófonos y sus aplicaciones','Uso correcto de los micrófonos','Cableado y conexiones de audio','Conociendo la consola de sonido']},
- {n:'Control y procesamiento del audio',ev:'Evaluación del Nivel 2',m:['Flujo de señal y estructura de ganancia','Fundamentos de ecualización (EQ)','Ecualización práctica de voces e instrumentos','Monitoreo personal y mezcla de escenario','Efectos básicos del sonido']},
- {n:'Aplicación profesional y trabajo en equipo',ev:'Proyecto práctico y evaluación final',proj:1,m:['Acoples, problemas y soluciones','Comunicación, empatía y trabajo en equipo','Preparación y prueba de sonido (Soundcheck)','Evaluación y práctica final']}
+ {n:'Fundamentos del sonido',ev:'Evaluación del Nivel 1',
+  d:'Los principios básicos del sonido: cómo se produce y se transmite, los tipos de micrófonos y el funcionamiento básico de las conexiones y las consolas de audio.',
+  obj:['Conocer los principios básicos del sonido.','Comprender cómo se produce y se transmite.','Identificar los diferentes tipos de micrófonos.','Comprender el funcionamiento básico de las conexiones y las consolas de audio.'],
+  m:['Introducción al mundo del sonido','Tipos de micrófonos y sus aplicaciones','Uso correcto de los micrófonos','Cableado y conexiones de audio','Conociendo la consola de sonido'],
+  tm:[['Qué es el sonido','Cómo se produce y se propaga','Frecuencia y amplitud','Longitud de onda','Decibelios y niveles de sonido','El oído humano y la percepción'],
+      ['Qué es un micrófono','Micrófonos dinámicos','Micrófonos de condensador','Micrófonos de cinta','Patrones polares','Aplicaciones según voz e instrumentos'],
+      ['Técnicas básicas de microfonía','Distancia y posición','Manejo del micrófono vocal','Microfonía básica de instrumentos','Errores comunes','Cuidados y mantenimiento'],
+      ['Cables balanceados y no balanceados','Conectores XLR, TRS, TS y RCA','Entradas y salidas','Conexiones de micrófonos e instrumentos','Cajas directas (DI)','Organización y cuidado del cableado'],
+      ['Qué es una consola','Canales de entrada','Ganancia','Ecualización básica','Auxiliares','Faders y controles principales','Salidas principales y monitoreo']]},
+ {n:'Control y procesamiento del audio',ev:'Evaluación del Nivel 2',
+  d:'Cómo se mueve la señal de audio dentro de un sistema, cómo controlar sus niveles y cómo usar herramientas básicas de procesamiento para mejorar el sonido de voces e instrumentos.',
+  obj:['Comprender cómo se mueve la señal de audio dentro de un sistema.','Controlar los niveles de la señal.','Usar herramientas básicas de procesamiento para mejorar el sonido de voces e instrumentos.'],
+  m:['Flujo de señal y estructura de ganancia','Fundamentos de ecualización (EQ)','Ecualización práctica de voces e instrumentos','Monitoreo personal y mezcla de escenario','Efectos básicos del sonido'],
+  tm:[['Qué es una señal de audio','Recorrido de la señal','Entrada, procesamiento y salida','Ganancia de entrada','Niveles de señal','Clipping y saturación','Estructura de ganancia'],
+      ['Qué es la ecualización','Frecuencias graves, medias y agudas','Filtros pasa altos y pasa bajos','Ecualización sustractiva y aditiva','Frecuencia central, ganancia y ancho de banda','Uso responsable de la ecualización'],
+      ['Ecualización básica de voz masculina y femenina','Voz hablada y voz cantada','Guitarra acústica y eléctrica','Bajo','Teclados','Batería','Identificación de frecuencias problemáticas'],
+      ['Qué es el monitoreo','Monitores de piso','Sistemas In-Ear','Mezclas individuales','Envíos auxiliares','Balance entre voz e instrumentos','Comunicación de necesidades de monitoreo'],
+      ['Qué son los efectos de audio','Reverb','Delay','Chorus','Compresión básica','Uso de efectos en voces e instrumentos','Evitar el exceso de procesamiento']]},
+ {n:'Aplicación profesional y trabajo en equipo',ev:'Proyecto práctico y evaluación final',proj:1,
+  d:'Aplicar lo aprendido en situaciones reales de ensayo y presentación: identificar problemas, comunicarse con el equipo técnico y participar correctamente en una prueba de sonido.',
+  obj:['Aplicar los conocimientos en situaciones reales de ensayo y presentación musical.','Identificar problemas de sonido.','Comunicarse con el equipo técnico.','Participar correctamente en una prueba de sonido.'],
+  m:['Acoples, problemas y soluciones','Comunicación, empatía y trabajo en equipo','Preparación y prueba de sonido (Soundcheck)','Evaluación y práctica final'],
+  tm:[['Qué es un acople','Cómo se produce la realimentación acústica','Relación entre micrófonos y altavoces','Identificación de frecuencias problemáticas','Prevención de acoples','Problemas frecuentes de audio','Soluciones básicas'],
+      ['Relación entre músicos y técnicos de sonido','Respeto por el trabajo de cada profesional','Cómo solicitar cambios de sonido','Comunicación clara y específica','Responsabilidad durante ensayos y eventos','Empatía, paciencia y trabajo colaborativo'],
+      ['Preparación antes de un evento','Organización del escenario','Revisión de conexiones','Orden de prueba de instrumentos','Prueba de voces','Ajuste de monitores','Comunicación durante el soundcheck','Errores que deben evitarse'],
+      ['Repaso general de los tres niveles','Evaluación teórica','Identificación de equipos y conexiones','Resolución de situaciones técnicas','Simulación de una prueba de sonido','Proyecto práctico final','Evaluación del aprendizaje']]}
 ];
 const atSi=l=>LEV[l].s.findIndex(x=>x[2]===AUD); /* posición de la asignatura en cada nivel */
 const atWeek=(l,i)=>AT.slice(0,l).reduce((a,x)=>a+x.m.length,0)+i+1; /* semana 1 a 14 */
@@ -949,7 +1005,7 @@ const ATC={};
 const atKeys=l=>AT[l].m.map((_,i)=>l+'-'+atSi(l)+'-'+i),atEv=l=>l+'-'+atSi(l)+'-ev';
 const atBest=(L,Q)=>{const all=(L.hist||[]).map(h=>h.score/h.total);if(typeof L.score==='number')all.push(L.score/Q.length);return all.length?Math.round(Math.max(...all)*100):null};
 const atModDone=k=>{const L=S.ls[k]||{},D=LD[k];return !!S.done[k]||(!!D&&solved(L,D.q)&&(L.status==='review'||L.status==='ok'))};
-const atEvPass=l=>{const k=atEv(l),D=LD[k],L=S.ls[k]||{};if(!D)return false;const b=atBest(L,D.q);return b!==null&&b>=AT_RULES.aprobar&&(!AT[l].proj||L.status==='review'||L.status==='ok')};
+const atEvPass=l=>{const k=atEv(l),D=LD[k],L=S.ls[k]||{};if(!D)return false;const b=atBest(L,D.q);return b!==null&&b>=atRule().aprobar&&(!AT[l].proj||L.status==='review'||L.status==='ok')};
 const atLvlLocked=l=>l>0&&!atEvPass(l-1);
 function atLocked(k){const[l,,i]=k.split('-');if(atLvlLocked(+l))return true;if(i==='ev')return !atKeys(+l).every(atModDone);return +i>0&&!atModDone(atKeys(+l)[+i-1])}
 function atLvlState(l){if(atLvlLocked(l))return 'bloqueado';if(atEvPass(l))return 'completado';return atKeys(l).concat(atEv(l)).some(k=>S.ls[k]&&(S.ls[k].step>0||typeof S.ls[k].score==='number'))?'progreso':'disponible'}
@@ -958,7 +1014,7 @@ function atStats(){let w=0,ev=0,lt=0,ld=0,grades=[];AT.forEach((L0,l)=>{atKeys(l
 function atLesson(k){const C=ATC[k],[l,,i]=k.split('-'),isEv=i==='ev',L0=AT[+l];
  const t=isEv?L0.ev:L0.m[+i],sub=AT_NAME+' · Nivel '+(+l+1)+(isEv?' · Evaluación':' · Semana '+atWeek(+l,+i));
  const card=(h,c)=>'<div class="card"><h3>'+h+'</h3>'+c+'</div>';
- return {at:1,retry:1,icon:isEv?'🏁':'🎚️',t,s:sub,q:C.q||[],e:C.e||'Escribe con tus palabras qué aprendiste y cómo lo aplicarás con tu equipo.',
+ return {at:1,retry:L=>{const n=atRule().intentos;return !n||(L.hist||[]).length+1<n},icon:isEv?'🏁':'🎚️',t,s:sub,q:C.q||[],e:C.e||'Escribe con tus palabras qué aprendiste y cómo lo aplicarás con tu equipo.',
   o:(C.obj||[]).join(' '),g:(C.lecciones||[]).map(x=>'<h3>'+x.t+'</h3>'+x.html).join(''),
   ver:()=>(C.intro?card('Presentación',C.intro):'')+(C.obj?card('🎯 Objetivos de aprendizaje','<ul style="padding-left:20px;margin:8px 0 0">'+C.obj.map(o=>'<li style="margin-top:6px">'+o+'</li>').join('')+'</ul>'):'')+(C.proyecto?card('🛠️ Proyecto práctico',C.proyecto):'')+(C.demos||[]).map(d=>'<div class="ph">🎬 '+d[0]+(d[1]?'<br><a class="link" href="'+esc(d[1])+'" target="_blank" rel="noopener">Abrir</a>':'<br><small>Demostración en preparación</small>')+'</div>').join(''),
   leer:(K,L)=>(C.ilus?C.ilus():'')+(C.lecciones||[]).map((x,j)=>{const r=(L.lr||{})[j];return '<div class="card"><h3>Lección '+(j+1)+' · '+x.t+'</h3>'+x.html+'<button class="btn '+(r?'':'ghost ')+'lrb" data-lr="'+j+'" aria-pressed="'+!!r+'">'+(r?'✓ Lección leída':'Marcar como leída')+'</button></div>'}).join('')+(C.ej?card('🎤 Ejemplos en la música',C.ej):'')+(C.glos?card('📖 Glosario',C.glos.map(g=>'<div class="gl"><b>'+g[0]+'</b>: '+g[1]+'</div>').join('')):''),
@@ -966,20 +1022,28 @@ function atLesson(k){const C=ATC[k],[l,,i]=k.split('-'),isEv=i==='ev',L0=AT[+l];
   fin:()=>C.res?card('🧭 Resumen de lo aprendido',C.res):''}}
 const atLoad=()=>{AT.forEach((_,l)=>atKeys(l).concat(atEv(l)).forEach(k=>{if(ATC[k])LD[k]=atLesson(k);else delete LD[k]}))};
 atLoad();
-function atRow(l){const st=atLvlState(l);return '<button class="card atrow" data-go="asig" aria-label="'+AT_NAME+', nivel '+(l+1)+' de la asignatura: '+AT_STN[st].replace(/^\S+ /,'')+'"><span class="em" aria-hidden="true">🎚️</span><span class="grow"><span class="st" style="display:block">'+AT_NAME+'</span><small class="mute">Nivel '+(l+1)+' de la asignatura · '+AT[l].m.length+' semanas</small></span><span class="atst '+st+'">'+AT_STN[st]+'</span></button>'}
-function atView(){const T=atStats();
- const head='<h2>🎚️ '+AT_NAME+'</h2><p class="mute">'+AUD+'</p>'
- +'<div class="card row"><svg width="84" height="84" viewBox="0 0 84 84" aria-hidden="true"><circle cx="42" cy="42" r="34" fill="none" stroke="#2b2417" stroke-width="8"/><circle cx="42" cy="42" r="34" fill="none" stroke="#f2a31b" stroke-width="8" stroke-linecap="round" stroke-dasharray="213.6" stroke-dashoffset="'+(213.6*(1-T.p/100))+'" transform="rotate(-90 42 42)"/><text x="42" y="48" text-anchor="middle" fill="#fbf7ef" font-size="18" font-weight="600">'+T.p+'%</text></svg><div class="grow"><h3>Tu progreso</h3><p class="mute">Semanas: '+T.w+' de 14 · Evaluaciones aprobadas: '+T.ev+' de 3'+(T.lt?' · Lecciones leídas: '+T.ld+' de '+T.lt:'')+'</p></div></div>'
- +'<div class="card"><h3>Cómo se aprende</h3><div class="atmet" aria-hidden="true">'+AT_MET.map((m,i)=>'<i style="width:'+m[2]+'%;background:'+['#f2a31b','#ffc857','#5fbf7a','#6fb1ff'][i]+'"></i>').join('')+'</div><div class="atleg">'+AT_MET.map(m=>'<span aria-hidden="true">'+m[0]+'</span><span>'+m[1]+'</span><b>'+m[2]+' %</b>').join('')+'</div></div>';
- const lv=AT.map((L0,l)=>{const st=atLvlState(l),g=T.grades[l],cur=atKeys(l).find(k=>!atModDone(k));
-  const mods=atKeys(l).map((k,i)=>{const done=atModDone(k),lock=atLocked(k),has=!!LD[k],now=!done&&!lock&&k===cur;const ic=done?'✓':lock?'🔒':has?'▶':'🚧';const est=done?'Completada':lock?(has?'Bloqueada':'Bloqueada · contenido pendiente'):has?(now?'Disponible: sigue aquí':'Disponible'):'Contenido pendiente';
-   return '<button class="atm'+(done?' ok':'')+(now&&has?' now':'')+(lock?' lock':'')+'" data-atk="'+k+'" aria-label="Semana '+atWeek(l,i)+': '+esc(L0.m[i])+'. '+est+'"><span class="ic" aria-hidden="true">'+ic+'</span><span class="grow">Semana '+atWeek(l,i)+' · '+L0.m[i]+'<small>'+est+'</small></span></button>'}).join('');
+const atLvlPct=l=>{const w=atKeys(l).filter(atModDone).length+(atEvPass(l)?1:0);return Math.round(w/(AT[l].m.length+1)*100)};
+function atNext(){for(let l=0;l<AT.length;l++){if(atLvlLocked(l))return null;const i=atKeys(l).findIndex(k=>!atModDone(k));if(i>-1)return{l,i,k:atKeys(l)[i]};if(!atEvPass(l))return{l,ev:1,k:atEv(l)}}return null}
+function atRow(l){const st=atLvlState(l),pc=atLvlPct(l);return '<button class="card atrow" data-go="asig" aria-label="'+AT_NAME+', nivel '+(l+1)+' de la asignatura: '+AT_STN[st].replace(/^\S+ /,'')+', '+pc+' %"><span class="em" aria-hidden="true">🎚️</span><span class="grow"><span class="st" style="display:block">'+AT_NAME+'</span><small class="mute">Nivel '+(l+1)+' · '+AT[l].n+' · '+AT[l].m.length+' semanas · '+pc+' %</small></span><span class="atst '+st+'">'+AT_STN[st]+'</span></button>'}
+const atBar=p=>'<div class="bar" aria-hidden="true"><b style="width:'+p+'%"></b></div>';
+function atView(){const T=atStats(),R=atRule(),nx=atNext();
+ const info='<details class="card sub atinfo"'+(S.open.atinfo===false?'':' open')+' data-ato="info"><summary><span class="grow">Sobre la asignatura</span></summary><div class="atchips"><span>⏱️ 14 semanas</span><span>🧱 3 niveles</span><span>💻 '+AT_INFO.modalidad+'</span><span>🌱 Nivel de entrada: '+AT_INFO.entrada+'</span></div><h4 class="ath4">🎯 Objetivo general</h4><p>'+AT_INFO.obj+'</p><h4 class="ath4">👥 Dirigido a</h4><div class="atchips">'+AT_INFO.para.map(x=>'<span>'+x+'</span>').join('')+'</div></details>';
+ const where=nx?'<p class="atnext">📍 Estás en el <b>Nivel '+(nx.l+1)+'</b> · Siguiente: <b>'+(nx.ev?AT[nx.l].ev:'Semana '+atWeek(nx.l,nx.i)+' · '+AT[nx.l].m[nx.i])+'</b>'+(LD[nx.k]?'':' <span class="mute">(contenido en preparación)</span>')+'</p>':'<p class="atnext">🏆 Completaste la asignatura.</p>';
+ const prog='<div class="card"><div class="row"><svg width="84" height="84" viewBox="0 0 84 84" aria-hidden="true"><circle cx="42" cy="42" r="34" fill="none" stroke="#2b2417" stroke-width="8"/><circle cx="42" cy="42" r="34" fill="none" stroke="#f2a31b" stroke-width="8" stroke-linecap="round" stroke-dasharray="213.6" stroke-dashoffset="'+(213.6*(1-T.p/100))+'" transform="rotate(-90 42 42)"/><text x="42" y="48" text-anchor="middle" fill="#fbf7ef" font-size="18" font-weight="600">'+T.p+'%</text></svg><div class="grow"><h3>Tu progreso</h3><p class="mute">Semanas: '+T.w+' de 14 · Evaluaciones aprobadas: '+T.ev+' de 3'+(T.lt?' · Lecciones leídas: '+T.ld+' de '+T.lt:'')+'</p></div></div>'+where+'</div>';
+ const met='<div class="card"><h3>Cómo se aprende</h3><div class="atmet" aria-hidden="true">'+AT_MET.map((m,i)=>'<i style="width:'+m[2]+'%;background:'+['#f2a31b','#ffc857','#5fbf7a','#6fb1ff'][i]+'"></i>').join('')+'</div><div class="atleg">'+AT_MET.map(m=>'<span aria-hidden="true">'+m[0]+'</span><span>'+m[1]+'</span><b>'+m[2]+' %</b>').join('')+'</div></div>';
+ const lv=AT.map((L0,l)=>{const st=atLvlState(l),g=T.grades[l],pc=atLvlPct(l),dn=atKeys(l).filter(atModDone).length;
+  const weeks=atKeys(l).map((k,i)=>{const done=atModDone(k),lock=atLocked(k),has=!!LD[k],now=nx&&nx.k===k;
+   const sc=done?'completado':lock?'bloqueado':now?'progreso':'disponible',sl=done?'✅ Completada':lock?'🔒 Bloqueada':now?'▶ Siguiente':'🟢 Disponible',tm=L0.tm[i];
+   return '<article class="atw'+(now?' now':'')+(lock?' lock':'')+(done?' ok':'')+'" aria-label="Semana '+atWeek(l,i)+'"><div class="atw-h"><span class="atw-n" aria-hidden="true">'+(done?'✓':atWeek(l,i))+'</span><div class="grow"><small class="mute">Semana '+atWeek(l,i)+'</small><h4>'+L0.m[i]+'</h4></div></div><p class="atw-d">'+tm.slice(0,3).join(' · ')+(tm.length>3?' · y '+(tm.length-3)+' temas más':'')+'</p><div class="atw-f"><span class="atst '+sc+'">'+sl+'</span>'+(has?'':'<span class="atst pend">🚧 Contenido pendiente</span>')+'</div><details class="atw-t"><summary>Ver los '+tm.length+' temas</summary><ul>'+tm.map(t=>'<li>'+t+'</li>').join('')+'</ul></details>'+(has&&!lock?'<button class="btn'+(done?' ghost':'')+'" data-atk="'+k+'" style="margin-top:10px">'+(done?'Repasar':'▶ Abrir la semana')+'</button>':'')+'</article>'}).join('');
   const ek=atEv(l),elock=atLocked(ek),epass=atEvPass(l),ehas=!!LD[ek];
-  const ev='<button class="atm'+(epass?' ok':'')+(elock?' lock':'')+'" data-atk="'+ek+'" aria-label="'+L0.ev+'. '+(epass?'Aprobada':elock?'Bloqueada':ehas?'Disponible':'Contenido pendiente')+'"><span class="ic" aria-hidden="true">'+(epass?'✓':elock?'🔒':ehas?'🏁':'🚧')+'</span><span class="grow ev">'+L0.ev+'<small>'+(epass?'Aprobada · '+g+' %':elock?'Se abre al completar las '+L0.m.length+' semanas':ehas?(g!==null?'Mejor resultado: '+g+' % · se aprueba con '+AT_RULES.aprobar+' %':'Se aprueba con '+AT_RULES.aprobar+' %'):'Contenido pendiente')+'</small></span></button>';
-  return '<details class="card sub" data-ato="'+l+'"'+(st!=='bloqueado'&&st!=='completado'||S.open['at'+l]?' open':'')+'><summary><span class="grow">Nivel '+(l+1)+' · '+L0.n+'<span class="mute" style="display:block">'+L0.m.length+' semanas'+(L0.proj?' · proyecto práctico':'')+(g!==null?' · nota: '+g+' %':'')+'</span></span><span class="atst '+st+'">'+AT_STN[st]+'</span></summary>'+mods+ev+'</details>'}).join('');
- $('#at-body').innerHTML=head+lv+'<p class="mute" style="margin-top:12px;font-size:14px">Completa las semanas en orden. Al aprobar la evaluación de un nivel se abre el siguiente. Puedes reintentar las evaluaciones.</p>'}
+  const ev='<article class="atw atev'+(elock?' lock':'')+(epass?' ok':'')+'" aria-label="'+L0.ev+'"><div class="atw-h"><span class="atw-n" aria-hidden="true">'+(epass?'✓':'🏁')+'</span><div class="grow"><small class="mute">'+(L0.proj?'Cierre de la asignatura':'Cierre del nivel')+'</small><h4>'+L0.ev+'</h4></div></div><p class="atw-d">'+(epass?'Aprobada con '+g+' %.':elock?'Se abre al completar las '+L0.m.length+' semanas del nivel.':'Se aprueba con '+R.aprobar+' %'+(R.intentos?' · hasta '+R.intentos+' intentos':' · intentos ilimitados')+(g!==null?' · mejor resultado: '+g+' %':'')+'.')+(l<AT.length-1&&!epass?' Al aprobarla se abre el Nivel '+(l+2)+'.':'')+'</p><div class="atw-f"><span class="atst '+(epass?'completado':elock?'bloqueado':'disponible')+'">'+(epass?'✅ Aprobada':elock?'🔒 Bloqueada':'🟢 Disponible')+'</span>'+(ehas?'':'<span class="atst pend">🚧 Contenido pendiente</span>')+'</div>'+(ehas&&!elock?'<button class="btn" data-atk="'+ek+'" style="margin-top:10px">▶ Abrir</button>':'')+'</article>';
+  return '<section class="card atl atl-'+st+'" aria-labelledby="atl'+l+'"><div class="atl-h"><span class="atl-n" aria-hidden="true">'+(l+1)+'</span><div class="grow"><small class="mute">Nivel '+(l+1)+' · '+L0.m.length+' semanas'+(L0.proj?' · proyecto final':'')+'</small><h3 id="atl'+l+'">'+L0.n+'</h3></div><span class="atst '+st+'">'+AT_STN[st]+'</span></div>'
+   +'<p class="mute" style="margin-top:8px">'+L0.d+'</p>'+atBar(pc)+'<p class="mute" style="font-size:13px">'+pc+' % · '+dn+' de '+L0.m.length+' semanas'+(g!==null?' · nota: '+g+' %':'')+'</p>'
+   +'<details class="atobj"><summary>🎯 Objetivos del nivel</summary><ul>'+L0.obj.map(o=>'<li>'+o+'</li>').join('')+'</ul></details>'
+   +'<details class="atwl"'+(st==='disponible'||st==='progreso'?' open':'')+'><summary>📅 Ver las '+L0.m.length+' semanas y la evaluación</summary><div class="atws">'+weeks+ev+'</div></details></section>'}).join('');
+ $('#at-body').innerHTML='<h2>🎚️ '+AT_NAME+'</h2><p class="mute">'+AUD+'</p>'+prog+info+met+lv+'<p class="mute" style="margin-top:12px;font-size:14px">Completa las semanas en orden. Al aprobar la evaluación de un nivel se abre el siguiente.</p>'}
 $('#at-body').addEventListener('click',e=>{const b=e.target.closest('[data-atk]');if(!b)return;const k=b.dataset.atk;if(atLocked(k)){toast('🔒 Completa primero lo anterior');return}if(!LD[k]){toast('🚧 Contenido en preparación');return}S.cur=k;go('leccion')});
-$('#at-body').addEventListener('toggle',e=>{const o=e.target.dataset&&e.target.dataset.ato;if(o!==undefined){S.open['at'+o]=e.target.open;save()}},true);
+$('#at-body').addEventListener('toggle',e=>{const o=e.target.dataset&&e.target.dataset.ato;if(o==='info'){S.open.atinfo=e.target.open;save()}},true);
 $('#kn-worlds').addEventListener('click',e=>{const b=e.target.closest('[data-k]');if(b&&LD[b.dataset.k]){S.cur=b.dataset.k;go('leccion')}});
 $('#ref').innerHTML=refSheet();
 if(DLD){const b=document.getElementById('dl-ref');if(b)b.hidden=false}
@@ -1012,7 +1076,7 @@ function lec(){
   if(!graded)b+=Q.every((_,i)=>ans[i]!==undefined)?'<button class="btn" id="grade" style="margin-top:16px">Calificar</button>':'<p class="mute" style="margin-top:16px">Responde todas las preguntas.</p>';
   else if(left)b+='<p style="margin-top:18px"><b>Primer intento: '+L.score+' de '+Q.length+'.</b> Te falta corregir '+left+'. Lee la explicación y elige otra respuesta.</p>';
   else{const fc=Object.keys(fx).length;b+='<p style="margin-top:18px"><b>Dominaste la prueba.</b> '+L.score+' a la primera'+(fc?' y '+fc+' corregida'+(fc>1?'s':''):'')+'. Lo importante es que lo aprendiste.</p>'+nx(4)}
-  if(D.retry&&graded)b+='<p class="mute" style="margin-top:14px;font-size:14px">Intentos: '+((L.hist||[]).length+1)+(L.hist&&L.hist.length?' · Mejor resultado: '+atBest(L,Q)+' %':'')+'</p><button class="btn ghost" id="retry" style="margin-top:8px">🔁 Reintentar desde cero</button>';
+  if(D.retry&&graded)b+='<p class="mute" style="margin-top:14px;font-size:14px">Intentos: '+((L.hist||[]).length+1)+(D.at&&atRule().intentos?' de '+atRule().intentos:'')+(L.hist&&L.hist.length?' · Mejor resultado: '+atBest(L,Q)+' %':'')+'</p>'+(typeof D.retry!=='function'||D.retry(L)?'<button class="btn ghost" id="retry" style="margin-top:8px">🔁 Reintentar desde cero</button>':'<p class="mute" style="font-size:14px">Ya usaste todos los intentos. Habla con tu docente.</p>');
   b+='</div>'}
  if(L.step===4){
   if(!solved(L,Q))b='<div class="card"><h3>Primero termina la prueba</h3><p class="mute" style="margin:6px 0 12px">La entrega se abre cuando termines la prueba y corrijas lo que falte.</p><button class="btn ghost" data-st="3">Ir a la prueba</button></div>';
@@ -1035,7 +1099,7 @@ $('#v-leccion').addEventListener('click',e=>{const t=e.target;let x;const K=S.cu
   save();lec()}
  else if(t.closest('#grade')){L.score=Q.filter((q,i)=>L.ans[i]===q[2]).length;save();lec();if(L.score===Q.length){party();toast(kid()?'¡Perfecto! Ganaste ⭐':'¡Perfecto!')}}
  else if(t.closest('#send')){L.status='review';save();lec()}
- else if(t.closest('#retry')){L.hist=L.hist||[];L.hist.push({score:L.score,total:Q.length,fecha:dkey(new Date())});delete L.ans;delete L.score;delete L.fix;save();lec();window.scrollTo(0,0)}
+ else if(t.closest('#retry')&&(typeof LD[K].retry!=='function'||LD[K].retry(L))){L.hist=L.hist||[];L.hist.push({score:L.score,total:Q.length,fecha:dkey(new Date())});delete L.ans;delete L.score;delete L.fix;save();lec();window.scrollTo(0,0)}
  else if(x=t.closest('[data-lr]')){L.lr=L.lr||{};L.lr[x.dataset.lr]=!L.lr[x.dataset.lr];save();lec()}
  else if(t.closest('#okdemo')){L.status='ok';S.done[K]=true;save();lec();party();toast(kid()?'¡Misión cumplida! +3 ⭐':'Lección aprobada')}
 });
