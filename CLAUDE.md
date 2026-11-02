@@ -24,7 +24,7 @@ Bloque en `plataforma-arp.html` que empieza con el comentario `AUDIO TÉCNICA B�
 - 14 semanas en 3 niveles (`AT`): N1 semanas 1–5, N2 semanas 6–10, N3 semanas 11–14. Cada nivel tiene descripción (`d`), objetivos (`obj`), títulos (`m`) y temas por semana (`tm`).
 - Claves (no cambiarlas, conservan el registro original): Nivel 1 `0-5-0`…`0-5-4` y `0-5-ev`; Nivel 2 `1-6-0`…`1-6-4` y `1-6-ev`; Nivel 3 `2-6-0`…`2-6-3` y `2-6-ev`. `atKeys(nivel)` y `atEv(nivel)` las devuelven.
 - Reglas en `ACAD_DEF` (aprobar 70 %, intentos ilimitados; configurable con la clave `arp-config` del navegador). Las semanas se abren en orden; aprobar la evaluación de un nivel abre el siguiente.
-- Estado actual: Semanas 1–8 y Evaluación del Nivel 1 completas. Pendientes: Semanas 9–14, Evaluación del Nivel 2 y Proyecto/Evaluación final del Nivel 3 (`2-6-ev`, con `proyecto`).
+- Estado actual: Semanas 1–9 y Evaluación del Nivel 1 completas. Pendientes: Semanas 10–14, Evaluación del Nivel 2 y Proyecto/Evaluación final del Nivel 3 (`2-6-ev`, con `proyecto`).
 
 ### Cómo agregar una semana
 1. Busca el final de la semana anterior: `grep -n "^ATC\['1-6-" plataforma-arp.html` y ubica su última línea `e:'…'};`.
