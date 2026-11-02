@@ -140,6 +140,13 @@ nav button[aria-current=page]{background:rgba(242,163,27,.14);border-radius:14px
 #steps .chip .si{font-size:24px;line-height:1}
 #steps .prog3{grid-column:1/-1;justify-content:center;font-size:14px;color:var(--mute);margin:2px 0 0}
 .kid #steps .chip{font-size:13px;min-height:70px}
+/* Metrónomo dentro de la lección */
+.mm{border-top:1px solid var(--line);margin-top:16px;padding-top:14px;text-align:center}
+.mm h4{margin:0 0 6px;font-size:15px;color:var(--gold2)}
+.mm-row{display:flex;align-items:center;justify-content:center;gap:12px}
+.mm-bpm{min-width:84px}.mm-bpm b{display:block;font:600 44px/1 "Cormorant Garamond",Georgia,serif;color:var(--gold2)}.mm-bpm small{color:var(--mute)}
+.mm .dots{margin:10px 0}
+.mm [data-mm=go]{min-width:160px}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}.cf{display:none}}
 </style>
 </head>
@@ -368,7 +375,7 @@ const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',
 function toast(t){const e=$('#toast');e.textContent=t;e.classList.add('on');setTimeout(()=>e.classList.remove('on'),2200)}
 
 function go(v){
- applyMode();try{window.speechSynthesis&&speechSynthesis.cancel();saying=false}catch(e){}
+ applyMode();if(typeof mmStop==='function')mmStop();try{window.speechSynthesis&&speechSynthesis.cancel();saying=false}catch(e){}
  document.querySelectorAll('.view').forEach(x=>x.hidden=x.id!=='v-'+v);
  document.querySelectorAll('nav button').forEach(b=>(b.dataset.go===v||(v==='leccion'&&b.dataset.go==='clases'))?b.setAttribute('aria-current','page'):b.removeAttribute('aria-current'));
  if(v==='home')home();if(v==='clases')clases();if(v==='biblioteca')biblio();if(v==='leccion'){S.last=S.cur;save();lec()}if(v==='perfil')perfil();
@@ -490,7 +497,15 @@ function staff(step,lab){
  if(step!=null){const y=84-step*7;if((step<=-2||step>=10)&&step%2===0)s+='<line x1="150" x2="190" y1="'+y+'" y2="'+y+'" stroke="#fbf7ef" stroke-width="1.4"/>';s+='<ellipse cx="170" cy="'+y+'" rx="9" ry="6.5" fill="#f2a31b" transform="rotate(-18 170 '+y+')"/>'}
  return s+'</svg>'}
 const prac=()=>'<div class="card">'+staff(pr.step)+'<p style="text-align:center;margin-top:4px">¿Qué nota es?</p><div class="nbt">'+NOTES.map(n=>'<button class="chip" data-nt="'+n+'">'+n+'</button>').join('')+'</div><p class="mute" style="margin-top:12px" aria-live="polite">'+pr.msg+'</p><p>Aciertos: <b>'+pr.ok+'</b> de '+pr.tot+'</p></div>';
-const tasks=(a,m)=>'<div class="card"><h3>Tu práctica</h3><ol style="padding-left:20px;margin:8px 0 0">'+a.map(x=>'<li style="margin-top:8px">'+x+'</li>').join('')+'</ol>'+(m?'<button class="btn ghost" data-go="practica" style="margin-top:14px">Abrir metrónomo</button>':'')+'</div>';
+const tasks=(a,m)=>'<div class="card"><h3>Tu práctica</h3><ol style="padding-left:20px;margin:8px 0 0">'+a.map(x=>'<li style="margin-top:8px">'+x+'</li>').join('')+'</ol>'+(m?mmBox(a):'')+'</div>';
+/* ===== Metrónomo dentro de la lección: no hace falta salir ===== */
+const MM={bpm:60,t:null,beat:0,k:null};
+const mmBpm0=a=>{const m=a.join(' ').match(/(\d{2,3})\s*bpm/);return m?Math.max(40,Math.min(200,+m[1])):60};
+const mmBox=a=>{const b=MM.t?MM.bpm:mmBpm0(a);return '<div class="mm" data-bpm="'+b+'"><h4>⏱️ Metrónomo</h4><div class="mm-row"><button class="btn ghost" data-mm="-" aria-label="Más lento: bajar 5">🐢 −5</button><div class="mm-bpm" aria-live="polite"><b id="mm-v">'+b+'</b><small>bpm</small></div><button class="btn ghost" data-mm="+" aria-label="Más rápido: subir 5">🐇 +5</button></div><div class="dots mm-dots" aria-hidden="true"><i></i><i></i><i></i><i></i></div><button class="btn" data-mm="go" aria-pressed="'+!!MM.t+'">'+(MM.t?'⏹ Detener':'▶ Iniciar')+'</button></div>'};
+function mmTick(){tone(MM.beat%4===0?1400:900,.07,'square',.12);document.querySelectorAll('.mm-dots i').forEach((d,i)=>d.classList.toggle('on',i===MM.beat%4));MM.beat++}
+function mmStop(){if(MM.t){clearInterval(MM.t);MM.t=null}document.querySelectorAll('.mm-dots i').forEach(d=>d.classList.remove('on'));const g=document.querySelector('[data-mm=go]');if(g){g.textContent='▶ Iniciar';g.setAttribute('aria-pressed','false')}}
+function mmStart(){if(typeof mt!=='undefined'&&mt)$('#mgo').click();MM.k=S.cur;MM.beat=0;mmTick();MM.t=setInterval(mmTick,60000/MM.bpm);const g=document.querySelector('[data-mm=go]');if(g){g.textContent='⏹ Detener';g.setAttribute('aria-pressed','true')}}
+function mmSet(v){MM.bpm=Math.max(40,Math.min(200,v));const e=$('#mm-v');if(e)e.textContent=MM.bpm;if(MM.t){clearInterval(MM.t);MM.t=setInterval(mmTick,60000/MM.bpm)}}
 const CH={E7:[0,2,0,1,0,0],A7:[-1,0,2,0,2,0],Em:[0,2,2,0,0,0],Am:[-1,0,2,2,1,0],Dm:[-1,-1,0,2,3,1],C:[-1,3,2,0,1,0],G:[3,2,0,0,0,3],F:[1,3,3,2,1,1],Bm:[-1,2,4,4,3,2],B7:[-1,2,1,2,0,2],D7:[-1,-1,0,2,1,2],G7:[3,2,0,0,0,1],C7:[-1,3,2,3,1,0],D:[-1,-1,0,2,3,2]},BR={F:1,Bm:2},FG={E7:[0,2,0,1,0,0],A7:[0,0,1,0,2,0],Em:[0,2,3,0,0,0],Am:[0,0,2,3,1,0],Dm:[0,0,0,2,3,1],C:[0,3,2,0,1,0],F:[0,3,4,2,0,0],Bm:[0,0,3,4,2,0],B7:[0,2,1,3,0,4],D7:[0,0,0,2,1,3],G7:[3,2,0,0,0,1],C7:[0,3,2,4,1,0],D:[0,0,0,1,3,2]};
 function cdiag(n){const f=CH[n];let s='<svg viewBox="0 0 110 130" width="120" role="img" aria-label="Acorde '+n+'">';
  for(let i=0;i<6;i++){const x=20+i*14;s+='<line x1="'+x+'" x2="'+x+'" y1="26" y2="116" stroke="#a79f8e" stroke-width="1.2"/>'}
@@ -824,6 +839,7 @@ function glossCard(D){
  return '<div class="card">'+say+(g.length?'<h3 style="margin-top:16px">'+(kid()?'Palabras nuevas 📖':'Vocabulario de la lección')+'</h3>'+g.map(x=>'<div class="gl"><b>'+x[0]+'</b>: '+x[1]+'</div>').join(''):'')+'</div>';
 }
 function lec(){
+ if(MM.t&&MM.k!==S.cur)mmStop();
  const K=S.cur||'0-1-0',D=LD[K],L=(S.ls[K]=S.ls[K]||{});L.step=L.step||0;
  $('#lec-t').textContent=D.t;$('#lec-s').textContent=D.s;
  const SL=kid()?STPK:STP,SY=['👀','📖','🎸','✅','📤'];$('#steps').innerHTML=SL.map((t,i)=>'<button class="chip" data-st="'+i+'" aria-pressed="'+(i===L.step)+'"'+(i===L.step?' aria-current="step"':'')+'><span class="si" aria-hidden="true">'+SY[i]+'</span>'+t+'</button>').join('')+'<div class="prog3">Paso '+(L.step+1)+' de 5</div>';
@@ -849,7 +865,8 @@ function lec(){
 }
 $('#v-leccion').addEventListener('click',e=>{const t=e.target;let x;const K=S.cur||'0-1-0',Q=LD[K].q,L=(S.ls[K]=S.ls[K]||{});
  if(x=t.closest('[data-say]')){const D=LD[K];readAloud(x.dataset.say==='o'?D.o:(typeof D.g==='function'?D.g():D.g))}
- else if(x=t.closest('[data-st]')){L.step=+x.dataset.st;save();lec();window.scrollTo(0,0)}
+ else if(x=t.closest('[data-st]')){mmStop();L.step=+x.dataset.st;save();lec();window.scrollTo(0,0)}
+ else if(x=t.closest('[data-mm]')){const a=x.dataset.mm;if(a==='go'){if(MM.t)mmStop();else{if(!MM.t)MM.bpm=+(x.closest('.mm').dataset.bpm);mmStart()}}else mmSet((MM.t?MM.bpm:+$('#mm-v').textContent)+(a==='+'?5:-5)),x.closest('.mm').dataset.bpm=MM.bpm}
  else if(x=t.closest('[data-fb]')){fbPlay(x.dataset.fb)}
  else if(t.closest('#explainstop')){if(hctl)hctl.abort()}
  else if(t.closest('#explain')){explain(K)}
