@@ -217,6 +217,8 @@ nav button[aria-current=page]{background:rgba(242,163,27,.14);border-radius:14px
 /* Nivel 4 · ARPA | Formación Ministerial: identidad propia (vino y oro) */
 :root{--wine:#8f2f45;--wine2:#d97a8c;--wineb:#4a1a26}
 .tile.m4t{grid-column:1/-1;flex-direction:row;gap:14px;border-color:var(--wine);background:linear-gradient(120deg,#2a0f17,var(--card) 70%);text-align:left;justify-content:flex-start;padding:14px 18px}
+.m4home{display:flex;align-items:center;gap:14px;width:100%;margin-top:14px;padding:14px 18px;min-height:64px;border:1px solid var(--wine);border-radius:18px;background:linear-gradient(120deg,#2a0f17,var(--card) 70%);color:var(--ivory);font:inherit;font-size:17px;font-weight:600;text-align:left;cursor:pointer}
+.m4home .em{font-size:28px}.m4home small{display:block;color:var(--wine2);font-size:13px;font-weight:500}
 .tile.m4t small{display:block;color:var(--wine2);font-size:13px;font-weight:500}
 .chip.m4c{border-color:var(--wine2);color:#f3d3d9}
 .m4hero{border-radius:22px;padding:28px 20px 24px;margin-top:14px;text-align:center;border:1px solid var(--wineb);background:radial-gradient(ellipse at 80% 0%,rgba(217,122,140,.28),transparent 60%),radial-gradient(ellipse at 10% 100%,rgba(242,163,27,.16),transparent 55%),linear-gradient(165deg,#1f0b12,#070304)}
@@ -263,6 +265,7 @@ nav button[aria-current=page]{background:rgba(242,163,27,.14);border-radius:14px
     <svg width="84" height="84" viewBox="0 0 84 84" aria-hidden="true"><circle cx="42" cy="42" r="34" fill="none" stroke="#2b2417" stroke-width="8"/><circle id="ring" cx="42" cy="42" r="34" fill="none" stroke="#f2a31b" stroke-width="8" stroke-linecap="round" stroke-dasharray="213.6" stroke-dashoffset="213.6" transform="rotate(-90 42 42)"/><text id="pct" x="42" y="48" text-anchor="middle" fill="#fbf7ef" font-size="18" font-weight="600">0%</text></svg>
     <div class="grow"><h3 id="prog-h">Tu avance</h3><p class="mute" id="prog-txt"></p></div>
   </div>
+  <button class="m4home" data-go="n4"><span class="em" aria-hidden="true">🕊️</span><span>ARPA | Formación Ministerial<small>Nivel 4 · Diplomado para músicos y líderes</small></span></button>
   <div class="card">
     <div class="row"><h3 class="grow" id="wk-h">Práctica de esta semana</h3><span class="mute" id="wk-total"></span></div>
     <div class="week" id="week"></div>
