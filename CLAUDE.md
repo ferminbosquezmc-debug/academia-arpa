@@ -12,7 +12,7 @@ Responde en español, breve y claro. El dueño del proyecto es principiante: exp
 - Cambios pequeños. Después de cada cambio: validar la sintaxis y probar en móvil (390 px) sin errores de consola.
 - Derechos de autor: todo en palabras propias, ejemplos y gráficos originales (SVG/HTML propios). Nunca copiar textos, imágenes ni ejercicios de libros o de otras academias. Datos técnicos estándar sí (y marcar como «aproximados» los rangos que varían).
 - No inventar contactos, nombres ni datos de estudiantes. No guardar llaves ni contraseñas.
-- Colores de las notas: Do rojo, Re naranja, Mi amarillo, Fa verde, Sol celeste, La azul, Si morado (función `nc()`). En contenido nuevo escribe las notas con `<n>Sol</n>`; usa `<span data-nn>` para impedir que algo se pinte. Cuidado: el pintor automático colorea frases como «La mayor parte» o «Si fallas» si siguen ciertos patrones; revisa la salida del probador.
+- Colores de las notas: Do rojo, Re naranja, Mi amarillo, Fa verde claro, Sol celeste, La azul oscuro, Si morado (función `nc()`, sistema tipo Boomwhackers). Las teclas negras del piano (sostenidos y bemoles) van en negro. En contenido nuevo escribe las notas con `<n>Sol</n>`; usa `<span data-nn>` para impedir que algo se pinte. Cuidado: el pintor automático colorea frases como «La mayor parte» o «Si fallas» si siguen ciertos patrones; revisa la salida del probador.
 
 ## Ahorro de créditos (pedido del dueño)
 - No tomes ni revises capturas salvo que el dueño las pida. Usa el probador de texto.
