@@ -920,7 +920,7 @@ applyMode();home();
 // ===== Colorear notas (cifrado y tradicional) en cualquier texto =====
 (function(){
 const NS='(?:Do|Re|Mi|Fa|Sol|La|Si)',NL='[A-G]',AC='[♯♭]?',CH='[A-G][♯♭]?(?:maj7|m7|m|7|5)',ITEM='(?:'+CH+'|'+NS+AC+'|'+NL+AC+')',B='(?<![\\p{L}\\d])',E='(?![\\p{L}\\d♯♭])';
-const BIG=new RegExp(B+'(?:'+NS+AC+'(?:\\s+'+NS+AC+'){2,}|'+ITEM+'(?:\\s*[,–\\-→=·]\\s*'+ITEM+'|\\s+y\\s+'+ITEM+')+|'+CH+'|'+NS+'[♯♭]|[A-G][♯♭]|'+NS+'(?=\\s(?:mayor|menor|pentatónica|natural)))'+'(?![\\p{L}\\d♯♭])','gu');
+const BIG=new RegExp(B+'(?:'+NS+AC+'(?:\\s+'+NS+AC+'){2,}|'+ITEM+'(?:\\s*[,–\\-→=·]\\s*'+ITEM+'|\\s+y\\s+'+ITEM+')+|'+CH+'|(?:Mi|La|Si)[♯♭]?\\s*\\([A-G][♯♭]?\\)|(?:Do|Re|Fa|Sol)[♯♭]?|'+NS+'[♯♭]|[A-G][♯♭]|(?<=[\\p{Ll}\\d),(]\\s)(?:Mi|La|Si)|(?<!\\.)[B-DFG](?!\\.[A-Z]\\.)|(?<=(?:acorde|nota|cuerda|con|luego|desde)\\s)[AE]|'+NS+'(?=\\s(?:mayor|menor|pentatónica|natural)))'+'(?![\\p{L}\\d♯♭])','gu');
 const TOK=new RegExp(B+'(?:'+CH+'|'+NS+AC+'|'+NL+AC+')'+E,'gu');
 const LEAF=new RegExp('^(?:'+CH+'|'+NS+AC+'|'+NL+AC+')$');
 const root=t=>{const m=t.match(/^(Do|Re|Mi|Fa|Sol|La|Si|[A-G])([♯♭]?)/);return nc(m[1]+m[2])};
