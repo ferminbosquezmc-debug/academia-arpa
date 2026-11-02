@@ -39,7 +39,15 @@ button{cursor:pointer;border:0;background:none}
 .lesson{display:flex;align-items:center;gap:14px;width:100%;text-align:left;padding:14px 4px;border-bottom:1px solid var(--line);min-height:56px}
 .tick{flex:none;width:26px;height:26px;border-radius:50%;border:2px solid var(--gold);display:grid;place-items:center;font-size:14px;color:#000}
 .lesson[aria-pressed=true] .tick{background:var(--gold)}
-.lesson[aria-pressed=true] span:last-child{color:var(--mute);text-decoration:line-through}
+.lesson[aria-pressed=true] .lt{color:var(--mute)}
+.lesson .li{font-size:24px;line-height:1;flex:none}
+.wkg{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-top:10px}
+.wk{display:flex;flex-direction:column;align-items:center;gap:4px;padding:8px 2px;border:1px solid var(--line);border-radius:14px;background:#0b0905;min-height:64px;color:var(--ivory)}
+.wk .wn{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;font-size:18px;font-weight:700;background:var(--line)}
+.wk small{font-size:11px;color:var(--mute)}
+.wk.d .wn{background:rgba(242,163,27,.18)}
+.wk.now{border-color:var(--gold);box-shadow:0 0 0 3px rgba(242,163,27,.25)}.wk.now .wn{background:var(--gold);color:#000}
+.wk.rp{opacity:.7}
 .bpm{font:600 64px/1 "Cormorant Garamond",Georgia,serif;text-align:center;color:var(--gold2)}
 .dots{display:flex;gap:10px;justify-content:center;margin:12px 0}
 .dots i{width:16px;height:16px;border-radius:50%;background:var(--line)}
@@ -379,6 +387,9 @@ function go(v){
 }
 document.addEventListener('click',e=>{const g=e.target.closest('[data-go]');if(g)go(g.dataset.go)});
 
+/* Símbolo según el tema de la lección */
+const ICONS=[[/taller/i,'🏆'],[/banda/i,'👥'],[/blues/i,'🎷'],[/\barmon|grados|progresi/i,'🧩'],[/ritmo|pulso|rasgueo|semicorchea|síncopa|tresillo/i,'🥁'],[/escala|tonos|semitono|sostenido|pentatónica|caja/i,'🪜'],[/acorde|cejilla|séptima|poder/i,'🎸'],[/mano|arpegio|cambios/i,'✋'],[/./,'🎼']];
+const licon=t=>ICONS.find(x=>x[0].test(t))[1];
 const lk=(l,s,i)=>l+'-'+(s===0?'0'+(getInst(l)||'x'):s)+'-'+i;
 function cnt(l){let t=0,d=0;LEV[l].s.forEach((_,si)=>{const x=subj(l,si);if(!x)return;x[1].forEach((_,i)=>{const k=lk(l,si,i);if(LD[k]){t++;if(S.done[k])d++}})});return{t,d,p:t?Math.round(d/t*100):0}}
 function home(){if(!LAV[S.lvl])S.lvl=0;applyMode();
@@ -430,13 +441,17 @@ function clases(){
  $('#inst').innerHTML=Object.keys(INSN).map(k=>'<button class="chip" data-i="'+k+'" aria-pressed="'+(k===ci)+'"'+(AVAIL[k]?'':' disabled style="opacity:.55"')+'>'+(EMO[k]||'')+' '+INSN[k]+'</button>').join('');
  $('#inst-t').textContent=kid()?'¿Qué quieres aprender? 🎶':'¿Qué instrumento o carrera estás estudiando?';
  $('#inst-h').textContent=ci?'Estás estudiando '+INSN[ci]+'. Las opciones en gris llegarán pronto.':'';
- const wkc=(()=>{const x=subj(S.lvl,0);if(!x)return '';const ls=[];x[1].forEach((_,i)=>{const k=lk(S.lvl,0,i);if(LD[k]&&LD[k].w)ls.push([k,LD[k].w,i+1])});if(!ls.length)return '';let c='';for(let w=1;w<=12;w++){const l=ls.find(a=>w>=a[1][0]&&w<=a[1][a[1].length-1]),d=l&&S.done[l[0]];c+='<div style="border:1px solid '+(d?'#5fbf7a':'var(--gold)')+';border-radius:10px;padding:6px 2px;text-align:center'+(d?';background:rgba(95,191,122,.15)':'')+'"><b style="font-size:11px;color:var(--gold2)">Sem '+w+'</b><div style="font-size:12px;margin-top:2px">'+(l?(d?'✓ ':'')+'Lección '+l[2]:'Repaso')+'</div></div>'}return '<div class="card"><h3>Ruta de 3 meses</h3><p class="mute" style="font-size:14px">12 semanas, una lección por semana y práctica corta cada día. Una lección puede ocupar dos semanas si necesita más tiempo.</p><div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-top:10px">'+c+'</div></div>'})();
+ const wkc=(()=>{const x=subj(S.lvl,0);if(!x)return '';const ls=[];x[1].forEach((_,i)=>{const k=lk(S.lvl,0,i);if(LD[k]&&LD[k].w)ls.push([k,LD[k].w,i+1])});if(!ls.length)return '';
+  const cur=(ls.find(a=>!S.done[a[0]])||[])[0];let c='';
+  for(let w=1;w<=12;w++){const l=ls.find(a=>w>=a[1][0]&&w<=a[1][a[1].length-1]),d=l&&S.done[l[0]],now=l&&l[0]===cur,ic=d?'⭐':now?'▶':l?(LD[l[0]].icon||l[2]):'🔁',lab='Semana '+w+': '+(l?'lección '+l[2]+', '+LD[l[0]].t+(d?', hecha':now?', ahora':''):'repaso');
+   c+=(l?'<button class="wk'+(d?' d':'')+(now?' now':'')+'" data-k="'+l[0]+'" aria-label="'+esc(lab)+'">':'<div class="wk rp" role="img" aria-label="'+lab+'">')+'<span class="wn" aria-hidden="true">'+ic+'</span><small aria-hidden="true">Sem '+w+'</small>'+(l?'</button>':'</div>')}
+  return '<div class="card"><h3>🗺️ Ruta de 3 meses</h3><p class="mute" style="font-size:14px">Una lección por semana. Toca una semana para abrirla.</p><div class="wkg">'+c+'</div><p class="mute" style="font-size:13px;margin-top:8px;text-align:center">⭐ hecha · ▶ ahora · 🔁 repaso</p></div>'})();
  const carr='<div class="card"><h3>Carrera en preparación</h3><p class="mute" style="font-size:14px;margin:4px 0 8px">Temas propuestos; el plan oficial lo definirá la academia.</p>'+['produccion'].map(k=>'<details class="sub" style="margin-top:8px"><summary><span class="grow">'+INSN[k]+'</span><span class="tag">En preparación</span></summary>'+INS[k].map((a,i)=>'<p style="margin-top:8px"><b>Nivel '+(i+1)+'</b></p><ul style="padding-left:20px;margin:2px 0">'+a.map(t=>'<li style="font-size:14px">'+t+'</li>').join('')+'</ul>').join('')+'</details>').join('')+'</div>';
  const rows=L.s.map((_,si)=>{const x=subj(S.lvl,si);if(!x)return '';
   const ks=x[1].map((t,i)=>[lk(S.lvl,si,i),t]).filter(a=>LD[a[0]]);
   if(!ks.length)return x[2]?'<details class="card sub"><summary><span class="grow">'+x[0]+'</span><span class="tag">🚧 En preparación</span></summary><p class="mute" style="font-size:14px;margin:2px 0 6px">'+x[2]+'</p><ul style="padding-left:20px;margin:2px 0 12px">'+x[1].map(t=>'<li style="font-size:15px;margin-top:4px">'+t+'</li>').join('')+'</ul></details>':'<div class="card"><div class="row"><span class="grow st">'+x[0]+'</span><span class="tag">🚧 En preparación</span></div></div>';
   const d=ks.filter(a=>S.done[a[0]]).length,o=S.lvl+'-'+si;
-  return '<details class="card sub" data-o="'+o+'"'+(S.open[o]?' open':'')+'><summary><span class="grow">'+x[0]+'</span><span class="mute">'+d+'/'+ks.length+'</span></summary>'+ks.map(a=>'<button class="lesson" data-k="'+a[0]+'" aria-pressed="'+!!S.done[a[0]]+'"><span class="tick">'+(S.done[a[0]]?'✓':'')+'</span><span>'+a[1]+'</span><span class="tag" style="margin-left:auto">'+({review:'💾 Guardada',ok:'✅ Aprobada'}[(S.ls[a[0]]||{}).status]||'▶ Abrir')+'</span></button>').join('')+(ks.length<x[1].length?'<p class="mute" style="font-size:14px;padding:10px 4px">Más lecciones en preparación.</p>':'')+'</details>'});$('#lec0').innerHTML=(rows[0]||'').replace('<details class="card sub"','<details class="card sub" open');$('#subs').innerHTML=wkc+rows.slice(1).join('')+carr;
+  return '<details class="card sub" data-o="'+o+'"'+(S.open[o]?' open':'')+'><summary><span class="grow">'+x[0]+'</span><span class="mute">'+d+'/'+ks.length+'</span></summary>'+ks.map(a=>'<button class="lesson" data-k="'+a[0]+'" aria-pressed="'+!!S.done[a[0]]+'"><span class="tick">'+(S.done[a[0]]?'✓':'')+'</span><span class="li" aria-hidden="true">'+(LD[a[0]].icon||'')+'</span><span class="lt">'+a[1]+'</span><span class="tag" style="margin-left:auto">'+({review:'💾 Guardada',ok:'✅ Aprobada'}[(S.ls[a[0]]||{}).status]||'▶ Abrir')+'</span></button>').join('')+(ks.length<x[1].length?'<p class="mute" style="font-size:14px;padding:10px 4px">Más lecciones en preparación.</p>':'')+'</details>'});$('#lec0').innerHTML=(rows[0]||'').replace('<details class="card sub"','<details class="card sub" open');$('#subs').innerHTML=wkc+rows.slice(1).join('')+carr;
 }
 $('#inst').addEventListener('click',e=>{const b=e.target.closest('[data-i]');if(b){S.inst[S.lvl]=b.dataset.i;save();clases()}});
 $('#chips').addEventListener('click',e=>{const c=e.target.closest('[data-l]');if(c){S.lvl=+c.dataset.l;save();clases()}});
@@ -827,6 +842,7 @@ const cuerdasC=()=>'<div class="card"><h3>Cuerdas al aire</h3><div style="displa
 const refBody=()=>pills()+cuerdasC()+chords(['E7','A7','Em','Am','Dm','C','G','F'])+rhythm();
 const refSheet=()=>'<details class="card sub"><summary><span class="grow">Hoja de referencia · Guitarra Nivel 1</span></summary><p class="mute" style="font-size:14px;margin-bottom:8px">Notas, cuerdas, acordes y figuras en una sola página.</p>'+refBody()+'<button class="btn ghost" id="dl-ref" hidden style="margin:14px 0 8px">Descargar hoja de referencia</button></details>';
 const refDoc=()=>'<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Hoja de referencia · Guitarra Nivel 1 · AMA</title><style>:root{--gold:#f2a31b;--gold2:#ffc857;--ivory:#fbf7ef;--mute:#a79f8e;--card:#13110d;--line:#2b2417}body{background:#000;color:#fbf7ef;font:16px/1.5 system-ui,sans-serif;max-width:720px;margin:0 auto;padding:20px 16px}h1,h3{font-family:Georgia,serif;font-weight:600;margin:0}h1{font-size:28px}.mute{color:var(--mute);margin:0}.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px;margin-top:14px}.tag{font-size:12px;color:var(--gold);border:1px solid var(--line);border-radius:99px;padding:2px 10px}p{margin:6px 0 0}</style></head><body><h1>Academia de Música ARPA (AMA)</h1><p class="mute">Hoja de referencia · Guitarra, Nivel 1</p>'+refBody()+'</body></html>';
+Object.keys(LD).forEach(k=>{if(/guitarra/.test(k))LD[k].icon=licon(LD[k].t)});
 $('#ref').innerHTML=refSheet();
 if(DLD){const b=document.getElementById('dl-ref');if(b)b.hidden=false}
 $('#ref').addEventListener('click',async e=>{if(!e.target.closest('#dl-ref')||!DLD)return;try{await DLD.save({filename:'hoja-referencia-guitarra-nivel-1.html',data:refDoc()});toast('Hoja guardada')}catch(err){if(!err||err.code!=='declined')toast('No se pudo guardar la hoja')}});
