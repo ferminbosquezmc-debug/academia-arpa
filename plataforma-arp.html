@@ -214,6 +214,37 @@ nav button[aria-current=page]{background:rgba(242,163,27,.14);border-radius:14px
 .mcc dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:4px 10px;font-size:14px}.mcc dt{color:var(--gold2);font-weight:600}.mcc dd{margin:0}
 .mug{display:grid;grid-template-columns:minmax(0,1fr);gap:8px;margin-top:10px}@media (min-width:600px){.mug{grid-template-columns:repeat(2,minmax(0,1fr))}}
 .muc{display:grid;grid-template-columns:36px 1fr;gap:10px;align-items:center;border:1px solid var(--line);border-radius:12px;padding:10px}.muc .em{font-size:26px;text-align:center}
+/* Nivel 4 · ARPA | Formación Ministerial: identidad propia (vino y oro) */
+:root{--wine:#8f2f45;--wine2:#d97a8c;--wineb:#4a1a26}
+.tile.m4t{grid-column:1/-1;flex-direction:row;gap:14px;border-color:var(--wine);background:linear-gradient(120deg,#2a0f17,var(--card) 70%);text-align:left;justify-content:flex-start;padding:14px 18px}
+.tile.m4t small{display:block;color:var(--wine2);font-size:13px;font-weight:500}
+.chip.m4c{border-color:var(--wine2);color:#f3d3d9}
+.m4hero{border-radius:22px;padding:28px 20px 24px;margin-top:14px;text-align:center;border:1px solid var(--wineb);background:radial-gradient(ellipse at 80% 0%,rgba(217,122,140,.28),transparent 60%),radial-gradient(ellipse at 10% 100%,rgba(242,163,27,.16),transparent 55%),linear-gradient(165deg,#1f0b12,#070304)}
+.m4kick{font-size:12px;letter-spacing:.22em;color:var(--wine2);font-weight:600}
+.m4hero h2{font-size:36px;margin:10px 0 4px}
+.m4hero h2 b{color:var(--gold2);font-weight:600}
+.m4sub{font:500 italic 20px/1.3 "Cormorant Garamond",Georgia,serif;color:var(--gold2)}
+.m4lema{font:500 italic 21px/1.35 "Cormorant Garamond",Georgia,serif;border-top:1px solid var(--wineb);margin-top:18px;padding-top:16px}
+.m4card{border-color:var(--wineb)}
+.m4facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin-top:12px}
+.m4facts div{border:1px solid var(--wineb);border-radius:14px;padding:12px}
+.m4facts b{display:block;font:600 22px/1.15 "Cormorant Garamond",Georgia,serif;color:var(--gold2)}
+.m4facts span{font-size:13px;color:var(--mute)}
+.m4vias{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;margin-top:12px}
+.m4via{border:1px solid var(--wineb);border-radius:18px;padding:18px;background:#0d0709;display:flex;flex-direction:column;gap:8px}
+.m4via .tag{align-self:flex-start;border-color:var(--wine2);color:var(--wine2)}
+.m4via ul{margin:0;padding-left:20px;font-size:15px}
+.m4via .btn{margin-top:auto}
+.m4n{flex:none;width:30px;height:30px;border-radius:50%;display:inline-grid;place-items:center;background:var(--wine);color:#fff;font-weight:600;font-size:15px}
+.m4st{display:inline-block;font-size:13px;font-weight:600;border-radius:99px;padding:3px 12px;border:1px solid var(--wine2);color:var(--wine2)}
+.m4st.ok{border-color:#5fbf7a;color:#5fbf7a}.m4st.wait{border-color:var(--gold);color:var(--gold)}
+.m4lock{font-size:14px;color:var(--mute);padding:10px 4px}
+.m4row{display:grid;grid-template-columns:1fr auto;gap:8px;align-items:center;border-top:1px solid var(--line);padding:10px 0}
+.m4row:first-child{border-top:0}
+.m4mini{font-size:13px;padding:6px 12px;min-height:36px}
+#f4{position:fixed;inset:0;background:rgba(0,0,0,.82);z-index:50;display:flex;align-items:flex-end;justify-content:center}
+#f4[hidden]{display:none}
+#f4 .sheet{background:var(--card);border:1px solid var(--wine2);border-radius:20px 20px 0 0;max-width:720px;width:100%;max-height:92vh;overflow:auto;padding:20px 18px 28px}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}.cf{display:none}}
 </style>
 </head>
@@ -306,6 +337,10 @@ nav button[aria-current=page]{background:rgba(242,163,27,.14);border-radius:14px
 
 <section class="view" id="v-perfil" hidden></section>
 
+<section class="view" id="v-n4" data-nn hidden></section>
+<section class="view" id="v-u4" data-nn hidden></section>
+<section class="view" id="v-a4" data-nn hidden></section>
+
 </main>
 
 <div id="toast" role="status" aria-live="polite"></div>
@@ -318,6 +353,7 @@ nav button[aria-current=page]{background:rgba(242,163,27,.14);border-radius:14px
 </nav>
 <button id="help-fab" aria-label="Ayuda: cómo se usa" aria-haspopup="dialog">?</button>
 <div id="help" role="dialog" aria-modal="true" aria-labelledby="help-t" hidden><div class="sheet" id="help-b"></div></div>
+<div id="f4" role="dialog" aria-modal="true" aria-labelledby="f4-t" data-nn hidden><div class="sheet" id="f4-b"></div></div>
 
 <script>
 const $=s=>document.querySelector(s);
@@ -506,8 +542,8 @@ function toast(t){const e=$('#toast');e.textContent=t;e.classList.add('on');setT
 function go(v){
  applyMode();if(typeof mmStop==='function')mmStop();if(typeof sgStop==='function')sgStop();if(typeof eqStop==='function')eqStop();if(typeof fxStop==='function')fxStop();try{window.speechSynthesis&&speechSynthesis.cancel();saying=false}catch(e){}
  document.querySelectorAll('.view').forEach(x=>x.hidden=x.id!=='v-'+v);
- document.querySelectorAll('nav button').forEach(b=>(b.dataset.go===v||(v==='asig'&&b.dataset.go==='clases')||(v==='leccion'&&b.dataset.go===(LD[S.cur]&&LD[S.cur].kidm?'ninos':'clases')))?b.setAttribute('aria-current','page'):b.removeAttribute('aria-current'));
- if(v==='home')home();if(v==='clases')clases();if(v==='ninos')ninos();if(v==='asig')atView();if(v==='biblioteca')biblio();if(v==='leccion'){S.last=S.cur;save();lec()}if(v==='perfil')perfil();
+ document.querySelectorAll('nav button').forEach(b=>(b.dataset.go===v||(['asig','n4','u4','a4'].includes(v)&&b.dataset.go==='clases')||(v==='leccion'&&b.dataset.go===(LD[S.cur]&&LD[S.cur].kidm?'ninos':'clases')))?b.setAttribute('aria-current','page'):b.removeAttribute('aria-current'));
+ if(v==='home')home();if(v==='clases')clases();if(v==='ninos')ninos();if(v==='asig')atView();if(v==='biblioteca')biblio();if(v==='leccion'){S.last=S.cur;save();lec()}if(v==='perfil')perfil();if(v==='n4')n4();if(v==='u4')u4();if(v==='a4')a4();
  window.scrollTo(0,0);
 }
 document.addEventListener('click',e=>{const g=e.target.closest('[data-go]');if(g)go(g.dataset.go)});
@@ -561,7 +597,7 @@ function home(){if(!LAV[S.lvl])S.lvl=0;applyMode();
 
 function clases(){
  if(!LAV[S.lvl])S.lvl=0;
- $('#chips').innerHTML=LEV.map((v,i)=>'<button class="chip" data-l="'+i+'" aria-pressed="'+(i===S.lvl)+'"'+(LAV[i]?'':' disabled style="opacity:.55"')+'>'+v.n.split(' · ')[0]+(LAV[i]?'':' · Próximamente')+'</button>').join('');
+ $('#chips').innerHTML=LEV.map((v,i)=>'<button class="chip" data-l="'+i+'" aria-pressed="'+(i===S.lvl)+'"'+(LAV[i]?'':' disabled style="opacity:.55"')+'>'+v.n.split(' · ')[0]+(LAV[i]?'':' · Próximamente')+'</button>').join('')+'<button class="chip m4c" data-go="n4">🕊️ Nivel 4 · Ministerial</button>';
  const L=LEV[S.lvl],c=cnt(S.lvl),ci=getInst(S.lvl);
  $('#lv-d').textContent=L.d+' Duración: 3 meses (12 semanas).';$('#lv-t').textContent=L.n.split(' · ')[1];$('#lv-n').textContent=c.d+'/'+c.t;$('#lv-bar').style.width=c.p+'%';
  $('#inst').innerHTML=Object.keys(INSN).map(k=>'<button class="chip" data-i="'+k+'" aria-pressed="'+(k===ci)+'"'+(AVAIL[k]?'':' disabled style="opacity:.55"')+'>'+(EMO[k]||'')+' '+INSN[k]+'</button>').join('');
@@ -2267,7 +2303,233 @@ function run(){ob.disconnect();try{paint(document.body)}catch(e){}ob.observe(doc
 run();
 })();
 </script>
+<script>
+/* ===== Nivel 4 · ARPA | Formación Ministerial =====
+   Base de datos del artifact (los niveles 1 a 3 no la usan):
+   n4plan/config y n4plan/a1…a6  plan y parámetros; los lee todo el mundo, los escribe la dirección.
+   n4sol/<id>                     solicitud de ingreso; cada estudiante escribe la suya, solo la dirección las lee.
+   n4mat/<id>                     matrícula, avances y evaluaciones; solo la dirección.
+   n4est/<id>                     estado que ve el estudiante; lo escribe la dirección, cada uno lee el suyo.
+   N4DEF se usa mientras la base de datos no responde o aún no tiene datos. */
+const N4DEF={
+config:{duracion:6,unidad:'meses',frecuencia:'Una sesión semanal',modalidades:['Presencial','Virtual','Semipresencial'],evaluacion:'Una evaluación por asignatura',practicas:'Actividades prácticas y ejercicios de reflexión personal en cada unidad',proyecto:'Proyecto final de aplicación ministerial: un plan concreto para servir en tu congregación con lo aprendido, acompañado por tu docente.'},
+asig:[
+['a1','Identidad y autoestima','Conocerte mejor y descubrir que tu valor no depende de lo bien que toques o cantes.','Escribe tres cualidades tuyas que no tengan que ver con la música y compártelas con alguien de confianza.','¿En qué momentos siento que valgo solo por mi talento? ¿Qué cambiaría si recordara que mi valor es anterior a lo que hago?','Reflexión escrita sobre tu identidad personal y ministerial, y participación en las sesiones.',['Autoconocimiento','Identidad personal y ministerial','Autoestima equilibrada','Seguridad personal','Ego, orgullo y necesidad de reconocimiento','Valor personal independiente del talento']],
+['a2','Inteligencia emocional','Reconocer lo que sientes y responder con calma, también en el ensayo y en el servicio.','Durante una semana, anota una situación del ensayo o del servicio que te movió por dentro y cómo respondiste.','Cuando recibo una crítica, ¿qué siento primero y qué hago después? ¿Cómo me gustaría responder la próxima vez?','Diario emocional de una semana y conversación de cierre con tu docente.',['Reconocimiento de las emociones','Gestión emocional','Autocontrol','Manejo de frustraciones','Tolerancia a las críticas','Resiliencia y estabilidad emocional']],
+['a3','Espiritualidad y carácter cristiano','Cultivar una vida devocional sencilla y un carácter íntegro que sostenga el servicio.','Planifica un tiempo devocional diario de diez minutos durante dos semanas y anota lo que aprendes.','¿Mi servicio nace de mi relación con Dios o de la costumbre? ¿Qué hábito me ayudaría a crecer?','Registro devocional y ensayo breve sobre el propósito del ministerio musical.',['Sensibilidad espiritual','Vida devocional','Humildad','Integridad','Propósito del ministerio musical','Cultura de servicio']],
+['a4','Relaciones interpersonales','Comunicarte con empatía, resolver diferencias y construir un equipo sano.','Ten una conversación pendiente con alguien de tu equipo, escuchando primero, y cuenta qué aprendiste.','¿Cómo trato a quien piensa distinto en el equipo? ¿Qué puedo hacer esta semana para acercarme?','Estudio de caso en grupo sobre un conflicto en un ministerio y su solución.',['Empatía','Comunicación efectiva','Resolución de conflictos','Compañerismo','Trabajo en equipo','Relaciones saludables dentro de la congregación']],
+['a5','Liderazgo y cultura de servicio','Liderar con humildad, disciplina y responsabilidad, sin buscar protagonismo.','Durante un mes, asume una tarea de servicio que nadie vea: preparar el espacio, ordenar los equipos o recibir a los nuevos.','¿Sirvo igual cuando nadie me ve? ¿Qué entiendo por autoridad y qué por responsabilidad?','Informe de la tarea de servicio y autoevaluación de liderazgo.',['Liderazgo ministerial','Autoridad y responsabilidad','Disciplina','Compromiso','Humildad en el liderazgo','Servicio sin protagonismo']],
+['a6','Madurez y desarrollo ministerial','Integrar lo aprendido y aplicarlo con constancia y excelencia en tu congregación.','Diseña con tu líder un plan de servicio de tres meses para tu ministerio.','¿Qué pasión me mueve a servir? ¿Qué compromiso concreto asumo para los próximos meses?','Presentación del proyecto final de aplicación ministerial.',['Pasión por el servicio','Constancia','Responsabilidad ministerial','Vocación','Excelencia','Aplicación de los principios aprendidos en la congregación']]
+]};
+const N4ROL=['Músico','Cantante','Pastor','Director de alabanza','Líder de ministerio musical','Servidor de la congregación'];
+const N4PUB=['Músicos','Cantantes','Pastores','Directores de alabanza','Líderes de ministerios musicales','Servidores de congregaciones'];
+const N4PERF=['Posee identidad y autoestima equilibradas.','Es un músico con madurez emocional.','Es un servidor con sensibilidad y profundidad espiritual.','Construye relaciones saludables.','Lidera con humildad, disciplina y sentido de responsabilidad.','Comprende que su talento es un medio para servir y no una medida de su valor personal.'];
+const N4EST=['activa','en pausa','egresada','retirada'],N4PRG=['sin iniciar','en curso','completada'];
+const EMAP={activa:'confirmada','en pausa':'en pausa',egresada:'egresada',retirada:'retirada'};
+S.n4=Object.assign({sol:null,done:{},refl:{},cur:''},S.n4||{});
+const defA4=a=>({id:a[0],n:a[1],d:a[2],act:a[3],ref:a[4],ev:a[5],u:a[6].map((t,i)=>({id:'u'+(i+1),t,d:'',m:[]}))});
+let DB4=null,UID4=null,ADM4=false,P4={config:null,asig:{}},EST4=null,SOL4=[],MAT4=[],A4sub=false;
+const A4={tab:'sol',open:null,add:false,w:null,f:'todas',busy:false};
+function plan4(){const c=Object.assign({},N4DEF.config,P4.config||{});return{c,as:N4DEF.asig.map(a=>{const d=defA4(a),x=P4.asig[d.id];return x?Object.assign(d,x,{id:d.id}):d})}}
+const vis4=id=>!$('#'+id).hidden;
+const lock4=()=>A4.busy||A4.w||A4.open||A4.add||A4.tab==='cfg';
+const rr4=()=>{if(vis4('v-n4'))n4();if(vis4('v-a4')&&!lock4())a4()};
+const fd4=s=>{const d=new Date(s);return isNaN(d)?'':d.toLocaleDateString('es-PA',{day:'numeric',month:'long',year:'numeric'})};
+const url4=u=>/^https?:\/\/\S+$/i.test(u||'');
+const via4=v=>v==='academica'?'Vía académica':'Vía ministerial';
+const opts4=(L,v)=>L.map(o=>'<option'+(o===v?' selected':'')+'>'+esc(o)+'</option>').join('');
+(async()=>{try{if(!window.claude||!window.claude.use)return;
+ const[d,u]=await Promise.all([window.claude.use('db'),window.claude.use('user')]);DB4=d||null;
+ if(u){UID4=await u.id();ADM4=!!(await u.canEdit())}
+ if(DB4){DB4.collection('n4plan').onSnapshot(s=>{const p={config:null,asig:{}};s.docs.forEach(x=>{if(x.id==='config')p.config=x.data();else p.asig[x.id]=x.data()});P4=p;rr4()},()=>{});
+  if(UID4)DB4.doc('n4est/'+UID4).onSnapshot(s=>{EST4=s.exists?s.data():null;rr4()},()=>{})}
+ rr4()}catch(e){}})();
+
+/* Acceso: 'ok' matrícula confirmada, 'prov' solicitud hecha (acceso provisional), 'no' sin solicitud o no admitida */
+function acc4(){if(EST4)return ['no admitida','retirada'].includes(EST4.estado)?'no':['confirmada','egresada','en pausa'].includes(EST4.estado)?'ok':'prov';return S.n4.sol?'prov':'no'}
+function st4(){const E=EST4,s=S.n4.sol;
+ if(E)return({confirmada:['ok','Matrícula confirmada'],egresada:['ok','Egresado del diplomado'],'en pausa':['wait','Matrícula en pausa'],retirada:['','Retirado del diplomado'],'no admitida':['','Solicitud no admitida'],pendiente:['wait','Solicitud en revisión'],verificando:['wait','La academia está verificando tu egreso de los tres niveles']})[E.estado]||['wait',E.estado];
+ if(s)return s.enviada?['wait','Solicitud enviada · en revisión']:['wait','Solicitud guardada en este dispositivo'];
+ return null}
+const txt4=r=>['Solicitud de ingreso · ARPA | Formación Ministerial','Diplomado en Formación Integral del Músico y Líder Ministerial','',via4(r.via),'Nombre: '+r.nombre,'Correo: '+r.correo,'Teléfono: '+r.tel,'País y ciudad: '+r.ubic,'Congregación o ministerio: '+r.igl,'Servicio actual: '+r.rol,'Modalidad preferida: '+r.mod].concat(r.via==='academica'?['Declara haber culminado los niveles 1, 2 y 3: '+(r.egreso?'Sí':'No')]:[]).concat(['Expectativas: '+r.nota,'Fecha: '+fd4(r.fecha)]).join('\n');
+
+function n4(){const{c,as}=plan4(),A=acc4(),st=st4(),E=EST4,sol=S.n4.sol,via=E&&E.via||sol&&sol.via;
+ const lv=[0,1,2].map(l=>{const x=cnt(l);return x.t?x.p+'%':'—'});
+ const canReq=!st||(E&&['no admitida','retirada'].includes(E.estado));
+ const vb=v=>canReq?'<button class="btn" data-f4="'+v+'">Solicitar ingreso por esta vía</button>':via===v?'<span class="m4st ok">Tu vía de ingreso</span>':'';
+ let h='<button class="link" data-go="clases" style="font-size:16px;min-height:44px">⬅ Volver a Clases</button>'
+ +'<div class="m4hero"><p class="m4kick">NIVEL 4 · FORMACIÓN SUPERIOR</p><h2>ARPA <b>|</b> Formación Ministerial</h2><p class="m4sub">Diplomado en Formación Integral del Músico y Líder Ministerial</p>'
+ +'<p style="margin-top:16px;color:#e9dccb">Un programa de formación integral diseñado para fortalecer la identidad personal, autoestima, madurez emocional, sensibilidad espiritual, relaciones interpersonales, carácter y liderazgo de músicos y servidores ministeriales.</p>'
+ +'<p style="margin-top:10px;color:#e9dccb">Su propósito es complementar la preparación musical con herramientas de desarrollo humano y espiritual que contribuyan al fortalecimiento de los ministerios musicales de las congregaciones.</p>'
+ +'<p class="m4lema">«El talento se desarrolla, el carácter se forma y el servicio se cultiva».</p></div>'
+ +'<div class="card m4card"><h3>El diplomado en breve</h3><p class="mute" style="font-size:14px;margin-top:4px">Los niveles 1, 2 y 3 forman al músico. El Nivel 4 forma a la persona y al servidor.</p><div class="m4facts"><div><b>'+esc(c.duracion+' '+c.unidad)+'</b><span>Duración</span></div><div><b>'+as.length+'</b><span>Asignaturas</span></div><div><b>'+esc(c.frecuencia)+'</b><span>Frecuencia</span></div><div><b>'+esc((c.modalidades||[]).join(' · '))+'</b><span>Modalidad</span></div></div>'
+ +'<ul style="margin:14px 0 0;padding-left:20px;font-size:15px;display:flex;flex-direction:column;gap:4px"><li>'+esc(c.evaluacion)+'.</li><li>'+esc(c.practicas)+'.</li><li>'+esc(c.proyecto)+'</li></ul></div>';
+ if(st){h+='<div class="card" style="border-color:var(--wine2)"><div class="row"><h3 class="grow">Mi matrícula</h3><span class="m4st '+st[0]+'">'+esc(st[1])+'</span></div>'+(via?'<p style="margin-top:8px">'+via4(via)+'</p>':'')
+  +(A==='prov'?'<p class="mute" style="font-size:14px;margin-top:6px">Ya puedes estudiar las unidades. La academia confirmará tu matrícula'+(via==='academica'?' después de verificar tu egreso de los tres niveles':'')+'.</p>':'')
+  +(!E&&sol&&!sol.enviada?'<p style="font-size:14px;margin-top:8px">No pudimos enviar la solicitud a la academia desde esta cuenta. Descárgala y entrégala a la coordinación de la academia, o inténtalo de nuevo con tu cuenta de la academia.</p><div class="row" style="flex-wrap:wrap;gap:8px;margin-top:10px">'+(DB4&&UID4?'<button class="btn m4mini" id="n4-re">Reintentar envío</button>':'')+(DLD?'<button class="btn ghost m4mini" id="n4-dl">Descargar solicitud</button>':'')+'</div>':'')
+  +'</div>'}
+ h+='<div class="card m4card"><h3>Dos vías de ingreso</h3><p class="mute" style="margin-top:4px">Las dos llevan al mismo diplomado. Elige la que corresponde a tu camino.</p><div class="m4vias">'
+ +'<div class="m4via"><span class="tag">Vía académica</span><h3>Continúa después de los niveles musicales</h3><p class="mute" style="font-size:15px">Para estudiantes que culminaron satisfactoriamente los niveles 1, 2 y 3 de la Academia de Música ARPA.</p><ul><li>Requisito: haber egresado de los tres niveles técnicos.</li><li>La academia verifica tu egreso antes de confirmar la matrícula.</li></ul><p class="mute" style="font-size:13px">Tu avance en este dispositivo: Nivel 1 '+lv[0]+' · Nivel 2 '+lv[1]+' · Nivel 3 '+lv[2]+'</p>'+vb('academica')+'</div>'
+ +'<div class="m4via"><span class="tag">Vía ministerial</span><h3>Ingreso directo para quienes ya sirven</h3><p class="mute" style="font-size:15px">Matrícula directa, sin haber cursado los niveles técnicos de ARPA. Para:</p><ul>'+N4PUB.map(r=>'<li>'+r+'</li>').join('')+'</ul>'+vb('ministerial')+'</div></div></div>'
+ +'<div class="card m4card"><h3>Cómo trabajamos</h3><p style="margin-top:6px">La formación ministerial no consiste en señalar defectos ni en etiquetar a nadie. Buscamos el autoconocimiento, el crecimiento personal, la madurez emocional y espiritual, y relaciones saludables.</p><p class="mute" style="font-size:14px;margin-top:8px">Es un programa educativo y formativo: no hace diagnósticos ni reemplaza la atención psicológica. Si atraviesas un momento difícil, tu docente puede orientarte hacia la ayuda adecuada.</p></div>'
+ +'<h2>Plan de estudios</h2><p class="mute">'+as.length+' asignaturas. Cada unidad trae una actividad práctica y un ejercicio de reflexión personal.</p>'
+ +as.map((a,i)=>{const d=a.u.filter(u=>S.n4.done[a.id+'-'+u.id]).length,o='n4-'+a.id,R=E&&E.asig&&E.asig[a.id];
+  return '<details class="card sub m4card" data-o4="'+o+'"'+(S.open[o]?' open':'')+'><summary><span class="m4n">'+(i+1)+'</span><span class="grow">'+esc(a.n)+'</span><span class="mute">'+(A==='no'?a.u.length+' unidades':d+'/'+a.u.length)+'</span></summary>'
+  +'<p style="margin:2px 0 8px">'+esc(a.d)+'</p>'
+  +(R&&((R.p&&R.p!=='sin iniciar')||R.n)?'<p style="font-size:14px;margin-bottom:8px"><span class="m4st ok">Registro de la academia: '+esc(R.p||'')+(R.n?' · Nota '+esc(R.n):'')+'</span></p>':'')
+  +(A==='no'?'<ul style="padding-left:20px;margin:0">'+a.u.map(u=>'<li style="font-size:15px;margin-top:4px">'+esc(u.t)+'</li>').join('')+'</ul><p class="m4lock">🔒 Las unidades se abren cuando solicitas tu ingreso por una de las dos vías.</p>'
+  :a.u.map(u=>{const k=a.id+'-'+u.id;return '<button class="lesson" data-u4="'+esc(k)+'" aria-pressed="'+!!S.n4.done[k]+'"><span class="tick">'+(S.n4.done[k]?'✓':'')+'</span><span>'+esc(u.t)+'</span><span class="tag" style="margin-left:auto">▶ Abrir</span></button>'}).join(''))
+  +'<p style="font-size:14px;margin-top:10px"><b style="color:var(--gold2)">Evaluación:</b> '+esc(a.ev)+'</p></details>'}).join('')
+ +'<div class="card m4card"><h3>Perfil del egresado</h3><p class="mute" style="margin-top:4px">Al completar el diplomado, esperamos que el participante:</p><ol style="padding-left:22px;margin:10px 0 0;display:flex;flex-direction:column;gap:6px">'+N4PERF.map(p=>'<li>'+p+'</li>').join('')+'</ol></div>'
+ +(ADM4?'<div class="card" style="border-color:var(--gold)"><h3>Administración del Nivel 4</h3><p class="mute" style="margin-top:4px">Solicitudes, matrículas, evaluaciones, plan de estudios y configuración.</p><button class="btn" data-go="a4" style="margin-top:12px">Abrir administración</button></div>':'');
+ $('#v-n4').innerHTML=h;
+}
+$('#v-n4').addEventListener('toggle',e=>{const o=e.target.dataset&&e.target.dataset.o4;if(o){S.open[o]=e.target.open;save()}},true);
+$('#v-n4').addEventListener('click',async e=>{
+ const f=e.target.closest('[data-f4]');if(f){open4(f.dataset.f4);return}
+ if(e.target.closest('#n4-re')){await push4();toast(S.n4.sol.enviada?'Solicitud enviada':'Aún no se pudo enviar');n4();return}
+ if(e.target.closest('#n4-dl')&&DLD){try{await DLD.save({filename:'solicitud-formacion-ministerial.txt',data:txt4(S.n4.sol)});toast('Solicitud guardada')}catch(err){if(!err||err.code!=='declined')toast('No se pudo descargar')}}
+});
+document.addEventListener('click',e=>{const u=e.target.closest('[data-u4]');if(u){S.n4.cur=u.dataset.u4;save();go('u4')}});
+
+/* Solicitud de ingreso */
+function open4(via){const{c}=plan4(),P=S.prof||{},ac=via==='academica';
+ const f=(id,l,t,val,x)=>'<label class="fl" for="f4-'+id+'">'+l+'<input class="fi" id="f4-'+id+'" type="'+t+'" value="'+esc(val||'')+'" '+(x||'')+'></label>';
+ $('#f4-b').innerHTML='<div class="row"><h3 class="grow" id="f4-t">Solicitud de ingreso · '+via4(via)+'</h3><button class="btn ghost" id="f4-x" aria-label="Cerrar la solicitud">✕</button></div>'
+ +'<p class="mute" style="margin-top:6px">'+(ac?'Para quienes culminaron los niveles 1, 2 y 3 de ARPA. La academia verificará tu egreso.':'Matrícula directa, sin requisitos de los niveles técnicos.')+'</p>'
+ +f('nombre','Nombre completo','text',P.nombre,'autocomplete="name"')+f('correo','Correo electrónico','email',P.correo,'autocomplete="email" inputmode="email"')+f('tel','Teléfono o WhatsApp','tel',P.tel,'autocomplete="tel"')+f('ubic','País y ciudad','text',P.ubic)+f('igl','Congregación o ministerio'+(ac?' (opcional)':''),'text',P.igl)
+ +'<label class="fl" for="f4-rol">Tu servicio actual'+(ac?' (opcional)':'')+'<select class="fi" id="f4-rol"><option value="">Elige una opción</option>'+opts4(N4ROL)+(ac?'<option>Aún no sirvo en un ministerio</option>':'')+'</select></label>'
+ +'<label class="fl" for="f4-mod">Modalidad preferida<select class="fi" id="f4-mod"><option value="">Elige una opción</option>'+opts4(c.modalidades||[])+'</select></label>'
+ +(ac?'<label class="chk"><input type="checkbox" id="f4-egr"><span>Culminé satisfactoriamente los niveles 1, 2 y 3 de la Academia de Música ARPA.</span></label>':'')
+ +'<label class="fl" for="f4-nota">¿Qué esperas del diplomado? (opcional)<textarea class="fi" id="f4-nota" style="min-height:80px"></textarea></label>'
+ +'<label class="chk"><input type="checkbox" id="f4-ok"><span>Acepto que la academia use estos datos para la inscripción, la comunicación y el seguimiento académico.</span></label>'
+ +'<p id="f4-err" style="color:#e0685a;margin-top:10px" role="alert"></p><button class="btn" id="f4-go" data-via="'+via+'" style="margin-top:8px;width:100%">Enviar solicitud</button>';
+ $('#f4').hidden=false;$('#f4-nombre').focus()}
+const close4=()=>{$('#f4').hidden=true};
+async function push4(){const r=S.n4.sol;if(!r)return;let ok=false;if(DB4&&UID4){try{const b=Object.assign({},r,{uid:UID4,estado:'pendiente'});delete b.enviada;await DB4.doc('n4sol/'+UID4).set(b);ok=true}catch(e){}}r.enviada=ok;save()}
+async function send4(via){const g=k=>{const e=$('#f4-'+k);return e?(e.type==='checkbox'?e.checked:e.value.trim()):''};
+ const r={via,nombre:g('nombre'),correo:g('correo'),tel:g('tel'),ubic:g('ubic'),igl:g('igl'),rol:g('rol'),mod:g('mod'),egreso:via==='academica'&&g('egr'),nota:g('nota'),fecha:new Date().toISOString()};
+ const err=!r.nombre?'Escribe tu nombre completo.':!r.correo&&!r.tel?'Escribe un correo o un teléfono para contactarte.':via==='ministerial'&&!r.rol?'Elige tu servicio actual.':!r.mod?'Elige la modalidad.':via==='academica'&&!r.egreso?'La vía académica es para quienes culminaron los tres niveles. Puedes seguir tus niveles o, si ya sirves en un ministerio, entrar por la vía ministerial.':!g('ok')?'Necesitamos tu autorización para usar estos datos.':'';
+ if(err){$('#f4-err').textContent=err;return}
+ const b=$('#f4-go');b.disabled=true;b.textContent='Enviando…';
+ S.n4.sol=r;save();await push4();close4();toast(r.enviada?'Solicitud enviada a la academia':'Solicitud guardada');n4()}
+$('#f4').addEventListener('click',e=>{if(e.target.id==='f4'||e.target.closest('#f4-x'))close4();else if(e.target.closest('#f4-go'))send4(e.target.closest('#f4-go').dataset.via)});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!$('#f4').hidden)close4()});
+
+/* Unidad del Nivel 4 */
+function u4(){const{as}=plan4(),[aid,un]=String(S.n4.cur).split('-'),ai=as.findIndex(x=>x.id===aid),a=as[ai],u=a&&a.u.find(x=>x.id===un);
+ if(!u||acc4()==='no'){go('n4');return}
+ const k=aid+'-'+un,dn=!!S.n4.done[k],ix=a.u.indexOf(u),nx=a.u[ix+1];
+ $('#v-u4').innerHTML='<button class="link" data-go="n4" style="font-size:16px;min-height:44px">⬅ Volver a Formación Ministerial</button>'
+ +'<p class="m4kick" style="margin-top:10px">ASIGNATURA '+(ai+1)+' · '+esc(a.n.toUpperCase())+'</p><h2>'+esc(u.t)+'</h2><p class="mute">Unidad '+(ix+1)+' de '+a.u.length+'</p>'
+ +'<div class="card m4card">'+(u.d?'<p>'+esc(u.d).replace(/\n/g,'<br>')+'</p>':'<p class="mute">Tu docente desarrolla esta unidad en la sesión semanal. Aquí aparecerán sus materiales cuando la academia los publique.</p>')+'</div>'
+ +(u.m&&u.m.length?'<div class="card m4card"><h3>Materiales</h3>'+u.m.map(m=>'<p style="margin-top:8px">📎 '+(url4(m.url)?'<a href="'+esc(m.url)+'" target="_blank" rel="noopener noreferrer" style="color:var(--gold)">'+esc(m.t||m.url)+'</a>':esc(m.t))+'</p>').join('')+'</div>':'')
+ +'<div class="card m4card"><h3>Actividad práctica</h3><p style="margin-top:6px">'+esc(a.act)+'</p></div>'
+ +'<div class="card m4card"><h3>Reflexión personal</h3><p style="margin-top:6px">'+esc(a.ref)+'</p><textarea id="u4-r" aria-label="Tu reflexión" placeholder="Escribe con libertad. Nadie califica lo que sientes.">'+esc(S.n4.refl[k]||'')+'</textarea><p class="mute" style="font-size:13px;margin-top:6px">Tu reflexión se guarda solo en este dispositivo y no llega a la academia.</p></div>'
+ +(!nx?'<div class="card" style="border-color:var(--gold)"><h3>Evaluación de la asignatura</h3><p style="margin-top:6px">'+esc(a.ev)+'</p><p class="mute" style="font-size:13px;margin-top:6px">La evaluación la hace tu docente y la registra la academia.</p></div>':'')
+ +'<button class="btn" id="u4-ok" style="margin-top:16px;width:100%">'+(dn?'✓ Unidad completada · tocar para desmarcar':'Marcar unidad como completada')+'</button>'
+ +(nx?'<button class="btn ghost" data-u4="'+esc(aid+'-'+nx.id)+'" style="margin-top:10px;width:100%">Siguiente unidad ›</button>':'');
+}
+$('#v-u4').addEventListener('input',e=>{if(e.target.id==='u4-r'){S.n4.refl[S.n4.cur]=e.target.value;save()}});
+$('#v-u4').addEventListener('click',e=>{if(e.target.closest('#u4-ok')){const k=S.n4.cur;S.n4.done[k]=!S.n4.done[k];save();toast(S.n4.done[k]?'Unidad completada':'Unidad desmarcada');u4()}});
+
+/* ===== Administración del Nivel 4 (propietario y Editores del artifact) ===== */
+function a4(){const v=$('#v-a4'),back='<button class="link" data-go="n4" style="font-size:16px;min-height:44px">⬅ Volver a Formación Ministerial</button>';
+ if(!ADM4||!DB4){v.innerHTML=back+'<h2>Administración · Nivel 4</h2><div class="card"><p>'+(DB4?'Solo la dirección de la academia administra el Nivel 4. Se usan los mismos permisos de la plataforma: el propietario y las personas con acceso de Editor.':'La administración necesita la base de datos de la plataforma, que no está disponible en esta vista. Ábrela con la cuenta de la academia.')+'</p></div>';return}
+ if(!A4sub){A4sub=true;
+  DB4.collection('n4sol').onSnapshot(s=>{SOL4=s.docs.map(d=>Object.assign({_id:d.id},d.data()));rr4()},()=>toast('No se pudieron leer las solicitudes'));
+  DB4.collection('n4mat').onSnapshot(s=>{MAT4=s.docs.map(d=>Object.assign({_id:d.id},d.data()));rr4()},()=>toast('No se pudieron leer las matrículas'))}
+ const pend=SOL4.filter(s=>!s.estado||['pendiente','verificando'].includes(s.estado)).length;
+ const T=[['sol','📥 Solicitudes'+(pend?' ('+pend+')':'')],['est','🎓 Estudiantes ('+MAT4.length+')'],['plan','📚 Plan de estudios'],['cfg','⚙️ Configuración']];
+ v.innerHTML=back+'<h2>Administración · Nivel 4</h2><p class="mute">ARPA | Formación Ministerial. Lo que guardas aquí lo ve toda la academia.</p><div class="chips" role="group" aria-label="Secciones" style="flex-wrap:wrap">'+T.map(t=>'<button class="chip" data-t4="'+t[0]+'" aria-pressed="'+(A4.tab===t[0])+'">'+t[1]+'</button>').join('')+'</div>'
+ +({sol:a4sol,est:a4est,plan:a4plan,cfg:a4cfg}[A4.tab])();
+}
+function a4sol(){const L=SOL4.slice().sort((a,b)=>String(b.fecha).localeCompare(String(a.fecha)));
+ if(!L.length)return '<div class="card"><p class="mute">Aún no hay solicitudes. Llegan aquí cuando alguien pide ingreso desde su cuenta. Si alguien te entrega su solicitud descargada, matricúlalo en la pestaña Estudiantes.</p></div>';
+ return L.map(s=>{const ac=s.via==='academica',e=s.estado||'pendiente',id=esc(s._id);
+  return '<div class="card m4card"><div class="row"><h3 class="grow">'+esc(s.nombre)+'</h3><span class="m4st '+(e==='aprobada'?'ok':e==='no admitida'?'':'wait')+'">'+esc(e)+'</span></div>'
+  +'<p style="margin-top:6px"><span class="tag">'+via4(s.via)+'</span> '+esc([s.rol,s.mod].filter(Boolean).join(' · '))+'</p>'
+  +'<p class="mute" style="font-size:14px;margin-top:6px">'+esc([s.correo,s.tel,s.ubic,s.igl].filter(Boolean).join(' · '))+'</p>'
+  +(ac?'<p style="font-size:14px;margin-top:6px">'+(s.egreso?'Declara haber culminado los niveles 1, 2 y 3.':'No declara egreso de los tres niveles.')+'</p>':'')
+  +(s.nota?'<p style="font-size:14px;margin-top:6px">«'+esc(s.nota)+'»</p>':'')
+  +'<p class="mute" style="font-size:13px;margin-top:6px">Recibida el '+fd4(s.fecha)+'</p>'
+  +(e==='aprobada'?'':'<div style="margin-top:6px">'+(ac?'<label class="chk"><input type="checkbox" data-vf="'+id+'"><span>Verifiqué su egreso de los niveles 1, 2 y 3.</span></label>':'')
+  +'<div class="row" style="flex-wrap:wrap;gap:8px;margin-top:10px"><button class="btn m4mini" data-sa="ok" data-id="'+id+'">Aprobar y matricular</button>'+(ac&&e!=='verificando'?'<button class="btn ghost m4mini" data-sa="verificando" data-id="'+id+'">En verificación</button>':'')+(e!=='no admitida'?'<button class="btn ghost m4mini" data-sa="no admitida" data-id="'+id+'">No admitir</button>':'')+'</div></div>')+'</div>'}).join('')}
+async function sa4(id,a){const s=SOL4.find(x=>x._id===id);if(!s)return;
+ if(a==='ok'&&s.via==='academica'){const c=document.querySelector('[data-vf="'+CSS.escape(id)+'"]');if(!c||!c.checked){toast('Primero marca que verificaste su egreso');return}}
+ A4.busy=true;try{
+  if(a==='ok'){const r=DB4.doc('n4mat/'+id),g=await r.get(),m=g.exists?Object.assign({},g.data(),{estado:'activa'}):{uid:s.uid||id,nombre:s.nombre,correo:s.correo||'',tel:s.tel||'',ubic:s.ubic||'',igl:s.igl||'',rol:s.rol||'',via:s.via,mod:s.mod||'',estado:'activa',ingreso:new Date().toISOString(),egresoVerificado:s.via==='academica',asig:{},pf:{p:'sin iniciar',n:''},obs:''};
+   await r.set(m);await est4(m);await DB4.doc('n4sol/'+id).update({estado:'aprobada'});toast('Matrícula creada')}
+  else{await DB4.doc('n4sol/'+id).update({estado:a});if(s.uid)await DB4.doc('n4est/'+s.uid).set({estado:a,via:s.via});toast('Solicitud actualizada')}
+ }catch(e){toast('No se pudo guardar. Intenta de nuevo.')}A4.busy=false;a4()}
+const est4=m=>m.uid?DB4.doc('n4est/'+m.uid).set({estado:EMAP[m.estado]||'confirmada',via:m.via,asig:m.asig||{},pf:m.pf||{}}):Promise.resolve();
+function a4est(){const{c,as}=plan4(),L=MAT4.filter(m=>A4.f==='todas'||m.via===A4.f).sort((a,b)=>String(a.nombre).localeCompare(String(b.nombre),'es'));
+ const nA=MAT4.filter(m=>m.via==='academica').length;
+ let h='<div class="chips" role="group" aria-label="Filtrar por vía" style="flex-wrap:wrap">'+[['todas','Todas ('+MAT4.length+')'],['academica','Vía académica ('+nA+')'],['ministerial','Vía ministerial ('+(MAT4.length-nA)+')']].map(f=>'<button class="chip" data-f4v="'+f[0]+'" aria-pressed="'+(A4.f===f[0])+'">'+f[1]+'</button>').join('')+'</div>';
+ h+=A4.add?'<div class="card" style="border-color:var(--gold)"><h3>Matricular estudiante</h3><p class="mute" style="font-size:14px;margin-top:4px">Para quien entregó su solicitud fuera de la plataforma. Su estado y sus notas no aparecerán en su cuenta, porque la matrícula no está ligada a ella.</p>'
+  +'<label class="fl" for="ad-nombre">Nombre completo<input class="fi" id="ad-nombre"></label><label class="fl" for="ad-via">Vía de ingreso<select class="fi" id="ad-via"><option value="ministerial">Vía ministerial</option><option value="academica">Vía académica (egreso verificado)</option></select></label>'
+  +'<label class="fl" for="ad-rol">Servicio actual<select class="fi" id="ad-rol"><option value="">—</option>'+opts4(N4ROL)+'</select></label><label class="fl" for="ad-correo">Correo<input class="fi" id="ad-correo" type="email"></label><label class="fl" for="ad-tel">Teléfono<input class="fi" id="ad-tel" type="tel"></label><label class="fl" for="ad-mod">Modalidad<select class="fi" id="ad-mod">'+opts4(c.modalidades||[])+'</select></label>'
+  +'<div class="row" style="gap:8px;margin-top:14px"><button class="btn" id="ad-ok">Matricular</button><button class="btn ghost" id="ad-x">Cancelar</button></div></div>'
+  :'<button class="btn ghost" id="a4-add" style="margin-top:8px">＋ Matricular estudiante manualmente</button>';
+ if(!L.length)return h+'<div class="card"><p class="mute">No hay estudiantes en esta vista.</p></div>';
+ return h+L.map(m=>{const id=esc(m._id),A=m.asig||{},ok=as.filter(a=>(A[a.id]||{}).p==='completada').length;
+  let r='<div class="card m4card"><div class="row"><div class="grow"><h3>'+esc(m.nombre)+'</h3><p style="margin-top:4px"><span class="tag">'+via4(m.via)+'</span> <span class="m4st '+(m.estado==='activa'||m.estado==='egresada'?'ok':'wait')+'">'+esc(m.estado)+'</span></p><p class="mute" style="font-size:14px;margin-top:4px">'+ok+' de '+as.length+' asignaturas completadas'+(m.uid?'':' · sin cuenta ligada')+'</p></div>'
+  +(A4.open===m._id?'':'<button class="btn ghost m4mini" data-om="'+id+'">Abrir ficha</button>')+'</div>';
+  if(A4.open===m._id)r+='<p class="mute" style="font-size:14px;margin-top:8px">'+esc([m.rol,m.correo,m.tel,m.ubic,m.igl].filter(Boolean).join(' · '))+(m.ingreso?' · Ingreso: '+fd4(m.ingreso):'')+'</p>'
+   +'<label class="fl" for="m4-estado">Estado<select class="fi" id="m4-estado">'+opts4(N4EST,m.estado)+'</select></label>'
+   +'<label class="fl" for="m4-via">Vía de ingreso<select class="fi" id="m4-via"><option value="academica"'+(m.via==='academica'?' selected':'')+'>Vía académica</option><option value="ministerial"'+(m.via==='ministerial'?' selected':'')+'>Vía ministerial</option></select></label>'
+   +'<label class="fl" for="m4-mod">Modalidad<select class="fi" id="m4-mod">'+opts4(c.modalidades||[],m.mod)+'</select></label>'
+   +'<h3 style="margin-top:18px">Avance y evaluaciones</h3>'+as.map((a,i)=>{const x=A[a.id]||{};return '<div style="margin-top:12px"><p style="font-size:15px">'+(i+1)+'. '+esc(a.n)+'</p><div style="display:grid;grid-template-columns:1fr 1fr;gap:8px"><select class="fi" data-mp="'+a.id+'" aria-label="Avance en '+esc(a.n)+'">'+opts4(N4PRG,x.p||'sin iniciar')+'</select><input class="fi" data-mn="'+a.id+'" value="'+esc(x.n||'')+'" placeholder="Nota" aria-label="Nota de '+esc(a.n)+'"></div></div>'}).join('')
+   +'<div style="margin-top:12px"><p style="font-size:15px">Proyecto final de aplicación ministerial</p><div style="display:grid;grid-template-columns:1fr 1fr;gap:8px"><select class="fi" id="m4-pfp" aria-label="Avance del proyecto final">'+opts4(N4PRG,(m.pf||{}).p||'sin iniciar')+'</select><input class="fi" id="m4-pfn" value="'+esc((m.pf||{}).n||'')+'" placeholder="Nota" aria-label="Nota del proyecto final"></div></div>'
+   +'<label class="fl" for="m4-obs">Observaciones del docente (no las ve el estudiante)<textarea class="fi" id="m4-obs" style="min-height:80px">'+esc(m.obs||'')+'</textarea></label>'
+   +'<div class="row" style="gap:8px;margin-top:14px"><button class="btn" data-ms="'+id+'">Guardar ficha</button><button class="btn ghost" data-om="">Cerrar</button></div>';
+  return r+'</div>'}).join('')}
+async function ms4(id){const m=MAT4.find(x=>x._id===id);if(!m)return;const{as}=plan4(),q=s=>document.querySelector('#v-a4 '+s),asig={};
+ as.forEach(a=>{asig[a.id]={p:q('[data-mp="'+a.id+'"]').value,n:q('[data-mn="'+a.id+'"]').value.trim()}});
+ const nm=Object.assign({},m,{estado:q('#m4-estado').value,via:q('#m4-via').value,mod:q('#m4-mod').value,asig,pf:{p:q('#m4-pfp').value,n:q('#m4-pfn').value.trim()},obs:q('#m4-obs').value,act:new Date().toISOString()});delete nm._id;
+ A4.busy=true;try{await DB4.doc('n4mat/'+id).set(nm);await est4(nm);A4.open=null;toast('Ficha guardada')}catch(e){toast('No se pudo guardar la ficha')}A4.busy=false;a4()}
+async function ad4(){const g=k=>$('#ad-'+k).value.trim(),n=g('nombre');if(!n){toast('Escribe el nombre');return}
+ A4.busy=true;try{await DB4.collection('n4mat').add({uid:'',nombre:n,via:g('via'),rol:g('rol'),correo:g('correo'),tel:g('tel'),ubic:'',igl:'',mod:g('mod'),estado:'activa',ingreso:new Date().toISOString(),egresoVerificado:g('via')==='academica',asig:{},pf:{p:'sin iniciar',n:''},obs:''});A4.add=false;toast('Estudiante matriculado')}catch(e){toast('No se pudo matricular')}A4.busy=false;a4()}
+function a4plan(){const{as}=plan4(),w=A4.w;
+ if(!w)return '<div class="card"><p class="mute">Elige una asignatura para editar su información, sus unidades temáticas y sus materiales.</p>'+as.map((a,i)=>'<button class="lesson" data-ea="'+a.id+'"><span class="m4n">'+(i+1)+'</span><span>'+esc(a.n)+'</span><span class="tag" style="margin-left:auto">'+a.u.length+' unidades · Editar</span></button>').join('')+'</div>';
+ const ta=(id,l,v,h)=>'<label class="fl" for="w-'+id+'">'+l+'<textarea class="fi" id="w-'+id+'" style="min-height:'+(h||70)+'px">'+esc(v||'')+'</textarea></label>';
+ return '<div class="card" style="border-color:var(--gold)"><h3>Editar asignatura</h3><label class="fl" for="w-n">Nombre<input class="fi" id="w-n" value="'+esc(w.n)+'"></label>'+ta('d','Descripción',w.d)+ta('act','Actividad práctica',w.act)+ta('ref','Ejercicio de reflexión personal',w.ref)+ta('ev','Evaluación',w.ev)+'</div>'
+ +w.u.map((u,i)=>'<div class="card m4card"><div class="row"><h3 class="grow">Unidad '+(i+1)+'</h3><button class="btn ghost m4mini" data-wu="up" data-i="'+i+'" aria-label="Subir unidad"'+(i?'':' disabled')+'>↑</button><button class="btn ghost m4mini" data-wu="dn" data-i="'+i+'" aria-label="Bajar unidad"'+(i<w.u.length-1?'':' disabled')+'>↓</button><button class="btn ghost m4mini" data-wu="del" data-i="'+i+'">Quitar</button></div>'
+  +'<label class="fl">Título<input class="fi" data-ut="'+i+'" value="'+esc(u.t)+'"></label><label class="fl">Contenido para el estudiante<textarea class="fi" data-ud="'+i+'" style="min-height:90px">'+esc(u.d||'')+'</textarea></label>'
+  +'<label class="fl">Materiales publicados: uno por línea, «Título | https://enlace»<textarea class="fi" data-um="'+i+'" style="min-height:70px">'+esc((u.m||[]).map(m=>m.url?m.t+' | '+m.url:m.t).join('\n'))+'</textarea></label></div>').join('')
+ +'<button class="btn ghost" id="w-add" style="margin-top:12px">＋ Agregar unidad</button><div class="row" style="gap:8px;margin-top:16px"><button class="btn" id="w-save">Guardar asignatura</button><button class="btn ghost" id="w-x">Cancelar</button></div>'}
+function syncW(){const w=A4.w,q=s=>document.querySelector('#v-a4 '+s);if(!w||!q('#w-n'))return;['n','d','act','ref','ev'].forEach(k=>w[k]=q('#w-'+k).value);
+ w.u.forEach((u,i)=>{u.t=q('[data-ut="'+i+'"]').value;u.d=q('[data-ud="'+i+'"]').value;u.m=q('[data-um="'+i+'"]').value.split('\n').map(l=>l.trim()).filter(Boolean).map(l=>{const p=l.split('|').map(x=>x.trim());return url4(p[p.length-1])?{t:p.length>1?p.slice(0,-1).join(' | '):p[0],url:p[p.length-1]}:{t:l,url:''}})})}
+async function sw4(){syncW();const w=A4.w;w.n=w.n.trim();w.u=w.u.filter(u=>u.t.trim());if(!w.n||!w.u.length){toast('La asignatura necesita nombre y al menos una unidad');return}
+ A4.busy=true;try{const b=JSON.parse(JSON.stringify(w));delete b.id;await DB4.doc('n4plan/'+w.id).set(b);A4.w=null;toast('Asignatura guardada')}catch(e){toast('No se pudo guardar la asignatura')}A4.busy=false;a4()}
+function a4cfg(){const{c}=plan4(),M=['Presencial','Virtual','Semipresencial'],i=(id,l,v,t)=>'<label class="fl" for="c-'+id+'">'+l+'<input class="fi" id="c-'+id+'" type="'+(t||'text')+'" value="'+esc(v)+'"></label>';
+ return '<div class="card" style="border-color:var(--gold)"><h3>Parámetros del diplomado</h3><p class="mute" style="font-size:14px;margin-top:4px">Se muestran a los estudiantes en la presentación del Nivel 4.</p>'
+ +'<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">'+i('dur','Duración',c.duracion,'number')+'<label class="fl" for="c-uni">Unidad<select class="fi" id="c-uni">'+opts4(['meses','semanas'],c.unidad)+'</select></label></div>'
+ +i('fre','Frecuencia',c.frecuencia)+'<p class="fl">Modalidades</p>'+M.map(m=>'<label class="chk"><input type="checkbox" data-cm="'+m+'"'+((c.modalidades||[]).includes(m)?' checked':'')+'><span>'+m+'</span></label>').join('')
+ +i('eva','Evaluaciones',c.evaluacion)+i('pra','Actividades',c.practicas)+'<label class="fl" for="c-pro">Proyecto final<textarea class="fi" id="c-pro" style="min-height:80px">'+esc(c.proyecto)+'</textarea></label>'
+ +'<button class="btn" id="c-save" style="margin-top:16px">Guardar configuración</button></div>'}
+async function sc4(){const q=s=>document.querySelector('#v-a4 '+s),d=+q('#c-dur').value,mo=[...document.querySelectorAll('#v-a4 [data-cm]')].filter(x=>x.checked).map(x=>x.dataset.cm);
+ if(!(d>0)||!mo.length){toast('Indica una duración y al menos una modalidad');return}
+ A4.busy=true;try{await DB4.doc('n4plan/config').set({duracion:d,unidad:q('#c-uni').value,frecuencia:q('#c-fre').value.trim(),modalidades:mo,evaluacion:q('#c-eva').value.trim(),practicas:q('#c-pra').value.trim(),proyecto:q('#c-pro').value.trim()});toast('Configuración guardada')}catch(e){toast('No se pudo guardar la configuración')}A4.busy=false;a4()}
+$('#v-a4').addEventListener('click',e=>{const t=e.target,c=s=>t.closest(s);let b;
+ if(b=c('[data-t4]')){A4.tab=b.dataset.t4;A4.open=null;A4.add=false;A4.w=null;a4()}
+ else if(b=c('[data-sa]'))sa4(b.dataset.id,b.dataset.sa);
+ else if(b=c('[data-f4v]')){A4.f=b.dataset.f4v;a4()}
+ else if(b=c('[data-om]')){A4.open=b.dataset.om||null;a4()}
+ else if(b=c('[data-ms]'))ms4(b.dataset.ms);
+ else if(c('#a4-add')){A4.add=true;a4()}
+ else if(c('#ad-x')){A4.add=false;a4()}
+ else if(c('#ad-ok'))ad4();
+ else if(b=c('[data-ea]')){A4.w=JSON.parse(JSON.stringify(plan4().as.find(a=>a.id===b.dataset.ea)));a4()}
+ else if(b=c('[data-wu]')){syncW();const i=+b.dataset.i,u=A4.w.u,k=b.dataset.wu;
+  if(k==='del'){if(!b.dataset.s){b.dataset.s=1;b.textContent='¿Quitar? Toca otra vez';return}u.splice(i,1)}
+  else{const j=k==='up'?i-1:i+1;[u[i],u[j]]=[u[j],u[i]]}a4()}
+ else if(c('#w-add')){syncW();A4.w.u.push({id:'u'+Date.now().toString(36),t:'Nueva unidad',d:'',m:[]});a4()}
+ else if(c('#w-x')){A4.w=null;a4()}
+ else if(c('#w-save'))sw4();
+ else if(c('#c-save'))sc4();
+});
+</script>
 </body>
 </html>
 
-<!-- Logo: ARP Music Academy -->
