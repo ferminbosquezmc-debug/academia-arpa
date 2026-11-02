@@ -82,6 +82,13 @@ details.sub .lesson:last-child{border-bottom:0}
 .opt{display:block;width:100%;text-align:left;border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin-top:8px;min-height:44px}
 .opt[aria-pressed=true]{border-color:var(--gold);background:#1c1608}
 .opt.good{border-color:#5fbf7a}.opt.bad{border-color:#e0685a}
+.pal{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px;margin-top:12px}
+@media (max-width:480px){.pal{grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}}
+.sw{display:flex;flex-direction:column;align-items:center;gap:4px;padding:6px 2px;min-height:64px;border:1px solid var(--line);border-radius:12px;background:#0b0905;color:var(--ivory);font-size:13px;font-weight:600}
+.sw .swc{width:34px;height:34px;border-radius:50%;background:var(--sw);border:2px solid #fff3}
+.sw:hover .swc,.sw:focus-visible .swc{transform:scale(1.08)}.sw:disabled{opacity:.6}
+.sw.no{animation:swno .35s}@keyframes swno{25%{transform:translateX(-4px)}75%{transform:translateX(4px)}}
+.sfn{transition:fill .3s}
 .nbt{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:12px}
 .nbt .chip{text-align:center;padding:9px 4px}
 textarea{width:100%;min-height:130px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px;color:inherit;font:inherit;margin-top:10px}
@@ -618,15 +625,16 @@ async function explain(K){
 
 const STP=['Ver','Leer','Practicar','Prueba','Entregar'],NOTES=['Do','Re','Mi','Fa','Sol','La','Si'];
 const nm=s=>NOTES[((s+2)%7+7)%7];
-let pr={step:2,ok:0,tot:0,msg:'Toca el nombre de la nota que ves.'},qm={};
+let pr={step:2,ok:0,tot:0,hit:false,msg:'Toca el color de la nota que ves.'},qm={};
 const solved=(L,Q)=>typeof L.score==='number'&&Q.every((q,i)=>(L.ans||[])[i]===q[2]||(L.fix||{})[i]);
-function staff(step,lab){
+function staff(step,lab,fill){
  let s='<svg viewBox="0 0 300 130" width="100%" role="img" aria-label="Pentagrama">';
  for(let k=0;k<5;k++){const y=84-14*k;s+='<line x1="10" x2="270" y1="'+y+'" y2="'+y+'" stroke="#fbf7ef" stroke-width="1.4"/>'+(lab?'<text x="282" y="'+(y+4)+'" fill="#a79f8e" font-size="12">'+(k+1)+'</text>':'')}
  s+='<text x="20" y="102" font-size="78" fill="#f2a31b" font-family="Noto Music,Apple Symbols,Segoe UI Symbol,serif">𝄞</text>';
- if(step!=null){const y=84-step*7;if((step<=-2||step>=10)&&step%2===0)s+='<line x1="150" x2="190" y1="'+y+'" y2="'+y+'" stroke="#fbf7ef" stroke-width="1.4"/>';s+='<ellipse cx="170" cy="'+y+'" rx="9" ry="6.5" fill="#f2a31b" transform="rotate(-18 170 '+y+')"/>'}
+ if(step!=null){const y=84-step*7;if((step<=-2||step>=10)&&step%2===0)s+='<line x1="150" x2="190" y1="'+y+'" y2="'+y+'" stroke="#fbf7ef" stroke-width="1.4"/>';s+='<ellipse class="'+(fill?'sfn':'')+'" cx="170" cy="'+y+'" rx="9" ry="6.5" fill="'+(fill||'#f2a31b')+'" stroke="'+(fill==='#fff'?'#a79f8e':'none')+'" stroke-width="1.5" transform="rotate(-18 170 '+y+')"/>'}
  return s+'</svg>'}
-const prac=()=>'<div class="card">'+staff(pr.step)+'<p style="text-align:center;margin-top:4px">¿Qué nota es?</p><div class="nbt">'+NOTES.map(n=>'<button class="chip" data-nt="'+n+'">'+n+'</button>').join('')+'</div><p class="mute" style="margin-top:12px" aria-live="polite">'+pr.msg+'</p><p>Aciertos: <b>'+pr.ok+'</b> de '+pr.tot+'</p></div>';
+/* Ejercicio del pentagrama: la nota aparece en blanco y el estudiante la pinta tocando su color en la paleta */
+const prac=()=>'<div class="card">'+staff(pr.step,false,pr.hit?nc(nm(pr.step)):'#fff')+'<p style="text-align:center;margin-top:4px">🎨 ¿Qué nota es? Píntala con su color.</p><div class="pal" role="group" aria-label="Paleta de colores de las notas">'+NOTES.map(n=>'<button class="sw" data-nt="'+n+'" aria-label="'+n+'"'+(pr.hit?' disabled':'')+' style="--sw:'+nc(n)+';--st:'+ntx(nc(n))+'"><span class="swc" aria-hidden="true"></span><span data-nn>'+n+'</span></button>').join('')+'</div><p class="mute" style="margin-top:12px" aria-live="polite">'+pr.msg+'</p><p>Aciertos: <b>'+pr.ok+'</b> de '+pr.tot+'</p></div>';
 const tasks=(a,m)=>'<div class="card"><h3>Tu práctica</h3><ol style="padding-left:20px;margin:8px 0 0">'+a.map(x=>'<li style="margin-top:8px">'+x+'</li>').join('')+'</ol>'+(m?mmBox(a):'')+'</div>';
 /* ===== Metrónomo dentro de la lección: no hace falta salir ===== */
 const MM={bpm:60,t:null,beat:0,k:null};
@@ -2155,7 +2163,7 @@ $('#v-leccion').addEventListener('click',e=>{const t=e.target;let x;const K=S.cu
  else if(x=t.closest('[data-fb]')){fbPlay(x.dataset.fb,x)}
  else if(t.closest('#explainstop')){if(hctl)hctl.abort()}
  else if(t.closest('#explain')){explain(K)}
- else if(x=t.closest('[data-nt]')){pr.tot++;if(x.dataset.nt===nm(pr.step)){pr.ok++;pr.msg='¡Correcto! Era '+nm(pr.step)+'.';let s;do{s=Math.floor(Math.random()*11)-2}while(s===pr.step);pr.step=s}else pr.msg='Esa no es. Cuenta las líneas de abajo hacia arriba y vuelve a intentar.';lec()}
+ else if(x=t.closest('[data-nt]')){if(pr.hit)return;pr.tot++;if(x.dataset.nt===nm(pr.step)){pr.ok++;pr.hit=true;pr.msg='¡Correcto! Es '+nm(pr.step)+'.';lec();const k0=S.cur;setTimeout(()=>{let s;do{s=Math.floor(Math.random()*11)-2}while(s===pr.step);pr.step=s;pr.hit=false;pr.msg='Toca el color de la nota que ves.';if(S.cur===k0&&document.querySelector('.pal'))lec()},1100)}else{pr.msg='Ese color es '+x.dataset.nt+'. Cuenta las líneas de abajo hacia arriba y vuelve a intentar.';lec();const b=document.querySelector('.sw[data-nt="'+x.dataset.nt+'"]');if(b)b.classList.add('no')}}
  else if(x=t.closest('[data-q]')){const i=+x.dataset.q,o=+x.dataset.o;L.ans=L.ans||[];
   if(typeof L.score!=='number')L.ans[i]=o;
   else if(L.ans[i]!==Q[i][2]&&!(L.fix||{})[i]){if(o===Q[i][2]){L.fix=L.fix||{};L.fix[i]=true;qm[K+i]='';if(Q.every((q,j)=>L.ans[j]===q[2]||L.fix[j]))party()}else qm[K+i]='Todavía no. Relee la explicación e inténtalo otra vez.'}
