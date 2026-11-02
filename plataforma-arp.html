@@ -46,11 +46,11 @@ button{cursor:pointer;border:0;background:none}
 .dots i.on{background:var(--gold);box-shadow:0 0 14px var(--gold)}
 .ctl{display:flex;gap:12px;align-items:center;justify-content:center}
 .ctl .btn{padding:10px 18px}
-input[type=range]{width:100%;accent-color:var(--gold);margin:14px 0}
+input[type=range]{width:100%;accent-color:var(--gold);margin:14px 0;min-height:44px}
 .nt{border-radius:6px;padding:0 5px;font-weight:700;white-space:nowrap}
 .kb{position:relative;display:flex;height:170px;margin-top:12px;user-select:none;touch-action:manipulation}
 .w{flex:1;background:var(--kc,var(--ivory));border:1px solid #000;border-radius:0 0 8px 8px;color:var(--kt,#000);font-weight:700;display:flex;align-items:flex-end;justify-content:center;padding-bottom:8px;font-size:13px}
-.k{position:absolute;top:0;width:8.5%;height:62%;background:var(--kc,#000);border:1px solid #000;border-radius:0 0 6px 6px;z-index:2}
+.k{position:absolute;top:0;width:11%;min-width:44px;height:62%;background:var(--kc,#000);border:1px solid #000;border-radius:0 0 6px 6px;z-index:2}
 .w:active,.w.p{background:var(--gold2)}.k:active,.k.p{background:var(--gold)}
 .time{font:600 44px/1 "Cormorant Garamond",Georgia,serif;text-align:center;margin:8px 0 14px}
 .search{width:100%;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin:8px 0 4px}
@@ -455,7 +455,7 @@ $('#mgo').onclick=()=>{if(mt){clearInterval(mt);mt=null;dots.forEach(d=>d.classL
 const N=[['Do',261.63],['Do♯',277.18],['Re',293.66],['Re♯',311.13],['Mi',329.63],['Fa',349.23],['Fa♯',369.99],['Sol',392],['Sol♯',415.3],['La',440],['La♯',466.16],['Si',493.88]];
 const WH=[0,2,4,5,7,9,11],BL={1:0,3:1,6:3,8:4,10:5};
 let kb='';WH.forEach(i=>kb+='<button class="w" data-n="'+i+'" style="--kc:'+nc(N[i][0])+';--kt:'+ntx(nc(N[i][0]))+'">'+N[i][0]+'</button>');
-for(const i in BL)kb+='<button class="k" data-n="'+i+'" aria-label="'+N[i][0]+'" style="left:'+((BL[i]+1)*100/7-4.25)+'%;--kc:'+nc(N[i][0])+'"></button>';
+for(const i in BL)kb+='<button class="k" data-n="'+i+'" aria-label="'+N[i][0]+'" style="left:calc('+((BL[i]+1)*100/7)+'% - max(5.5%, 22px));--kc:'+nc(N[i][0])+'"></button>';
 $('#kb').innerHTML=kb;
 $('#kb').addEventListener('pointerdown',e=>{const b=e.target.closest('[data-n]');if(!b)return;const n=N[b.dataset.n];tone(n[1],1,'triangle',.35);$('#note').textContent=n[0]+' · '+n[1].toFixed(0)+' Hz';b.classList.add('p');setTimeout(()=>b.classList.remove('p'),180)});
 
