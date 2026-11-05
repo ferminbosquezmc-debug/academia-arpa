@@ -47,3 +47,9 @@ node herramientas/probar-semana.js <clave>
 El probador desbloquea lo anterior, recorre los 5 pasos y muestra: bloqueo, preguntas, desborde, notas pintadas y errores. Debe terminar sin errores ni desborde.
 
 Git: rama `at-semana-N` → commit con mensaje claro → `git fetch origin` (otra sesión pudo subir cambios) → merge `--no-ff` a `main` → probar de nuevo → push.
+
+## Juegos de práctica (vista Práctica)
+Bloque JS que empieza con el comentario `Juegos de práctica`; CSS con prefijo `jg-`; HTML dentro de `<div data-nn>` en `#v-practica` (para que el pintor no toque los textos de Arpi).
+- Racha (`jgRacha`): usa `streak()` y los días de `S.min`, igual que el cronómetro. Recompensas en `JG_RW` (3, 7, 14, 21 y 30 días).
+- Atrapa la nota (`JG`, `jgStart`, `jgStop`) y Oído musical (`EAR`). El tiempo jugado se suma a `S.min` con `jgTime` (`S.jgs` guarda los segundos sueltos; `S.jgb` es el récord).
+- Arpi, la mascota: `jgSay(html, 'wow'|'sad')`. `jgStop()` se llama en `go()`.
