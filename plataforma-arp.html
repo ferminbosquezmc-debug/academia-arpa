@@ -247,6 +247,29 @@ nav button[aria-current=page]{background:rgba(242,163,27,.14);border-radius:14px
 #f4{position:fixed;inset:0;background:rgba(0,0,0,.82);z-index:50;display:flex;align-items:flex-end;justify-content:center}
 #f4[hidden]{display:none}
 #f4 .sheet{background:var(--card);border:1px solid var(--wine2);border-radius:20px 20px 0 0;max-width:720px;width:100%;max-height:92vh;overflow:auto;padding:20px 18px 28px}
+.m4h4{margin:18px 0 2px;font:600 20px/1.2 "Cormorant Garamond",Georgia,serif;color:var(--gold2)}
+.m4ul{padding-left:22px;margin:8px 0 0;display:flex;flex-direction:column;gap:6px}
+.m4key{margin-top:12px;padding:10px 14px;border-left:3px solid var(--wine2);background:rgba(217,122,140,.09);border-radius:0 12px 12px 0;font-style:italic}
+/* Guitarra · clases del Método Integral AMA */
+.gimg{display:block;width:100%;height:auto;margin-top:12px;border-radius:12px;background:#fff}
+.gtw{overflow-x:auto;margin-top:10px}.gtb{border-collapse:collapse;width:100%;font-size:15px}
+.gtb th,.gtb td{border:1px solid var(--line);padding:8px;text-align:left;vertical-align:top}.gtb th{color:var(--gold2);font-weight:600}
+.gtb .gimg{margin-top:0;min-width:110px}
+.gpre{font:15px/1.55 ui-monospace,SFMono-Regular,Consolas,monospace;background:#0b0905;border:1px solid var(--line);border-radius:12px;padding:12px;margin-top:10px;overflow-x:auto;white-space:pre;color:var(--ivory)}
+.gbx{color:var(--gold);font-size:1.1em}
+@media (max-width:480px){.gpre{font-size:12.5px;padding:10px}}
+/* Lector de clases: bloque, frase y palabra que se están leyendo */
+.m4rd{border-radius:8px;background:rgba(242,163,27,.08);box-shadow:0 0 0 6px rgba(242,163,27,.08)}
+::highlight(m4s){background-color:rgba(242,163,27,.24)}
+::highlight(m4w){background-color:#f2a31b;color:#000}
+#r4-bar{position:sticky;top:0;z-index:5;border-color:var(--gold)}
+#r4-bar .fl{margin:0;flex:1;min-width:150px}
+#r4-bar.on{padding:10px 14px}#r4-bar.on .r4opt{display:none}
+/* Velocidad del lector */
+.r4sp{margin-top:12px;border-top:1px solid var(--line);padding-top:12px}.r4sv{text-align:center;margin:0;font:600 32px/1 "Cormorant Garamond",Georgia,serif;color:var(--gold2);font-variant-numeric:tabular-nums}.r4sr{display:flex;align-items:center;gap:12px;margin-top:10px}.r4sb{flex:none;width:48px;height:48px;border-radius:50%;background:var(--line);color:var(--ivory);font:500 28px/1 Jost,sans-serif;display:grid;place-items:center}.r4sb:active{background:var(--gold);color:#000}#r4-vel{flex:1;min-width:0;margin:0;min-height:44px;accent-color:var(--gold)}.r4sc{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px;margin-top:10px}.r4cp{border-radius:999px;background:var(--line);color:var(--ivory);min-height:48px;font-weight:600;font-variant-numeric:tabular-nums;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1.1;padding:4px 2px}.r4cp small{font-size:11px;font-weight:500;color:var(--mute)}.r4cp[aria-pressed=true]{background:var(--gold);color:#000}.r4cp[aria-pressed=true] small{color:#000}#r4-bar.on .r4sp{margin-top:8px;padding-top:8px}
+.r4top{display:flex;gap:8px;align-items:center}.r4go{flex:1;min-width:0;padding:10px 14px;font-size:15px;min-height:44px}.r4cfg{flex:none;display:flex;align-items:center;gap:6px;min-height:44px;padding:0 12px;border:1px solid var(--gold);border-radius:999px;color:var(--gold2);font-variant-numeric:tabular-nums}.r4cfg[aria-expanded=true]{background:#1c1608}.r4sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}#r4-bar.r4c{padding:10px 12px}#r4-pan{margin-top:10px}#r4-pan .fl{width:100%}.r4sp{margin-top:10px;padding-top:10px}.r4sv{font-size:24px}.r4sr{gap:10px;margin-top:8px}.r4sb{width:40px;height:40px;font-size:22px}.r4sc{gap:6px;margin-top:8px}.r4cp{min-height:40px;font-size:14px}
+/* Espacios de respuesta de las clases del Nivel 4 */
+.m4ans{min-height:0;margin-top:8px;resize:vertical;line-height:1.5}.m4ln{display:flex;gap:10px;align-items:center;margin-top:8px}.m4ln span{flex:none}.m4ln input{margin:0;flex:1;min-width:0}.m4ck{margin-top:8px}.m4ck.m4ln{align-items:center}.m4ck.m4ln input[type=checkbox]{flex:none;width:24px;height:24px}.m4tw{overflow-x:auto;margin-top:10px}.m4tb{border-collapse:collapse;width:100%;font-size:15px}.m4tb th,.m4tb td{border:1px solid var(--line);padding:8px;text-align:left;vertical-align:middle}.m4tb th{color:var(--gold2);font-weight:600}.m4tb td.m4rc{text-align:center}.m4tb input[type=radio]{width:22px;height:22px;accent-color:var(--gold);margin:0}.m4tin{margin:0;min-width:120px;min-height:40px;padding:8px;flex:1}.m4tc{display:flex;gap:6px;align-items:center}.m4inl{display:inline-block;width:min(240px,100%);margin:2px 4px;padding:4px 8px;min-height:0;vertical-align:baseline}
 /* ===== Juegos de práctica (racha, Atrapa la nota, Oído musical, Arpi) ===== */
 .jg-guide{display:flex;gap:12px;align-items:flex-end;margin-top:14px}
 .jg-arpi{width:64px;height:76px;flex:none}
@@ -334,7 +357,7 @@ nav button[aria-current=page]{background:rgba(242,163,27,.14);border-radius:14px
     <svg class="jg-arpi" id="jg-arpi" viewBox="0 0 72 84" role="img" aria-label="Arpi, la mascota de la academia">
       <path d="M14 78 L14 14 Q14 4 26 6 Q46 10 58 30 Q64 42 60 54 L60 78" fill="none" stroke="#f2a31b" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
       <path d="M14 78 H62" stroke="#c9852a" stroke-width="7" stroke-linecap="round"/>
-      <g stroke-width="2" stroke-linecap="round"><line x1="22" y1="12" x2="22" y2="74" stroke="#e53935"/><line x1="28" y1="10" x2="28" y2="74" stroke="#fb8c00"/><line x1="34" y1="12" x2="34" y2="74" stroke="#fdd835"/><line x1="40" y1="15" x2="40" y2="74" stroke="#7cc242"/><line x1="46" y1="19" x2="46" y2="74" stroke="#4fc3f7"/><line x1="52" y1="25" x2="52" y2="74" stroke="#2f5fe0"/><line x1="57" y1="33" x2="57" y2="74" stroke="#a64de0"/></g>
+      <g stroke-width="2" stroke-linecap="round"><line x1="22" y1="12" x2="22" y2="74" stroke="#E5312B"/><line x1="28" y1="10" x2="28" y2="74" stroke="#F57C00"/><line x1="34" y1="12" x2="34" y2="74" stroke="#FFD21F"/><line x1="40" y1="15" x2="40" y2="74" stroke="#2E9E4F"/><line x1="46" y1="19" x2="46" y2="74" stroke="#2AA7E8"/><line x1="52" y1="25" x2="52" y2="74" stroke="#283593"/><line x1="57" y1="33" x2="57" y2="74" stroke="#8E3BB8"/></g>
       <circle cx="36" cy="44" r="15" fill="#ffc857" stroke="#c9852a" stroke-width="2"/>
       <circle cx="31" cy="42" r="2.6" fill="#1b1610"/><circle cx="41" cy="42" r="2.6" fill="#1b1610"/>
       <path id="jg-mouth" d="M30 48 Q36 54 42 48" fill="none" stroke="#1b1610" stroke-width="2.4" stroke-linecap="round"/>
@@ -417,6 +440,7 @@ nav button[aria-current=page]{background:rgba(242,163,27,.14);border-radius:14px
 
 <section class="view" id="v-n4" data-nn hidden></section>
 <section class="view" id="v-u4" data-nn hidden></section>
+<section class="view" id="v-m4" data-nn hidden></section>
 <section class="view" id="v-a4" data-nn hidden></section>
 
 </main>
@@ -435,12 +459,13 @@ nav button[aria-current=page]{background:rgba(242,163,27,.14);border-radius:14px
 
 <script>
 const $=s=>document.querySelector(s);
-const NCOL={Do:'#e53935',Re:'#fb8c00',Mi:'#fdd835',Fa:'#7cc242',Sol:'#4fc3f7',La:'#2f5fe0',Si:'#a64de0'},NORD=['Do','Re','Mi','Fa','Sol','La','Si'],NEN={C:'Do',D:'Re',E:'Mi',F:'Fa',G:'Sol',A:'La',B:'Si'};
+/* Paleta oficial del Método Integral AMA (07_ATLAS_VISUAL/sistema/ama-colores.json) */
+const NCOL={Do:'#E5312B',Re:'#F57C00',Mi:'#FFD21F',Fa:'#2E9E4F',Sol:'#2AA7E8',La:'#283593',Si:'#8E3BB8'},NTXT={'#E5312B':'#fff','#F57C00':'#1A1A1A','#FFD21F':'#1A1A1A','#2E9E4F':'#1A1A1A','#2AA7E8':'#1A1A1A','#283593':'#fff','#8E3BB8':'#fff'},NORD=['Do','Re','Mi','Fa','Sol','La','Si'],NEN={C:'Do',D:'Re',E:'Mi',F:'Fa',G:'Sol',A:'La',B:'Si'};
 const hx=c=>[1,3,5].map(i=>parseInt(c.substr(i,2),16));
 const mixc=(a,b)=>'#'+hx(a).map((v,i)=>Math.round((v+hx(b)[i])/2).toString(16).padStart(2,'0')).join('');
-function nc(n){const m=String(n).trim().match(/^(Do|Re|Mi|Fa|Sol|La|Si|[A-G])([♯♭#]?)$/);if(!m)return null;const b=NEN[m[1]]||m[1],i=NORD.indexOf(b),c=NCOL[b];if(m[2]==='♯'||m[2]==='#')return mixc(c,NCOL[NORD[(i+1)%7]]);if(m[2]==='♭')return mixc(c,NCOL[NORD[(i+6)%7]]);return c}
+function nc(n){const m=String(n).trim().match(/^(Do|Re|Mi|Fa|Sol|La|Si|[A-G])([♯♭#]?)$/);if(!m)return null;const b=NEN[m[1]]||m[1];return NCOL[b]} /* las alteraciones conservan el color de su nota natural */
 const lum=c=>hx(c).map(v=>{v/=255;return v<=.03928?v/12.92:Math.pow((v+.055)/1.055,2.4)}).reduce((a,v,i)=>a+v*[.2126,.7152,.0722][i],0);
-const ntx=c=>{const L=lum(c);return (L+.05)/.05>=1.05/(L+.05)?'#000':'#fff'}; /* negro o blanco: el de mayor contraste */
+const ntx=c=>{if(NTXT[String(c).toUpperCase()])return NTXT[String(c).toUpperCase()];const L=lum(c);return (L+.05)/.05>=1.05/(L+.05)?'#000':'#fff'}; /* negro o blanco: el de mayor contraste */
 const mkc=m=>{const c=nc(m[2]);return c?'fill="'+c+'" stroke="'+(m[3]||'none')+'" stroke-width="2.5"':'fill="'+(m[3]||'#f2a31b')+'"'};
 const mkt=m=>{const c=nc(m[2]);return c?ntx(c):'#000'};
 const noteLegendHtml=()=>NORD.map(n=>{const c=nc(n);return '<span style="background:'+c+';color:'+ntx(c)+';border-radius:99px;padding:5px 12px;font-weight:700;font-size:14px">'+n+'</span>'}).join('');
@@ -620,8 +645,8 @@ function toast(t){const e=$('#toast');e.textContent=t;e.classList.add('on');setT
 function go(v){
  applyMode();if(typeof mmStop==='function')mmStop();if(typeof sgStop==='function')sgStop();if(typeof eqStop==='function')eqStop();if(typeof fxStop==='function')fxStop();if(typeof jgStop==='function')jgStop();try{window.speechSynthesis&&speechSynthesis.cancel();saying=false}catch(e){}
  document.querySelectorAll('.view').forEach(x=>x.hidden=x.id!=='v-'+v);
- document.querySelectorAll('nav button').forEach(b=>(b.dataset.go===v||(['asig','n4','u4','a4'].includes(v)&&b.dataset.go==='clases')||(v==='leccion'&&b.dataset.go===(LD[S.cur]&&LD[S.cur].kidm?'ninos':'clases')))?b.setAttribute('aria-current','page'):b.removeAttribute('aria-current'));
- if(v==='home')home();if(v==='clases')clases();if(v==='ninos')ninos();if(v==='asig')atView();if(v==='biblioteca')biblio();if(v==='leccion'){S.last=S.cur;save();lec()}if(v==='perfil')perfil();if(v==='practica'&&typeof jgRacha==='function')jgRacha();if(v==='n4')n4();if(v==='u4')u4();if(v==='a4')a4();
+ document.querySelectorAll('nav button').forEach(b=>(b.dataset.go===v||(['asig','n4','u4','a4','m4'].includes(v)&&b.dataset.go==='clases')||(v==='leccion'&&b.dataset.go===(LD[S.cur]&&LD[S.cur].kidm?'ninos':'clases')))?b.setAttribute('aria-current','page'):b.removeAttribute('aria-current'));
+ if(v==='home')home();if(v==='clases')clases();if(v==='ninos')ninos();if(v==='asig')atView();if(v==='biblioteca')biblio();if(v==='leccion'){S.last=S.cur;save();lec()}if(v==='perfil')perfil();if(v==='practica'&&typeof jgRacha==='function')jgRacha();if(v==='n4')n4();if(v==='u4')u4();if(v==='a4')a4();if(v==='m4')m4();
  window.scrollTo(0,0);
 }
 document.addEventListener('click',e=>{const g=e.target.closest('[data-go]');if(g)go(g.dataset.go)});
@@ -629,7 +654,7 @@ document.addEventListener('click',e=>{const g=e.target.closest('[data-go]');if(g
 /* Símbolo según el tema de la lección */
 const ICONS=[[/taller/i,'🏆'],[/banda/i,'👥'],[/blues/i,'🎷'],[/\barmon|grados|progresi/i,'🧩'],[/ritmo|pulso|rasgueo|semicorchea|síncopa|tresillo/i,'🥁'],[/escala|tonos|semitono|sostenido|pentatónica|caja/i,'🪜'],[/acorde|cejilla|séptima|poder/i,'🎸'],[/mano|arpegio|cambios/i,'✋'],[/./,'🎼']];
 const licon=t=>ICONS.find(x=>x[0].test(t))[1];
-const lk=(l,s,i)=>l+'-'+(s===0?'0'+(getInst(l)||'x'):s)+'-'+i;
+const lk=(l,s,i)=>(s===0&&l===0&&getInst(0)==='guitarra'&&window.G1K&&G1K.length)?G1K[i]:l+'-'+(s===0?'0'+(getInst(l)||'x'):s)+'-'+i; /* Guitarra I usa las claves de las clases del Método Integral (G1K) */
 function cnt(l){let t=0,d=0;LEV[l].s.forEach((_,si)=>{const x=subj(l,si);if(!x)return;x[1].forEach((_,i)=>{const k=lk(l,si,i);if(LD[k]){t++;if(S.done[k])d++}})});return{t,d,p:t?Math.round(d/t*100):0}}
 function home(){if(!LAV[S.lvl])S.lvl=0;applyMode();
  const g=$('#greet'),K=kid();
@@ -1168,6 +1193,67 @@ const GQX={
 '2-0guitarra-7':[['¿En qué tonalidades puedes tocar el blues del taller?',['Solo en Do','Sin acordes, en cualquiera','En La o en Fa'],2,'Puedes elegir La (acordes abiertos) o Fa (con cejilla).'],['Antes de entregar tu toma conviene…',['Escucharla y anotar qué mejorar','Entregar la primera sin oírla','Borrarla y no entregar'],0,'Escucharte es la mejor forma de mejorar antes de la toma final.']]
 };
 Object.keys(GQX).forEach(k=>{if(LD[k])LD[k].q.push(...GQX[k])});
+/* Generado desde AMA_GUITARRA/02_NIVEL_1 (Método Integral AMA). No editar a mano. */
+const GNC1=[{"n":1,"t":"¡Bienvenidos a la música!","mes":"1 · CONOCIENDO LA MÚSICA Y LA GUITARRA","o":"Despertar el interés del estudiante por la música y la guitarra, y comprender qué son la música, el sonido y el silencio.","md":"### 📖 Aprendo\n- **Música** = sonidos + silencios + tiempo.\n- **Sonido** = algo que vibra. En la guitarra, vibra la cuerda.\n- **Silencio** = cuando no hay sonido. ¡También es música!\n\n| Guitarra | Cuerdas | Sonido |\n|---|---|---|\n| Clásica | nailon | cálido y dulce |\n| Acústica | acero | brillante y fuerte |\n| Eléctrica | acero + amplificador | necesita corriente |\n\n### 👀 Observo\nToca la 6.ª cuerda (la más gruesa) y **mírala**: se ve borrosa porque vibra. Pon tu mano en la caja: ¡también vibra!\n\n### 🎸 Practico\n- ☐ Toco la 6.ª cuerda con el pulgar y escucho hasta que se apaga.\n- ☐ Toco y apago la cuerda con la palma: sonido – silencio.\n- ☐ **4 y 4:** toco contando 1-2-3-4 y apago contando 1-2-3-4. Lo hago 4 veces.\n\n### 🎵 Interpreto\n**La orquesta del silencio:** toco cuando mi profesor levanta la mano y paro cuando la baja.\n\n### ✏️ ¿Sonido o silencio?\nEscribe **S** (sonido) o **—** (silencio):\n\n| Una campana | Una sala vacía de noche | Un perro ladrando | La pausa entre dos canciones | Mi guitarra |\n|---|---|---|---|---|\n| ___ | ___ | ___ | ___ | ___ |\n\n### 🏠 Mi tarea\n- ☐ **Cazador de sonidos:** escribo 5 sonidos de mi casa: _______________________________________________\n- ☐ 5 minutos al día: «4 de sonido, 4 de silencio».\n\n### ✅ ¿Lo logré?\n- ☐ Sé qué es la música. ☐ Sé qué es el sonido. ☐ Conozco 3 tipos de guitarra."},{"n":2,"t":"Conozco mi guitarra","mes":"1 · CONOCIENDO LA MÚSICA Y LA GUITARRA","o":"Conocer las partes de la guitarra y su función, aprender a cuidarla y comprender las cuatro cualidades del sonido.","md":"### 📖 Aprendo\nLa guitarra tiene **10 partes**. Cada una tiene un trabajo.\n\n### 👀 Observo\n![Partes de la guitarra](guitarra/img/N1_partes_guitarra.svg)\n\n### 📖 Las 4 cualidades del sonido\n![Cualidades del sonido](guitarra/img/N1_cualidades_sonido.svg)\n\n### 🎸 Practico\n- ☐ **¿Dónde está?** Toco en mi guitarra la parte que dice mi profesor.\n- ☐ **Agudo o grave:** 1.ª cuerda = aguda; 6.ª cuerda = grave.\n- ☐ **Fuerte y suave:** 4 veces suave y 4 veces fuerte en la 6.ª cuerda.\n- ☐ **Largo y corto:** 1 sonido largo (4 tiempos) y 4 sonidos cortos.\n\n### ✏️ Une con una línea\n\n| Parte | | Qué hace |\n|---|---|---|\n| Clavijas | • | • Amplifica el sonido |\n| Trastes | • | • Sirven para afinar |\n| Caja de resonancia | • | • Sujeta las cuerdas sobre la tapa |\n| Puente | • | • Cambian la nota cuando piso |\n\n### 🛡️ Cuido mi guitarra\n1. En su funda, lejos del sol y la humedad.\n2. Manos limpias antes de tocar.\n3. Limpio las cuerdas al terminar.\n4. Nunca la dejo parada contra la pared.\n5. Giro las clavijas solo para afinar.\n\n### 🏠 Mi tarea\n- ☐ Le explico a alguien de mi familia las partes de la guitarra.\n- ☐ 5–10 minutos: fuerte/suave y largo/corto.\n\n### ✅ ¿Lo logré?\n- ☐ Nombro 6 partes de la guitarra. ☐ Toco agudo y grave, fuerte y suave."},{"n":3,"t":"Mi postura y mis manos","mes":"1 · CONOCIENDO LA MÚSICA Y LA GUITARRA","o":"Adoptar una postura correcta y relajada, conocer la numeración de los dedos de ambas manos y aprender las siete notas musicales con su color AMA.","md":"### 📖 Aprendo · Mi postura en 7 pasos\n1. Pies en el suelo.\n2. Me siento en el borde de la silla.\n3. La guitarra se apoya en mi **pierna derecha**.\n4. Espalda recta y hombros sueltos.\n5. Mástil un poco hacia arriba.\n6. Brazo derecho sobre la caja; mano sobre la boca.\n7. Mano izquierda: **pulgar detrás del mástil**, dedos arqueados.\n\n### 👀 Observo · Mis dedos\n![Numeración de los dedos](guitarra/img/N1_dedos.svg)\n\n### 🎸 Practico\n- ☐ Me siento con la postura de 7 pasos frente a un espejo.\n- ☐ Suelto la mano izquierda: ¡la guitarra no se cae!\n- ☐ **Dedos que saludan:** levanto el dedo que me dicen (2, 4, 1, 3… / i, p, a, m).\n- ☐ Apoyo los dedos 1-2-3-4 en la 3.ª cuerda, uno por traste, sin apretar. 5 veces.\n- ☐ Canto: DO-RE-MI-FA-SOL-LA-SI-DO, subiendo y bajando.\n\n### ✏️ Colorea y escribe el cifrado\nPinta cada círculo con el color AMA de la nota y escribe su letra.\n\n| ◯ DO | ◯ RE | ◯ MI | ◯ FA | ◯ SOL | ◯ LA | ◯ SI |\n|---|---|---|---|---|---|---|\n| ___ | ___ | ___ | ___ | ___ | ___ | ___ |\n\n### 👧 Para los más pequeños\nConoce a los **amigos de las notas**. ¿Cuál es tu favorito? ______________\n\n![Personajes AMA](guitarra/atlas/Personajes_AMA.svg)\n\n### 🏠 Mi tarea\n- ☐ 2 minutos de postura frente al espejo cada día.\n- ☐ Canto la escala de DO una vez al día.\n\n### ✅ ¿Lo logré?\n- ☐ Me siento bien con la guitarra. ☐ Sé los números y letras de mis dedos. ☐ Digo las 7 notas en orden."},{"n":4,"t":"Las seis cuerdas y el pentagrama","mes":"1 · CONOCIENDO LA MÚSICA Y LA GUITARRA","o":"Identificar las seis cuerdas de la guitarra, conocer el pentagrama y la clave de sol, y tocar las primeras notas pisadas en la 1.ª cuerda.","md":"### 📖 Aprendo\n- La **1.ª cuerda** es la más delgada (aguda). La **6.ª** es la más gruesa (grave).\n- De la 6.ª a la 1.ª: **MI – LA – RE – SOL – SI – MI**.\n- **Pentagrama** = 5 líneas y 4 espacios. Se cuentan **de abajo hacia arriba**.\n- **Clave de sol**: nace en la 2.ª línea. Ahí vive SOL.\n\n### 👀 Observo\n![Las seis cuerdas](guitarra/img/N1_cuerdas.svg)\n\n![Pentagrama](guitarra/img/N1_pentagrama_basico.svg)\n\n### 📖 Mis primeras notas pisadas · 1.ª cuerda\n\n| Nota | Traste | Dedo |\n|---|---|---|\n| MI | al aire | — |\n| FA | 1 | 1 |\n| SOL | 3 | 3 |\n\n**Pisa con la punta del dedo, justo detrás del traste.**\n\n![MI, FA y SOL](guitarra/img/N1_cuerda1.svg)\n\n### 🎸 Practico\n- ☐ Toco las 6 cuerdas al aire y digo su nombre.\n- ☐ Toco la 1.ª cuerda alternando **i-m** (4 veces 4 notas).\n- ☐ FA con el dedo 1: suena limpio, sin zumbido.\n- ☐ SOL con el dedo 3: suena limpio.\n- ☐ MI-FA-SOL-FA-MI (como en el dibujo), 5 veces.\n\n### ✏️ Escribe\nNombre de las cuerdas al aire:  \n6.ª ______ 5.ª ______ 4.ª ______ 3.ª ______ 2.ª ______ 1.ª ______\n\n### 🏠 Mi tarea\n- ☐ 10 minutos al día: i-m en la 1.ª cuerda + MI-FA-SOL.\n- ☐ Me aprendo de memoria: MI – LA – RE – SOL – SI – MI.\n\n### ✅ ¿Lo logré?\n- ☐ Nombro las 6 cuerdas. ☐ Sé qué es el pentagrama. ☐ Toco MI, FA y SOL.\n\n**⭐ Evaluación del mes 1:** fecha ________ · resultado ________"},{"n":5,"t":"Siento el pulso","mes":"2 · PRIMERAS NOTAS Y RITMOS","o":"Sentir y mantener el pulso con el cuerpo y en la guitarra, y diferenciar pulso de ritmo.","md":"### 📖 Aprendo\n- **Pulso** = el latido de la música. Regular, como un reloj: tic, tic, tic, tic.\n- **Ritmo** = sonidos largos y cortos que bailan sobre el pulso.\n- La **negra** dura **1 pulso**. Se dice **ta**.\n\n### 👀 Observo\n![Ritmo en negras](guitarra/img/N1_ritmo_negras.svg)\n\n### 🎸 Practico\n- ☐ Marco el pulso con el pie mientras escucho una canción.\n- ☐ Pie en el pulso + palmas en negras (ta ta ta ta).\n- ☐ Cuerdas **6.ª, 5.ª y 4.ª con el pulgar (p)**: 4 negras en cada una.\n- ☐ Cuerdas **3.ª, 2.ª y 1.ª con i-m**: 4 negras en cada una.\n- ☐ Las 6 cuerdas seguidas, sin perder el pulso.\n\n### 🎵 Interpreto\nAcompaño a mi profesor con la **6.ª cuerda (MI)** y luego con la **5.ª (LA)**, en negras.\n\n### 🏠 Mi tarea\n- ☐ Busco el pulso de 3 canciones que me gustan.\n- ☐ 10 minutos: las 6 cuerdas en negras.\n\n### ✅ ¿Lo logré?\n- ☐ Marco el pulso sin acelerar. ☐ Sé la diferencia entre pulso y ritmo. ☐ Uso p e i-m."},{"n":6,"t":"Las figuras y el compás","mes":"2 · PRIMERAS NOTAS Y RITMOS","o":"Reconocer y ejecutar la redonda, la blanca y la negra en compás de 4/4, y desarrollar la independencia de los dedos de la mano izquierda con el metrónomo.","md":"### 📖 Aprendo\n| Figura | Tiempos | Digo |\n|---|---|---|\n| Redonda | 4 | taa-aa-aa-aa |\n| Blanca | 2 | taa-aa |\n| Negra | 1 | ta |\n\n- **4/4** = 4 negras en cada compás. El primer tiempo es el más fuerte: **UN**-dos-tres-cuatro.\n- Las **barras de compás** separan los compases.\n- **Metrónomo** = marca el pulso exacto. 60 BPM = 1 pulso por segundo.\n\n### 👀 Observo\n![Figuras musicales](guitarra/img/N1_figuras.svg)\n\n![Ritmo para leer](guitarra/img/N1_ritmo_figuras.svg)\n\n### 🎸 Practico\n- ☐ Leo el ritmo con sílabas y palmas.\n- ☐ Lo toco en la 6.ª cuerda.\n- ☐ Con metrónomo a 60: negras, blancas y redondas en la 6.ª cuerda.\n\n### 🎸 Ejercicio de dedos 1-2-3-4\n![Ejercicio 1-2-3-4](guitarra/img/N1_arana.svg)\n\n- ☐ Un dedo por traste en la 6.ª cuerda… y así hasta la 1.ª.\nMi tempo hoy: ______ BPM\n\n### ✏️ Completa los compases de 4/4\nDibuja la figura que falta para completar 4 tiempos:\n\n| Compás | Tengo | Me falta |\n|---|---|---|\n| 1 | blanca + negra | ______ |\n| 2 | negra + negra | ______ |\n| 3 | negra | ______ |\n| 4 | (vacío) | ______ |\n\n### 🏠 Mi tarea\n- ☐ 5 minutos de 1-2-3-4 todos los días. ☐ Metrónomo con la 6.ª cuerda.\n\n### ✅ ¿Lo logré?\n- ☐ Conozco redonda, blanca y negra. ☐ Sé qué es 4/4. ☐ Toco con metrónomo."},{"n":7,"t":"El silencio también es música","mes":"2 · PRIMERAS NOTAS Y RITMOS","o":"Reconocer y ejecutar los silencios de redonda, blanca y negra, conocer los compases de 2/4 y 3/4, y leer notas en la 1.ª y la 2.ª cuerda.","md":"### 📖 Aprendo\n- Cada figura tiene **su silencio**, que dura lo mismo. En el silencio digo **sh** y apago la cuerda.\n- Silencio de redonda: **cuelga**. Silencio de blanca: **se sienta**. Silencio de negra: un **rayito**.\n\n| Compás | Tiempos | Se siente como |\n|---|---|---|\n| 2/4 | **UN**-dos | marcha |\n| 3/4 | **UN**-dos-tres | vals |\n| 4/4 | **UN**-dos-tres-cuatro | el más usado |\n\n### 👀 Observo\n![Ritmo con silencios](guitarra/img/N1_ritmo_silencios.svg)\n\n![Compases](guitarra/img/N1_compases.svg)\n\n### 📖 Notas de la 2.ª cuerda\n| Nota | Traste | Dedo |\n|---|---|---|\n| SI | al aire | — |\n| DO | 1 | 1 |\n| RE | 3 | 3 |\n\n![SI, DO y RE](guitarra/img/N1_cuerda2.svg)\n\n### 🎸 Practico\n- ☐ Leo el ritmo con silencios: ta – sh – ta – sh…\n- ☐ Lo toco en la 6.ª cuerda y apago a tiempo.\n- ☐ SI-DO-RE-DO-SI en la 2.ª cuerda.\n- ☐ Leo y toco en dos cuerdas:\n\n![Lectura en la 1.ª y la 2.ª cuerda](guitarra/img/N1_cuerdas_1y2.svg)\n\n### 🎵 Interpreto\n**Vals del silencio:** MI grave en el 1, SI en el 2 y el 3: **UN**-dos-tres.\n\n### 🏠 Mi tarea\n- ☐ 10–15 minutos: ritmo con silencios + lectura en dos cuerdas.\n\n### ✅ ¿Lo logré?\n- ☐ Reconozco 3 silencios. ☐ Diferencio 3/4 y 4/4. ☐ Toco SI, DO y RE."},{"n":8,"t":"Mi primera melodía","mes":"2 · PRIMERAS NOTAS Y RITMOS","o":"Conocer la corchea, coordinar ambas manos y tocar completa la melodía del «Himno de la alegría» (Beethoven) en la 1.ª y la 2.ª cuerda.","md":"### 📖 Aprendo\n- **Corchea** = medio tiempo. Dos corcheas = una negra. Digo **ti-ti**.\n- Cuento: **1 y 2 y 3 y 4 y**.\n- **Primero piso, luego pulso.**\n\n### 👀 Observo\n![Ritmo con corcheas](guitarra/img/N1_ritmo_corcheas.svg)\n\n### 🎵 «Himno de la alegría» · Ludwig van Beethoven\n![Himno de la alegría](guitarra/img/N1_oda_alegria.svg)\n\nLa **frase 1** termina en RE (como una pregunta). La **frase 2** termina en DO (como una respuesta).\n\n### 🎸 Practico\n- ☐ Leo las corcheas con sílabas y palmas.\n- ☐ Corcheas en la 1.ª cuerda con i-m.\n- ☐ Compases del «Himno» uno por uno (3 veces cada uno).\n- ☐ Frase 1 completa. ☐ Frase 2 completa.\n- ☐ ¡El «Himno» entero! Mi tempo: ______ BPM\n\n### 🏠 Mi tarea\n- ☐ 10 minutos diarios con el «Himno».\n- ☐ Se lo toco a mi familia. Fecha: ________ ¡Mi primera melodía! 🎉\n\n### ✅ ¿Lo logré?\n- ☐ Conozco la corchea. ☐ Coordino las dos manos. ☐ Toco el «Himno de la alegría».\n\n**⭐ Evaluación del mes 2:** fecha ________ · resultado ________"},{"n":9,"t":"¿Qué es un acorde?","mes":"3 · MIS PRIMEROS ACORDES","o":"Comprender la diferencia entre melodía y armonía, leer diagramas de acordes y tocar los acordes de Mi menor (Em) y Mi mayor (E).","md":"### 📖 Aprendo\n- **Melodía** = notas una después de otra.\n- **Armonía** = notas al mismo tiempo.\n- **Acorde** = 3 o más notas distintas que suenan juntas.\n- **Mayor** suena alegre. **Menor** (con «m») suena más triste.\n\n### 👀 Observo\n![Qué es un acorde](guitarra/img/N1_que_es_acorde.svg)\n\n### Cómo leer un diagrama\n- Líneas verticales = cuerdas (6.ª a la izquierda).\n- Línea gruesa arriba = cejuela.\n- ● con número = dedo que pisa.\n- ○ = cuerda al aire. ✕ = no se toca.\n\n| Mi menor (Em) | Mi mayor (E) |\n|---|---|\n| ![Em](guitarra/img/N1_acorde_Em.svg) | ![E](guitarra/img/N1_acorde_E.svg) |\n\n**E = Em + el dedo 1** en la 3.ª cuerda, traste 1.\n\n### 🎸 Practico\n- ☐ Afino mi guitarra con el afinador (con ayuda).\n- ☐ Em cuerda por cuerda: suenan las 6.\n- ☐ Formar y soltar Em, 10 veces. Igual con E.\n- ☐ Em | E | Em | E en redondas, con el pulgar.\n\n### 🏠 Mi tarea\n- ☐ 10–15 minutos diarios: Em, E y el cambio entre los dos.\n\n### ✅ ¿Lo logré?\n- ☐ Sé qué es un acorde. ☐ Leo un diagrama. ☐ Toco Em y E."},{"n":10,"t":"La menor y La mayor","mes":"3 · MIS PRIMEROS ACORDES","o":"Comprender los tonos y semitonos en la guitarra, y tocar los acordes de La menor (Am) y La mayor (A) cambiando con fluidez entre Em–Am y E–A.","md":"### 📖 Aprendo\n- **Semitono** = 1 traste. **Tono** = 2 trastes.\n- En la escala de DO hay semitonos entre **MI–FA** y **SI–DO**.\n\n### 👀 Observo\n![Tonos y semitonos](guitarra/img/N1_semitonos.svg)\n\n| La menor (Am) | La mayor (A) |\n|---|---|\n| ![Am](guitarra/img/N1_acorde_Am.svg) | ![A](guitarra/img/N1_acorde_A.svg) |\n\n**Truco:** Am tiene la misma forma que E, una cuerda más abajo. En Am y A **no toco la 6.ª cuerda**.\n\n### 🎸 Practico\n- ☐ Paso de E a Am moviendo la forma completa (10 veces).\n- ☐ Am y A cuerda por cuerda (de la 5.ª a la 1.ª).\n- ☐ Em | Am | Em | Am en redondas → luego en blancas.\n- ☐ E | A | E | A en redondas → luego en blancas.\n\n### ✏️ Escribe T (tono) o S (semitono)\nDO ___ RE ___ MI ___ FA ___ SOL ___ LA ___ SI ___ DO\n\n### 🏠 Mi tarea\n- ☐ 15 minutos: cambios Em–Am y E–A. Meta: cambiar cada 2 tiempos.\n\n### ✅ ¿Lo logré?\n- ☐ Sé qué es tono y semitono. ☐ Toco Am y A. ☐ Cambio sin detenerme."},{"n":11,"t":"Re mayor y mi primer rasgueo","mes":"3 · MIS PRIMEROS ACORDES","o":"Tocar el acorde de Re mayor (D), rasguear en negras y en corcheas, tocar la escala de Do mayor en primera posición y leer una tablatura sencilla.","md":"### 📖 Aprendo\n- **D** se toca solo en las cuerdas **4.ª a 1.ª**.\n- **Rasguear** = tocar varias cuerdas con un movimiento de la muñeca. ↓ hacia el suelo, ↑ hacia el techo.\n- **Tablatura (TAB):** 6 líneas = 6 cuerdas. Arriba está la **1.ª**. El número es el traste.\n\n### 👀 Observo\n| Re mayor (D) | Rasgueos |\n|---|---|\n| ![D](guitarra/img/N1_acorde_D.svg) | ![Rasgueos](guitarra/img/N1_rasgueo.svg) |\n\n![Cómo leer la tablatura](guitarra/img/N1_tablatura.svg)\n\n### 🎵 La escala de Do mayor\n![Escala de Do mayor](guitarra/img/N1_escala_do.svg)\n\n### 🎸 Practico\n- ☐ D cuerda por cuerda (4.ª a 1.ª).\n- ☐ Rasgueo 1 (↓ ↓ ↓ ↓) con A | A | D | D | E | E | A | A.\n- ☐ Rasgueo 2 (↓↑ ↓↑ ↓↑ ↓↑) con Em | Em | Am | Am.\n- ☐ Escala de Do subiendo. ☐ Escala de Do bajando.\n\n### ✏️ Lee la tablatura\n¿Qué cuerda y qué traste? Escribe la nota.\n\n| TAB | Cuerda | Traste | Nota |\n|---|---|---|---|\n| 1.ª línea, número 0 | | | |\n| 2.ª línea, número 1 | | | |\n| 1.ª línea, número 3 | | | |\n| 5.ª línea, número 3 | | | |\n\n### 🏠 Mi tarea\n- ☐ 15–20 minutos: rasgueos + cambios A–D–E + escala de Do.\n\n### ✅ ¿Lo logré?\n- ☐ Toco D. ☐ Rasgueo en negras y en corcheas. ☐ Leo una tablatura. ☐ Toco la escala de Do."},{"n":12,"t":"Mis primeras canciones","mes":"3 · MIS PRIMEROS ACORDES","o":"Integrar todo lo aprendido en el Nivel 1 tocando canciones completas con acordes y una melodía, y realizar la evaluación final del nivel.","md":"### 🎵 Canción 1 · «Dos amigos» (canción AMA)\n**Acordes:** Em y Am · **Rasgueo:** ↓ ↓ ↓ ↓ · 1 compás por acorde\n\n```\nEm                        Am\nToco mi guitarra y suena el corazón,\nEm                        Am\ncada día aprendo una nueva canción.\nEm                        Am\nMi menor y La menor caminan de la mano,\nEm                  Am            Em\npractico despacio y luego más rápido.\n```\n\n### 🎵 Canción 2 · «Camino de la mañana» (canción AMA)\n**Acordes:** A, D y E · **Rasgueo:** ↓ ↓ ↓ ↓ o ↓↑ ↓↑ ↓↑ ↓↑ · 1 compás por acorde\n\n```\nA                          D\nSale el sol temprano, abro mi ventana,\nE                          A\ntomo mi guitarra y canto en la mañana.\nA                          D\nLa, Re y Mi mayor siempre me acompañan,\nE                                A\ncon tres acordes ya tengo una canción.\n```\n\n### 🎵 Canción 3 · «Himno de la alegría» (melodía, Clase 8)\n\n### 🎸 Mis acordes del Nivel 1\n![Acordes del Nivel 1](guitarra/img/N1_acordes.svg)\n\n### ⭐ Lo que ya sé hacer (autoevaluación)\nMarca: 😀 lo hago bien · 🙂 casi · 😐 necesito practicar\n\n| Puedo… | 😀 | 🙂 | 😐 |\n|---|---|---|---|\n| Sentarme con buena postura | | | |\n| Nombrar las 6 cuerdas | | | |\n| Decir las 7 notas, su cifrado y su color | | | |\n| Leer redonda, blanca, negra, corchea y silencios | | | |\n| Mantener el pulso con el metrónomo | | | |\n| Tocar el «Himno de la alegría» | | | |\n| Tocar Em, E, Am, A y D | | | |\n| Cambiar de acorde sin detenerme | | | |\n| Rasguear en negras y en corcheas | | | |\n| Leer una tablatura | | | |\n| Tocar la escala de Do | | | |\n\n**Lo que más me gustó del Nivel 1:** ______________________________________  \n**Lo que quiero mejorar:** ______________________________________________\n\n**⭐ Evaluación final del Nivel 1:** fecha ________ · resultado ________"}];
+/* ===== Guitarra Nivel 1 · Método Integral AMA (clases 1–12) =====
+   Cada clase del método es la lección principal (texto del Libro del Estudiante en GNC1).
+   Las lecciones anteriores de la plataforma que tratan el mismo tema pasan a ser su «Práctica interactiva»:
+   se conservan sus diagramas y sus preguntas, y su explicación solo cuando el método no la trae (G1KEEP).
+   Las que el método enseña en otro nivel quedan al final como «Práctica adicional» (G1EXTRA) hasta reubicarlas.
+   Claves: '0-0guitarra-c<N>' para las clases; las anteriores conservan las suyas, y con ellas el avance guardado. */
+const G1MAP={4:[0,7],5:[1],8:[9],10:[3,6],11:[8],12:[10]};
+const G1KEEP={3:1,6:1,7:1,8:1,9:1};
+const G1EXTRA=[2,5,4];
+const G1Q={
+1:[['¿Qué es la música?',['Solo sonidos fuertes','Sonidos, silencios y tiempo','Solo canciones con letra'],1,'Música = sonidos + silencios + tiempo.'],['¿Por qué se ve borrosa la 6.ª cuerda cuando la tocas?',['Porque vibra','Porque está floja','Porque es de nailon'],0,'El sonido es algo que vibra: en la guitarra, vibra la cuerda.'],['¿Qué guitarra usa cuerdas de nailon y tiene un sonido cálido y dulce?',['La eléctrica','La acústica','La clásica'],2,'La clásica usa nailon; la acústica y la eléctrica, acero.']],
+2:[['¿Para qué sirven las clavijas?',['Para afinar','Para amplificar el sonido','Para sujetar las cuerdas sobre la tapa'],0,'Las clavijas se giran solo para afinar.'],['¿Qué cuerda suena más aguda?',['La 6.ª','La 1.ª','La 4.ª'],1,'La 1.ª cuerda es la aguda; la 6.ª, la grave.'],['¿Dónde se guarda la guitarra?',['Parada contra la pared','En su funda, lejos del sol y la humedad','Junto a una ventana con sol'],1,'En su funda, lejos del sol y la humedad, y nunca parada contra la pared.']],
+3:[['¿Sobre qué pierna se apoya la guitarra?',['La izquierda','La derecha','Entre las dos'],1,'La guitarra se apoya en la pierna derecha.'],['En la mano izquierda, ¿qué número tiene el dedo índice?',['1','2','4'],0,'Mano izquierda: 1 índice, 2 medio, 3 anular, 4 meñique.'],['¿Dónde va el pulgar de la mano izquierda?',['Detrás del mástil','Sobre las cuerdas','Sobre la caja'],0,'El pulgar va detrás del mástil y los dedos quedan arqueados.']],
+6:[['¿Cuántos tiempos dura una blanca?',['1','2','4'],1,'Redonda 4, blanca 2, negra 1.'],['En 4/4, ¿cuál es el tiempo más fuerte?',['El primero','El segundo','El cuarto'],0,'UN-dos-tres-cuatro: el primer tiempo es el más fuerte.'],['A 60 BPM, ¿cada cuánto suena el metrónomo?',['Una vez por segundo','Dos veces por segundo','Una vez por minuto'],0,'60 BPM = 1 pulso por segundo.']],
+7:[['¿Cuánto dura el silencio de negra?',['Lo mismo que una negra','La mitad de una negra','No dura nada'],0,'Cada silencio dura lo mismo que su figura.'],['¿Qué compás se siente como un vals?',['2/4','3/4','4/4'],1,'3/4: UN-dos-tres, como un vals.'],['En la 2.ª cuerda, ¿en qué traste está DO?',['Al aire','En el 1','En el 3'],1,'SI al aire, DO en el traste 1 y RE en el 3.']],
+9:[['¿Qué es un acorde?',['Una nota larga','Tres o más notas distintas que suenan juntas','Notas que suenan una después de otra'],1,'Una después de otra es melodía; al mismo tiempo es armonía, y así se forma el acorde.'],['En un diagrama, ¿qué significa ○ sobre una cuerda?',['Que suena al aire','Que no se toca','Que va el dedo 1'],0,'○ es cuerda al aire; ✕, cuerda que no se toca.'],['¿Qué diferencia hay entre Em y E?',['E lleva además el dedo 1 en la 3.ª cuerda, traste 1','Em se toca solo en cinco cuerdas','Ninguna'],0,'E = Em + el dedo 1 en la 3.ª cuerda, traste 1.']]
+};
+/* Texto del método (Markdown sencillo) a HTML de la plataforma */
+const gInl=s=>esc(s).replace(/\*\*(.+?)\*\*/g,'<b>$1</b>').replace(/(^|[^*])\*([^*\s][^*]*?)\*/g,'$1<i>$2</i>').replace(/`([^`]+)`/g,'<code>$1</code>').replace(/☐/g,'<span class="gbx" aria-hidden="true">☐</span>');
+function gImg(alt,src){return /^guitarra\/(img|atlas)\/[\w.-]+\.svg$/.test(src)?'<img class="gimg" src="'+src+'" alt="'+esc(alt)+'" loading="lazy">':''}
+function mdR(t){const L=String(t||'').split('\n');let h='',i=0;
+ const cell=s=>{const m=s.match(/^!\[([^\]]*)\]\(([^)]+)\)$/);return m?gImg(m[1],m[2]):gInl(s)};
+ while(i<L.length){const s=L[i].trim();let m;
+  if(!s){i++;continue}
+  if(s.startsWith('```')){const b=[];i++;while(i<L.length&&!L[i].trim().startsWith('```'))b.push(L[i++]);i++;h+='<pre class="gpre" data-nn>'+esc(b.join('\n'))+'</pre>';continue}
+  if(s.startsWith('|')){const R=[];while(i<L.length&&L[i].trim().startsWith('|'))R.push(L[i++].trim());const rows=R.filter(r=>!/^\|[\s:|-]+\|$/.test(r)).map(r=>r.replace(/^\||\|$/g,'').split('|').map(x=>x.trim()));
+   h+='<div class="gtw"><table class="gtb">'+rows.map((r,j)=>'<tr>'+r.map(c=>j?'<td>'+cell(c)+'</td>':'<th>'+cell(c)+'</th>').join('')+'</tr>').join('')+'</table></div>';continue}
+  if(m=s.match(/^!\[([^\]]*)\]\(([^)]+)\)$/)){h+=gImg(m[1],m[2]);i++;continue}
+  if(m=s.match(/^#{3,4}\s+(.*)/)){h+='<h4 class="m4h4">'+gInl(m[1])+'</h4>';i++;continue}
+  if(/^[-*]\s/.test(s)){h+='<ul class="m4ul">';while(i<L.length&&/^[-*]\s/.test(L[i].trim()))h+='<li>'+gInl(L[i++].trim().slice(2))+'</li>';h+='</ul>';continue}
+  if(/^\d+\.\s/.test(s)){h+='<ol class="m4ul">';while(i<L.length&&/^\d+\.\s/.test(L[i].trim()))h+='<li>'+gInl(L[i++].trim().replace(/^\d+\.\s/,''))+'</li>';h+='</ol>';continue}
+  if(s.startsWith('>')){h+='<p class="m4key">'+gInl(s.replace(/^>\s*/,''))+'</p>';i++;continue}
+  const P=[];while(i<L.length&&L[i].trim()&&!/^(```|\||!\[|#{3,4}\s|[-*]\s|\d+\.\s|>)/.test(L[i].trim()))P.push(gInl(L[i++].trim()));h+='<p style="margin-top:8px">'+P.join('<br>')+'</p>'}
+ return h}
+/* Secciones «### …» de una lección y a qué paso de la plataforma va cada una */
+function gSecs(md){const R=[];let c={h:'',b:[]};String(md).split('\n').forEach(l=>{const m=l.match(/^###\s+(.*)/);if(m){if(c.h||c.b.join('').trim())R.push(c);c={h:m[1].trim(),b:[]}}else c.b.push(l)});if(c.h||c.b.join('').trim())R.push(c);return R.map(x=>({h:x.h,b:x.b.join('\n')}))}
+const gCat=h=>/^🏠/.test(h)?'e':/^(✅|⭐)/.test(h)?'fin':/^(🎸|🎵|✏️)/.test(h)?'p':'leer';
+const gCards=a=>a.map(s=>'<div class="card">'+(s.h?'<h3>'+gInl(s.h)+'</h3>':'')+mdR(s.b)+'</div>').join('');
+function gOld(i){const o=LD['0-0guitarra-'+i];if(!o)return '';
+ return '<div class="card" style="border-color:var(--gold)"><h3>🎛️ Práctica interactiva · '+esc(o.t)+'</h3><p class="mute" style="margin-top:4px;font-size:14px">Diagramas y ejercicios de la plataforma para este mismo tema.</p></div>'
+  +(G1KEEP[i]?'<details class="card guide"><summary style="min-height:44px;cursor:pointer;color:var(--gold)">Para profundizar: '+esc(o.t)+'</summary>'+(typeof o.g==='function'?o.g():o.g||'')+'</details>':'')
+  +(o.z?o.z():'')}
+const gCred=c=>'<p class="mute" style="font-size:13px;margin-top:16px">Método Integral AMA de Guitarra · © Academia de Música ARPA.'+(/Beethoven/.test(c.md)?' «Himno de la alegría»: melodía de Ludwig van Beethoven (dominio público), transcripción AMA.':'')+(/canción AMA/.test(c.md)?' Las canciones marcadas «canción AMA» son composiciones originales de la academia.':'')+'</p>';
+var G1K=[];
+GNC1.forEach(c=>{const S2=gSecs(c.md),pick=k=>S2.filter(s=>gCat(s.h)===k),att=G1MAP[c.n]||[];
+ const qq=[].concat(...att.map(i=>(LD['0-0guitarra-'+i]||{q:[]}).q.slice(0,3)));
+ const tar=pick('e').map(s=>s.b).join('\n').split('\n').map(l=>l.trim()).filter(l=>/^[-*\d]/.test(l)).map(l=>gInl(l.replace(/^([-*]|\d+\.)\s*/,'').replace(/^☐\s*/,'')));
+ const k='0-0guitarra-c'+c.n;G1K.push(k);
+ LD[k]={u:'Clase '+c.n,t:c.t,s:'Guitarra I · Mes '+String(c.mes).split(' ')[0]+' · Clase '+c.n+' · Nivel 1 · Semana '+c.n,w:[c.n],o:esc(c.o),v:1,
+  leer:()=>gCards(pick('leer'))+att.map(gOld).join('')+gCred(c),
+  p:()=>gCards(pick('p'))+'<div class="card">'+mmBox(['60 bpm'])+'</div>',
+  q:qq.length?qq:(G1Q[c.n]||[]),
+  e:(tar.length?'<b>Tu tarea:</b> '+tar.join(' · ')+'<br><br>':'')+'Cuéntale a tu docente cómo te fue: qué lograste y qué te costó.',
+  fin:()=>gCards(pick('fin'))}});
+G1EXTRA.forEach(i=>{const k='0-0guitarra-'+i;if(LD[k]){delete LD[k].w;G1K.push(k)}});
+INS.guitarra[0]=G1K.map(k=>/-c\d+$/.test(k)?LD[k].u+' · '+LD[k].t:'Práctica adicional · '+LD[k].t);
+/* Avance anterior: una clase queda completa si ya estaban completas todas las lecciones que ahora son su práctica */
+if(!S.g1mig){Object.keys(G1MAP).forEach(n=>{if(G1MAP[n].every(i=>S.done['0-0guitarra-'+i]))S.done['0-0guitarra-c'+n]=true});S.g1mig=1;save()}
+
 Object.keys(LD).forEach(k=>{if(/guitarra/.test(k))LD[k].icon=licon(LD[k].t)});
 /* ===================== ZONA EXPLORADORES (niños desde 9 años) =====================
  Para agregar una misión, copia un objeto de KIDS y cambia sus campos:
@@ -2459,16 +2545,22 @@ run();
    n4sol/<id>                     solicitud de ingreso; cada estudiante escribe la suya, solo la dirección las lee.
    n4mat/<id>                     matrícula, avances y evaluaciones; solo la dirección.
    n4est/<id>                     estado que ve el estudiante; lo escribe la dirección, cada uno lee el suyo.
-   N4DEF se usa mientras la base de datos no responde o aún no tiene datos. */
+   N4DEF se usa mientras la base de datos no responde o aún no tiene datos.
+   Estructura: 6 módulos (a1…a6), cada uno con sus clases (c1…c24). Cada clase es un espacio propio
+   con campos vacíos (obj, d, tarea, ev, m) que la dirección llenará clase por clase. */
 const N4DEF={
-config:{duracion:6,unidad:'meses',frecuencia:'Una sesión semanal',modalidades:['Presencial','Virtual','Semipresencial'],evaluacion:'Una evaluación por asignatura',practicas:'Actividades prácticas y ejercicios de reflexión personal en cada unidad',proyecto:'Proyecto final de aplicación ministerial: un plan concreto para servir en tu congregación con lo aprendido, acompañado por tu docente.'},
+config:{duracion:6,unidad:'meses',frecuencia:'Una sesión semanal',modalidades:['Presencial','Virtual','Semipresencial'],evaluacion:'Evaluaciones por módulo',practicas:'Actividades prácticas y ejercicios de reflexión personal',proyecto:'Proyecto final de aplicación ministerial.'},
 asig:[
-['a1','Identidad y autoestima','Conocerte mejor y descubrir que tu valor no depende de lo bien que toques o cantes.','Escribe tres cualidades tuyas que no tengan que ver con la música y compártelas con alguien de confianza.','¿En qué momentos siento que valgo solo por mi talento? ¿Qué cambiaría si recordara que mi valor es anterior a lo que hago?','Reflexión escrita sobre tu identidad personal y ministerial, y participación en las sesiones.',['Autoconocimiento','Identidad personal y ministerial','Autoestima equilibrada','Seguridad personal','Ego, orgullo y necesidad de reconocimiento','Valor personal independiente del talento']],
-['a2','Inteligencia emocional','Reconocer lo que sientes y responder con calma, también en el ensayo y en el servicio.','Durante una semana, anota una situación del ensayo o del servicio que te movió por dentro y cómo respondiste.','Cuando recibo una crítica, ¿qué siento primero y qué hago después? ¿Cómo me gustaría responder la próxima vez?','Diario emocional de una semana y conversación de cierre con tu docente.',['Reconocimiento de las emociones','Gestión emocional','Autocontrol','Manejo de frustraciones','Tolerancia a las críticas','Resiliencia y estabilidad emocional']],
-['a3','Espiritualidad y carácter cristiano','Cultivar una vida devocional sencilla y un carácter íntegro que sostenga el servicio.','Planifica un tiempo devocional diario de diez minutos durante dos semanas y anota lo que aprendes.','¿Mi servicio nace de mi relación con Dios o de la costumbre? ¿Qué hábito me ayudaría a crecer?','Registro devocional y ensayo breve sobre el propósito del ministerio musical.',['Sensibilidad espiritual','Vida devocional','Humildad','Integridad','Propósito del ministerio musical','Cultura de servicio']],
-['a4','Relaciones interpersonales','Comunicarte con empatía, resolver diferencias y construir un equipo sano.','Ten una conversación pendiente con alguien de tu equipo, escuchando primero, y cuenta qué aprendiste.','¿Cómo trato a quien piensa distinto en el equipo? ¿Qué puedo hacer esta semana para acercarme?','Estudio de caso en grupo sobre un conflicto en un ministerio y su solución.',['Empatía','Comunicación efectiva','Resolución de conflictos','Compañerismo','Trabajo en equipo','Relaciones saludables dentro de la congregación']],
-['a5','Liderazgo y cultura de servicio','Liderar con humildad, disciplina y responsabilidad, sin buscar protagonismo.','Durante un mes, asume una tarea de servicio que nadie vea: preparar el espacio, ordenar los equipos o recibir a los nuevos.','¿Sirvo igual cuando nadie me ve? ¿Qué entiendo por autoridad y qué por responsabilidad?','Informe de la tarea de servicio y autoevaluación de liderazgo.',['Liderazgo ministerial','Autoridad y responsabilidad','Disciplina','Compromiso','Humildad en el liderazgo','Servicio sin protagonismo']],
-['a6','Madurez y desarrollo ministerial','Integrar lo aprendido y aplicarlo con constancia y excelencia en tu congregación.','Diseña con tu líder un plan de servicio de tres meses para tu ministerio.','¿Qué pasión me mueve a servir? ¿Qué compromiso concreto asumo para los próximos meses?','Presentación del proyecto final de aplicación ministerial.',['Pasión por el servicio','Constancia','Responsabilidad ministerial','Vocación','Excelencia','Aplicación de los principios aprendidos en la congregación']]
+['a1','Identidad y autoestima',['Identidad y el peso del escenario','Identidad espiritual y lugar en el Cuerpo de Cristo','Motivaciones personales y ministeriales','Percepción del carácter: ¿cómo me ven los demás?'],{
+ d:'Este módulo busca ayudar a toda persona que sirve en una iglesia, ministerio o institución (músicos, cantantes, maestros, predicadores, líderes, coordinadores y colaboradores) a reconocer y fortalecer su identidad personal y espiritual, comprendiendo que su valor no depende de sus dones, su posición, el reconocimiento, la visibilidad de su servicio ni la aprobación de los demás.\nSe abordarán las motivaciones que impulsan el servicio, la relación entre identidad y autoestima, y la manera en que las actitudes personales pueden influir en la convivencia y el testimonio dentro de una congregación.',
+ og:'Fortalecer la identidad y la autoestima de quien sirve en un ministerio, promoviendo una comprensión saludable de su valor personal, su identidad espiritual y sus motivaciones para servir, independientemente del reconocimiento, de sus dones y capacidades o de la posición que ocupe dentro de la congregación.',
+ oe:['Reconocer que su valor personal no depende de su desempeño en el servicio ni del reconocimiento público.','Comprender su identidad espiritual y su lugar dentro del Cuerpo de Cristo.','Identificar las motivaciones personales que influyen en su servicio ministerial.','Reconocer cómo sus actitudes y comportamientos pueden ser percibidos por otras personas.','Identificar áreas personales que necesitan crecimiento, corrección y madurez.','Desarrollar una actitud de servicio basada en la humildad, la seguridad personal y el propósito.'],
+ res:'Que el participante comprenda que su identidad y su valor personal van más allá de su función o área de servicio, y que pueda desarrollar una autoestima saludable, motivaciones correctas y una actitud de humildad y servicio dentro de su congregación.'}],
+['a2','Inteligencia emocional',['Conociendo y comprendiendo mis emociones','Ego, comparación y envidia en el ministerio musical','Cómo enfrentar las críticas y las frustraciones','Resiliencia y madurez emocional']],
+['a3','Espiritualidad y carácter',['La vida espiritual del músico ministerial','El carácter del ministro de música','Vocación, ambición y propósito ministerial','Ética e integridad en el ministerio musical']],
+['a4','Relaciones interpersonales',['Comunicación y escucha efectiva','Empatía y respeto entre músicos y servidores','Manejo de conflictos y relaciones con el liderazgo','Deberes, derechos y responsabilidades ministeriales']],
+['a5','Liderazgo y servicio',['El liderazgo del ministro de música','Cultura de servicio: servir sin buscar protagonismo','Disciplina y organización ministerial','Ensamble: tocar juntos, servir juntos']],
+['a6','Desarrollo y madurez ministerial',['Historia de la música cristiana y nuestras raíces','Influencias, referentes y formación musical','El sustento y la sostenibilidad del ministro de música','Madurez, legado y compromiso ministerial']]
 ]};
 const N4ROL=['Músico','Cantante','Pastor','Director de alabanza','Líder de ministerio musical','Servidor de la congregación'];
 const N4PUB=['Músicos','Cantantes','Pastores','Directores de alabanza','Líderes de ministerios musicales','Servidores de congregaciones'];
@@ -2476,13 +2568,66 @@ const N4PERF=['Posee identidad y autoestima equilibradas.','Es un músico con ma
 const N4EST=['activa','en pausa','egresada','retirada'],N4PRG=['sin iniciar','en curso','completada'];
 const EMAP={activa:'confirmada','en pausa':'en pausa',egresada:'egresada',retirada:'retirada'};
 S.n4=Object.assign({sol:null,done:{},refl:{},cur:''},S.n4||{});
-const defA4=a=>({id:a[0],n:a[1],d:a[2],act:a[3],ref:a[4],ev:a[5],u:a[6].map((t,i)=>({id:'u'+(i+1),t,d:'',m:[]}))});
+/* Secciones de una clase, en el orden en que las ve el estudiante: [campo, título, letra del editor] */
+const SEC4=[['prop','Propósito de la clase','p'],['obj','Objetivos de aprendizaje','o'],['bib','Fundamento bíblico','b'],['d','Contenido de desarrollo','d'],['preg','Preguntas para reflexión','q'],['sol','Aplicación práctica','s'],['tarea','Actividad de aprendizaje','k'],['ev','Evidencia de aprendizaje','e'],['cie','Cierre de la clase','c']];
+const cls4=(id,t)=>Object.assign({id,t,m:[]},...SEC4.map(s=>({[s[0]]:''})));
+/* Formato de los textos de las clases: «## subtítulo», «- lista», «1. lista numerada», «> idea clave», **negrita**, *cursiva*.
+   Espacios de respuesta: una línea de «_____» es un cuadro para escribir (varias seguidas, uno más alto),
+   «a) _____» una línea corta, «☐ opción» una casilla y «| … |» una tabla (cada «☐» de una fila es una opción). */
+function fmt4(t,kp){let h='',lt=null,pa=[],tb=null,n=0,ta=0;
+ const inl=s=>esc(s).replace(/\*\*(.+?)\*\*/g,'<b>$1</b>').replace(/(^|[\s(“"«])\*([^*\s][^*]*?)\*(?=[\s.,;:!?)”"»]|$)/g,'$1<i>$2</i>');
+ const id=()=>kp!=null?' data-r4="'+kp+'.'+(++n)+'"':'';
+ const fp=()=>{if(pa.length){h+='<p style="margin-top:8px">'+pa.map(x=>inl(x).replace(/_{5,}/g,()=>'<input class="fi m4inl" aria-label="Tu respuesta"'+id()+'>')).join('<br>')+'</p>';pa=[]}},fl=()=>{if(lt){h+='</'+lt+'>';lt=null}};
+ const ft=()=>{if(ta){h+='<textarea class="fi m4ans" rows="'+Math.min(8,ta+1)+'" aria-label="Tu respuesta"'+id()+'></textarea>';ta=0}};
+ const fb=()=>{if(!tb)return;const R=tb.filter(r=>!r.every(c=>/^:?-{2,}:?$/.test(c))),H=R.shift()||[];
+  h+='<div class="m4tw"><table class="m4tb"><thead><tr>'+H.map(c=>'<th>'+inl(c)+'</th>').join('')+'</tr></thead><tbody>'
+  +R.map(r=>{const k=r.some(c=>c==='☐')?id():'';return '<tr>'+r.map((c,j)=>c==='☐'?'<td class="m4rc"><input type="radio" name="'+esc(kp+'-'+n)+'" value="'+esc(H[j]||String(j))+'" aria-label="'+esc((r[0]||'')+': '+(H[j]||''))+'"'+k+'></td>':/_{3,}$/.test(c)?'<td><span class="m4tc">'+inl(c.replace(/\s*_{3,}$/,''))+'<input class="fi m4tin" aria-label="'+esc((r[0]||'')+': '+(H[j]||''))+'"'+id()+'></span></td>':c===''?'<td><input class="fi m4tin" aria-label="'+esc((r[0]||'')+': '+(H[j]||''))+'"'+id()+'></td>':'<td>'+inl(c)+'</td>').join('')+'</tr>'}).join('')
+  +'</tbody></table></div>';tb=null};
+ String(t||'').split('\n').forEach(r=>{const s=r.trim();let m;
+  if(/^\|.*\|$/.test(s)){fp();fl();ft();(tb=tb||[]).push(s.slice(1,-1).split('|').map(c=>c.trim()));return}
+  fb();
+  if(!s){fp();fl();return}
+  if(/^_{5,}$/.test(s)){fp();fl();ta++;return}
+  ft();
+  if(m=s.match(/^(.*?[^_\s])\s*_{5,}$/)){fp();fl();const q=m[1].match(/^☐\s*(.*)/);h+=q?'<div class="chk m4ck m4ln"><input type="checkbox" aria-label="'+esc(q[1])+'"'+id()+'><span>'+inl(q[1])+'</span><input class="fi" aria-label="'+esc(q[1])+'"'+id()+'></div>':'<label class="m4ln"><span>'+inl(m[1])+'</span><input class="fi" aria-label="Tu respuesta"'+id()+'></label>'}
+  else if(m=s.match(/^☐\s*(.*)/)){fp();fl();h+='<label class="chk m4ck"><input type="checkbox"'+id()+'><span>'+inl(m[1])+'</span></label>'}
+  else if(m=s.match(/^#{2,4}\s+(.*)/)){fp();fl();h+='<h4 class="m4h4">'+inl(m[1])+'</h4>'}
+  else if(m=s.match(/^[-*•]\s+(.*)/)){fp();if(lt!=='ul'){fl();h+='<ul class="m4ul">';lt='ul'}h+='<li>'+inl(m[1])+'</li>'}
+  else if(m=s.match(/^\d+[.)]\s+(.*)/)){fp();if(lt!=='ol'){fl();h+='<ol class="m4ul">';lt='ol'}h+='<li>'+inl(m[1])+'</li>'}
+  else if(m=s.match(/^>\s*(.*)/)){fp();fl();h+='<p class="m4key">'+inl(m[1])+'</p>'}
+  else{fl();pa.push(s)}});
+ fb();fp();fl();ft();return h}
+/* Clase completa en un solo texto («md»): cada «## N. Título» abre una parte numerada. */
+function md4(t){const P=[];let c=null;String(t||'').split('\n').forEach(r=>{const m=r.match(/^##\s+(?:\d+[.)]\s*)?(.+)$/);if(m){c=[m[1].trim(),''];P.push(c)}else if(c)c[1]+=r+'\n'});return P}
+/* Respuestas del estudiante: se guardan en este dispositivo y, con sesión iniciada, en n4resp/<id> (solo la persona y la dirección las leen). */
+S.n4.resp=S.n4.resp||{};
+let R4rem=null,R4t=null,R4busy=false,R4dirty=false;
+async function r4get(){if(R4rem||!DB4||!UID4)return;try{const s=await DB4.doc('n4resp/'+UID4).get(),d=s.exists?(s.data()||{}):{};R4rem=d;
+ Object.keys(d).forEach(c=>{if(d[c]&&typeof d[c]==='object')S.n4.resp[c]=Object.assign({},d[c],S.n4.resp[c]||{})});save();r4apply()}catch(e){R4rem={}}}
+function r4apply(){const v=$('#v-u4');if(!v)return;const R=S.n4.resp[S.n4.cur]||{};
+ v.querySelectorAll('[data-r4]').forEach(el=>{const x=R[el.dataset.r4];if(x===undefined)return;if(el.type==='checkbox')el.checked=!!x;else if(el.type==='radio')el.checked=x===el.value;else el.value=x})}
+function a4msg(t){const m=$('#a4-st');if(m)m.textContent=t}
+function r4set(el){const k=S.n4.cur,R=S.n4.resp[k]=S.n4.resp[k]||{},f=el.dataset.r4;
+ if(el.type==='checkbox')R[f]=el.checked;else if(el.type==='radio'){if(!el.checked)return;R[f]=el.value}else R[f]=el.value;
+ save();clearTimeout(R4t);a4msg('Guardando…');R4t=setTimeout(r4push,1500)}
+async function r4push(){if(!DB4||!UID4){a4msg('Respuestas guardadas en este dispositivo.');return}
+ if(R4busy){R4dirty=true;return}R4busy=true;
+ try{await r4get();await DB4.doc('n4resp/'+UID4).set(Object.assign({},S.n4.resp,{uid:UID4,fecha:new Date().toISOString()}));a4msg('Respuestas guardadas.')}
+ catch(e){a4msg('Guardadas en este dispositivo. Se enviarán a la academia cuando vuelva la conexión.')}
+ R4busy=false;if(R4dirty){R4dirty=false;r4push()}}
+['input','change'].forEach(ev=>document.addEventListener(ev,e=>{const el=e.target&&e.target.closest&&e.target.closest('#v-u4 [data-r4]');if(el)r4set(el)}));
+const defA4=(a,i)=>Object.assign({id:a[0],n:a[1],d:'',og:'',oe:[],res:''},a[3]||{},{u:a[2].map((t,j)=>cls4('c'+(i*4+j+1),t))});
+const mhas4=a=>!!(a.d||a.og||(a.oe&&a.oe.length)||a.res);
+const has4=u=>!!(u.md||SEC4.some(s=>u[s[0]])||(u.m&&u.m.length));
 let DB4=null,UID4=null,ADM4=false,P4={config:null,asig:{}},EST4=null,SOL4=[],MAT4=[],A4sub=false;
-const A4={tab:'sol',open:null,add:false,w:null,f:'todas',busy:false};
-function plan4(){const c=Object.assign({},N4DEF.config,P4.config||{});return{c,as:N4DEF.asig.map(a=>{const d=defA4(a),x=P4.asig[d.id];return x?Object.assign(d,x,{id:d.id}):d})}}
+const A4={tab:'sol',open:null,add:false,w:null,wo:0,f:'todas',busy:false};
+/* Las clases se numeran de corrido (1 a 24) según su orden en los módulos */
+function plan4(){const c=Object.assign({},N4DEF.config,P4.config||{});let k=0;
+ const as=N4DEF.asig.map((a,i)=>{const d=defA4(a,i),x=P4.asig[d.id];return x&&Array.isArray(x.u)?Object.assign(d,x,{id:d.id}):d});
+ as.forEach(a=>{a.u=a.u.map(u=>Object.assign(cls4(u.id,u.t),u,{num:++k}))});return{c,as,total:k}}
 const vis4=id=>!$('#'+id).hidden;
-const lock4=()=>A4.busy||A4.w||A4.open||A4.add||A4.tab==='cfg';
-const rr4=()=>{if(vis4('v-n4'))n4();if(vis4('v-a4')&&!lock4())a4()};
+const lock4=()=>A4.busy||A4.w||A4.open||A4.add||A4.tab==='cfg'||!!A4.r;
+const rr4=()=>{if(vis4('v-n4'))n4();if(vis4('v-m4'))m4();if(vis4('v-a4')&&!lock4())a4()};
 const fd4=s=>{const d=new Date(s);return isNaN(d)?'':d.toLocaleDateString('es-PA',{day:'numeric',month:'long',year:'numeric'})};
 const url4=u=>/^https?:\/\/\S+$/i.test(u||'');
 const via4=v=>v==='academica'?'Vía académica':'Vía ministerial';
@@ -2495,14 +2640,14 @@ const opts4=(L,v)=>L.map(o=>'<option'+(o===v?' selected':'')+'>'+esc(o)+'</optio
  rr4()}catch(e){}})();
 
 /* Acceso: 'ok' matrícula confirmada, 'prov' solicitud hecha (acceso provisional), 'no' sin solicitud o no admitida */
-function acc4(){if(EST4)return ['no admitida','retirada'].includes(EST4.estado)?'no':['confirmada','egresada','en pausa'].includes(EST4.estado)?'ok':'prov';return S.n4.sol?'prov':'no'}
+function acc4(){if(ADM4)return 'ok';/* la dirección revisa las clases sin matrícula */if(EST4)return ['no admitida','retirada'].includes(EST4.estado)?'no':['confirmada','egresada','en pausa'].includes(EST4.estado)?'ok':'prov';return S.n4.sol?'prov':'no'}
 function st4(){const E=EST4,s=S.n4.sol;
  if(E)return({confirmada:['ok','Matrícula confirmada'],egresada:['ok','Egresado del diplomado'],'en pausa':['wait','Matrícula en pausa'],retirada:['','Retirado del diplomado'],'no admitida':['','Solicitud no admitida'],pendiente:['wait','Solicitud en revisión'],verificando:['wait','La academia está verificando tu egreso de los tres niveles']})[E.estado]||['wait',E.estado];
  if(s)return s.enviada?['wait','Solicitud enviada · en revisión']:['wait','Solicitud guardada en este dispositivo'];
  return null}
 const txt4=r=>['Solicitud de ingreso · ARPA | Formación Ministerial','Diplomado en Formación Integral del Músico y Líder Ministerial','',via4(r.via),'Nombre: '+r.nombre,'Correo: '+r.correo,'Teléfono: '+r.tel,'País y ciudad: '+r.ubic,'Congregación o ministerio: '+r.igl,'Servicio actual: '+r.rol,'Modalidad preferida: '+r.mod].concat(r.via==='academica'?['Declara haber culminado los niveles 1, 2 y 3: '+(r.egreso?'Sí':'No')]:[]).concat(['Expectativas: '+r.nota,'Fecha: '+fd4(r.fecha)]).join('\n');
 
-function n4(){const{c,as}=plan4(),A=acc4(),st=st4(),E=EST4,sol=S.n4.sol,via=E&&E.via||sol&&sol.via;
+function n4(){const{c,as,total}=plan4(),A=acc4(),st=st4(),E=EST4,sol=S.n4.sol,via=E&&E.via||sol&&sol.via;
  const lv=[0,1,2].map(l=>{const x=cnt(l);return x.t?x.p+'%':'—'});
  const canReq=!st||(E&&['no admitida','retirada'].includes(E.estado));
  const vb=v=>canReq?'<button class="btn" data-f4="'+v+'">Solicitar ingreso por esta vía</button>':via===v?'<span class="m4st ok">Tu vía de ingreso</span>':'';
@@ -2511,24 +2656,25 @@ function n4(){const{c,as}=plan4(),A=acc4(),st=st4(),E=EST4,sol=S.n4.sol,via=E&&E
  +'<p style="margin-top:16px;color:#e9dccb">Un programa de formación integral diseñado para fortalecer la identidad personal, autoestima, madurez emocional, sensibilidad espiritual, relaciones interpersonales, carácter y liderazgo de músicos y servidores ministeriales.</p>'
  +'<p style="margin-top:10px;color:#e9dccb">Su propósito es complementar la preparación musical con herramientas de desarrollo humano y espiritual que contribuyan al fortalecimiento de los ministerios musicales de las congregaciones.</p>'
  +'<p class="m4lema">«El talento se desarrolla, el carácter se forma y el servicio se cultiva».</p></div>'
- +'<div class="card m4card"><h3>El diplomado en breve</h3><p class="mute" style="font-size:14px;margin-top:4px">Los niveles 1, 2 y 3 forman al músico. El Nivel 4 forma a la persona y al servidor.</p><div class="m4facts"><div><b>'+esc(c.duracion+' '+c.unidad)+'</b><span>Duración</span></div><div><b>'+as.length+'</b><span>Asignaturas</span></div><div><b>'+esc(c.frecuencia)+'</b><span>Frecuencia</span></div><div><b>'+esc((c.modalidades||[]).join(' · '))+'</b><span>Modalidad</span></div></div>'
+ +'<div class="card m4card"><h3>El diplomado en breve</h3><p class="mute" style="font-size:14px;margin-top:4px">Los niveles 1, 2 y 3 forman al músico. El Nivel 4 forma a la persona y al servidor.</p><div class="m4facts"><div><b>'+esc(c.duracion+' '+c.unidad)+'</b><span>Duración</span></div><div><b>'+as.length+'</b><span>Módulos</span></div><div><b>'+total+'</b><span>Clases</span></div><div><b>'+esc(c.frecuencia)+'</b><span>Frecuencia</span></div><div><b>'+esc((c.modalidades||[]).join(' · '))+'</b><span>Modalidad</span></div></div>'
  +'<ul style="margin:14px 0 0;padding-left:20px;font-size:15px;display:flex;flex-direction:column;gap:4px"><li>'+esc(c.evaluacion)+'.</li><li>'+esc(c.practicas)+'.</li><li>'+esc(c.proyecto)+'</li></ul></div>';
  if(st){h+='<div class="card" style="border-color:var(--wine2)"><div class="row"><h3 class="grow">Mi matrícula</h3><span class="m4st '+st[0]+'">'+esc(st[1])+'</span></div>'+(via?'<p style="margin-top:8px">'+via4(via)+'</p>':'')
-  +(A==='prov'?'<p class="mute" style="font-size:14px;margin-top:6px">Ya puedes estudiar las unidades. La academia confirmará tu matrícula'+(via==='academica'?' después de verificar tu egreso de los tres niveles':'')+'.</p>':'')
+  +(A==='prov'?'<p class="mute" style="font-size:14px;margin-top:6px">Ya puedes entrar a las clases. La academia confirmará tu matrícula'+(via==='academica'?' después de verificar tu egreso de los tres niveles':'')+'.</p>':'')
   +(!E&&sol&&!sol.enviada?'<p style="font-size:14px;margin-top:8px">No pudimos enviar la solicitud a la academia desde esta cuenta. Descárgala y entrégala a la coordinación de la academia, o inténtalo de nuevo con tu cuenta de la academia.</p><div class="row" style="flex-wrap:wrap;gap:8px;margin-top:10px">'+(DB4&&UID4?'<button class="btn m4mini" id="n4-re">Reintentar envío</button>':'')+(DLD?'<button class="btn ghost m4mini" id="n4-dl">Descargar solicitud</button>':'')+'</div>':'')
   +'</div>'}
  h+='<div class="card m4card"><h3>Dos vías de ingreso</h3><p class="mute" style="margin-top:4px">Las dos llevan al mismo diplomado. Elige la que corresponde a tu camino.</p><div class="m4vias">'
  +'<div class="m4via"><span class="tag">Vía académica</span><h3>Continúa después de los niveles musicales</h3><p class="mute" style="font-size:15px">Para estudiantes que culminaron satisfactoriamente los niveles 1, 2 y 3 de la Academia de Música ARPA.</p><ul><li>Requisito: haber egresado de los tres niveles técnicos.</li><li>La academia verifica tu egreso antes de confirmar la matrícula.</li></ul><p class="mute" style="font-size:13px">Tu avance en este dispositivo: Nivel 1 '+lv[0]+' · Nivel 2 '+lv[1]+' · Nivel 3 '+lv[2]+'</p>'+vb('academica')+'</div>'
  +'<div class="m4via"><span class="tag">Vía ministerial</span><h3>Ingreso directo para quienes ya sirven</h3><p class="mute" style="font-size:15px">Matrícula directa, sin haber cursado los niveles técnicos de ARPA. Para:</p><ul>'+N4PUB.map(r=>'<li>'+r+'</li>').join('')+'</ul>'+vb('ministerial')+'</div></div></div>'
  +'<div class="card m4card"><h3>Cómo trabajamos</h3><p style="margin-top:6px">La formación ministerial no consiste en señalar defectos ni en etiquetar a nadie. Buscamos el autoconocimiento, el crecimiento personal, la madurez emocional y espiritual, y relaciones saludables.</p><p class="mute" style="font-size:14px;margin-top:8px">Es un programa educativo y formativo: no hace diagnósticos ni reemplaza la atención psicológica. Si atraviesas un momento difícil, tu docente puede orientarte hacia la ayuda adecuada.</p></div>'
- +'<h2>Plan de estudios</h2><p class="mute">'+as.length+' asignaturas. Cada unidad trae una actividad práctica y un ejercicio de reflexión personal.</p>'
+ +'<h2>Plan de estudios</h2><p class="mute">'+as.length+' módulos y '+total+' clases. El contenido de cada clase se publicará aquí a medida que esté listo.</p>'+(ADM4?'<p style="margin-top:8px"><span class="m4st ok">Vista de la dirección: ves todas las clases abiertas, sin matrícula</span></p>':'')
  +as.map((a,i)=>{const d=a.u.filter(u=>S.n4.done[a.id+'-'+u.id]).length,o='n4-'+a.id,R=E&&E.asig&&E.asig[a.id];
-  return '<details class="card sub m4card" data-o4="'+o+'"'+(S.open[o]?' open':'')+'><summary><span class="m4n">'+(i+1)+'</span><span class="grow">'+esc(a.n)+'</span><span class="mute">'+(A==='no'?a.u.length+' unidades':d+'/'+a.u.length)+'</span></summary>'
-  +'<p style="margin:2px 0 8px">'+esc(a.d)+'</p>'
+  return '<details class="card sub m4card" data-o4="'+o+'"'+(S.open[o]?' open':'')+'><summary><span class="m4n">'+(i+1)+'</span><span class="grow"><small class="m4kick" style="display:block;font:600 11px/1.3 Jost,system-ui,sans-serif;letter-spacing:.18em">MÓDULO '+(i+1)+'</small>'+esc(a.n)+'</span><span class="mute">'+(A==='no'?a.u.length+' clases':d+'/'+a.u.length)+'</span></summary>'
+  +'<button class="btn ghost m4mini" data-m4="'+a.id+'" style="margin:2px 0 8px;border-color:var(--wine2);color:#f3d3d9">📖 '+(mhas4(a)?'Descripción y objetivos del módulo':'Página del módulo')+' ›</button>'
   +(R&&((R.p&&R.p!=='sin iniciar')||R.n)?'<p style="font-size:14px;margin-bottom:8px"><span class="m4st ok">Registro de la academia: '+esc(R.p||'')+(R.n?' · Nota '+esc(R.n):'')+'</span></p>':'')
-  +(A==='no'?'<ul style="padding-left:20px;margin:0">'+a.u.map(u=>'<li style="font-size:15px;margin-top:4px">'+esc(u.t)+'</li>').join('')+'</ul><p class="m4lock">🔒 Las unidades se abren cuando solicitas tu ingreso por una de las dos vías.</p>'
-  :a.u.map(u=>{const k=a.id+'-'+u.id;return '<button class="lesson" data-u4="'+esc(k)+'" aria-pressed="'+!!S.n4.done[k]+'"><span class="tick">'+(S.n4.done[k]?'✓':'')+'</span><span>'+esc(u.t)+'</span><span class="tag" style="margin-left:auto">▶ Abrir</span></button>'}).join(''))
-  +'<p style="font-size:14px;margin-top:10px"><b style="color:var(--gold2)">Evaluación:</b> '+esc(a.ev)+'</p></details>'}).join('')
+  +a.u.map(u=>{const k=a.id+'-'+u.id,lb='<span class="tick" style="border-color:var(--wine2);color:'+(S.n4.done[k]?'#000':'var(--wine2)')+';font-size:12px;width:30px;height:30px">'+(S.n4.done[k]?'✓':u.num)+'</span><span class="lt"><small class="mute" style="display:block;font-size:12px">Clase '+u.num+'</small>'+esc(u.t)+'</span>';
+   return A==='no'?'<div class="lesson" style="cursor:default">'+lb+'</div>':'<button class="lesson" data-u4="'+esc(k)+'" aria-pressed="'+!!S.n4.done[k]+'">'+lb+'<span class="tag" style="margin-left:auto;white-space:nowrap">'+(has4(u)?'▶ Abrir':'En preparación')+'</span></button>'}).join('')
+  +(A==='no'?'<p class="m4lock">🔒 Las clases se abren cuando solicitas tu ingreso por una de las dos vías.</p>':'')
+  +'</details>'}).join('')
  +'<div class="card m4card"><h3>Perfil del egresado</h3><p class="mute" style="margin-top:4px">Al completar el diplomado, esperamos que el participante:</p><ol style="padding-left:22px;margin:10px 0 0;display:flex;flex-direction:column;gap:6px">'+N4PERF.map(p=>'<li>'+p+'</li>').join('')+'</ol></div>'
  +(ADM4?'<div class="card" style="border-color:var(--gold)"><h3>Administración del Nivel 4</h3><p class="mute" style="margin-top:4px">Solicitudes, matrículas, evaluaciones, plan de estudios y configuración.</p><button class="btn" data-go="a4" style="margin-top:12px">Abrir administración</button></div>':'');
  $('#v-n4').innerHTML=h;
@@ -2565,33 +2711,232 @@ async function send4(via){const g=k=>{const e=$('#f4-'+k);return e?(e.type==='ch
 $('#f4').addEventListener('click',e=>{if(e.target.id==='f4'||e.target.closest('#f4-x'))close4();else if(e.target.closest('#f4-go'))send4(e.target.closest('#f4-go').dataset.via)});
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!$('#f4').hidden)close4()});
 
-/* Unidad del Nivel 4 */
-function u4(){const{as}=plan4(),[aid,un]=String(S.n4.cur).split('-'),ai=as.findIndex(x=>x.id===aid),a=as[ai],u=a&&a.u.find(x=>x.id===un);
+/* Clase del Nivel 4: cada clase es un espacio propio. Muestra solo las secciones que la dirección ya llenó. */
+/* ===== Velocidad del lector: valor grande, − barra +, y atajos ===== */
+const R4VS=[1,1.25,1.5,2,3];let R4vt=null;
+const r4speed=()=>'<div class="r4sp" role="group" aria-label="Velocidad de lectura"><p class="r4sv" id="r4-sv" aria-live="polite">1.00×</p>'
+ +'<div class="r4sr"><button class="r4sb" id="r4-m" aria-label="Leer más lento">−</button><input type="range" id="r4-vel" min="0.5" max="3" step="0.05" value="1" aria-label="Velocidad de lectura"><button class="r4sb" id="r4-p" aria-label="Leer más rápido">+</button></div>'
+ +'<div class="r4sc">'+R4VS.map(v=>'<button class="r4cp" data-vel="'+v+'" aria-pressed="false">'+(v===1.25?'1.25':v.toFixed(1))+(v===1?'<small>Normal</small>':'')+'</button>').join('')+'</div></div>';
+function r4vset(v,quiet){v=Math.min(3,Math.max(0.5,Math.round((+v||1)*20)/20));S.n4.vel=v;save();
+ const r=$('#r4-vel');if(r){r.value=v;r.style.setProperty('--p',((v-0.5)/2.5*100)+'%')}
+ const t=$('#r4-sv');if(t)t.textContent=v.toFixed(2)+'×';
+ document.querySelectorAll('#v-u4 [data-vel]').forEach(b=>b.setAttribute('aria-pressed',String(Math.abs(+b.dataset.vel-v)<0.001)));
+ if(!quiet){clearTimeout(R4vt);R4vt=setTimeout(()=>{if(R4.on&&!R4.pause)r4say(R4.i)},400)}}
+document.addEventListener('input',e=>{if(e.target&&e.target.id==='r4-vel')r4vset(e.target.value)});
+document.addEventListener('click',e=>{const t=e.target;if(!t.closest)return;
+ if(t.closest('#r4-m'))r4vset((+S.n4.vel||1)-0.1);else if(t.closest('#r4-p'))r4vset((+S.n4.vel||1)+0.1);
+ else{const b=t.closest('#v-u4 [data-vel]');if(b)r4vset(+b.dataset.vel)}});
+
+/* ===== PDF del Nivel 4: guía para imprimir, con los espacios en blanco ===== */
+let PDF4L=null;
+function pdf4lib(){if(window.jspdf&&window.jspdf.jsPDF&&window.jspdf.jsPDF.API.autoTable)return Promise.resolve();if(PDF4L)return PDF4L;
+ const ld=src=>new Promise((ok,ko)=>{const s=document.createElement('script');s.src=src;s.onload=ok;s.onerror=()=>ko(new Error('carga'));document.head.appendChild(s)});
+ PDF4L=ld('https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js').then(()=>ld('https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.2/jspdf.plugin.autotable.min.js')).catch(e=>{PDF4L=null;throw e});return PDF4L}
+/* Las fuentes estándar del PDF no traen comillas tipográficas ni rayas largas */
+const pcl4=s=>String(s==null?'':s).replace(/[“”„]/g,'"').replace(/[‘’]/g,"'").replace(/[–—]/g,'-').replace(/…/g,'...').replace(/ /g,' ');
+function PDFW4(){const D=new window.jspdf.jsPDF({unit:'mm',format:'a4'}),M=18,CW=210-2*M,B=278;let y=M;
+ const C={ink:[34,28,22],mute:[115,104,92],gold:[150,100,20],wine:[143,47,69],line:[185,175,165]};
+ const col=c=>D.setTextColor(...C[c]),font=(st,sz)=>{D.setFont('helvetica',st);D.setFontSize(sz)},lh=sz=>sz*0.46;
+ const need=h=>{if(y+h>B){D.addPage();y=M}};
+ const para=(t,o={})=>{const sz=o.sz||10.5,ind=o.ind||0,x=M+ind,w=CW-ind;let s=pcl4(t).trim(),st=o.st||'normal',pre='';
+  const m=s.match(/^\*\*(.+?)\*\*(.*)$/);
+  if(m&&st==='normal'){if(m[2].trim()){pre=m[1].trim()+' ';s=m[2].trim()}else{s=m[1];st='bold'}}
+  s=s.replace(/\*\*(.+?)\*\*/g,'$1');
+  if(/^\*[^*].*\*$/.test(s)){s=s.slice(1,-1);if(st==='normal')st='italic'}
+  let px=0;if(pre){font('bold',sz);px=D.getTextWidth(pre)}
+  font(st,sz);let L=D.splitTextToSize(s,w-px);if(px&&L.length>1)L=[L[0]].concat(D.splitTextToSize(L.slice(1).join(' '),w));
+  col(o.c||'ink');need(lh(sz)*Math.min(2,L.length));
+  L.forEach((ln,i)=>{need(lh(sz));if(i===0&&pre){font('bold',sz);D.text(pre,x,y+lh(sz)*0.8);font(st,sz)}D.text(ln,x+(i===0?px:0),y+lh(sz)*0.8);y+=lh(sz)});
+  y+=o.after==null?2.2:o.after};
+ const rule=(x1,x2,yy,c,w)=>{D.setDrawColor(...C[c||'line']);D.setLineWidth(w||0.3);D.line(x1,yy,x2,yy)};
+ const blanks=n=>{for(let i=0;i<n;i++){need(9);y+=7.5;rule(M,M+CW,y)}y+=3};
+ const lblank=(label,ind)=>{need(10);const x=M+(ind||0);let s=pcl4(label).replace(/\*\*/g,'');const b=/^\*\*/.test(pcl4(label).trim());
+  font(b?'bold':'normal',10.5);col('ink');const lw=Math.min(D.getTextWidth(s)+2,CW*0.6);D.text(D.splitTextToSize(s,CW*0.6)[0],x,y+6);rule(x+lw,M+CW,y+6.6);y+=10};
+ const box=(t,ind,line)=>{need(7);const x=M+(ind||0);D.setDrawColor(...C.ink);D.setLineWidth(0.3);D.rect(x,y+1,3.6,3.6);
+  if(line){font('normal',10.5);col('ink');const s=pcl4(t);D.text(s,x+6,y+4.2);rule(x+7+D.getTextWidth(s),M+CW,y+4.8);y+=7.5}else para(t,{ind:(ind||0)+6,after:1.2})};
+ const bullet=(mk,t,ind)=>{const i=ind||0;need(6);font('normal',10.5);col('gold');D.text(mk,M+i+1,y+lh(10.5)*0.8);para(t,{ind:i+7,after:1.2})};
+ const quote=t=>{const y0=y;para(t,{ind:5,st:'italic',after:0});D.setDrawColor(...C.wine);D.setLineWidth(0.9);D.line(M+1.5,y0+0.5,M+1.5,y-0.5);y+=3};
+ const sub=t=>{need(12);y+=2;para(t,{sz:11.5,st:'bold',after:1.5})};
+ const sec=(n,t)=>{need(18);y+=4;font('bold',13);col('wine');const s=n+'. '+pcl4(t);const L=D.splitTextToSize(s,CW);L.forEach(ln=>{D.text(ln,M,y+5);y+=6});rule(M,M+CW,y+0.5,'wine',0.4);y+=4};
+ const table=rows=>{const R=rows.filter(r=>!r.every(c=>/^:?-{2,}:?$/.test(c))),H=R.shift()||[];
+  const fill=R.some(r=>r.some(c=>c===''||c==='☐'||/_{3,}$/.test(c)));
+  const cell=c=>c==='☐'?'':pcl4(c.replace(/\s*_{3,}$/,'')).replace(/\*\*/g,'');
+  need(22);D.autoTable({startY:y,head:[H.map(cell)],body:R.map(r=>r.map(cell)),margin:{left:M,right:M,top:M,bottom:210*1.414-B},theme:'grid',
+   styles:{font:'helvetica',fontSize:9,textColor:C.ink,lineColor:C.line,lineWidth:0.2,cellPadding:2,minCellHeight:fill?10:6,valign:'middle'},
+   headStyles:{fillColor:[245,236,220],textColor:C.ink,fontStyle:'bold'},
+   didDrawCell:d=>{if(d.section==='body'&&R[d.row.index]&&R[d.row.index][d.column.index]==='☐'){const s=3.6;D.setDrawColor(...C.ink);D.setLineWidth(0.3);D.rect(d.cell.x+d.cell.width/2-s/2,d.cell.y+d.cell.height/2-s/2,s,s)}}});
+  y=D.lastAutoTable.finalY+5};
+ const body=t=>{let tb=null,ta=0;const fb=()=>{if(tb){table(tb);tb=null}},ft=()=>{if(ta){blanks(ta);ta=0}};
+  String(t||'').split('\n').forEach(r=>{const s=r.trim();let m;
+   if(/^\|.*\|$/.test(s)){ft();(tb=tb||[]).push(s.slice(1,-1).split('|').map(c=>c.trim()));return}
+   fb();if(!s)return;if(/^_{5,}$/.test(s)){ta++;return}ft();
+   if(m=s.match(/^(.*?[^_\s])\s*_{5,}$/)){const q=m[1].match(/^☐\s*(.*)/);if(q)box(q[1],0,true);else lblank(m[1]);return}
+   if(m=s.match(/^☐\s*(.*)/)){box(m[1]);return}
+   if(m=s.match(/^#{2,4}\s+(.*)/)){sub(m[1]);return}
+   if(m=s.match(/^[-*•]\s+(.*)/)){bullet('•',m[1]);return}
+   if(m=s.match(/^(\d+)[.)]\s+(.*)/)){bullet(m[1]+'.',m[2]);return}
+   if(m=s.match(/^>\s*(.*)/)){quote(m[1]);return}
+   para(s.replace(/_{5,}/g,'________________'))});fb();ft()};
+ const top=()=>{if(y>M+1){D.addPage();y=M}};
+ const kick=t=>{font('bold',8);col('gold');D.text(pcl4(t).toUpperCase(),M,y+3);y+=7};
+ const title=(t,sz)=>{font('bold',sz);col('ink');D.splitTextToSize(pcl4(t),CW).forEach(ln=>{D.text(ln,M,y+sz*0.38);y+=sz*0.46});y+=2;rule(M,M+CW,y,'wine',0.8);y+=6};
+ return{
+  cover(a,ai){top();kick('ARPA | Formación Ministerial · Nivel 4');title('Módulo '+(ai+1)+'. '+a.n,22);
+   if(a.og){sub('Objetivo general');para(a.og)}
+   if(a.oe&&a.oe.length){sub('Objetivos específicos');para('Al finalizar el módulo, el participante podrá:',{c:'mute'});a.oe.forEach((o,i)=>bullet((i+1)+'.',o))}
+   if(a.d){sub('Descripción del módulo');String(a.d).split(/\n+/).filter(p=>p.trim()).forEach(p=>para(p))}
+   sub('Clases del módulo');a.u.forEach(u=>bullet('•','Clase '+u.num+'. '+u.t));
+   if(a.res){sub('Resultado esperado');para(a.res)}},
+  cls(a,ai,u){top();kick('ARPA | Formación Ministerial · Nivel 4 · Módulo '+(ai+1)+' · '+a.n);title('Clase '+u.num+'. '+u.t,18);
+   para('Nombre: ________________________________________   Fecha: ________________',{c:'mute',sz:9.5,after:4});
+   md4(u.md).forEach((x,j)=>{sec(j+1,x[0]);body(x[1])})},
+  out(){const n=D.getNumberOfPages();for(let i=1;i<=n;i++){D.setPage(i);font('normal',8);col('mute');D.text('Academia de Música ARPA · Formación Ministerial',M,289);D.text('Página '+i+' de '+n,210-M,289,{align:'right'})}return D.output('blob')}}}
+const slug4=s=>String(s).normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'').slice(0,60);
+async function pdf4(aid,uid){if(!DLD){toast('La descarga en PDF no está disponible en esta vista. Abre la plataforma en claude.ai.');return}
+ const{as}=plan4(),ai=as.findIndex(x=>x.id===aid),a=as[ai];if(!a)return;
+ const L=a.u.filter(u=>u.md&&(!uid||u.id===uid));if(!L.length){toast('Esta clase todavía no tiene contenido para descargar.');return}
+ toast('Preparando el PDF…');
+ try{await pdf4lib()}catch(e){toast('No se pudo preparar el PDF. Revisa tu conexión e inténtalo de nuevo.');return}
+ let blob;try{const P=PDFW4();if(!uid)P.cover(a,ai);L.forEach(u=>P.cls(a,ai,u));blob=P.out()}catch(e){toast('No se pudo crear el PDF.');return}
+ const fn=uid?'arpa-nivel4-clase-'+L[0].num+'-'+slug4(L[0].t)+'.pdf':'arpa-nivel4-modulo-'+(ai+1)+'-'+slug4(a.n)+'.pdf';
+ try{await DLD.save({filename:fn,data:blob});toast('PDF guardado')}catch(err){if(!err||err.code!=='declined')toast('No se pudo guardar el PDF')}}
+document.addEventListener('click',e=>{const b=e.target.closest&&e.target.closest('[data-pdf4]');if(!b)return;const p=b.dataset.pdf4.split(':');pdf4(p[0],p[1]||'')});
+const pdfbtn4=(aid,un)=>'<div class="row" style="margin-top:10px"><button class="btn ghost m4mini" data-pdf4="'+esc(aid+':'+un)+'">📄 Descargar PDF de la clase</button></div>';
+const pdfcard4=(a,A,box)=>A==='no'||!a.u.some(u=>u.md)?'':box('Descargar en PDF','<p class="mute" style="font-size:14px;margin-top:6px">Guía para imprimir, con los espacios en blanco para completar a mano.</p><div class="row" style="flex-wrap:wrap;gap:8px;margin-top:10px"><button class="btn m4mini" data-pdf4="'+esc(a.id)+'">📄 Módulo completo</button>'+a.u.filter(u=>u.md).map(u=>'<button class="btn ghost m4mini" data-pdf4="'+esc(a.id+':'+u.id)+'">Clase '+u.num+'</button>').join('')+'</div>');
+
+/* ===== Lector compacto: una fila con Escuchar y un botón que despliega voz y velocidad ===== */
+const r4bar4=()=>'<div class="card m4card r4c" id="r4-bar"><div class="r4top"><button class="btn r4go" id="r4-go">🔊 Escuchar la clase</button><button class="btn ghost r4go" id="r4-stop" hidden>⏹ Detener</button>'
+ +'<button class="r4cfg" id="r4-cfg" aria-expanded="'+!!S.n4.rcfg+'" aria-controls="r4-pan" title="Voz y velocidad"><span aria-hidden="true">⚙️</span><b id="r4-sv2">'+(+(S.n4.vel||1)).toFixed(2)+'×</b><span class="r4sr-only">Voz y velocidad</span></button></div>'
+ +'<div id="r4-pan"'+(S.n4.rcfg?'':' hidden')+'><label class="fl" for="r4-voz">Voz<select class="fi" id="r4-voz"><option value="">Voz del equipo</option></select></label>'+r4speed()
+ +'<p class="mute" id="r4-st" style="font-size:13px;margin-top:8px">Mientras se lee, toca cualquier párrafo para continuar desde ahí.</p></div></div>';
+r4vset=(f=>function(v,q){f(v,q);const t2=$('#r4-sv2');if(t2)t2.textContent=(+S.n4.vel||1).toFixed(2)+'×'})(r4vset);
+document.addEventListener('click',e=>{const b=e.target.closest&&e.target.closest('#r4-cfg');if(!b)return;const p=$('#r4-pan');if(!p)return;p.hidden=!p.hidden;S.n4.rcfg=!p.hidden;save();b.setAttribute('aria-expanded',String(!p.hidden))});
+
+/* ===== Retroceso escalonado: clase → módulo → Formación Ministerial → Clases ===== */
+const DEP4={home:0,clases:0,n4:1,m4:2,a4:2,u4:3},PAR4={u4:'m4',m4:'n4',a4:'n4',n4:'clases'};let V4cur='home',NAV4pop=false;
+go=(function(orig){return function(v){const prev=V4cur;
+ if(v==='m4'&&prev==='u4'&&S.n4.cur)S.n4.mod=String(S.n4.cur).split('-')[0];
+ orig(v);V4cur=v;
+ if(!NAV4pop&&DEP4[v]!=null&&DEP4[v]>(DEP4[prev]||0)){try{history.pushState({v4:v},'')}catch(e){}}}})(go);
+window.addEventListener('popstate',()=>{const p=PAR4[V4cur];if(!p)return;NAV4pop=true;try{go(p)}finally{NAV4pop=false}});
+
+function u4(){r4stop();setTimeout(r4fill,0);setTimeout(()=>{r4apply();r4get()},0);const{as}=plan4(),[aid,un]=String(S.n4.cur).split('-'),ai=as.findIndex(x=>x.id===aid),a=as[ai],u=a&&a.u.find(x=>x.id===un);
  if(!u||acc4()==='no'){go('n4');return}
- const k=aid+'-'+un,dn=!!S.n4.done[k],ix=a.u.indexOf(u),nx=a.u[ix+1];
- $('#v-u4').innerHTML='<button class="link" data-go="n4" style="font-size:16px;min-height:44px">⬅ Volver a Formación Ministerial</button>'
- +'<p class="m4kick" style="margin-top:10px">ASIGNATURA '+(ai+1)+' · '+esc(a.n.toUpperCase())+'</p><h2>'+esc(u.t)+'</h2><p class="mute">Unidad '+(ix+1)+' de '+a.u.length+'</p>'
- +'<div class="card m4card">'+(u.d?'<p>'+esc(u.d).replace(/\n/g,'<br>')+'</p>':'<p class="mute">Tu docente desarrolla esta unidad en la sesión semanal. Aquí aparecerán sus materiales cuando la academia los publique.</p>')+'</div>'
- +(u.m&&u.m.length?'<div class="card m4card"><h3>Materiales</h3>'+u.m.map(m=>'<p style="margin-top:8px">📎 '+(url4(m.url)?'<a href="'+esc(m.url)+'" target="_blank" rel="noopener noreferrer" style="color:var(--gold)">'+esc(m.t||m.url)+'</a>':esc(m.t))+'</p>').join('')+'</div>':'')
- +'<div class="card m4card"><h3>Actividad práctica</h3><p style="margin-top:6px">'+esc(a.act)+'</p></div>'
- +'<div class="card m4card"><h3>Reflexión personal</h3><p style="margin-top:6px">'+esc(a.ref)+'</p><textarea id="u4-r" aria-label="Tu reflexión" placeholder="Escribe con libertad. Nadie califica lo que sientes.">'+esc(S.n4.refl[k]||'')+'</textarea><p class="mute" style="font-size:13px;margin-top:6px">Tu reflexión se guarda solo en este dispositivo y no llega a la academia.</p></div>'
- +(!nx?'<div class="card" style="border-color:var(--gold)"><h3>Evaluación de la asignatura</h3><p style="margin-top:6px">'+esc(a.ev)+'</p><p class="mute" style="font-size:13px;margin-top:6px">La evaluación la hace tu docente y la registra la academia.</p></div>':'')
- +'<button class="btn" id="u4-ok" style="margin-top:16px;width:100%">'+(dn?'✓ Unidad completada · tocar para desmarcar':'Marcar unidad como completada')+'</button>'
- +(nx?'<button class="btn ghost" data-u4="'+esc(aid+'-'+nx.id)+'" style="margin-top:10px;width:100%">Siguiente unidad ›</button>':'');
+ const k=aid+'-'+un,dn=!!S.n4.done[k],ix=a.u.indexOf(u),all=[].concat(...as.map(m=>m.u.map(x=>[m.id,x]))),g=all.findIndex(x=>x[1]===u),pv=all[g-1],nx=all[g+1];
+ let sn=0;const sec=(t,v,kk)=>v?'<div class="card m4card m4rdz"><h3><span class="m4n" style="width:26px;height:26px;font-size:13px;margin-right:8px;vertical-align:3px">'+(++sn)+'</span>'+esc(t)+'</h3>'+fmt4(v,kk)+'</div>':'';
+ $('#v-u4').innerHTML='<button class="link" data-m4="'+aid+'" style="font-size:16px;min-height:44px">\u2B05 Volver al M\u00F3dulo '+(ai+1)+'</button>'
+ +'<button class="m4kick" data-m4="'+aid+'" style="margin-top:10px;padding:8px 0;min-height:44px;text-align:left;text-decoration:underline;text-underline-offset:3px">MÓDULO '+(ai+1)+' · '+esc(a.n.toUpperCase())+' ›</button><h2>Clase '+u.num+'. '+esc(u.t)+'</h2><p class="mute">Clase '+(ix+1)+' de '+a.u.length+' del módulo</p>'
+ +(has4(u)?(u.md?pdfbtn4(aid,un):'')+r4bar4()+(u.md?'<p class="mute" id="a4-st" style="font-size:14px;margin-top:12px">Escribe tus respuestas en los espacios de la clase. Se guardan solas'+(UID4?'':' en este dispositivo')+'.</p>'+md4(u.md).map((x,j)=>sec(x[0],x[1],j+1)).join(''):SEC4.map(s=>sec(s[1],u[s[0]])).join(''))
+  +(u.m&&u.m.length?'<div class="card m4card"><h3>Materiales</h3>'+u.m.map(m=>'<p style="margin-top:8px">📎 '+(url4(m.url)?'<a href="'+esc(m.url)+'" target="_blank" rel="noopener noreferrer" style="color:var(--gold)">'+esc(m.t||m.url)+'</a>':esc(m.t))+'</p>').join('')+'</div>':'')
+  +'<button class="btn" id="u4-ok" style="margin-top:16px;width:100%">'+(dn?'✓ Clase completada · tocar para desmarcar':'Marcar clase como completada')+'</button>'
+ :'<div class="ph" style="border-color:var(--wine2)"><p style="font-size:30px">🕊️</p><p style="margin-top:6px;color:var(--ivory);font-weight:600">Clase en preparación</p><p style="margin-top:6px;font-size:15px">La academia publicará aquí el contenido de esta clase.</p></div>')
+ +'<div class="row" style="gap:10px;margin-top:12px">'+(pv?'<button class="btn ghost grow" data-u4="'+esc(pv[0]+'-'+pv[1].id)+'">‹ Clase '+pv[1].num+'</button>':'')+(nx?'<button class="btn ghost grow" data-u4="'+esc(nx[0]+'-'+nx[1].id)+'">Clase '+nx[1].num+' ›</button>':'')+'</div>';
 }
-$('#v-u4').addEventListener('input',e=>{if(e.target.id==='u4-r'){S.n4.refl[S.n4.cur]=e.target.value;save()}});
-$('#v-u4').addEventListener('click',e=>{if(e.target.closest('#u4-ok')){const k=S.n4.cur;S.n4.done[k]=!S.n4.done[k];save();toast(S.n4.done[k]?'Unidad completada':'Unidad desmarcada');u4()}});
+/* Página del módulo: descripción, objetivos, clases y resultado esperado */
+function m4(){const{as}=plan4(),i=Math.max(0,as.findIndex(x=>x.id===S.n4.mod)),a=as[i],A=acc4(),pv=as[i-1],nx=as[i+1];
+ const ps=t=>String(t).split(/\n+/).filter(s=>s.trim()).map(s=>'<p style="margin-top:8px">'+esc(s)+'</p>').join('');
+ const box=(t,b)=>'<div class="card m4card"><h3>'+t+'</h3>'+b+'</div>';
+ $('#v-m4').innerHTML='<button class="link" data-go="n4" style="font-size:16px;min-height:44px">⬅ Volver a Formación Ministerial</button>'
+ +'<div class="m4hero" style="text-align:left"><p class="m4kick">ARPA · NIVEL 4 · MÓDULO '+(i+1)+'</p><h2>'+esc(a.n)+'</h2><p class="mute" style="font-size:15px">'+a.u.length+' clases · Clases '+a.u[0].num+' a '+a.u[a.u.length-1].num+'</p></div>'
+ +(mhas4(a)?(a.d?box('Descripción del módulo',ps(a.d)):'')
+  +(a.og?box('Objetivo general','<p style="margin-top:8px">'+esc(a.og)+'</p>'):'')
+  +(a.oe&&a.oe.length?box('Objetivos específicos','<p class="mute" style="margin-top:6px">Al finalizar el módulo, el participante podrá:</p><ol style="padding-left:22px;margin:10px 0 0;display:flex;flex-direction:column;gap:6px">'+a.oe.map(o=>'<li>'+esc(o)+'</li>').join('')+'</ol>'):'')
+  :'<div class="ph" style="border-color:var(--wine2)"><p style="color:var(--ivory);font-weight:600">Descripción del módulo en preparación</p><p style="margin-top:6px;font-size:15px">La academia publicará aquí la descripción y los objetivos de este módulo.</p></div>')
+ +box('Clases que componen el módulo',a.u.map(u=>{const k=a.id+'-'+u.id,lb='<span class="tick" style="border-color:var(--wine2);color:'+(S.n4.done[k]?'#000':'var(--wine2)')+';font-size:12px;width:30px;height:30px">'+(S.n4.done[k]?'✓':u.num)+'</span><span class="lt"><small class="mute" style="display:block;font-size:12px">Clase '+u.num+'</small>'+esc(u.t)+'</span>';
+   return A==='no'?'<div class="lesson" style="cursor:default">'+lb+'</div>':'<button class="lesson" data-u4="'+esc(k)+'" aria-pressed="'+!!S.n4.done[k]+'">'+lb+'<span class="tag" style="margin-left:auto;white-space:nowrap">'+(has4(u)?'▶ Abrir':'En preparación')+'</span></button>'}).join('')
+  +(A==='no'?'<p class="m4lock">🔒 Las clases se abren cuando solicitas tu ingreso al diplomado.</p>':''))
+ +pdfcard4(a,A,box)+(a.res?'<div class="card" style="border-color:var(--gold)"><h3>Resultado esperado</h3><p style="margin-top:8px">'+esc(a.res)+'</p></div>':'')
+ +'<div class="row" style="gap:10px;margin-top:14px">'+(pv?'<button class="btn ghost grow" data-m4="'+pv.id+'">‹ Módulo '+i+'</button>':'')+(nx?'<button class="btn ghost grow" data-m4="'+nx.id+'">Módulo '+(i+2)+' ›</button>':'')+'</div>';
+}
+document.addEventListener('click',e=>{const m=e.target.closest('[data-m4]');if(m){S.n4.mod=m.dataset.m4;save();go('m4')}});
+/* ===== Lector de clases =====
+   Lee la clase frase por frase con la voz del equipo (Web Speech) y resalta el párrafo, la frase y,
+   cuando el navegador lo informa, la palabra que se está leyendo. Prefiere voces masculinas en español. */
+const R4={on:false,pause:false,tok:0,i:0,q:[],blk:null};
+const HL4=!!(window.CSS&&CSS.highlights&&window.Highlight);
+const MALE4=/jorge|pablo|diego|ra[uú]l|carlos|juan|enrique|[aá]lvaro|miguel|andr[eé]s|tom[aá]s|dar[ií]o|gonzalo|federico|lorenzo|alonso|jos[eé]|antonio|manuel|jaime|rodrigo|male|hombre|masculin/i;
+function r4voices(){if(!window.speechSynthesis)return[];const reg=v=>/-(PA|MX|US|419|CO|CR|VE|DO|PR|AR|CL|PE|GT|HN|NI|SV|EC|BO|UY|PY|CU)$/i.test(v.lang)?0:1;
+ return speechSynthesis.getVoices().filter(v=>/^es/i.test(v.lang)).sort((a,b)=>(MALE4.test(b.name)-MALE4.test(a.name))||(reg(a)-reg(b))||a.name.localeCompare(b.name))}
+const r4voice=()=>{const V=r4voices();return V.find(v=>v.name===S.n4.voz)||V[0]||null};
+const r4bar=()=>'<div class="card m4card" id="r4-bar"><div class="row" style="flex-wrap:wrap;gap:8px"><button class="btn" id="r4-go">🔊 Escuchar la clase</button><button class="btn ghost" id="r4-stop" hidden>⏹ Detener</button></div>'
+ +'<div class="row r4opt" style="flex-wrap:wrap;gap:8px;margin-top:10px"><label class="fl" for="r4-voz">Voz<select class="fi" id="r4-voz"><option value="">Voz del equipo</option></select></label></div>'+r4speed()
+ +'<p class="mute r4opt" id="r4-st" style="font-size:13px;margin-top:8px">Mientras se lee, toca cualquier párrafo para continuar desde ahí.</p></div>';
+function r4fill(){const s=$('#r4-voz');if(!s)return;
+ if(!window.speechSynthesis){$('#r4-bar').innerHTML='<p class="mute">Este navegador no puede leer en voz alta.</p>';return}
+ const V=r4voices(),cur=r4voice();
+ if(V.length)s.innerHTML=V.map(v=>'<option value="'+esc(v.name)+'"'+(cur&&v.name===cur.name?' selected':'')+'>'+esc(v.name.replace(/^(Microsoft|Google|Apple)\s+/,'').replace(/\s*-\s*Spanish.*$/i,''))+' · '+esc(v.lang)+'</option>').join('');
+ r4vset(+(S.n4.vel||1),1);
+ if(!V.length)$('#r4-st').textContent='No encontramos voces en español en este equipo; se usará la voz predeterminada.'}
+if(window.speechSynthesis)speechSynthesis.addEventListener('voiceschanged',()=>{if(vis4('v-u4')&&!R4.on)r4fill()});
+function r4ui(){const g=$('#r4-go'),x=$('#r4-stop');if(!g)return;$('#r4-bar').classList.toggle('on',R4.on&&!R4.pause);g.textContent=!R4.on?'🔊 Escuchar la clase':R4.pause?'▶ Continuar':'⏸ Pausar';x.hidden=!R4.on}
+/* Texto de un bloque sin el número de sección, con la posición de cada nodo para resaltar */
+function r4nodes(el){const L=[],w=document.createTreeWalker(el,NodeFilter.SHOW_TEXT,{acceptNode:n=>n.parentElement.closest('.m4n')?2:1});let t='';while(w.nextNode()){L.push([w.currentNode,t.length]);t+=w.currentNode.nodeValue}return{L,t}}
+function r4range(L,a,b){const r=document.createRange();let ok=0;for(const[n,o]of L){const e=o+n.nodeValue.length;if(!ok&&a>=o&&a<e){r.setStart(n,a-o);ok=1}if(ok&&b>o&&b<=e){r.setEnd(n,b-o);return r}}return null}
+function r4build(){const q=[];
+ document.querySelectorAll('#v-u4 h2,#v-u4 .m4rdz h3,#v-u4 .m4rdz h4,#v-u4 .m4rdz p,#v-u4 .m4rdz li').forEach(el=>{const{L,t}=r4nodes(el),re=/[^.!?…]+[.!?…]*[»"”)]*\s*|[.!?…]+\s*/g;let m;
+  while((m=re.exec(t))){const s=m[0],a=m.index+(s.length-s.trimStart().length),b=m.index+s.trimEnd().length;if(/[\p{L}\p{N}]/u.test(s))q.push({el,L,a,b,tx:t.slice(a,b)})}});
+ return q}
+function r4mark(it,w){if(R4.blk!==it.el){if(R4.blk)R4.blk.classList.remove('m4rd');R4.blk=it.el;it.el.classList.add('m4rd');it.el.scrollIntoView({block:'center',behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'})}
+ if(!HL4)return;const rs=r4range(it.L,it.a,it.b);if(rs)CSS.highlights.set('m4s',new Highlight(rs));
+ const rw=w&&r4range(it.L,w[0],w[1]);if(rw)CSS.highlights.set('m4w',new Highlight(rw));else CSS.highlights.delete('m4w')}
+function r4clear(){if(R4.blk)R4.blk.classList.remove('m4rd');R4.blk=null;if(HL4){CSS.highlights.delete('m4s');CSS.highlights.delete('m4w')}}
+function r4stop(){R4.tok++;R4.on=false;R4.pause=false;try{window.speechSynthesis&&speechSynthesis.cancel()}catch(e){}r4clear();r4ui()}
+function r4say(i){const t=++R4.tok,it=R4.q[i];R4.i=i;try{speechSynthesis.cancel()}catch(e){}
+ if(!it){r4stop();toast('Lectura terminada');return}
+ r4mark(it,null);const u=new SpeechSynthesisUtterance(it.tx),v=r4voice();
+ if(v){u.voice=v;u.lang=v.lang}else u.lang='es-ES';u.rate=+(S.n4.vel||1);u.pitch=0.95;
+ u.onboundary=e=>{if(t!==R4.tok||(e.name&&e.name!=='word'))return;const s=e.charIndex,n=e.charLength||((it.tx.slice(s).match(/^[\p{L}\p{N}'’-]+/u)||[''])[0].length);if(n)r4mark(it,[it.a+s,it.a+s+n])};
+ u.onend=()=>{if(t===R4.tok&&R4.on&&!R4.pause&&!$('#v-u4').hidden)r4say(i+1)};
+ u.onerror=e=>{if(t!==R4.tok||e.error==='interrupted'||e.error==='canceled')return;r4stop();toast('No se pudo leer en voz alta')};
+ speechSynthesis.speak(u)}
+function r4toggle(){if(!window.speechSynthesis)return;
+ if(!R4.on){R4.q=r4build();if(!R4.q.length)return;R4.on=true;R4.pause=false;r4ui();r4say(0)}
+ else if(!R4.pause){R4.pause=true;R4.tok++;speechSynthesis.cancel();if(HL4)CSS.highlights.delete('m4w');r4ui()}
+ else{R4.pause=false;r4ui();r4say(R4.i)}}
+$('#v-u4').addEventListener('change',e=>{const t=e.target;if(t.id==='r4-voz'){S.n4.voz=t.value;save()}else if(t.id==='r4-vel'){return}else return;if(R4.on&&!R4.pause)r4say(R4.i)});
+$('#v-u4').addEventListener('click',e=>{const t=e.target;
+ if(t.closest('#r4-go'))return r4toggle();if(t.closest('#r4-stop'))return r4stop();
+ if(!R4.on||t.closest('a,button,select,label,#r4-bar'))return;
+ const el=t.closest('h2,h3,h4,p,li');if(!el)return;const i=R4.q.findIndex(x=>x.el===el||el.contains(x.el));if(i>-1){R4.pause=false;r4ui();r4say(i)}});
+$('#v-u4').addEventListener('click',e=>{if(e.target.closest('#u4-ok')){const k=S.n4.cur;S.n4.done[k]=!S.n4.done[k];save();toast(S.n4.done[k]?'Clase completada':'Clase desmarcada');u4()}});
 
 /* ===== Administración del Nivel 4 (propietario y Editores del artifact) ===== */
+/* Administración · Respuestas: lo que cada estudiante escribió en las clases (n4resp/<id>, solo la dirección lo lee). */
+let RESP4=[];
+const nm4=id=>{const m=MAT4.find(x=>x.uid===id||x._id===id)||SOL4.find(x=>x.uid===id||x._id===id);return m&&m.nombre?m.nombre:''};
+const cnt4=o=>o&&typeof o==='object'?Object.values(o).filter(v=>v!==''&&v!==false&&v!=null).length:0;
+const cls4all=()=>[].concat(...plan4().as.map((a,i)=>a.u.map(u=>({k:a.id+'-'+u.id,u,mi:i+1}))));
+function a4resp(){const C=cls4all();
+ if(A4.r){const d=RESP4.find(x=>x._id===A4.r);
+  if(!d){A4.r=null;return a4resp()}
+  const L=C.filter(c=>cnt4(d[c.k]));
+  return '<div class="card m4card"><button class="btn ghost m4mini" data-rv="">‹ Volver a la lista</button>'
+  +'<h3 style="margin-top:10px">'+esc(nm4(d._id)||'Estudiante sin solicitud registrada')+'</h3>'
+  +'<p class="mute" style="font-size:14px;margin-top:4px">'+L.length+' clase'+(L.length===1?'':'s')+' con respuestas'+(d.fecha?' · Última actualización: '+fd4(d.fecha):'')+'</p>'
+  +'<p class="mute" style="font-size:13px;margin-top:6px">Las respuestas se muestran dentro de cada clase, en el lugar donde el estudiante las escribió. Solo se pueden leer.</p></div>'
+  +(L.length?L.map(c=>'<details class="card sub m4card"><summary><span class="grow">Clase '+c.u.num+'. '+esc(c.u.t)+'</span><span class="tag" style="white-space:nowrap">'+cnt4(d[c.k])+' respuestas</span></summary><div data-rk="'+esc(c.k)+'">'
+    +(c.u.md?md4(c.u.md).map((x,j)=>'<h4 class="m4h4">'+(j+1)+'. '+esc(x[0])+'</h4>'+fmt4(x[1],j+1)).join(''):'<p class="mute">Esta clase ya no tiene espacios de respuesta.</p>')
+    +'</div></details>').join(''):'<div class="card"><p class="mute">Este estudiante todavía no ha escrito respuestas.</p></div>')}
+ const L=RESP4.slice().sort((a,b)=>String(b.fecha||'').localeCompare(String(a.fecha||'')));
+ if(!L.length)return '<div class="card"><p class="mute">Todavía no hay respuestas. Aparecen aquí cuando un estudiante con sesión iniciada escribe en los espacios de una clase.</p></div>';
+ return '<div class="card"><p class="mute" style="font-size:14px">Solo la dirección puede ver esta sección. Cada estudiante ve únicamente sus propias respuestas.</p>'
+ +L.map(d=>{const n=C.filter(c=>cnt4(d[c.k])).length,nm=nm4(d._id);
+  return '<button class="lesson" data-rv="'+esc(d._id)+'"><span class="grow"><b>'+esc(nm||'Estudiante sin solicitud registrada')+'</b><small class="mute" style="display:block;font-size:13px">'+n+' clase'+(n===1?'':'s')+' con respuestas'+(d.fecha?' · '+fd4(d.fecha):'')+'</small></span><span class="tag" style="white-space:nowrap">Ver</span></button>'}).join('')+'</div>'}
+/* Llena las respuestas del estudiante elegido y deja los campos solo para leer */
+function a4rfill(){if(A4.tab!=='resp'||!A4.r)return;const d=RESP4.find(x=>x._id===A4.r);if(!d)return;
+ document.querySelectorAll('#v-a4 [data-rk]').forEach(b=>{const k=b.dataset.rk,R=d[k]||{};
+  b.querySelectorAll('input[type=radio]').forEach(el=>{el.name='rv|'+k+'|'+el.name});
+  b.querySelectorAll('[data-r4]').forEach(el=>{const x=R[el.dataset.r4];if(el.type==='checkbox')el.checked=!!x;else if(el.type==='radio')el.checked=x!==undefined&&x===el.value;else el.value=x==null?'':x;el.disabled=true})})}
+document.addEventListener('click',e=>{const b=e.target.closest('#v-a4 [data-rv]');if(!b)return;A4.r=b.dataset.rv||null;a4();window.scrollTo(0,0)});
 function a4(){const v=$('#v-a4'),back='<button class="link" data-go="n4" style="font-size:16px;min-height:44px">⬅ Volver a Formación Ministerial</button>';
  if(!ADM4||!DB4){v.innerHTML=back+'<h2>Administración · Nivel 4</h2><div class="card"><p>'+(DB4?'Solo la dirección de la academia administra el Nivel 4. Se usan los mismos permisos de la plataforma: el propietario y las personas con acceso de Editor.':'La administración necesita la base de datos de la plataforma, que no está disponible en esta vista. Ábrela con la cuenta de la academia.')+'</p></div>';return}
  if(!A4sub){A4sub=true;
   DB4.collection('n4sol').onSnapshot(s=>{SOL4=s.docs.map(d=>Object.assign({_id:d.id},d.data()));rr4()},()=>toast('No se pudieron leer las solicitudes'));
-  DB4.collection('n4mat').onSnapshot(s=>{MAT4=s.docs.map(d=>Object.assign({_id:d.id},d.data()));rr4()},()=>toast('No se pudieron leer las matrículas'))}
+  DB4.collection('n4mat').onSnapshot(s=>{MAT4=s.docs.map(d=>Object.assign({_id:d.id},d.data()));rr4()},()=>toast('No se pudieron leer las matrículas'));DB4.collection('n4resp').onSnapshot(s=>{RESP4=s.docs.map(x=>Object.assign({_id:x.id},x.data()));rr4()},()=>{})}
  const pend=SOL4.filter(s=>!s.estado||['pendiente','verificando'].includes(s.estado)).length;
- const T=[['sol','📥 Solicitudes'+(pend?' ('+pend+')':'')],['est','🎓 Estudiantes ('+MAT4.length+')'],['plan','📚 Plan de estudios'],['cfg','⚙️ Configuración']];
+ const T=[['sol','📥 Solicitudes'+(pend?' ('+pend+')':'')],['est','🎓 Estudiantes ('+MAT4.length+')'],['resp','\u270D\uFE0F Respuestas ('+RESP4.length+')'],['plan','📚 Plan de estudios'],['cfg','⚙️ Configuración']];
  v.innerHTML=back+'<h2>Administración · Nivel 4</h2><p class="mute">ARPA | Formación Ministerial. Lo que guardas aquí lo ve toda la academia.</p><div class="chips" role="group" aria-label="Secciones" style="flex-wrap:wrap">'+T.map(t=>'<button class="chip" data-t4="'+t[0]+'" aria-pressed="'+(A4.tab===t[0])+'">'+t[1]+'</button>').join('')+'</div>'
- +({sol:a4sol,est:a4est,plan:a4plan,cfg:a4cfg}[A4.tab])();
+ +({sol:a4sol,est:a4est,resp:a4resp,plan:a4plan,cfg:a4cfg}[A4.tab])();setTimeout(a4rfill,0);
 }
 function a4sol(){const L=SOL4.slice().sort((a,b)=>String(b.fecha).localeCompare(String(a.fecha)));
  if(!L.length)return '<div class="card"><p class="mute">Aún no hay solicitudes. Llegan aquí cuando alguien pide ingreso desde su cuenta. Si alguien te entrega su solicitud descargada, matricúlalo en la pestaña Estudiantes.</p></div>';
@@ -2622,13 +2967,13 @@ function a4est(){const{c,as}=plan4(),L=MAT4.filter(m=>A4.f==='todas'||m.via===A4
   :'<button class="btn ghost" id="a4-add" style="margin-top:8px">＋ Matricular estudiante manualmente</button>';
  if(!L.length)return h+'<div class="card"><p class="mute">No hay estudiantes en esta vista.</p></div>';
  return h+L.map(m=>{const id=esc(m._id),A=m.asig||{},ok=as.filter(a=>(A[a.id]||{}).p==='completada').length;
-  let r='<div class="card m4card"><div class="row"><div class="grow"><h3>'+esc(m.nombre)+'</h3><p style="margin-top:4px"><span class="tag">'+via4(m.via)+'</span> <span class="m4st '+(m.estado==='activa'||m.estado==='egresada'?'ok':'wait')+'">'+esc(m.estado)+'</span></p><p class="mute" style="font-size:14px;margin-top:4px">'+ok+' de '+as.length+' asignaturas completadas'+(m.uid?'':' · sin cuenta ligada')+'</p></div>'
+  let r='<div class="card m4card"><div class="row"><div class="grow"><h3>'+esc(m.nombre)+'</h3><p style="margin-top:4px"><span class="tag">'+via4(m.via)+'</span> <span class="m4st '+(m.estado==='activa'||m.estado==='egresada'?'ok':'wait')+'">'+esc(m.estado)+'</span></p><p class="mute" style="font-size:14px;margin-top:4px">'+ok+' de '+as.length+' módulos completados'+(m.uid?'':' · sin cuenta ligada')+'</p></div>'
   +(A4.open===m._id?'':'<button class="btn ghost m4mini" data-om="'+id+'">Abrir ficha</button>')+'</div>';
   if(A4.open===m._id)r+='<p class="mute" style="font-size:14px;margin-top:8px">'+esc([m.rol,m.correo,m.tel,m.ubic,m.igl].filter(Boolean).join(' · '))+(m.ingreso?' · Ingreso: '+fd4(m.ingreso):'')+'</p>'
    +'<label class="fl" for="m4-estado">Estado<select class="fi" id="m4-estado">'+opts4(N4EST,m.estado)+'</select></label>'
    +'<label class="fl" for="m4-via">Vía de ingreso<select class="fi" id="m4-via"><option value="academica"'+(m.via==='academica'?' selected':'')+'>Vía académica</option><option value="ministerial"'+(m.via==='ministerial'?' selected':'')+'>Vía ministerial</option></select></label>'
    +'<label class="fl" for="m4-mod">Modalidad<select class="fi" id="m4-mod">'+opts4(c.modalidades||[],m.mod)+'</select></label>'
-   +'<h3 style="margin-top:18px">Avance y evaluaciones</h3>'+as.map((a,i)=>{const x=A[a.id]||{};return '<div style="margin-top:12px"><p style="font-size:15px">'+(i+1)+'. '+esc(a.n)+'</p><div style="display:grid;grid-template-columns:1fr 1fr;gap:8px"><select class="fi" data-mp="'+a.id+'" aria-label="Avance en '+esc(a.n)+'">'+opts4(N4PRG,x.p||'sin iniciar')+'</select><input class="fi" data-mn="'+a.id+'" value="'+esc(x.n||'')+'" placeholder="Nota" aria-label="Nota de '+esc(a.n)+'"></div></div>'}).join('')
+   +'<h3 style="margin-top:18px">Avance por módulo</h3>'+as.map((a,i)=>{const x=A[a.id]||{};return '<div style="margin-top:12px"><p style="font-size:15px">Módulo '+(i+1)+'. '+esc(a.n)+'</p><div style="display:grid;grid-template-columns:1fr 1fr;gap:8px"><select class="fi" data-mp="'+a.id+'" aria-label="Avance en '+esc(a.n)+'">'+opts4(N4PRG,x.p||'sin iniciar')+'</select><input class="fi" data-mn="'+a.id+'" value="'+esc(x.n||'')+'" placeholder="Nota" aria-label="Nota de '+esc(a.n)+'"></div></div>'}).join('')
    +'<div style="margin-top:12px"><p style="font-size:15px">Proyecto final de aplicación ministerial</p><div style="display:grid;grid-template-columns:1fr 1fr;gap:8px"><select class="fi" id="m4-pfp" aria-label="Avance del proyecto final">'+opts4(N4PRG,(m.pf||{}).p||'sin iniciar')+'</select><input class="fi" id="m4-pfn" value="'+esc((m.pf||{}).n||'')+'" placeholder="Nota" aria-label="Nota del proyecto final"></div></div>'
    +'<label class="fl" for="m4-obs">Observaciones del docente (no las ve el estudiante)<textarea class="fi" id="m4-obs" style="min-height:80px">'+esc(m.obs||'')+'</textarea></label>'
    +'<div class="row" style="gap:8px;margin-top:14px"><button class="btn" data-ms="'+id+'">Guardar ficha</button><button class="btn ghost" data-om="">Cerrar</button></div>';
@@ -2640,17 +2985,27 @@ async function ms4(id){const m=MAT4.find(x=>x._id===id);if(!m)return;const{as}=p
 async function ad4(){const g=k=>$('#ad-'+k).value.trim(),n=g('nombre');if(!n){toast('Escribe el nombre');return}
  A4.busy=true;try{await DB4.collection('n4mat').add({uid:'',nombre:n,via:g('via'),rol:g('rol'),correo:g('correo'),tel:g('tel'),ubic:'',igl:'',mod:g('mod'),estado:'activa',ingreso:new Date().toISOString(),egresoVerificado:g('via')==='academica',asig:{},pf:{p:'sin iniciar',n:''},obs:''});A4.add=false;toast('Estudiante matriculado')}catch(e){toast('No se pudo matricular')}A4.busy=false;a4()}
 function a4plan(){const{as}=plan4(),w=A4.w;
- if(!w)return '<div class="card"><p class="mute">Elige una asignatura para editar su información, sus unidades temáticas y sus materiales.</p>'+as.map((a,i)=>'<button class="lesson" data-ea="'+a.id+'"><span class="m4n">'+(i+1)+'</span><span>'+esc(a.n)+'</span><span class="tag" style="margin-left:auto">'+a.u.length+' unidades · Editar</span></button>').join('')+'</div>';
- const ta=(id,l,v,h)=>'<label class="fl" for="w-'+id+'">'+l+'<textarea class="fi" id="w-'+id+'" style="min-height:'+(h||70)+'px">'+esc(v||'')+'</textarea></label>';
- return '<div class="card" style="border-color:var(--gold)"><h3>Editar asignatura</h3><label class="fl" for="w-n">Nombre<input class="fi" id="w-n" value="'+esc(w.n)+'"></label>'+ta('d','Descripción',w.d)+ta('act','Actividad práctica',w.act)+ta('ref','Ejercicio de reflexión personal',w.ref)+ta('ev','Evaluación',w.ev)+'</div>'
- +w.u.map((u,i)=>'<div class="card m4card"><div class="row"><h3 class="grow">Unidad '+(i+1)+'</h3><button class="btn ghost m4mini" data-wu="up" data-i="'+i+'" aria-label="Subir unidad"'+(i?'':' disabled')+'>↑</button><button class="btn ghost m4mini" data-wu="dn" data-i="'+i+'" aria-label="Bajar unidad"'+(i<w.u.length-1?'':' disabled')+'>↓</button><button class="btn ghost m4mini" data-wu="del" data-i="'+i+'">Quitar</button></div>'
-  +'<label class="fl">Título<input class="fi" data-ut="'+i+'" value="'+esc(u.t)+'"></label><label class="fl">Contenido para el estudiante<textarea class="fi" data-ud="'+i+'" style="min-height:90px">'+esc(u.d||'')+'</textarea></label>'
-  +'<label class="fl">Materiales publicados: uno por línea, «Título | https://enlace»<textarea class="fi" data-um="'+i+'" style="min-height:70px">'+esc((u.m||[]).map(m=>m.url?m.t+' | '+m.url:m.t).join('\n'))+'</textarea></label></div>').join('')
- +'<button class="btn ghost" id="w-add" style="margin-top:12px">＋ Agregar unidad</button><div class="row" style="gap:8px;margin-top:16px"><button class="btn" id="w-save">Guardar asignatura</button><button class="btn ghost" id="w-x">Cancelar</button></div>'}
-function syncW(){const w=A4.w,q=s=>document.querySelector('#v-a4 '+s);if(!w||!q('#w-n'))return;['n','d','act','ref','ev'].forEach(k=>w[k]=q('#w-'+k).value);
- w.u.forEach((u,i)=>{u.t=q('[data-ut="'+i+'"]').value;u.d=q('[data-ud="'+i+'"]').value;u.m=q('[data-um="'+i+'"]').value.split('\n').map(l=>l.trim()).filter(Boolean).map(l=>{const p=l.split('|').map(x=>x.trim());return url4(p[p.length-1])?{t:p.length>1?p.slice(0,-1).join(' | '):p[0],url:p[p.length-1]}:{t:l,url:''}})})}
-async function sw4(){syncW();const w=A4.w;w.n=w.n.trim();w.u=w.u.filter(u=>u.t.trim());if(!w.n||!w.u.length){toast('La asignatura necesita nombre y al menos una unidad');return}
- A4.busy=true;try{const b=JSON.parse(JSON.stringify(w));delete b.id;await DB4.doc('n4plan/'+w.id).set(b);A4.w=null;toast('Asignatura guardada')}catch(e){toast('No se pudo guardar la asignatura')}A4.busy=false;a4()}
+ if(!w)return '<div class="card"><p class="mute">Elige un módulo para editar sus clases. Cada clase tiene su propio espacio: objetivos, contenido, materiales, tarea y evaluación. Lo que dejes vacío no se muestra al estudiante.</p>'+as.map((a,i)=>'<button class="lesson" data-ea="'+a.id+'"><span class="m4n">'+(i+1)+'</span><span><small class="mute" style="display:block;font-size:12px">Módulo '+(i+1)+'</small>'+esc(a.n)+'</span><span class="tag" style="margin-left:auto;white-space:nowrap">'+a.u.filter(has4).length+'/'+a.u.length+' con contenido · Editar</span></button>').join('')+'</div>';
+ const ta=(a,i,l,v,h)=>'<label class="fl">'+l+'<textarea class="fi" data-u'+a+'="'+i+'" style="min-height:'+(h||70)+'px">'+esc(v||'')+'</textarea></label>';
+ return '<div class="card" style="border-color:var(--gold)"><h3>Editar módulo</h3><label class="fl" for="w-n">Nombre del módulo<input class="fi" id="w-n" value="'+esc(w.n)+'"></label><label class="fl" for="w-d">Descripción del módulo (deja una línea en blanco entre párrafos)<textarea class="fi" id="w-d" style="min-height:120px">'+esc(w.d||'')+'</textarea></label>'
+ +'<label class="fl" for="w-og">Objetivo general<textarea class="fi" id="w-og" style="min-height:80px">'+esc(w.og||'')+'</textarea></label>'
+ +'<label class="fl" for="w-oe">Objetivos específicos: uno por línea<textarea class="fi" id="w-oe" style="min-height:120px">'+esc((w.oe||[]).join('\n'))+'</textarea></label>'
+ +'<label class="fl" for="w-res">Resultado esperado<textarea class="fi" id="w-res" style="min-height:70px">'+esc(w.res||'')+'</textarea></label>'
+ +'<p class="mute" style="font-size:13px;margin-top:8px">Se muestran en la página del módulo. Lo que dejes vacío no aparece.</p></div>'
+ +w.u.map((u,i)=>'<details class="card sub m4card"'+(i===A4.wo?' open':'')+' data-wo="'+i+'"><summary><span class="grow">Clase '+(i+1)+': '+esc(u.t)+'</span><span class="tag" style="white-space:nowrap">'+(has4(u)?'Con contenido':'Vacía')+'</span></summary>'
+  +'<div class="row" style="gap:8px;justify-content:flex-end"><button class="btn ghost m4mini" data-wu="up" data-i="'+i+'" aria-label="Subir clase"'+(i?'':' disabled')+'>↑</button><button class="btn ghost m4mini" data-wu="dn" data-i="'+i+'" aria-label="Bajar clase"'+(i<w.u.length-1?'':' disabled')+'>↓</button><button class="btn ghost m4mini" data-wu="del" data-i="'+i+'">Quitar</button></div>'
+  +'<label class="fl">Título de la clase<input class="fi" data-ut="'+i+'" value="'+esc(u.t)+'"></label>'
+  +'<p class="mute" style="font-size:13px;margin-top:10px">Formato: «## Subtítulo», «- elemento de lista», «1. lista numerada», «> Idea clave» y **negrita**. Las secciones vacías no se muestran.</p>'
+  +ta('x',i,'Clase completa por partes (opcional). Cada «## 1. Título» abre una parte; «### subtítulo»; una línea «_____» es un espacio para responder; «☐ opción» es una casilla; «| … |» es una tabla. Si la llenas, se muestra en lugar de las secciones de abajo.',u.md,260)+SEC4.map(s=>ta(s[2],i,s[1],u[s[0]],s[0]==='d'?220:90)).join('')
+  +'<label class="fl">Materiales: uno por línea, «Título | https://enlace»<textarea class="fi" data-um="'+i+'" style="min-height:60px">'+esc((u.m||[]).map(m=>m.url?m.t+' | '+m.url:m.t).join('\n'))+'</textarea></label>'
+  +'<div style="height:10px"></div></details>').join('')
+ +'<button class="btn ghost" id="w-add" style="margin-top:12px">＋ Agregar clase</button><div class="row" style="gap:8px;margin-top:16px"><button class="btn" id="w-save">Guardar módulo</button><button class="btn ghost" id="w-x">Cancelar</button></div>'}
+function syncW(){const w=A4.w,q=s=>document.querySelector('#v-a4 '+s);if(!w||!q('#w-n'))return;w.n=q('#w-n').value;w.d=q('#w-d').value;w.og=q('#w-og').value.trim();w.res=q('#w-res').value.trim();
+ w.oe=q('#w-oe').value.split('\n').map(l=>l.replace(/^\s*\d+[.)-]?\s*/,'').trim()).filter(Boolean);
+ w.u.forEach((u,i)=>{u.t=q('[data-ut="'+i+'"]').value;SEC4.forEach(s=>{u[s[0]]=q('[data-u'+s[2]+'="'+i+'"]').value});u.md=q('[data-ux="'+i+'"]').value.trim();
+  u.m=q('[data-um="'+i+'"]').value.split('\n').map(l=>l.trim()).filter(Boolean).map(l=>{const p=l.split('|').map(x=>x.trim());return url4(p[p.length-1])?{t:p.length>1?p.slice(0,-1).join(' | '):p[0],url:p[p.length-1]}:{t:l,url:''}})})}
+async function sw4(){syncW();const w=A4.w;w.n=w.n.trim();w.u=w.u.filter(u=>u.t.trim());if(!w.n||!w.u.length){toast('El módulo necesita nombre y al menos una clase');return}
+ A4.busy=true;try{const b=JSON.parse(JSON.stringify(w));delete b.id;b.u.forEach(u=>delete u.num);await DB4.doc('n4plan/'+w.id).set(b);A4.w=null;toast('Módulo guardado')}catch(e){toast('No se pudo guardar el módulo')}A4.busy=false;a4()}
 function a4cfg(){const{c}=plan4(),M=['Presencial','Virtual','Semipresencial'],i=(id,l,v,t)=>'<label class="fl" for="c-'+id+'">'+l+'<input class="fi" id="c-'+id+'" type="'+(t||'text')+'" value="'+esc(v)+'"></label>';
  return '<div class="card" style="border-color:var(--gold)"><h3>Parámetros del diplomado</h3><p class="mute" style="font-size:14px;margin-top:4px">Se muestran a los estudiantes en la presentación del Nivel 4.</p>'
  +'<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">'+i('dur','Duración',c.duracion,'number')+'<label class="fl" for="c-uni">Unidad<select class="fi" id="c-uni">'+opts4(['meses','semanas'],c.unidad)+'</select></label></div>'
@@ -2660,8 +3015,9 @@ function a4cfg(){const{c}=plan4(),M=['Presencial','Virtual','Semipresencial'],i=
 async function sc4(){const q=s=>document.querySelector('#v-a4 '+s),d=+q('#c-dur').value,mo=[...document.querySelectorAll('#v-a4 [data-cm]')].filter(x=>x.checked).map(x=>x.dataset.cm);
  if(!(d>0)||!mo.length){toast('Indica una duración y al menos una modalidad');return}
  A4.busy=true;try{await DB4.doc('n4plan/config').set({duracion:d,unidad:q('#c-uni').value,frecuencia:q('#c-fre').value.trim(),modalidades:mo,evaluacion:q('#c-eva').value.trim(),practicas:q('#c-pra').value.trim(),proyecto:q('#c-pro').value.trim()});toast('Configuración guardada')}catch(e){toast('No se pudo guardar la configuración')}A4.busy=false;a4()}
+$('#v-a4').addEventListener('toggle',e=>{const o=e.target.dataset&&e.target.dataset.wo;if(o!==undefined&&e.target.open)A4.wo=+o},true);
 $('#v-a4').addEventListener('click',e=>{const t=e.target,c=s=>t.closest(s);let b;
- if(b=c('[data-t4]')){A4.tab=b.dataset.t4;A4.open=null;A4.add=false;A4.w=null;a4()}
+ if(b=c('[data-t4]')){A4.tab=b.dataset.t4;A4.open=null;A4.r=null;A4.add=false;A4.w=null;a4()}
  else if(b=c('[data-sa]'))sa4(b.dataset.id,b.dataset.sa);
  else if(b=c('[data-f4v]')){A4.f=b.dataset.f4v;a4()}
  else if(b=c('[data-om]')){A4.open=b.dataset.om||null;a4()}
@@ -2669,11 +3025,11 @@ $('#v-a4').addEventListener('click',e=>{const t=e.target,c=s=>t.closest(s);let b
  else if(c('#a4-add')){A4.add=true;a4()}
  else if(c('#ad-x')){A4.add=false;a4()}
  else if(c('#ad-ok'))ad4();
- else if(b=c('[data-ea]')){A4.w=JSON.parse(JSON.stringify(plan4().as.find(a=>a.id===b.dataset.ea)));a4()}
+ else if(b=c('[data-ea]')){A4.w=JSON.parse(JSON.stringify(plan4().as.find(a=>a.id===b.dataset.ea)));A4.wo=0;a4()}
  else if(b=c('[data-wu]')){syncW();const i=+b.dataset.i,u=A4.w.u,k=b.dataset.wu;
   if(k==='del'){if(!b.dataset.s){b.dataset.s=1;b.textContent='¿Quitar? Toca otra vez';return}u.splice(i,1)}
-  else{const j=k==='up'?i-1:i+1;[u[i],u[j]]=[u[j],u[i]]}a4()}
- else if(c('#w-add')){syncW();A4.w.u.push({id:'u'+Date.now().toString(36),t:'Nueva unidad',d:'',m:[]});a4()}
+  else{const j=k==='up'?i-1:i+1;[u[i],u[j]]=[u[j],u[i]];A4.wo=j}a4()}
+ else if(c('#w-add')){syncW();A4.w.u.push(cls4('c'+Date.now().toString(36),'Nueva clase'));A4.wo=A4.w.u.length-1;a4()}
  else if(c('#w-x')){A4.w=null;a4()}
  else if(c('#w-save'))sw4();
  else if(c('#c-save'))sc4();
@@ -2681,4 +3037,3 @@ $('#v-a4').addEventListener('click',e=>{const t=e.target,c=s=>t.closest(s);let b
 </script>
 </body>
 </html>
-

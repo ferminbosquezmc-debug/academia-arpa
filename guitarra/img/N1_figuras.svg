@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="1300" viewBox="0 0 2400 1300" role="img" aria-label="Figuras musicales y silencios">
+<title>Figuras musicales y silencios</title>
+<rect width="2400" height="1300" fill="#FFFFFF"/>
+<text x="180.0" y="70.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="30" font-weight="700" fill="#8A6A0A" text-anchor="middle" letter-spacing="3">FIGURA</text>
+<text x="560.0" y="70.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="30" font-weight="700" fill="#8A6A0A" text-anchor="middle" letter-spacing="3">NOMBRE</text>
+<text x="900.0" y="70.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="30" font-weight="700" fill="#8A6A0A" text-anchor="middle" letter-spacing="3">SILENCIO</text>
+<text x="1250.0" y="70.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="30" font-weight="700" fill="#8A6A0A" text-anchor="middle" letter-spacing="3">TIEMPOS</text>
+<text x="1800.0" y="70.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="30" font-weight="700" fill="#8A6A0A" text-anchor="middle" letter-spacing="3">SÍLABA</text>
+<rect x="40" y="90" width="2320" height="250" rx="22" fill="#FAF6EE"/>
+<ellipse cx="180" cy="240" rx="30.360000000000003" ry="21.619999999999997" transform="rotate(-20 180 240)" fill="#1A1A1A" stroke="#1A1A1A" stroke-width="3"/><ellipse cx="180" cy="240" rx="16.698000000000004" ry="9.0804" transform="rotate(-35 180 240)" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="1.7999999999999998"/>
+<text x="560.0" y="230.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="54" font-weight="700" fill="#1A1A1A" text-anchor="middle" >Redonda</text>
+<line x1="810" y1="280" x2="990" y2="280" stroke="#5F6368" stroke-width="2"/>
+<line x1="810" y1="250" x2="990" y2="250" stroke="#5F6368" stroke-width="2"/>
+<line x1="810" y1="220" x2="990" y2="220" stroke="#5F6368" stroke-width="2"/>
+<line x1="810" y1="190" x2="990" y2="190" stroke="#5F6368" stroke-width="2"/>
+<line x1="810" y1="160" x2="990" y2="160" stroke="#5F6368" stroke-width="2"/>
+<rect x="882.0" y="190" width="36.0" height="15.0" fill="#1A1A1A"/>
+<rect x="1050" y="190" width="80" height="80" rx="10" fill="#1A1A1A" stroke="#1A1A1A" stroke-width="4"/>
+<rect x="1150" y="190" width="80" height="80" rx="10" fill="#1A1A1A" stroke="#1A1A1A" stroke-width="4"/>
+<rect x="1250" y="190" width="80" height="80" rx="10" fill="#1A1A1A" stroke="#1A1A1A" stroke-width="4"/>
+<rect x="1350" y="190" width="80" height="80" rx="10" fill="#1A1A1A" stroke="#1A1A1A" stroke-width="4"/>
+<text x="1240.0" y="320.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="30" font-weight="600" fill="#5F6368" text-anchor="middle" >4 tiempos</text>
+<text x="1920.0" y="245.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="50" font-weight="700" fill="#1A1A1A" text-anchor="middle" >taa-aa-aa-aa</text>
+<ellipse cx="180" cy="510" rx="30.360000000000003" ry="21.619999999999997" transform="rotate(-20 180 510)" fill="#1A1A1A" stroke="#1A1A1A" stroke-width="3"/><ellipse cx="180" cy="510" rx="16.698000000000004" ry="9.0804" transform="rotate(-35 180 510)" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="1.7999999999999998"/>
+<line x1="208.2348" y1="510" x2="208.2348" y2="353.6" stroke="#1A1A1A" stroke-width="6"/>
+<text x="560.0" y="500.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="54" font-weight="700" fill="#1A1A1A" text-anchor="middle" >Blanca</text>
+<line x1="810" y1="550" x2="990" y2="550" stroke="#5F6368" stroke-width="2"/>
+<line x1="810" y1="520" x2="990" y2="520" stroke="#5F6368" stroke-width="2"/>
+<line x1="810" y1="490" x2="990" y2="490" stroke="#5F6368" stroke-width="2"/>
+<line x1="810" y1="460" x2="990" y2="460" stroke="#5F6368" stroke-width="2"/>
+<line x1="810" y1="430" x2="990" y2="430" stroke="#5F6368" stroke-width="2"/>
+<rect x="882.0" y="475.0" width="36.0" height="15.0" fill="#1A1A1A"/>
+<rect x="1050" y="460" width="80" height="80" rx="10" fill="#1A1A1A" stroke="#1A1A1A" stroke-width="4"/>
+<rect x="1150" y="460" width="80" height="80" rx="10" fill="#1A1A1A" stroke="#1A1A1A" stroke-width="4"/>
+<rect x="1250" y="460" width="80" height="80" rx="10" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="4"/>
+<rect x="1350" y="460" width="80" height="80" rx="10" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="4"/>
+<text x="1240.0" y="590.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="30" font-weight="600" fill="#5F6368" text-anchor="middle" >2 tiempos</text>
+<text x="1920.0" y="515.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="50" font-weight="700" fill="#1A1A1A" text-anchor="middle" >taa-aa</text>
+<rect x="40" y="630" width="2320" height="250" rx="22" fill="#FAF6EE"/>
+<ellipse cx="180" cy="780" rx="30.360000000000003" ry="21.619999999999997" transform="rotate(-20 180 780)" fill="#1A1A1A" stroke="#1A1A1A" stroke-width="3"/>
+<line x1="208.2348" y1="780" x2="208.2348" y2="623.6" stroke="#1A1A1A" stroke-width="6"/>
+<text x="560.0" y="770.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="54" font-weight="700" fill="#1A1A1A" text-anchor="middle" >Negra</text>
+<line x1="810" y1="820" x2="990" y2="820" stroke="#5F6368" stroke-width="2"/>
+<line x1="810" y1="790" x2="990" y2="790" stroke="#5F6368" stroke-width="2"/>
+<line x1="810" y1="760" x2="990" y2="760" stroke="#5F6368" stroke-width="2"/>
+<line x1="810" y1="730" x2="990" y2="730" stroke="#5F6368" stroke-width="2"/>
+<line x1="810" y1="700" x2="990" y2="700" stroke="#5F6368" stroke-width="2"/>
+<path d="M55 208Q55 242 77.5 260.0Q100 278 130 278Q150 278 178 267L65 415Q145 487 145 544Q145 589 91 658H136L264 502Q181 404 181 356Q181 310 259 217L243 194Q203 217 176 217Q140 217 140.0 173.0Q140 129 179 84L165 62Q55 144 55 208Z" fill="#1A1A1A" transform="translate(875.9,814.4) scale(0.1510,-0.1510)"/>
+<rect x="1050" y="730" width="80" height="80" rx="10" fill="#1A1A1A" stroke="#1A1A1A" stroke-width="4"/>
+<rect x="1150" y="730" width="80" height="80" rx="10" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="4"/>
+<rect x="1250" y="730" width="80" height="80" rx="10" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="4"/>
+<rect x="1350" y="730" width="80" height="80" rx="10" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="4"/>
+<text x="1240.0" y="860.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="30" font-weight="600" fill="#5F6368" text-anchor="middle" >1 tiempo</text>
+<text x="1920.0" y="785.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="50" font-weight="700" fill="#1A1A1A" text-anchor="middle" >ta</text>
+<ellipse cx="180" cy="1050" rx="30.360000000000003" ry="21.619999999999997" transform="rotate(-20 180 1050)" fill="#1A1A1A" stroke="#1A1A1A" stroke-width="3"/>
+<line x1="208.2348" y1="1050" x2="208.2348" y2="893.6" stroke="#1A1A1A" stroke-width="6"/>
+<path d="M208.2348,893.6 C217.4348,939.6 263.4348,953.4 249.6348,1013.2" fill="none" stroke="#1A1A1A" stroke-width="7" stroke-linecap="round"/>
+<text x="560.0" y="1040.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="54" font-weight="700" fill="#1A1A1A" text-anchor="middle" >Corchea</text>
+<line x1="810" y1="1090" x2="990" y2="1090" stroke="#5F6368" stroke-width="2"/>
+<line x1="810" y1="1060" x2="990" y2="1060" stroke="#5F6368" stroke-width="2"/>
+<line x1="810" y1="1030" x2="990" y2="1030" stroke="#5F6368" stroke-width="2"/>
+<line x1="810" y1="1000" x2="990" y2="1000" stroke="#5F6368" stroke-width="2"/>
+<line x1="810" y1="970" x2="990" y2="970" stroke="#5F6368" stroke-width="2"/>
+<path d="M136 443Q152 443 175.0 466.5Q198 490 213 511H234L138 166H101L173 426Q126 402 97.0 402.0Q68 402 43.5 422.5Q19 443 19 473Q19 495 35.0 513.5Q51 532 79 532Q106 532 122.0 513.5Q138 495 138 473Q138 458 131 445Q135 443 136 443Z" fill="#1A1A1A" transform="translate(880.3,1081.4) scale(0.1557,-0.1557)"/>
+<rect x="1050" y="1000" width="80" height="80" rx="10" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="4"/>
+<rect x="1050" y="1000" width="40" height="80" rx="6" fill="#1A1A1A"/>
+<rect x="1150" y="1000" width="80" height="80" rx="10" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="4"/>
+<rect x="1250" y="1000" width="80" height="80" rx="10" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="4"/>
+<rect x="1350" y="1000" width="80" height="80" rx="10" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="4"/>
+<text x="1240.0" y="1130.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="30" font-weight="600" fill="#5F6368" text-anchor="middle" >½ tiempo</text>
+<text x="1920.0" y="1055.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="50" font-weight="700" fill="#1A1A1A" text-anchor="middle" >ti</text>
+<text x="1200.0" y="1250.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="44" font-weight="700" fill="#1A1A1A" text-anchor="middle" >1 redonda = 2 blancas = 4 negras = 8 corcheas</text>
+</svg>

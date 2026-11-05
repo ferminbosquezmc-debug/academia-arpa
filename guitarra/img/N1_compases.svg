@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="1398.0" viewBox="0 0 2400 1398.0" role="img" aria-label="Compases de 2/4, 3/4 y 4/4">
+<title>Compases de 2/4, 3/4 y 4/4</title>
+<rect width="2400" height="1398.0" fill="#FFFFFF"/><g transform="translate(0,60)"><text x="40.0" y="0.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="40" font-weight="600" fill="#1A1A1A" text-anchor="start" >2/4 · dos tiempos: marcha (UN-dos)</text><line x1="40" y1="176.0" x2="2380" y2="176.0" stroke="#1A1A1A" stroke-width="3"/>
+<text x="102.0" y="170.0" font-family="'DejaVu Serif', serif" font-size="68.0" font-weight="700" fill="#1A1A1A" text-anchor="middle" >2</text><text x="102.0" y="234.0" font-family="'DejaVu Serif', serif" font-size="68.0" font-weight="700" fill="#1A1A1A" text-anchor="middle" >4</text>
+<ellipse cx="303.11" cy="176.0" rx="26.400000000000002" ry="18.799999999999997" transform="rotate(-20 303.11 176.0)" fill="#1A1A1A" stroke="#1A1A1A" stroke-width="3"/>
+<line x1="327.66200000000003" y1="176.0" x2="327.66200000000003" y2="36.0" stroke="#1A1A1A" stroke-width="4"/>
+<text x="303.1" y="280.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32.0" font-weight="600" fill="#5F6368" text-anchor="middle" >ta</text>
+<ellipse cx="842.61" cy="176.0" rx="26.400000000000002" ry="18.799999999999997" transform="rotate(-20 842.61 176.0)" fill="#1A1A1A" stroke="#1A1A1A" stroke-width="3"/>
+<line x1="867.162" y1="176.0" x2="867.162" y2="36.0" stroke="#1A1A1A" stroke-width="4"/>
+<text x="842.6" y="280.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32.0" font-weight="600" fill="#5F6368" text-anchor="middle" >ta</text>
+<line x1="1285.0" y1="128.0" x2="1285.0" y2="224.0" stroke="#1A1A1A" stroke-width="3"/>
+<ellipse cx="1406.11" cy="176.0" rx="26.400000000000002" ry="18.799999999999997" transform="rotate(-20 1406.11 176.0)" fill="#1A1A1A" stroke="#1A1A1A" stroke-width="3"/><ellipse cx="1406.11" cy="176.0" rx="14.520000000000003" ry="7.895999999999998" transform="rotate(-35 1406.11 176.0)" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="1.7999999999999998"/>
+<line x1="1430.6619999999998" y1="176.0" x2="1430.6619999999998" y2="36.0" stroke="#1A1A1A" stroke-width="4"/>
+<text x="1406.1" y="280.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32.0" font-weight="600" fill="#5F6368" text-anchor="middle" >taa-aa</text>
+<line x1="2366" y1="128.0" x2="2366" y2="224.0" stroke="#1A1A1A" stroke-width="3"/>
+<rect x="2372" y="128.0" width="9" height="96.0" fill="#1A1A1A"/></g>
+<g transform="translate(0,526.0)"><text x="40.0" y="0.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="40" font-weight="600" fill="#1A1A1A" text-anchor="start" >3/4 · tres tiempos: vals (UN-dos-tres)</text><line x1="40" y1="176.0" x2="2380" y2="176.0" stroke="#1A1A1A" stroke-width="3"/>
+<text x="102.0" y="170.0" font-family="'DejaVu Serif', serif" font-size="68.0" font-weight="700" fill="#1A1A1A" text-anchor="middle" >3</text><text x="102.0" y="234.0" font-family="'DejaVu Serif', serif" font-size="68.0" font-weight="700" fill="#1A1A1A" text-anchor="middle" >4</text>
+<ellipse cx="270.74" cy="176.0" rx="26.400000000000002" ry="18.799999999999997" transform="rotate(-20 270.74 176.0)" fill="#1A1A1A" stroke="#1A1A1A" stroke-width="3"/>
+<line x1="295.29200000000003" y1="176.0" x2="295.29200000000003" y2="36.0" stroke="#1A1A1A" stroke-width="4"/>
+<text x="270.7" y="280.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32.0" font-weight="600" fill="#5F6368" text-anchor="middle" >ta</text>
+<ellipse cx="630.4066666666668" cy="176.0" rx="26.400000000000002" ry="18.799999999999997" transform="rotate(-20 630.4066666666668 176.0)" fill="#1A1A1A" stroke="#1A1A1A" stroke-width="3"/>
+<line x1="654.9586666666668" y1="176.0" x2="654.9586666666668" y2="36.0" stroke="#1A1A1A" stroke-width="4"/>
+<text x="630.4" y="280.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32.0" font-weight="600" fill="#5F6368" text-anchor="middle" >ta</text>
+<ellipse cx="990.0733333333335" cy="176.0" rx="26.400000000000002" ry="18.799999999999997" transform="rotate(-20 990.0733333333335 176.0)" fill="#1A1A1A" stroke="#1A1A1A" stroke-width="3"/>
+<line x1="1014.6253333333335" y1="176.0" x2="1014.6253333333335" y2="36.0" stroke="#1A1A1A" stroke-width="4"/>
+<text x="990.1" y="280.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32.0" font-weight="600" fill="#5F6368" text-anchor="middle" >ta</text>
+<line x1="1285.0000000000002" y1="128.0" x2="1285.0000000000002" y2="224.0" stroke="#1A1A1A" stroke-width="3"/>
+<ellipse cx="1373.7400000000002" cy="176.0" rx="26.400000000000002" ry="18.799999999999997" transform="rotate(-20 1373.7400000000002 176.0)" fill="#1A1A1A" stroke="#1A1A1A" stroke-width="3"/><ellipse cx="1373.7400000000002" cy="176.0" rx="14.520000000000003" ry="7.895999999999998" transform="rotate(-35 1373.7400000000002 176.0)" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="1.7999999999999998"/>
+<line x1="1398.2920000000001" y1="176.0" x2="1398.2920000000001" y2="36.0" stroke="#1A1A1A" stroke-width="4"/>
+<text x="1373.7" y="280.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32.0" font-weight="600" fill="#5F6368" text-anchor="middle" >taa-aa</text>
+<ellipse cx="2093.0733333333333" cy="176.0" rx="26.400000000000002" ry="18.799999999999997" transform="rotate(-20 2093.0733333333333 176.0)" fill="#1A1A1A" stroke="#1A1A1A" stroke-width="3"/>
+<line x1="2117.6253333333334" y1="176.0" x2="2117.6253333333334" y2="36.0" stroke="#1A1A1A" stroke-width="4"/>
+<text x="2093.1" y="280.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32.0" font-weight="600" fill="#5F6368" text-anchor="middle" >ta</text>
+<line x1="2366" y1="128.0" x2="2366" y2="224.0" stroke="#1A1A1A" stroke-width="3"/>
+<rect x="2372" y="128.0" width="9" height="96.0" fill="#1A1A1A"/></g>
+<g transform="translate(0,992.0)"><text x="40.0" y="0.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="40" font-weight="600" fill="#1A1A1A" text-anchor="start" >4/4 · cuatro tiempos: el más usado (UN-dos-tres-cuatro)</text><line x1="40" y1="176.0" x2="2380" y2="176.0" stroke="#1A1A1A" stroke-width="3"/>
+<text x="102.0" y="170.0" font-family="'DejaVu Serif', serif" font-size="68.0" font-weight="700" fill="#1A1A1A" text-anchor="middle" >4</text><text x="102.0" y="234.0" font-family="'DejaVu Serif', serif" font-size="68.0" font-weight="700" fill="#1A1A1A" text-anchor="middle" >4</text>
+<ellipse cx="254.555" cy="176.0" rx="26.400000000000002" ry="18.799999999999997" transform="rotate(-20 254.555 176.0)" fill="#1A1A1A" stroke="#1A1A1A" stroke-width="3"/>
+<line x1="279.107" y1="176.0" x2="279.107" y2="36.0" stroke="#1A1A1A" stroke-width="4"/>
+<text x="254.6" y="280.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32.0" font-weight="600" fill="#5F6368" text-anchor="middle" >ta</text>
+<ellipse cx="524.305" cy="176.0" rx="26.400000000000002" ry="18.799999999999997" transform="rotate(-20 524.305 176.0)" fill="#1A1A1A" stroke="#1A1A1A" stroke-width="3"/>
+<line x1="548.857" y1="176.0" x2="548.857" y2="36.0" stroke="#1A1A1A" stroke-width="4"/>
+<text x="524.3" y="280.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32.0" font-weight="600" fill="#5F6368" text-anchor="middle" >ta</text>
+<ellipse cx="794.055" cy="176.0" rx="26.400000000000002" ry="18.799999999999997" transform="rotate(-20 794.055 176.0)" fill="#1A1A1A" stroke="#1A1A1A" stroke-width="3"/>
+<line x1="818.607" y1="176.0" x2="818.607" y2="36.0" stroke="#1A1A1A" stroke-width="4"/>
+<text x="794.1" y="280.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32.0" font-weight="600" fill="#5F6368" text-anchor="middle" >ta</text>
+<ellipse cx="1063.805" cy="176.0" rx="26.400000000000002" ry="18.799999999999997" transform="rotate(-20 1063.805 176.0)" fill="#1A1A1A" stroke="#1A1A1A" stroke-width="3"/>
+<line x1="1088.357" y1="176.0" x2="1088.357" y2="36.0" stroke="#1A1A1A" stroke-width="4"/>
+<text x="1063.8" y="280.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32.0" font-weight="600" fill="#5F6368" text-anchor="middle" >ta</text>
+<line x1="1285.0" y1="128.0" x2="1285.0" y2="224.0" stroke="#1A1A1A" stroke-width="3"/>
+<ellipse cx="1357.555" cy="176.0" rx="26.400000000000002" ry="18.799999999999997" transform="rotate(-20 1357.555 176.0)" fill="#1A1A1A" stroke="#1A1A1A" stroke-width="3"/><ellipse cx="1357.555" cy="176.0" rx="14.520000000000003" ry="7.895999999999998" transform="rotate(-35 1357.555 176.0)" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="1.7999999999999998"/>
+<text x="1357.6" y="280.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32.0" font-weight="600" fill="#5F6368" text-anchor="middle" >taa-aa-aa-aa</text>
+<line x1="2366" y1="128.0" x2="2366" y2="224.0" stroke="#1A1A1A" stroke-width="3"/>
+<rect x="2372" y="128.0" width="9" height="96.0" fill="#1A1A1A"/></g>
+</svg>

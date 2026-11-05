@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="640" viewBox="0 0 2400 640" role="img" aria-label="Ejercicio de digitación 1-2-3-4">
+<title>Ejercicio de digitación 1-2-3-4</title>
+<rect width="2400" height="640" fill="#FFFFFF"/>
+<rect x="300" y="80" width="1740" height="460" fill="#F3E7D3"/>
+<rect x="286" y="70" width="22" height="480" fill="#1A1A1A"/>
+<line x1="720" y1="80" x2="720" y2="540" stroke="#9A8F80" stroke-width="7"/>
+<text x="510.0" y="600.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="30" font-weight="600" fill="#5F6368" text-anchor="middle" >traste 1</text>
+<line x1="1140" y1="80" x2="1140" y2="540" stroke="#9A8F80" stroke-width="7"/>
+<text x="930.0" y="600.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="30" font-weight="600" fill="#5F6368" text-anchor="middle" >traste 2</text>
+<line x1="1560" y1="80" x2="1560" y2="540" stroke="#9A8F80" stroke-width="7"/>
+<text x="1350.0" y="600.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="30" font-weight="600" fill="#5F6368" text-anchor="middle" >traste 3</text>
+<line x1="1980" y1="80" x2="1980" y2="540" stroke="#9A8F80" stroke-width="7"/>
+<text x="1770.0" y="600.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="30" font-weight="600" fill="#5F6368" text-anchor="middle" >traste 4</text>
+<line x1="300" y1="110" x2="2040" y2="110" stroke="#5E554C" stroke-width="3.0"/>
+<text x="240.0" y="122.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32" font-weight="700" fill="#1A1A1A" text-anchor="end" >1.ª</text>
+<line x1="300" y1="190" x2="2040" y2="190" stroke="#5E554C" stroke-width="4.0"/>
+<text x="240.0" y="202.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32" font-weight="700" fill="#1A1A1A" text-anchor="end" >2.ª</text>
+<line x1="300" y1="270" x2="2040" y2="270" stroke="#5E554C" stroke-width="5.0"/>
+<text x="240.0" y="282.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32" font-weight="700" fill="#1A1A1A" text-anchor="end" >3.ª</text>
+<line x1="300" y1="350" x2="2040" y2="350" stroke="#5E554C" stroke-width="6.0"/>
+<text x="240.0" y="362.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32" font-weight="700" fill="#1A1A1A" text-anchor="end" >4.ª</text>
+<line x1="300" y1="430" x2="2040" y2="430" stroke="#5E554C" stroke-width="7.0"/>
+<text x="240.0" y="442.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32" font-weight="700" fill="#1A1A1A" text-anchor="end" >5.ª</text>
+<line x1="300" y1="510" x2="2040" y2="510" stroke="#5E554C" stroke-width="8.0"/>
+<text x="240.0" y="522.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32" font-weight="700" fill="#1A1A1A" text-anchor="end" >6.ª</text>
+<circle cx="510.0" cy="510" r="34" fill="#1A1A1A"/>
+<text x="510.0" y="523.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="38" font-weight="700" fill="#C9A227" text-anchor="middle" >1</text>
+<circle cx="930.0" cy="510" r="34" fill="#1A1A1A"/>
+<text x="930.0" y="523.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="38" font-weight="700" fill="#C9A227" text-anchor="middle" >2</text>
+<circle cx="1350.0" cy="510" r="34" fill="#1A1A1A"/>
+<text x="1350.0" y="523.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="38" font-weight="700" fill="#C9A227" text-anchor="middle" >3</text>
+<circle cx="1770.0" cy="510" r="34" fill="#1A1A1A"/>
+<text x="1770.0" y="523.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="38" font-weight="700" fill="#C9A227" text-anchor="middle" >4</text>
+<text x="1140.0" y="50.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="30" font-weight="500" fill="#1A1A1A" text-anchor="middle" >Un dedo por traste: dedo 1 en el traste 1, dedo 2 en el 2…  Empieza en la 6.ª cuerda y sube hasta la 1.ª.</text>
+</svg>
