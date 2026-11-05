@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="900" viewBox="0 0 2400 900" role="img" aria-label="Rasgueos básicos">
+<title>Rasgueos básicos</title>
+<rect width="2400" height="900" fill="#FFFFFF"/>
+<text x="40.0" y="70.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="42" font-weight="700" fill="#1A1A1A" text-anchor="start" >Rasgueo 1 · Negras: abajo en cada tiempo</text>
+<line x1="300" y1="110" x2="300" y2="260" stroke="#1A1A1A" stroke-width="16" stroke-linecap="round"/><path d="M262,240 L300,300 L338,240 Z" fill="#1A1A1A"/>
+<text x="300.0" y="380.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="52" font-weight="700" fill="#1A1A1A" text-anchor="middle" >1</text>
+<line x1="820" y1="110" x2="820" y2="260" stroke="#1A1A1A" stroke-width="16" stroke-linecap="round"/><path d="M782,240 L820,300 L858,240 Z" fill="#1A1A1A"/>
+<text x="820.0" y="380.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="52" font-weight="700" fill="#1A1A1A" text-anchor="middle" >2</text>
+<line x1="1340" y1="110" x2="1340" y2="260" stroke="#1A1A1A" stroke-width="16" stroke-linecap="round"/><path d="M1302,240 L1340,300 L1378,240 Z" fill="#1A1A1A"/>
+<text x="1340.0" y="380.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="52" font-weight="700" fill="#1A1A1A" text-anchor="middle" >3</text>
+<line x1="1860" y1="110" x2="1860" y2="260" stroke="#1A1A1A" stroke-width="16" stroke-linecap="round"/><path d="M1822,240 L1860,300 L1898,240 Z" fill="#1A1A1A"/>
+<text x="1860.0" y="380.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="52" font-weight="700" fill="#1A1A1A" text-anchor="middle" >4</text>
+<text x="40.0" y="520.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="42" font-weight="700" fill="#1A1A1A" text-anchor="start" >Rasgueo 2 · Corcheas: abajo en el número, arriba en la «y»</text>
+<line x1="300" y1="560" x2="300" y2="690" stroke="#1A1A1A" stroke-width="16" stroke-linecap="round"/><path d="M262,670 L300,730 L338,670 Z" fill="#1A1A1A"/>
+<text x="300.0" y="810.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="48" font-weight="700" fill="#1A1A1A" text-anchor="middle" >1</text>
+<line x1="560" y1="710" x2="560" y2="600" stroke="#5F6368" stroke-width="12" stroke-linecap="round"/><path d="M528,620 L560,560 L592,620 Z" fill="#5F6368"/>
+<text x="560.0" y="810.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="48" font-weight="700" fill="#5F6368" text-anchor="middle" >y</text>
+<line x1="820" y1="560" x2="820" y2="690" stroke="#1A1A1A" stroke-width="16" stroke-linecap="round"/><path d="M782,670 L820,730 L858,670 Z" fill="#1A1A1A"/>
+<text x="820.0" y="810.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="48" font-weight="700" fill="#1A1A1A" text-anchor="middle" >2</text>
+<line x1="1080" y1="710" x2="1080" y2="600" stroke="#5F6368" stroke-width="12" stroke-linecap="round"/><path d="M1048,620 L1080,560 L1112,620 Z" fill="#5F6368"/>
+<text x="1080.0" y="810.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="48" font-weight="700" fill="#5F6368" text-anchor="middle" >y</text>
+<line x1="1340" y1="560" x2="1340" y2="690" stroke="#1A1A1A" stroke-width="16" stroke-linecap="round"/><path d="M1302,670 L1340,730 L1378,670 Z" fill="#1A1A1A"/>
+<text x="1340.0" y="810.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="48" font-weight="700" fill="#1A1A1A" text-anchor="middle" >3</text>
+<line x1="1600" y1="710" x2="1600" y2="600" stroke="#5F6368" stroke-width="12" stroke-linecap="round"/><path d="M1568,620 L1600,560 L1632,620 Z" fill="#5F6368"/>
+<text x="1600.0" y="810.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="48" font-weight="700" fill="#5F6368" text-anchor="middle" >y</text>
+<line x1="1860" y1="560" x2="1860" y2="690" stroke="#1A1A1A" stroke-width="16" stroke-linecap="round"/><path d="M1822,670 L1860,730 L1898,670 Z" fill="#1A1A1A"/>
+<text x="1860.0" y="810.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="48" font-weight="700" fill="#1A1A1A" text-anchor="middle" >4</text>
+<line x1="2120" y1="710" x2="2120" y2="600" stroke="#5F6368" stroke-width="12" stroke-linecap="round"/><path d="M2088,620 L2120,560 L2152,620 Z" fill="#5F6368"/>
+<text x="2120.0" y="810.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="48" font-weight="700" fill="#5F6368" text-anchor="middle" >y</text>
+<text x="2360.0" y="880.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="30" font-weight="500" fill="#5F6368" text-anchor="end" >↓ hacia el suelo (más fuerte)   ·   ↑ hacia el techo (más suave)</text>
+</svg>
