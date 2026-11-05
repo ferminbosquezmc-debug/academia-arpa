@@ -286,6 +286,7 @@ nav button[aria-current=page]{background:rgba(242,163,27,.14);border-radius:14px
 .jg-play{width:100px;height:100px;border-radius:50%;background:radial-gradient(circle at 35% 30%,var(--gold2),var(--gold) 60%,#a77a1f);color:#000;display:grid;place-items:center}
 .jg-play svg{width:40px;height:40px}
 .jg-tal{display:flex;gap:18px;font-weight:600;font-variant-numeric:tabular-nums}
+.arpi-h{display:flex;gap:10px;align-items:flex-end;margin-top:10px}.arpi-h svg{width:48px;height:57px;flex:none}.arpi-h .jg-bub{font-size:15px}
 @media (prefers-reduced-motion:reduce){.jg-arpi.hop,.jg-arpi.shake{animation:none}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}.cf{display:none}}
 </style>
@@ -2244,10 +2245,10 @@ function lec(){
  if(L.step===2)b=D.p()+helpCard(K)+nx(3);
  if(L.step===3){const left=Q.filter((q,i)=>ans[i]!==q[2]&&!fx[i]).length;
   b='<div class="card"><h3>'+(kid()?'¡Reto de la lección! 🏁':'Prueba de la lección')+'</h3><p class="mute">Si fallas alguna, verás una explicación y podrás corregirla. Aquí todos pueden aprender y pasar.</p>'+Q.map((q,i)=>{const first=ans[i]===q[2],f=fx[i],pend=graded&&!first&&!f;
-   return '<p style="margin-top:18px;font-weight:500">'+(i+1)+'. '+q[0]+(graded?' <span class="tag">'+(first?'Correcta':f?'Corregida':'Por corregir')+'</span>':'')+'</p>'+q[1].map((o,j)=>{const done=graded&&!pend;return '<button class="opt'+(done&&j===q[2]?' good':(pend&&j===ans[i]?' bad':''))+'" data-q="'+i+'" data-o="'+j+'" aria-pressed="'+(!graded&&ans[i]===j)+'"'+((graded&&!pend)||(pend&&j===ans[i])?' disabled':'')+'>'+o+'</button>'}).join('')+(pend?'<div class="card" style="background:#1c1608;margin-top:10px"><b>Para pensar:</b> '+q[3]+'</div><p class="mute" style="margin-top:8px" aria-live="polite">'+(qm[K+i]||'Elige otra respuesta.')+'</p>':'')}).join('');
+   return '<p style="margin-top:18px;font-weight:500">'+(i+1)+'. '+q[0]+(graded?' <span class="tag">'+(first?'Correcta':f?'Corregida':'Por corregir')+'</span>':'')+'</p>'+q[1].map((o,j)=>{const done=graded&&!pend;return '<button class="opt'+(done&&j===q[2]?' good':(pend&&(j===ans[i]||((L.tw||{})[i]||[]).includes(j))?' bad':''))+'" data-q="'+i+'" data-o="'+j+'" aria-pressed="'+(!graded&&ans[i]===j)+'"'+((graded&&!pend)||(pend&&(j===ans[i]||((L.tw||{})[i]||[]).includes(j)))?' disabled':'')+'>'+o+'</button>'}).join('')+(pend?arpiHint(q,i,L):'')}).join('');
   if(!graded)b+=Q.every((_,i)=>ans[i]!==undefined)?'<button class="btn" id="grade" style="margin-top:16px">Calificar</button>':'<p class="mute" style="margin-top:16px">Responde todas las preguntas.</p>';
   else if(left)b+='<p style="margin-top:18px"><b>'+(L.hist&&L.hist.length?'Intento '+(L.hist.length+1):'Primer intento')+': '+L.score+' de '+Q.length+(D.at?' ('+Math.round(L.score/Q.length*100)+' %)':'')+'.</b> Te falta corregir '+left+'. Lee la explicación y elige otra respuesta.</p>';
-  else{const fc=Object.keys(fx).length;b+=(D.at&&/-ev$/.test(K)?'<p style="margin-top:18px"><b>'+(atEvPass(+K[0])?'✅ Evaluación aprobada. Mejor resultado: '+atBest(L,Q)+' %.':'❌ Todavía no apruebas: necesitas '+atRule().aprobar+' % y tu mejor resultado es '+atBest(L,Q)+' %. Repasa y reintenta.')+'</b></p>':'')+'<p style="margin-top:18px"><b>Dominaste la prueba.</b> '+L.score+' a la primera'+(fc?' y '+fc+' corregida'+(fc>1?'s':''):'')+'. Lo importante es que lo aprendiste.</p>'+nx(4)}
+  else{const fc=Object.keys(fx).length;b+=(D.at&&/-ev$/.test(K)?'<p style="margin-top:18px"><b>'+(atEvPass(+K[0])?'✅ Evaluación aprobada. Mejor resultado: '+atBest(L,Q)+' %.':'❌ Todavía no apruebas: necesitas '+atRule().aprobar+' % y tu mejor resultado es '+atBest(L,Q)+' %. Repasa y reintenta.')+'</b></p>':'')+'<div class="arpi-h">'+arpiSvg('wow')+'<p class="jg-bub" data-nn><b>¡Dominaste la prueba!</b> '+L.score+' a la primera'+(fc?' y '+fc+' corregida'+(fc>1?'s':''):'')+'. Lo importante es que lo aprendiste.</p></div>'+nx(4)}
   if(D.retry&&graded)b+='<p class="mute" style="margin-top:14px;font-size:14px">Intentos: '+((L.hist||[]).length+1)+(D.at&&atRule().intentos?' de '+atRule().intentos:'')+(L.hist&&L.hist.length?' · Mejor resultado: '+atBest(L,Q)+' %':'')+'</p>'+(typeof D.retry!=='function'||D.retry(L)?'<button class="btn ghost" id="retry" style="margin-top:8px">🔁 Reintentar desde cero</button>':'<p class="mute" style="font-size:14px">Ya usaste todos los intentos. Habla con tu docente.</p>');
   b+='</div>'}
  if(L.step===4){
@@ -2279,11 +2280,11 @@ $('#v-leccion').addEventListener('click',e=>{const t=e.target;let x;const K=S.cu
  else if(x=t.closest('[data-nt]')){if(pr.hit)return;pr.tot++;if(x.dataset.nt===nm(pr.step)){pr.ok++;pr.hit=true;pr.msg='¡Correcto! Es '+nm(pr.step)+'.';lec();const k0=S.cur;setTimeout(()=>{let s;do{s=Math.floor(Math.random()*11)-2}while(s===pr.step);pr.step=s;pr.hit=false;pr.msg='Toca el color de la nota que ves.';if(S.cur===k0&&document.querySelector('.pal'))lec()},1100)}else{pr.msg='Ese color es '+x.dataset.nt+'. Cuenta las líneas de abajo hacia arriba y vuelve a intentar.';lec();const b=document.querySelector('.sw[data-nt="'+x.dataset.nt+'"]');if(b)b.classList.add('no')}}
  else if(x=t.closest('[data-q]')){const i=+x.dataset.q,o=+x.dataset.o;L.ans=L.ans||[];
   if(typeof L.score!=='number')L.ans[i]=o;
-  else if(L.ans[i]!==Q[i][2]&&!(L.fix||{})[i]){if(o===Q[i][2]){L.fix=L.fix||{};L.fix[i]=true;qm[K+i]='';if(Q.every((q,j)=>L.ans[j]===q[2]||L.fix[j]))party()}else qm[K+i]='Todavía no. Relee la explicación e inténtalo otra vez.'}
+  else if(L.ans[i]!==Q[i][2]&&!(L.fix||{})[i]){if(o===Q[i][2]){L.fix=L.fix||{};L.fix[i]=true;qm[K+i]='';if(Q.every((q,j)=>L.ans[j]===q[2]||L.fix[j]))party()}else{L.tw=L.tw||{};L.tw[i]=L.tw[i]||[];if(!L.tw[i].includes(o))L.tw[i].push(o)}}
   save();lec()}
  else if(t.closest('#grade')){L.score=Q.filter((q,i)=>L.ans[i]===q[2]).length;save();lec();if(L.score===Q.length){party();toast(kid()?'¡Perfecto! Ganaste ⭐':'¡Perfecto!')}}
  else if(t.closest('#send')){L.status='review';save();lec()}
- else if(t.closest('#retry')&&(typeof LD[K].retry!=='function'||LD[K].retry(L))){L.hist=L.hist||[];L.hist.push({score:L.score,total:Q.length,fecha:dkey(new Date())});delete L.ans;delete L.score;delete L.fix;save();lec();window.scrollTo(0,0)}
+ else if(t.closest('#retry')&&(typeof LD[K].retry!=='function'||LD[K].retry(L))){L.hist=L.hist||[];L.hist.push({score:L.score,total:Q.length,fecha:dkey(new Date())});delete L.ans;delete L.score;delete L.fix;delete L.tw;save();lec();window.scrollTo(0,0)}
  else if(x=t.closest('[data-lr]')){L.lr=L.lr||{};L.lr[x.dataset.lr]=!L.lr[x.dataset.lr];save();lec()}
  else if(t.closest('#okdemo')){L.status='ok';S.done[K]=true;save();lec();party();toast(kid()?'¡Misión cumplida! +3 ⭐':'Lección aprobada')}
 });
@@ -2327,6 +2328,13 @@ $('#tgo').onclick=()=>{
  else{t0=Date.now();ti=setInterval(()=>$('#clock').textContent=fmt(Math.round((Date.now()-t0)/1000)),500);$('#tgo').textContent='⏹ Terminar y guardar'}
 };
 
+/* Arpi en las pruebas: da la pista cuando el estudiante falla y celebra al terminar.
+   L.tw[i] guarda las opciones equivocadas que ya probó al corregir (se descartan). */
+function arpiSvg(m){const mo=m==='sad'?'M30 51 Q36 46 42 51':m==='wow'?'M33 49 Q36 55 39 49 Q36 46 33 49':'M30 48 Q36 54 42 48';
+ return '<svg viewBox="0 0 72 84" aria-hidden="true"><path d="M14 78 L14 14 Q14 4 26 6 Q46 10 58 30 Q64 42 60 54 L60 78" fill="none" stroke="#f2a31b" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 78 H62" stroke="#c9852a" stroke-width="7" stroke-linecap="round"/><g stroke-width="2" stroke-linecap="round">'+NORD.map((n,i)=>'<line x1="'+[22,28,34,40,46,52,57][i]+'" y1="'+[12,10,12,15,19,25,33][i]+'" x2="'+[22,28,34,40,46,52,57][i]+'" y2="74" stroke="'+NCOL[n]+'"/>').join('')+'</g><circle cx="36" cy="44" r="15" fill="#ffc857" stroke="#c9852a" stroke-width="2"/><circle cx="31" cy="42" r="2.6" fill="#1b1610"/><circle cx="41" cy="42" r="2.6" fill="#1b1610"/><path d="'+mo+'" fill="none" stroke="#1b1610" stroke-width="2.4" stroke-linecap="round"/><circle cx="27" cy="47" r="2" fill="#ff8a7a" opacity=".7"/><circle cx="45" cy="47" r="2" fill="#ff8a7a" opacity=".7"/></svg>'}
+function arpiHint(q,i,L){const tw=((L.tw||{})[i]||[]).length,left=q[1].length-2-tw;
+ const lead=tw===0?(kid()?'¡Casi! Te doy una pista:':'Una pista para corregir:'):left<=0?'Ya descartaste las demás. ¡Solo queda una opción!':'Todavía no, pero ya descartaste una. Lee otra vez la pista:';
+ return '<div class="arpi-h">'+arpiSvg(tw?'sad':'')+'<div class="jg-bub" aria-live="polite"><b data-nn>Arpi:</b> <span data-nn>'+lead+'</span> '+q[3]+'</div></div>'}
 /* ===== Juegos de práctica: racha con recompensas, Atrapa la nota, Oído musical y Arpi =====
    La racha usa los mismos días de S.min que el cronómetro. El tiempo jugado se suma a S.min
    (S.jgs guarda los segundos sueltos hasta completar un minuto). */

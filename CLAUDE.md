@@ -53,3 +53,4 @@ Bloque JS que empieza con el comentario `Juegos de práctica`; CSS con prefijo `
 - Racha (`jgRacha`): usa `streak()` y los días de `S.min`, igual que el cronómetro. Recompensas en `JG_RW` (3, 7, 14, 21 y 30 días).
 - Atrapa la nota (`JG`, `jgStart`, `jgStop`) y Oído musical (`EAR`). El tiempo jugado se suma a `S.min` con `jgTime` (`S.jgs` guarda los segundos sueltos; `S.jgb` es el récord).
 - Arpi, la mascota: `jgSay(html, 'wow'|'sad')`. `jgStop()` se llama en `go()`.
+- Arpi en las pruebas de lecciones: `arpiHint(q,i,L)` muestra la pista (`q[3]`) cuando una respuesta está por corregir; `arpiSvg(mood)` dibuja la mascota. `L.tw[i]` guarda las opciones equivocadas ya probadas al corregir (quedan descartadas; se borra al reintentar).
