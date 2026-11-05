@@ -247,6 +247,46 @@ nav button[aria-current=page]{background:rgba(242,163,27,.14);border-radius:14px
 #f4{position:fixed;inset:0;background:rgba(0,0,0,.82);z-index:50;display:flex;align-items:flex-end;justify-content:center}
 #f4[hidden]{display:none}
 #f4 .sheet{background:var(--card);border:1px solid var(--wine2);border-radius:20px 20px 0 0;max-width:720px;width:100%;max-height:92vh;overflow:auto;padding:20px 18px 28px}
+/* ===== Juegos de práctica (racha, Atrapa la nota, Oído musical, Arpi) ===== */
+.jg-guide{display:flex;gap:12px;align-items:flex-end;margin-top:14px}
+.jg-arpi{width:64px;height:76px;flex:none}
+.jg-arpi.hop{animation:jghop .5s ease}.jg-arpi.shake{animation:jgshake .45s ease}
+@keyframes jghop{0%,100%{transform:translateY(0)}40%{transform:translateY(-10px)}}
+@keyframes jgshake{0%,100%{transform:translateX(0)}25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.jg-bub{flex:1;min-width:0;background:var(--ivory);color:#1b1610;border-radius:16px 16px 16px 4px;padding:10px 14px;font-weight:500;min-height:48px}
+.jg-bub b{color:#8a5d00}
+.jg-big{display:flex;align-items:baseline;gap:8px;margin-top:6px}
+.jg-big .n{font:600 52px/1 "Cormorant Garamond",Georgia,serif;color:var(--gold);font-variant-numeric:tabular-nums}
+.jg-rw{display:flex;flex-direction:column;gap:8px;margin-top:12px}
+.jg-r{display:flex;align-items:center;gap:12px;border:1px solid var(--line);border-radius:12px;padding:10px 12px}
+.jg-r .ic{width:40px;height:40px;flex:none;border-radius:10px;background:#000;border:1px solid var(--line);display:grid;place-items:center}
+.jg-r .tx{flex:1;min-width:0}.jg-r .tx b{display:block;font-weight:600}.jg-r .tx small{color:var(--mute)}
+.jg-r .st{font-size:13px;color:var(--mute);font-variant-numeric:tabular-nums}
+.jg-r.op{border-color:var(--gold)}.jg-r.op .st{color:#5fd18a}.jg-r:not(.op) .ic{opacity:.5}
+.jg-seg{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}
+.jg-seg button{border:1px solid var(--line);border-radius:999px;padding:8px 14px;min-height:40px;color:var(--mute);font-size:14px}
+.jg-seg button[aria-pressed=true]{border-color:var(--gold);color:var(--ivory);background:#2a210f}
+.jg-hud{display:flex;justify-content:space-between;margin-top:12px;font-weight:600;font-variant-numeric:tabular-nums}
+.jg-hud .lv{color:#ff6b5e;letter-spacing:2px}
+.jg-stage{position:relative;height:320px;margin-top:8px;background:linear-gradient(#000,#14110b);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.jg-lanes{position:absolute;inset:0;display:grid}.jg-lanes div{border-right:1px solid #1f1a12}.jg-lanes div:last-child{border:0}
+.jg-line{position:absolute;left:0;right:0;bottom:46px;height:3px;background:var(--gold);box-shadow:0 0 12px var(--gold)}
+.jg-n{position:absolute;top:0;width:40px;height:40px;margin-left:-20px;border-radius:50%;display:grid;place-items:center;font-size:12px;font-weight:600;color:#fff;will-change:transform}
+.jg-n span{background:rgba(0,0,0,.55);border-radius:6px;padding:0 4px}
+.jg-n.hit{transition:transform .2s,opacity .2s;opacity:0}
+.jg-ov{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;background:rgba(0,0,0,.82);text-align:center;padding:16px}
+.jg-ov[hidden]{display:none}.jg-ov h3{color:var(--gold);font-size:26px}
+.jg-pop{position:absolute;bottom:60px;left:50%;transform:translateX(-50%);font:600 22px "Cormorant Garamond",Georgia,serif;pointer-events:none}
+.jg-keys{display:grid;gap:6px;margin-top:10px}
+.jg-k{border:1px solid var(--line);border-radius:12px;padding:10px 0 8px;display:flex;flex-direction:column;align-items:center;gap:4px;font-size:13px;font-weight:600;touch-action:manipulation;-webkit-tap-highlight-color:transparent;min-height:60px}
+.jg-k i{width:24px;height:24px;border-radius:50%}
+.jg-k:active,.jg-k.fl{transform:scale(.94);border-color:var(--gold)}
+.jg-k.ok{border-color:#5fd18a;background:#163322}.jg-k.no{border-color:#ff6b5e;background:#3a1714}
+.jg-ear{display:flex;flex-direction:column;align-items:center;gap:10px;margin-top:12px}
+.jg-play{width:100px;height:100px;border-radius:50%;background:radial-gradient(circle at 35% 30%,var(--gold2),var(--gold) 60%,#a77a1f);color:#000;display:grid;place-items:center}
+.jg-play svg{width:40px;height:40px}
+.jg-tal{display:flex;gap:18px;font-weight:600;font-variant-numeric:tabular-nums}
+@media (prefers-reduced-motion:reduce){.jg-arpi.hop,.jg-arpi.shake{animation:none}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}.cf{display:none}}
 </style>
 </head>
@@ -288,6 +328,40 @@ nav button[aria-current=page]{background:rgba(242,163,27,.14);border-radius:14px
 
 <section class="view" id="v-practica" hidden>
   <h2>Práctica</h2>
+  <div data-nn>
+  <div class="jg-guide" aria-live="polite">
+    <svg class="jg-arpi" id="jg-arpi" viewBox="0 0 72 84" role="img" aria-label="Arpi, la mascota de la academia">
+      <path d="M14 78 L14 14 Q14 4 26 6 Q46 10 58 30 Q64 42 60 54 L60 78" fill="none" stroke="#f2a31b" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M14 78 H62" stroke="#c9852a" stroke-width="7" stroke-linecap="round"/>
+      <g stroke-width="2" stroke-linecap="round"><line x1="22" y1="12" x2="22" y2="74" stroke="#e53935"/><line x1="28" y1="10" x2="28" y2="74" stroke="#fb8c00"/><line x1="34" y1="12" x2="34" y2="74" stroke="#fdd835"/><line x1="40" y1="15" x2="40" y2="74" stroke="#7cc242"/><line x1="46" y1="19" x2="46" y2="74" stroke="#4fc3f7"/><line x1="52" y1="25" x2="52" y2="74" stroke="#2f5fe0"/><line x1="57" y1="33" x2="57" y2="74" stroke="#a64de0"/></g>
+      <circle cx="36" cy="44" r="15" fill="#ffc857" stroke="#c9852a" stroke-width="2"/>
+      <circle cx="31" cy="42" r="2.6" fill="#1b1610"/><circle cx="41" cy="42" r="2.6" fill="#1b1610"/>
+      <path id="jg-mouth" d="M30 48 Q36 54 42 48" fill="none" stroke="#1b1610" stroke-width="2.4" stroke-linecap="round"/>
+      <circle cx="27" cy="47" r="2" fill="#ff8a7a" opacity=".7"/><circle cx="45" cy="47" r="2" fill="#ff8a7a" opacity=".7"/>
+    </svg>
+    <p class="jg-bub" id="jg-bub">¡Hola! Soy <b>Arpi</b>. Practica un poquito cada día y juntos encendemos todas las cuerdas.</p>
+  </div>
+  <div class="card" id="jg-racha"></div>
+  <div class="card">
+    <h3>🎯 Atrapa la nota</h3>
+    <p class="mute" style="margin-top:4px">Toca el botón del color cuando la nota llegue a la línea dorada.</p>
+    <div class="jg-seg" id="jg-lvl"><button aria-pressed="true" data-n="3">Nivel 1 · Do Re Mi</button><button aria-pressed="false" data-n="5">Nivel 2 · Do a Sol</button><button aria-pressed="false" data-n="7">Nivel 3 · 7 notas</button></div>
+    <div class="jg-hud"><span>Puntos <span id="jg-sc">0</span></span><span>Combo ×<span id="jg-cb">0</span></span><span class="lv" id="jg-lv" aria-label="vidas"></span></div>
+    <div class="jg-stage" id="jg-stage"><div class="jg-lanes" id="jg-lanes"></div><div class="jg-line"></div>
+      <div class="jg-ov" id="jg-ov"><h3 id="jg-ovt">¿Listo?</h3><p class="mute" id="jg-ovp">Tienes 5 vidas. Cada 10 aciertos seguidos, Arpi te celebra.</p><button class="btn" id="jg-go">Jugar</button></div></div>
+    <div class="jg-keys" id="jg-gk"></div>
+    <p class="mute" style="font-size:13px;margin-top:10px">Pronto: el micrófono escuchará tu guitarra, piano o voz para detectar la nota. Por ahora tocas los botones de color.</p>
+  </div>
+  <div class="card">
+    <h3>👂 Oído musical</h3>
+    <p class="mute" style="margin-top:4px">Escucha la nota y toca el color que creas que es. Si fallas, Arpi te da una pista.</p>
+    <div class="jg-seg" id="jg-tim"><button aria-pressed="true" data-t="guitarra">Guitarra</button><button aria-pressed="false" data-t="piano">Piano</button><button aria-pressed="false" data-t="canto">Canto</button></div>
+    <div class="jg-ear"><button class="jg-play" id="jg-play" aria-label="Escuchar la nota"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></button>
+      <button class="btn ghost" id="jg-ref">Escuchar Do de referencia</button>
+      <div class="jg-tal"><span style="color:#5fd18a">✓ <span id="jg-ok">0</span></span><span style="color:#ff6b5e">✗ <span id="jg-no">0</span></span><span>Ronda <span id="jg-rd">1</span></span></div></div>
+    <div class="jg-keys" id="jg-ek"></div>
+  </div>
+  </div>
   <div class="card">
     <h3>Metrónomo</h3>
     <div class="bpm"><span id="bpm">80</span></div>
@@ -543,10 +617,10 @@ const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',
 function toast(t){const e=$('#toast');e.textContent=t;e.classList.add('on');setTimeout(()=>e.classList.remove('on'),2200)}
 
 function go(v){
- applyMode();if(typeof mmStop==='function')mmStop();if(typeof sgStop==='function')sgStop();if(typeof eqStop==='function')eqStop();if(typeof fxStop==='function')fxStop();try{window.speechSynthesis&&speechSynthesis.cancel();saying=false}catch(e){}
+ applyMode();if(typeof mmStop==='function')mmStop();if(typeof sgStop==='function')sgStop();if(typeof eqStop==='function')eqStop();if(typeof fxStop==='function')fxStop();if(typeof jgStop==='function')jgStop();try{window.speechSynthesis&&speechSynthesis.cancel();saying=false}catch(e){}
  document.querySelectorAll('.view').forEach(x=>x.hidden=x.id!=='v-'+v);
  document.querySelectorAll('nav button').forEach(b=>(b.dataset.go===v||(['asig','n4','u4','a4'].includes(v)&&b.dataset.go==='clases')||(v==='leccion'&&b.dataset.go===(LD[S.cur]&&LD[S.cur].kidm?'ninos':'clases')))?b.setAttribute('aria-current','page'):b.removeAttribute('aria-current'));
- if(v==='home')home();if(v==='clases')clases();if(v==='ninos')ninos();if(v==='asig')atView();if(v==='biblioteca')biblio();if(v==='leccion'){S.last=S.cur;save();lec()}if(v==='perfil')perfil();if(v==='n4')n4();if(v==='u4')u4();if(v==='a4')a4();
+ if(v==='home')home();if(v==='clases')clases();if(v==='ninos')ninos();if(v==='asig')atView();if(v==='biblioteca')biblio();if(v==='leccion'){S.last=S.cur;save();lec()}if(v==='perfil')perfil();if(v==='practica'&&typeof jgRacha==='function')jgRacha();if(v==='n4')n4();if(v==='u4')u4();if(v==='a4')a4();
  window.scrollTo(0,0);
 }
 document.addEventListener('click',e=>{const g=e.target.closest('[data-go]');if(g)go(g.dataset.go)});
@@ -2249,9 +2323,73 @@ $('#v-perfil').addEventListener('click',e=>{const b=e.target.closest('#pf-del');
 let t0=0,ti=null;
 const fmt=s=>String(Math.floor(s/60)).padStart(2,'0')+':'+String(s%60).padStart(2,'0');
 $('#tgo').onclick=()=>{
- if(ti){clearInterval(ti);ti=null;const s=Math.round((Date.now()-t0)/1000),m=Math.max(1,Math.round(s/60)),k=dkey(new Date());S.min[k]=(S.min[k]||0)+m;save();$('#tgo').textContent='▶ Empezar';$('#clock').textContent='00:00';toast('Práctica guardada: '+m+' min')}
+ if(ti){clearInterval(ti);ti=null;const s=Math.round((Date.now()-t0)/1000),m=Math.max(1,Math.round(s/60)),k=dkey(new Date());S.min[k]=(S.min[k]||0)+m;save();jgRacha();$('#tgo').textContent='▶ Empezar';$('#clock').textContent='00:00';toast('Práctica guardada: '+m+' min')}
  else{t0=Date.now();ti=setInterval(()=>$('#clock').textContent=fmt(Math.round((Date.now()-t0)/1000)),500);$('#tgo').textContent='⏹ Terminar y guardar'}
 };
+
+/* ===== Juegos de práctica: racha con recompensas, Atrapa la nota, Oído musical y Arpi =====
+   La racha usa los mismos días de S.min que el cronómetro. El tiempo jugado se suma a S.min
+   (S.jgs guarda los segundos sueltos hasta completar un minuto). */
+const JG_N=NORD.map((n,i)=>({name:n,f:[261.63,293.66,329.63,349.23,392,440,493.88][i],c:NCOL[n]}));
+const JG_RW=[[3,'Acorde de Sol','Tu primer acorde completo',['Sol','Si','Re']],[7,'Ritmo de merengue','Rasgueo básico en 2 tiempos',['Do','Mi','Sol']],[14,'Acorde de Re','Para tocar más alabanzas',['Re','Fa','La']],[21,'Ritmo de balada','Patrón de 4 tiempos para adoración',['La','Do','Mi']],[30,'Insignia Arpa Dorada','Las 7 cuerdas encendidas',NORD]];
+function jgSay(h,m){const b=$('#jg-bub'),a=$('#jg-arpi');if(!b)return;b.innerHTML=h;$('#jg-mouth').setAttribute('d',m==='sad'?'M30 51 Q36 46 42 51':m==='wow'?'M33 49 Q36 55 39 49 Q36 46 33 49':'M30 48 Q36 54 42 48');a.classList.remove('hop','shake');void a.getBoundingClientRect();a.classList.add(m==='sad'?'shake':'hop')}
+function jgPlay(f,t,dur){const c=AC();if(c.state==='suspended')c.resume();const n=c.currentTime,g=c.createGain();g.connect(c.destination);dur=dur||1;
+ if(t==='guitarra'){const sr=c.sampleRate,L=Math.floor(sr*1.4),bf=c.createBuffer(1,L,sr),d=bf.getChannelData(0),N=Math.round(sr/f);for(let i=0;i<N;i++)d[i]=Math.random()*2-1;for(let i=N;i<L;i++)d[i]=.498*(d[i-N]+d[i-N+1]);const s=c.createBufferSource();s.buffer=bf;g.gain.value=.5;s.connect(g);s.start(n);return}
+ const o=c.createOscillator();o.frequency.value=f;
+ if(t==='canto'){o.type='sine';const l=c.createOscillator(),lg=c.createGain();l.frequency.value=5.5;lg.gain.value=4;l.connect(lg).connect(o.frequency);l.start(n);l.stop(n+dur+.3);g.gain.setValueAtTime(0,n);g.gain.linearRampToValueAtTime(.32,n+.12);g.gain.setValueAtTime(.32,n+dur-.2);g.gain.linearRampToValueAtTime(0,n+dur+.2)}
+ else{o.type='triangle';g.gain.setValueAtTime(.4,n);g.gain.exponentialRampToValueAtTime(.001,n+dur+.4)}
+ o.connect(g);o.start(n);o.stop(n+dur+.5)}
+const jgChime=()=>[523.25,659.25,783.99].forEach((f,i)=>setTimeout(()=>jgPlay(f,'piano',.4),i*90));
+function jgTime(sec){if(sec<=0)return;const before=streak();S.jgs=(S.jgs||0)+sec;const m=Math.floor(S.jgs/60);if(m>0){S.jgs-=m*60;const k=dkey(new Date());S.min[k]=(S.min[k]||0)+m}save();jgRacha();
+ const n=streak(),w=JG_RW.find(r=>r[0]>before&&r[0]<=n);if(w){jgChime();jgSay('¡Desbloqueaste <b>'+w[1]+'</b>! Llevas '+n+' días seguidos.','wow')}}
+function jgRacha(){const e=$('#jg-racha');if(!e)return;const n=streak(),nx=JG_RW.find(r=>r[0]>n),pv=[...JG_RW].reverse().find(r=>r[0]<=n),lo=pv?pv[0]:0,today=!!S.min[dkey(new Date())];
+ e.innerHTML='<h3>🔥 Tu racha de práctica</h3><div class="jg-big"><span class="n">'+n+'</span><span>'+(n===1?'día seguido':'días seguidos')+'</span></div>'
+ +'<p class="mute" style="font-size:14px">'+(today?'Hoy ya practicaste. ¡Vuelve mañana para no apagarla!':'Practica hoy con el cronómetro o con un juego para sumar el día.')+'</p>'
+ +'<div class="row" style="justify-content:space-between;margin-top:12px;gap:8px"><b>Próxima recompensa</b><small class="mute">'+(nx?n+' / '+nx[0]+' días':'¡Todas abiertas!')+'</small></div>'
+ +'<div class="bar"><b style="width:'+(nx?Math.round((n-lo)/(nx[0]-lo)*100):100)+'%"></b></div>'
+ +'<div class="jg-rw">'+JG_RW.map(r=>{const op=n>=r[0],many=r[3].length>3;
+  const ic=op?r[3].map((x,i)=>'<circle cx="'+(many?6+i*4.7:10+i*10)+'" cy="'+(many?(i%2?24:16):20)+'" r="'+(many?3.4:4.5)+'" fill="'+NCOL[x]+'"/>').join(''):'<rect x="13" y="18" width="14" height="12" rx="2" fill="#a79f8e"/><path d="M15 18v-4a5 5 0 0 1 10 0v4" stroke="#a79f8e" stroke-width="2.5" fill="none"/>';
+  return '<div class="jg-r'+(op?' op':'')+'"><span class="ic"><svg viewBox="0 0 40 40" width="34" height="34" aria-hidden="true">'+ic+'</svg></span><span class="tx"><b>'+r[1]+'</b><small>'+r[2]+'</small></span><span class="st">'+(op?'Abierta':r[0]+' días')+'</span></div>'}).join('')+'</div>'}
+function jgKeys(el,cnt,fn){el.style.gridTemplateColumns='repeat('+cnt+',minmax(0,1fr))';el.innerHTML=JG_N.slice(0,cnt).map((n,i)=>'<button class="jg-k" data-i="'+i+'" aria-label="'+n.name+'"><i style="background:'+n.c+'"></i>'+n.name+'</button>').join('');
+ el.querySelectorAll('.jg-k').forEach(b=>b.addEventListener('pointerdown',e=>{e.preventDefault();fn(+b.dataset.i,b)}))}
+/* Atrapa la nota */
+const JG={ln:3,notes:[],on:false,raf:0,last:0,sp:0,sc:0,cb:0,lv:5,v:110,gap:1.3,t0:0};
+const jgHud=()=>{$('#jg-sc').textContent=JG.sc;$('#jg-cb').textContent=JG.cb;$('#jg-lv').textContent='♥'.repeat(JG.lv)+'♡'.repeat(5-JG.lv)};
+function jgLanes(){$('#jg-lanes').style.gridTemplateColumns='repeat('+JG.ln+',1fr)';$('#jg-lanes').innerHTML='<div></div>'.repeat(JG.ln);jgKeys($('#jg-gk'),JG.ln,jgHit)}
+const jgHY=()=>$('#jg-stage').clientHeight-66;
+function jgPop(t,c){const p=document.createElement('div');p.className='jg-pop';p.textContent=t;p.style.color=c;$('#jg-stage').appendChild(p);setTimeout(()=>p.remove(),450)}
+function jgSpawn(){const i=Math.floor(Math.random()*JG.ln),n=JG_N[i],el=document.createElement('div');el.className='jg-n';el.style.background=n.c;el.innerHTML='<span>'+n.name+'</span>';el.style.left=((i+.5)/JG.ln*100)+'%';$('#jg-stage').appendChild(el);JG.notes.push({i,y:-40,el})}
+function jgLoop(ts){const dt=Math.min(.05,(ts-JG.last)/1000);JG.last=ts;JG.sp-=dt;if(JG.sp<=0){jgSpawn();JG.sp=JG.gap}const H=jgHY();
+ for(const n of JG.notes){if(n.done)continue;n.y+=JG.v*dt;n.el.style.transform='translateY('+n.y+'px)';if(n.y>H+34){n.done=true;n.el.remove();JG.cb=0;JG.lv--;jgHud();jgPop('¡Se fue!','#ff6b5e');if(JG.lv<=0){jgEnd();return}}}
+ JG.notes=JG.notes.filter(n=>!n.done);JG.raf=requestAnimationFrame(jgLoop)}
+function jgHit(i,b){jgPlay(JG_N[i].f,'piano',.5);b.classList.add('fl');setTimeout(()=>b.classList.remove('fl'),120);if(!JG.on)return;const H=jgHY();
+ const c=JG.notes.filter(n=>n.i===i&&!n.done&&Math.abs(n.y-H)<38).sort((a,z)=>z.y-a.y)[0];
+ if(c){c.done=true;c.el.classList.add('hit');c.el.style.transform='translateY('+c.y+'px) scale(1.6)';setTimeout(()=>c.el.remove(),220);const pf=Math.abs(c.y-H)<14;JG.sc+=pf?20:10;JG.cb++;jgPop(pf?'¡Perfecto!':'¡Bien!',pf?'#ffc857':'#5fd18a');JG.v=Math.min(260,JG.v+2);JG.gap=Math.max(.55,JG.gap-.012);if(JG.cb%10===0)jgSay('¡Combo de <b>'+JG.cb+'</b>! Tus dedos ya conocen los colores.','wow')}
+ else{JG.cb=0;jgPop('Fuera de tiempo','#ff6b5e')}jgHud()}
+function jgClear(){JG.on=false;cancelAnimationFrame(JG.raf);JG.notes.forEach(n=>n.el.remove());JG.notes=[]}
+function jgStart(){AC();jgClear();Object.assign(JG,{sc:0,cb:0,lv:5,v:110,gap:1.3,sp:.4,on:true,last:performance.now(),t0:Date.now()});jgHud();$('#jg-ov').hidden=true;JG.raf=requestAnimationFrame(jgLoop);jgSay('¡Vamos! Espera a que la nota toque la línea dorada.')}
+function jgEnd(){const sec=Math.round((Date.now()-JG.t0)/1000);jgClear();const best=Math.max(JG.sc,S.jgb||0),rec=JG.sc>(S.jgb||0)&&JG.sc>0;S.jgb=best;save();
+ $('#jg-ov').hidden=false;$('#jg-ovt').textContent=JG.sc+' puntos';$('#jg-ovp').textContent=rec?'¡Nuevo récord personal!':'Tu récord: '+best+' puntos';$('#jg-go').textContent='Jugar otra vez';
+ jgSay(JG.sc>=150?'¡Qué manera de tocar! Sube de nivel cuando quieras.':'Buen intento. Mira la nota un segundo antes de tocar y verás cómo mejoras.',JG.sc>=150?'wow':'');jgTime(sec)}
+/* Se llama desde go(): detiene el juego al salir de Práctica y guarda el tiempo jugado */
+function jgStop(){if(JG.on){const sec=Math.round((Date.now()-JG.t0)/1000);jgClear();jgTime(sec)}$('#jg-ov').hidden=false;$('#jg-ovt').textContent='¿Listo?';$('#jg-ovp').textContent='Tienes 5 vidas. Cada 10 aciertos seguidos, Arpi te celebra.';$('#jg-go').textContent='Jugar'}
+$('#jg-go').onclick=jgStart;
+$('#jg-lvl').onclick=e=>{const b=e.target.closest('[data-n]');if(!b)return;$('#jg-lvl').querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',x===b));JG.ln=+b.dataset.n;jgStop();jgLanes()};
+/* Oído musical */
+const EAR={t:'guitarra',tg:-1,ok:0,no:0,rd:1,tr:0,lt:0};
+function earNew(){let t;do{t=Math.floor(Math.random()*7)}while(t===EAR.tg);EAR.tg=t;EAR.tr=0}
+function earMark(){const now=Date.now();if(EAR.lt)jgTime(Math.min(60,Math.round((now-EAR.lt)/1000)));EAR.lt=now}
+$('#jg-tim').onclick=e=>{const b=e.target.closest('[data-t]');if(!b)return;$('#jg-tim').querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',x===b));EAR.t=b.dataset.t;if(EAR.tg>=0)jgPlay(JG_N[EAR.tg].f,EAR.t)};
+$('#jg-play').onclick=()=>{if(EAR.tg<0){earNew();EAR.lt=Date.now()}jgPlay(JG_N[EAR.tg].f,EAR.t)};
+$('#jg-ref').onclick=()=>{jgPlay(JG_N[0].f,EAR.t);jgSay('Este es <b>Do</b>, la nota roja. Úsala para comparar.')};
+jgKeys($('#jg-ek'),7,(i,b)=>{const T=EAR.tg;
+ if(T<0){jgPlay(JG_N[i].f,EAR.t);jgSay('Primero toca el botón dorado para escuchar la nota misteriosa.');return}
+ if(i===T){b.classList.add('ok');setTimeout(()=>b.classList.remove('ok'),500);if(!EAR.tr)EAR.ok++;EAR.rd++;
+  jgSay(EAR.tr?'¡Lo lograste! Era <b>'+JG_N[i].name+'</b>. Equivocarse también es aprender.':'¡Sí! Era <b>'+JG_N[i].name+'</b>. Tienes buen oído.','wow');jgChime();earMark();earNew();setTimeout(()=>jgPlay(JG_N[EAR.tg].f,EAR.t),1100)}
+ else{b.classList.add('no');setTimeout(()=>b.classList.remove('no'),500);if(!EAR.tr)EAR.no++;EAR.tr++;
+  jgSay(EAR.tr>=2?'Pista extra: está entre <b>'+JG_N[Math.max(0,T-1)].name+'</b> y <b>'+JG_N[Math.min(6,T+1)].name+'</b>. ¡Escucha otra vez!':'Casi. La nota es más <b>'+(T>i?'aguda</b> (más alta)':'grave</b> (más baja)')+' que '+JG_N[i].name+'. Inténtalo de nuevo.','sad');setTimeout(()=>jgPlay(JG_N[T].f,EAR.t),700)}
+ $('#jg-ok').textContent=EAR.ok;$('#jg-no').textContent=EAR.no;$('#jg-rd').textContent=EAR.rd});
+jgLanes();jgHud();jgRacha();
 
 /* ===== Ayuda con símbolos y letra grande ===== */
 function helpOpen(){
