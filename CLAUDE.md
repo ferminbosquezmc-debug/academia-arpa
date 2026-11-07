@@ -68,9 +68,9 @@ Ojo: escribe «ponderación <span data-nn>C</span>» y letras sueltas parecidas 
 
 Git: rama `at-semana-N` → commit con mensaje claro → `git fetch origin` (otra sesión pudo subir cambios) → merge `--no-ff` a `main` → probar de nuevo → push.
 
-### Cabina virtual 3D (vista `cabina`)
+### Cabina virtual (vista `cabina`)
 Se entra desde el botón «Cabina virtual 3D» en la vista de la carrera (`atView`). Bloque JS que empieza con `CABINA VIRTUAL`; CSS con prefijo `cv-`; sección `#v-cabina` con `data-nn`.
-- Sala en 3D con CSS (`cvRoom`, `cvCam`, `cvTurn`, `cvEnter`): 4 paredes en `CVW` (consola, rack, escenario, conexiones). Se gira con flechas, chips o deslizando.
+- Ya no hay paredes que giran (el dueño las vio irreales). Ahora es el **puesto de mezcla** (`cvView`, `cvHub`: el dibujo `cvSalaF` con números) y 4 tareas en orden para preparar un servicio (`CVW`): 1 Conexiones y 2 Encender el equipo (ordenar, `CVORD`, `cvOrd`, `cvOrdTap`), 3 Ubicar las bocinas (misión de la planta), 4 Prueba de sonido (misiones de la consola). `cvDone(k)` guarda el avance en `S.cvd`; `data-cvreall` lo borra. Paneles en `cvPanel(i)`; `cvEnter(i)` los abre.
 - La consola suena (`cvMixer`, `cvBuild`, `cvSched`): música original sintetizada en 4 canales (`CVCH`) con ganancia, EQ de 3 bandas, volumen y mute; principal con limitador. `cvStop()` se llama en `go()`.
 - Misiones (`cvMeters`, `cvOk`): ganancia a amarillo sin luz roja, voz adelante, quitar graves al teclado.
 - Estación «La sala» (`cvSala`, botón `data-cvsala`): dibujos SVG originales en 2 ángulos (`cvSalaF` desde la consola, `cvSalaC` corte lateral; `CV.ang`). Elementos en `CVZ` (principales, subs, laterales, traseras, monitores, FOH, sombra del balcón): al tocarlos (`cvPick`) se ve su cobertura (`.cv-cov`) y distancias aproximadas. Calculadora de retardo (`#cv-dl`, `cvDl`). Inspirada en fotos del dueño, pero sin copiarlas.
