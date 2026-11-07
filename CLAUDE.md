@@ -74,6 +74,7 @@ Se entra desde el botón «Cabina virtual 3D» en la vista de la carrera (`atVie
 - La consola suena (`cvMixer`, `cvBuild`, `cvSched`): música original sintetizada en 4 canales (`CVCH`) con ganancia, EQ de 3 bandas, volumen y mute; principal con limitador. `cvStop()` se llama en `go()`.
 - Misiones (`cvMeters`, `cvOk`): ganancia a amarillo sin luz roja, voz adelante, quitar graves al teclado.
 - Estación «La sala» (`cvSala`, botón `data-cvsala`): dibujos SVG originales en 2 ángulos (`cvSalaF` desde la consola, `cvSalaC` corte lateral; `CV.ang`). Elementos en `CVZ` (principales, subs, laterales, traseras, monitores, FOH, sombra del balcón): al tocarlos (`cvPick`) se ve su cobertura (`.cv-cov`) y distancias aproximadas. Calculadora de retardo (`#cv-dl`, `cvDl`). Inspirada en fotos del dueño, pero sin copiarlas.
+- Tercer ángulo «Mueve las bocinas» (`CV.ang=2`, `cvPlan`, `cvPlanInit`, `cvPlanDraw`): planta de la sala; el estudiante arrastra y gira las bocinas (`CVP`, `CVP0()`), y cada butaca (`CVSEATS`) se pinta según `cvPlanCalc` (distancia con altura, ángulo fuera de eje; 15 unidades = 1 m). Avisos: detrás de la línea de micrófonos, apuntar a la pared, retardo de traseras. Misión: 90 % en verde sin rojas ni naranjas.
 
 ## Juegos de práctica (vista Práctica)
 Bloque JS que empieza con el comentario `Juegos de práctica`; CSS con prefijo `jg-`; HTML dentro de `<div data-nn>` en `#v-practica` (para que el pintor no toque los textos de Arpi).
