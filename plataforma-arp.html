@@ -640,6 +640,10 @@ function badges(){const c=cnt(S.lvl);return[
  ['🔥','Racha de 3 días',streak()>=3],['🎯','Nivel completo',c.t>0&&c.p===100]]}
 
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+/* Entregas: el estudiante envía su respuesta al docente por WhatsApp (número de la academia) */
+const WA_DOC='50768346940';
+const waHref=(D,L)=>'https://wa.me/'+WA_DOC+'?text='+encodeURIComponent('Entrega · Academia de Música ARPA\nEstudiante: '+(S.name||'(escribe tu nombre)')+'\nLección: '+D.t+(D.s?' · '+D.s:'')+'\n\nMi respuesta:\n'+(L.text||''));
+const waBtn=(D,L,cls)=>'<a class="btn'+(cls?' '+cls:'')+'" href="'+waHref(D,L)+'" target="_blank" rel="noopener" style="display:inline-block;text-decoration:none;margin-top:12px">📲 Enviar a mi docente por WhatsApp</a>';
 function toast(t){const e=$('#toast');e.textContent=t;e.classList.add('on');setTimeout(()=>e.classList.remove('on'),2200)}
 
 function go(v){
@@ -2339,9 +2343,9 @@ function lec(){
   b+='</div>'}
  if(L.step===4){
   if(!solved(L,Q))b='<div class="card"><h3>Primero termina la prueba</h3><p class="mute" style="margin:6px 0 12px">La entrega se abre cuando termines la prueba y corrijas lo que falte.</p><button class="btn ghost" data-st="3">Ir a la prueba</button></div>';
-  else if(L.status==='ok')b=(D.fin?D.fin():'')+'<div class="card"><h3>Lección aprobada</h3><p class="mute" style="margin:6px 0 12px">Comentario de ejemplo del docente: «Tu explicación es clara. Sigue practicando con constancia.»</p><button class="btn" data-go="clases">Volver a Clases</button></div>';
-  else if(L.status==='review')b=(D.fin?D.fin():'')+'<div class="card"><h3>Respuesta guardada</h3><p class="mute" style="margin:6px 0">Tu respuesta: '+esc(L.text||'')+'</p><p>Esta versión la guarda solo en este dispositivo. En la versión final se enviará a tu docente, que la revisará y te dejará un comentario.</p><button class="btn ghost" id="okdemo" style="margin-top:14px">Ver cómo se ve la aprobación (demo)</button></div>';
-  else b=(D.fin?D.fin():'')+'<div class="card"><h3>Demuestra lo aprendido</h3><p class="mute" style="margin-top:6px">'+D.e+'</p>'+(D.v?'<p class="mute" style="margin-top:8px;font-size:14px">En la versión final también subirás un video o audio tocando; tu docente lo escuchará y te dará un comentario.</p>':'')+'<textarea id="ta" aria-label="Tu respuesta" placeholder="Escribe tu respuesta aquí">'+esc(L.text||'')+'</textarea><p class="mute" style="font-size:14px"><span id="cnt">'+(L.text||'').trim().length+'</span> de 40 caracteres como mínimo</p><button class="btn" id="send" style="margin-top:10px"'+((L.text||'').trim().length<40?' disabled':'')+'>Guardar mi respuesta</button></div>'}
+  else if(L.status==='ok')b=(D.fin?D.fin():'')+'<div class="card"><h3>Lección terminada</h3><p class="mute" style="margin:6px 0 12px">Tu docente revisará tu entrega y te responderá por WhatsApp. Si todavía no la enviaste, puedes hacerlo aquí.</p><button class="btn" data-go="clases">Volver a Clases</button><br>'+waBtn(D,L,'ghost')+'</div>';
+  else if(L.status==='review')b=(D.fin?D.fin():'')+'<div class="card"><h3>Respuesta guardada</h3><p class="mute" style="margin:6px 0">Tu respuesta: '+esc(L.text||'')+'</p><p><b>Último paso:</b> envíala a tu docente. Se abrirá WhatsApp con tu respuesta ya escrita; solo pulsa enviar.'+(S.name?'':' Escribe tu nombre en el mensaje.')+'</p>'+waBtn(D,L)+'<br><button class="btn ghost" id="okdemo" style="margin-top:12px">Ya la envié · terminar lección</button></div>';
+  else b=(D.fin?D.fin():'')+'<div class="card"><h3>Demuestra lo aprendido</h3><p class="mute" style="margin-top:6px">'+D.e+'</p>'+(D.v?'<p class="mute" style="margin-top:8px;font-size:14px">Si se pide video o audio, mándalo a tu docente por el mismo chat de WhatsApp después de enviar tu respuesta.</p>':'')+'<textarea id="ta" aria-label="Tu respuesta" placeholder="Escribe tu respuesta aquí">'+esc(L.text||'')+'</textarea><p class="mute" style="font-size:14px"><span id="cnt">'+(L.text||'').trim().length+'</span> de 40 caracteres como mínimo</p><button class="btn" id="send" style="margin-top:10px"'+((L.text||'').trim().length<40?' disabled':'')+'>Guardar mi respuesta</button></div>'}
  $('#lec-body').innerHTML=b;
 }
 $('#v-leccion').addEventListener('click',e=>{const t=e.target;let x;const K=S.cur||'0-1-0',Q=LD[K].q,L=(S.ls[K]=S.ls[K]||{});
@@ -2372,7 +2376,7 @@ $('#v-leccion').addEventListener('click',e=>{const t=e.target;let x;const K=S.cu
  else if(t.closest('#send')){L.status='review';save();lec()}
  else if(t.closest('#retry')&&(typeof LD[K].retry!=='function'||LD[K].retry(L))){L.hist=L.hist||[];L.hist.push({score:L.score,total:Q.length,fecha:dkey(new Date())});delete L.ans;delete L.score;delete L.fix;delete L.tw;save();lec();window.scrollTo(0,0)}
  else if(x=t.closest('[data-lr]')){L.lr=L.lr||{};L.lr[x.dataset.lr]=!L.lr[x.dataset.lr];save();lec()}
- else if(t.closest('#okdemo')){L.status='ok';S.done[K]=true;save();lec();party();toast(kid()?'¡Misión cumplida! +3 ⭐':'Lección aprobada')}
+ else if(t.closest('#okdemo')){L.status='ok';S.done[K]=true;save();lec();party();toast(kid()?'¡Misión cumplida! +3 ⭐':'Lección terminada')}
 });
 $('#v-leccion').addEventListener('keydown',e=>{const c=e.target.closest&&e.target.closest('.csk');if(c&&(e.key==='Enter'||e.key===' ')){e.preventDefault();csSel(c.dataset.cs);return}if(c&&(e.key==='ArrowDown'||e.key==='ArrowUp')){e.preventDefault();csStep(e.key==='ArrowDown'?1:-1);return}const x=e.target.closest&&e.target.closest('.fbd');if(x&&(e.key==='Enter'||e.key===' ')){e.preventDefault();fbPlay(x.dataset.fb,x)}});
 $('#v-leccion').addEventListener('input',e=>{if(e.target.dataset.sg){sgInput(e.target);return}if(e.target.id==='pp-a'){ppInput(e.target);return}if(e.target.id==='dd-d'){ddInput(e.target);return}if(e.target.id==='bn-n'){bnInput(e.target);return}if(e.target.id==='gs-g'||e.target.id==='gs-f'){gsInput(e.target);return}if(e.target.dataset.eq){eqInput(e.target);return}if(e.target.dataset.mx){mxInput(e.target);return}if(e.target.id==='fx-m'){fxInput(e.target);return}if(e.target.dataset.fb){fbInput(e.target);return}if(e.target.dataset.rq){rqInput(e.target);return}if(e.target.id==='lw-f'){lwCalc();return}if(e.target.id==='ta'){const K=S.cur||'0-1-0',L=S.ls[K],v=e.target.value;L.text=v;save();$('#cnt').textContent=v.trim().length;$('#send').disabled=v.trim().length<40}});
