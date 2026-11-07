@@ -312,6 +312,20 @@ nav button[aria-current=page]{background:rgba(242,163,27,.14);border-radius:14px
 .jg-tal{display:flex;gap:18px;font-weight:600;font-variant-numeric:tabular-nums}
 .arpi-h{display:flex;gap:10px;align-items:flex-end;margin-top:10px}.arpi-h svg{width:48px;height:57px;flex:none}.arpi-h .jg-bub{font-size:15px}
 @media (prefers-reduced-motion:reduce){.jg-arpi.hop,.jg-arpi.shake{animation:none}}
+.cv-stage{perspective:600px;height:230px;overflow:hidden;position:relative;border-radius:16px;border:1px solid var(--line);background:radial-gradient(circle at 50% 40%,#1c160c,#050403);touch-action:pan-y;margin-top:10px}
+.cv-room{position:absolute;inset:0;transform-style:preserve-3d;transition:transform .7s ease}
+.cv-wall{position:absolute;left:50%;top:50%;width:300px;height:200px;margin:-100px 0 0 -150px;backface-visibility:hidden;-webkit-backface-visibility:hidden;background:linear-gradient(#2a2216,#17130c);border:1px solid #5a5240;border-radius:10px;padding:6px 8px;box-sizing:border-box;display:flex;flex-direction:column;align-items:center}
+.cv-wt{font-weight:700;font-size:14px;color:var(--gold)}.cv-wall svg{flex:1;max-height:130px}
+.cv-in{background:var(--gold);color:#1a1206;border:0;border-radius:999px;padding:6px 14px;font-weight:700;min-height:34px;cursor:pointer}
+.cv-floor{position:absolute;left:50%;top:50%;width:300px;height:300px;margin:-150px 0 0 -150px;transform:rotateX(90deg) translateZ(-100px);background:repeating-linear-gradient(90deg,#1a150d 0 30px,#14100a 30px 60px);pointer-events:none}
+.cv-nav{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:8px}.cv-nav span{flex:1;text-align:center;font-size:13px}.cv-nav .btn{min-width:48px}
+.cv-dots{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.cv-ch{border:1px solid var(--line);border-radius:12px;padding:10px;margin-top:10px}.cv-chh{display:flex;align-items:center;gap:8px}.cv-chh b{flex:1}
+.cv-led{width:12px;height:12px;border-radius:50%;background:#3a2a26;flex:none}.cv-led.on{background:#e0685a;box-shadow:0 0 8px #e0685a}
+.cv-meter{height:8px;border-radius:4px;background:#14100a;margin:8px 0;overflow:hidden}.cv-meter b{display:block;height:100%;width:0;background:#5fbf7a;transition:width .1s}
+.cv-l{display:block;font-size:13px;margin-top:4px}.cv-l input{width:100%}.cv-eq{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.cv-ms{padding-left:4px;list-style:none;margin:6px 0}.cv-ms li{margin:6px 0;font-size:14px}
+.cvhome{border-color:var(--gold);margin-top:12px}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}.cf{display:none}}
 </style>
 </head>
@@ -418,6 +432,10 @@ nav button[aria-current=page]{background:rgba(242,163,27,.14);border-radius:14px
 <section class="view" id="v-asig" hidden>
   <button class="link" data-go="home" style="font-size:16px;min-height:44px">⬅ Volver a Inicio</button>
   <div id="at-body"></div>
+</section>
+<section class="view" id="v-cabina" data-nn hidden>
+  <button class="link" data-go="asig" style="font-size:16px;min-height:44px">⬅ Volver a la carrera</button>
+  <div id="cv-body"></div>
 </section>
 
 <section class="view" id="v-biblioteca" hidden>
@@ -673,10 +691,10 @@ const waBtn=(D,L,cls)=>'<a class="btn'+(cls?' '+cls:'')+'" href="'+waHref(D,L)+'
 function toast(t){const e=$('#toast');e.textContent=t;e.classList.add('on');setTimeout(()=>e.classList.remove('on'),2200)}
 
 function go(v){
- applyMode();if(typeof mmStop==='function')mmStop();if(typeof sgStop==='function')sgStop();if(typeof eqStop==='function')eqStop();if(typeof fxStop==='function')fxStop();if(typeof jgStop==='function')jgStop();try{window.speechSynthesis&&speechSynthesis.cancel();saying=false}catch(e){}
+ applyMode();if(typeof mmStop==='function')mmStop();if(typeof sgStop==='function')sgStop();if(typeof eqStop==='function')eqStop();if(typeof fxStop==='function')fxStop();if(typeof jgStop==='function')jgStop();if(typeof cvStop==='function')cvStop();try{window.speechSynthesis&&speechSynthesis.cancel();saying=false}catch(e){}
  document.querySelectorAll('.view').forEach(x=>x.hidden=x.id!=='v-'+v);
- document.querySelectorAll('nav button').forEach(b=>(b.dataset.go===v||(['n4','u4','a4','m4'].includes(v)&&b.dataset.go==='clases')||(v==='asig'&&b.dataset.go==='home')||(v==='leccion'&&b.dataset.go===(LD[S.cur]&&LD[S.cur].kidm?'ninos':LD[S.cur]&&LD[S.cur].at?'home':'clases')))?b.setAttribute('aria-current','page'):b.removeAttribute('aria-current'));
- if(v==='home')home();if(v==='clases')clases();if(v==='ninos')ninos();if(v==='asig')atView();if(v==='biblioteca')biblio();if(v==='leccion'){S.last=S.cur;save();lec()}if(v==='perfil')perfil();if(v==='practica'&&typeof jgRacha==='function')jgRacha();if(v==='n4')n4();if(v==='u4')u4();if(v==='a4')a4();if(v==='m4')m4();
+ document.querySelectorAll('nav button').forEach(b=>(b.dataset.go===v||(['n4','u4','a4','m4'].includes(v)&&b.dataset.go==='clases')||((v==='asig'||v==='cabina')&&b.dataset.go==='home')||(v==='leccion'&&b.dataset.go===(LD[S.cur]&&LD[S.cur].kidm?'ninos':LD[S.cur]&&LD[S.cur].at?'home':'clases')))?b.setAttribute('aria-current','page'):b.removeAttribute('aria-current'));
+ if(v==='home')home();if(v==='clases')clases();if(v==='ninos')ninos();if(v==='asig')atView();if(v==='cabina')cvView();if(v==='biblioteca')biblio();if(v==='leccion'){S.last=S.cur;save();lec()}if(v==='perfil')perfil();if(v==='practica'&&typeof jgRacha==='function')jgRacha();if(v==='n4')n4();if(v==='u4')u4();if(v==='a4')a4();if(v==='m4')m4();
  window.scrollTo(0,0);
 }
 /* Modo revisión: 5 toques seguidos al logo de Inicio lo activan o desactivan */
@@ -3096,6 +3114,83 @@ const atRev=()=>{try{return localStorage.getItem('arp-rev')==='1'}catch(e){retur
 (()=>{try{const q=new URLSearchParams(location.search);if(q.get('revision')==='1')localStorage.setItem('arp-rev','1');if(q.get('revision')==='0')localStorage.removeItem('arp-rev')}catch(e){}})();
 function atRevSet(on){try{on?localStorage.setItem('arp-rev','1'):localStorage.removeItem('arp-rev')}catch(e){}toast(on?'Modo revisión activado: todas las semanas abiertas':'Modo revisión desactivado');revBar()}
 function revBar(){let b=document.getElementById('rev-bar');if(!atRev()){if(b)b.remove();return}if(!b){b=document.createElement('div');b.id='rev-bar';b.setAttribute('data-nn','');b.style.cssText='position:fixed;top:0;left:0;right:0;z-index:45;background:#5fbf7a;color:#000;font:600 13px Jost,system-ui,sans-serif;display:flex;align-items:center;justify-content:center;gap:10px;padding:6px 10px';b.innerHTML='👁️ Modo revisión: semanas abiertas <button id="rev-off" style="border:1px solid #000;border-radius:99px;padding:2px 10px;min-height:32px;font:inherit">Salir</button>';document.body.appendChild(b);b.querySelector('#rev-off').onclick=()=>{atRevSet(false);if(document.querySelector('#v-asig:not([hidden])'))atView()}}}
+/* ===================== CABINA VIRTUAL (Audio Técnica) =====================
+   Cabina de sonido en 3D (CSS 3D, sin librerías): 4 paredes con estaciones.
+   La consola suena: 4 canales generados aquí mismo (música original sintetizada) con ganancia, ecualizador de 3 bandas,
+   volumen y silencio, más un volumen general con limitador. cvStop() la apaga (se llama en go()). */
+const CV={a:0,z:0,st:-1,play:0,t:null,mt:null,nodes:null,step:0,next:0,ok:{}};
+const CVW=[['consola','🎛️','La consola','Aquí se mezcla todo: ganancia, ecualizador, envíos y volumen.'],['rack','🗄️','El rack de equipos','Procesador del sistema, amplificadores, inalámbricos y la grabadora.'],['escenario','🎤','La ventana al escenario','Desde aquí ves micrófonos, monitores y la caja de escenario.'],['conexiones','🔌','Las conexiones','El camino de la señal, de la fuente a los altavoces.']];
+const CVCH=[{n:'Bombo',em:'🥁',g:0,lo:0,mi:0,hi:0,f:70,m:0},{n:'Bajo',em:'🎸',g:0,lo:0,mi:0,hi:0,f:65,m:0},{n:'Teclado',em:'🎹',g:0,lo:0,mi:0,hi:0,f:60,m:0},{n:'Voz',em:'🎤',g:0,lo:0,mi:0,hi:0,f:60,m:0}];
+const CVM={f:70};
+const cvWallSvg=i=>[
+ '<svg viewBox="0 0 300 170" width="100%" aria-hidden="true"><rect x="20" y="96" width="260" height="60" rx="8" fill="#2b2417"/><rect x="34" y="104" width="232" height="44" rx="5" fill="#13110d"/>'+[0,1,2,3,4,5,6,7].map(k=>'<rect x="'+(44+k*27)+'" y="110" width="4" height="32" fill="#5a5240"/><rect x="'+(39+k*27)+'" y="'+(116+(k*7)%18)+'" width="14" height="8" rx="2" fill="#f2a31b"/>').join('')+'<rect x="60" y="20" width="80" height="54" rx="5" fill="#0b0905" stroke="#5a5240"/><rect x="160" y="20" width="80" height="54" rx="5" fill="#0b0905" stroke="#5a5240"/><path d="M68 60 l10-14 l10 8 l10-20 l10 16 l10-6 l10 10" stroke="#5fbf7a" fill="none" stroke-width="2"/><g fill="#6fb1ff">'+[0,1,2,3,4,5].map(k=>'<rect x="'+(170+k*11)+'" y="'+(64-k*6)+'" width="7" height="'+(6+k*6)+'"/>').join('')+'</g></svg>',
+ '<svg viewBox="0 0 300 170" width="100%" aria-hidden="true"><rect x="90" y="10" width="120" height="150" rx="6" fill="#2b2417"/>'+[0,1,2,3,4,5].map(k=>'<rect x="98" y="'+(18+k*23)+'" width="104" height="18" rx="3" fill="#13110d"/><circle cx="108" cy="'+(27+k*23)+'" r="3" fill="'+['#5fbf7a','#5fbf7a','#f2a31b','#5fbf7a','#6fb1ff','#e0685a'][k]+'"/><rect x="120" y="'+(24+k*23)+'" width="'+(30+k*8)+'" height="5" fill="#5a5240"/>').join('')+'</svg>',
+ '<svg viewBox="0 0 300 170" width="100%" aria-hidden="true"><rect x="16" y="14" width="268" height="142" rx="8" fill="#0d1a24" stroke="#5a5240" stroke-width="4"/><path d="M30 24 L80 24 L40 70Z" fill="rgba(255,255,255,.06)"/><rect x="30" y="118" width="240" height="30" fill="#3a3223"/><text x="80" y="110" font-size="26">🧑‍🎤</text><text x="140" y="110" font-size="26">🥁</text><text x="200" y="110" font-size="26">🎹</text><rect x="92" y="122" width="22" height="12" rx="3" fill="#a79f8e"/><rect x="212" y="122" width="22" height="12" rx="3" fill="#a79f8e"/><circle cx="160" cy="40" r="6" fill="#ffc857"/><circle cx="110" cy="44" r="5" fill="#ffc857"/><circle cx="210" cy="44" r="5" fill="#ffc857"/></svg>',
+ '<svg viewBox="0 0 300 170" width="100%" aria-hidden="true"><rect x="30" y="20" width="240" height="60" rx="6" fill="#2b2417"/>'+[0,1,2,3,4,5,6,7,8,9,10,11].map(k=>'<circle cx="'+(48+(k%6)*40)+'" cy="'+(38+Math.floor(k/6)*24)+'" r="7" fill="#13110d" stroke="#a79f8e"/>').join('')+'<path d="M48 80 C48 120 150 110 150 150 M88 80 C88 130 200 120 220 150 M128 80 C128 110 90 130 70 150" stroke="#ffc857" stroke-width="3" fill="none"/><rect x="50" y="148" width="200" height="14" rx="4" fill="#5a5240"/></svg>'][i];
+function cvRoom(){return CVW.map((w,i)=>'<div class="cv-wall" style="transform:rotateY('+(i*90)+'deg) translateZ(-150px)"><div class="cv-wt">'+w[1]+' '+w[2]+'</div>'+cvWallSvg(i)+'<button class="cv-in" data-cvs="'+i+'">🔍 Entrar</button></div>').join('')+'<div class="cv-floor"></div>'}
+function cvCam(){const r=document.getElementById('cv-room');if(r)r.style.transform='translateZ('+CV.z+'px) rotateY('+(-CV.a*90)+'deg)';const i=((CV.a%4)+4)%4,l=document.getElementById('cv-now');if(l)l.textContent=CVW[i][1]+' '+CVW[i][2]+' · '+CVW[i][3]}
+function cvTurn(d){CV.a+=d;CV.z=0;cvCam()}
+function cvEnter(i){const cur=((CV.a%4)+4)%4;let d=i-cur;if(d>2)d-=4;if(d<-2)d+=4;CV.a+=d;CV.z=110;CV.st=i;cvCam();const p=document.getElementById('cv-panel');if(p){p.innerHTML=cvPanel(i);p.scrollIntoView({behavior:'smooth',block:'start'})}}
+function cvView(){const b=document.getElementById('cv-body');if(!b)return;
+ b.innerHTML='<h2>🎛️ Cabina virtual</h2><p class="mute">Gira con las flechas o deslizando el dedo sobre la imagen. Toca «Entrar» para trabajar en cada estación.</p><div class="cv-stage" id="cv-stage"><div class="cv-room" id="cv-room">'+cvRoom()+'</div></div><div class="cv-nav"><button class="btn ghost" data-cvt="-1" aria-label="Girar a la izquierda">◀</button><span id="cv-now" class="mute" aria-live="polite"></span><button class="btn ghost" data-cvt="1" aria-label="Girar a la derecha">▶</button></div><div class="cv-dots">'+CVW.map((w,i)=>'<button class="chip" data-cvs="'+i+'">'+w[1]+' '+w[2].replace(/^(La|El|Las) /,'')+'</button>').join('')+'</div><div id="cv-panel"></div>';
+ CV.z=0;cvCam();
+ const s=document.getElementById('cv-stage');let x0=null;s.addEventListener('touchstart',e=>{x0=e.touches[0].clientX},{passive:true});s.addEventListener('touchend',e=>{if(x0===null)return;const dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>40)cvTurn(dx<0?1:-1);x0=null})}
+/* ----- Paneles de cada estación ----- */
+function cvPanel(i){
+ if(i===0)return cvMixer();
+ const box=(t,h)=>'<div class="card"><h3>'+t+'</h3>'+h+'<button class="link" data-cvback="1">⬅ Volver a la vista general</button></div>';
+ if(i===1)return box('🗄️ El rack de equipos','<div class="mug">'+[['🧠','Procesador del sistema','Reparte frecuencias entre subwoofers y principales, corrige la sala, retarda los altavoces de apoyo y protege con limitadores. Se ajusta una vez y se protege.'],['🔊','Amplificadores','Dan potencia a los altavoces pasivos. Cuida que la luz roja de saturación no se quede encendida.'],['📡','Receptores inalámbricos','Reciben los micrófonos sin cable. Revisa pilas, antenas y frecuencias coordinadas.'],['🎧','Transmisores de in-ear','Envían a cada músico su mezcla personal.'],['💾','Grabadora','Graba la mezcla o cada canal por separado. Picos cerca de −6 dBFS.']].map(r=>'<div class="muc"><span class="em" aria-hidden="true">'+r[0]+'</span><div><b>'+r[1]+'</b><div style="font-size:14px">'+r[2]+'</div></div></div>').join('')+'</div>');
+ if(i===2)return box('🎤 La ventana al escenario','<p>Desde la cabina debes ver el escenario. Toca cada elemento para recordar qué revisar:</p><div class="cv-dots">'+[['Micrófono de la voz','Dinámico cardioide, a pocos centímetros de la boca y con el monitor detrás.'],['Monitores de piso','En la zona de menor captación del micrófono, apuntando a la cabeza del músico.'],['Batería','Bombo, caja y overheads; cuida la fase entre los micrófonos de arriba.'],['Caja de escenario','Recibe todos los micrófonos y los envía a la consola por un solo cable.'],['Altavoces de sala','Delante de la línea de micrófonos, apuntando al público.']].map((x,k)=>'<button class="chip" data-cvi="'+k+'" data-t="'+x[1]+'">'+x[0]+'</button>').join('')+'</div><p id="cv-info" class="atnext" aria-live="polite">Toca un elemento.</p>');
+ return box('🔌 Las conexiones',flow(['Micrófono o instrumento (con caja directa si hace falta)','Cable balanceado hasta la caja de escenario','Caja de escenario hasta la consola','Consola: ganancia, ecualizador, envíos y volumen','Salidas: principal, monitores y grabación','Procesador y amplificadores','Altavoces'],'El camino de la señal')+'<p class="mute" style="font-size:14px;margin-top:8px">Cuando algo no suena, sigue este camino un punto a la vez.</p>');
+}
+/* ----- La consola que suena ----- */
+function cvMixer(){
+ const sl=(c,k,lab,min,max,val)=>'<label class="cv-l">'+lab+'<input type="range" data-cv="'+c+':'+k+'" min="'+min+'" max="'+max+'" step="1" value="'+val+'"></label>';
+ return '<div class="card"><h3>🎛️ La consola</h3><p class="mute" style="font-size:14px">Toca ▶ para escuchar un fragmento original de 4 canales. Usa audífonos y empieza con volumen bajo en tu teléfono.</p><button class="btn" id="cv-play" style="margin-top:8px">'+(CV.play?'⏸ Detener':'▶ Escuchar')+'</button>'+
+ CVCH.map((c,i)=>'<div class="cv-ch"><div class="cv-chh"><b>'+c.em+' '+c.n+'</b><span class="cv-led" id="cv-led'+i+'" title="Saturación"></span><button class="chip cv-mute" data-cvm="'+i+'" aria-pressed="'+!!c.m+'">'+(c.m?'🔇 Silenciado':'🔈 Mute')+'</button></div><div class="cv-meter"><b id="cv-mt'+i+'"></b></div>'+sl(i,'g','Ganancia',-24,12,c.g)+'<div class="cv-eq">'+sl(i,'lo','Graves',-12,12,c.lo)+sl(i,'mi','Medios',-12,12,c.mi)+sl(i,'hi','Agudos',-12,12,c.hi)+'</div>'+sl(i,'f','Volumen',0,100,c.f)+'</div>').join('')+
+ '<div class="cv-ch"><div class="cv-chh"><b>🔊 Principal</b></div><div class="cv-meter"><b id="cv-mtM"></b></div>'+sl('M','f','Volumen general',0,100,CVM.f)+'</div>'+
+ '<div class="card" style="margin-top:12px;border-color:var(--gold)"><h3>🎯 Misiones</h3><ul class="cv-ms">'+[['gain','Sube la ganancia de cada canal hasta que su medidor llegue a amarillo, sin que se encienda la luz roja.'],['voz','Deja la voz adelante: su volumen por encima del teclado y del bajo.'],['tec','Quita graves al teclado (Graves en −6 o menos) para hacerle espacio al bajo.']].map(m=>'<li id="cv-ms-'+m[0]+'">'+(CV.ok[m[0]]?'✅ ':'⬜ ')+m[1]+'</li>').join('')+'</ul><p class="mute" style="font-size:13px">Las misiones se revisan mientras suena la mezcla.</p></div><button class="link" data-cvback="1">⬅ Volver a la vista general</button></div>'}
+const cvDb=d=>Math.pow(10,d/20);
+function cvBuild(){const a=AC(),N={ch:[]};
+ N.lim=a.createDynamicsCompressor();N.lim.threshold.value=-6;N.lim.ratio.value=20;N.lim.attack.value=.002;N.lim.release.value=.15;
+ N.mg=a.createGain();N.mg.gain.value=(CVM.f/100)*.5;N.man=a.createAnalyser();N.man.fftSize=512;N.mg.connect(N.man);N.man.connect(N.lim);N.lim.connect(a.destination);
+ const curve=new Float32Array(1024);for(let k=0;k<1024;k++){const x=k/512-1;curve[k]=Math.tanh(2*x)/Math.tanh(2)}
+ CVCH.forEach((c,i)=>{const n={};n.in=a.createGain();n.g=a.createGain();n.g.gain.value=cvDb(c.g);n.an=a.createAnalyser();n.an.fftSize=512;n.sh=a.createWaveShaper();n.sh.curve=curve;
+  n.lo=a.createBiquadFilter();n.lo.type='lowshelf';n.lo.frequency.value=150;n.lo.gain.value=c.lo;n.mi=a.createBiquadFilter();n.mi.type='peaking';n.mi.frequency.value=1000;n.mi.Q.value=.8;n.mi.gain.value=c.mi;n.hi=a.createBiquadFilter();n.hi.type='highshelf';n.hi.frequency.value=5000;n.hi.gain.value=c.hi;
+  n.f=a.createGain();n.f.gain.value=c.m?0:(c.f/100);n.in.connect(n.g);n.g.connect(n.an);n.g.connect(n.sh);n.sh.connect(n.lo);n.lo.connect(n.mi);n.mi.connect(n.hi);n.hi.connect(n.f);n.f.connect(N.mg);N.ch[i]=n});
+ return N}
+/* Música original: progresión de 4 compases a 96 pulsos por minuto */
+const CVBAS=[65.41,55,43.65,49],CVCHD=[[261.6,329.6,392],[220,261.6,329.6],[174.6,220,261.6],[196,246.9,293.7]],CVMEL=[523.3,493.9,440,392,440,493.9,523.3,587.3,523.3,440,392,349.2,392,440,392,0];
+function cvNote(dest,type,f,t,d,v,filt){const a=AC(),o=a.createOscillator(),g=a.createGain();o.type=type;o.frequency.setValueAtTime(f,t);g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(v,t+.02);g.gain.setValueAtTime(v,t+d*.7);g.gain.linearRampToValueAtTime(0,t+d);let last=o;if(filt){filt.forEach(fl=>{last.connect(fl);last=fl})}last.connect(g);g.connect(dest);o.start(t);o.stop(t+d+.05);return o}
+function cvSched(){const a=AC(),N=CV.nodes;if(!N)return;const beat=60/96;
+ while(CV.next<a.currentTime+.25){const t=CV.next,s=CV.step,bar=Math.floor(s/4)%4,b=s%4;
+  if(b===0||b===2||(b===3&&bar%2)){const o=a.createOscillator(),g=a.createGain();o.frequency.setValueAtTime(130,t);o.frequency.exponentialRampToValueAtTime(42,t+.18);g.gain.setValueAtTime(.9,t);g.gain.exponentialRampToValueAtTime(.001,t+.35);o.connect(g);g.connect(N.ch[0].in);o.start(t);o.stop(t+.4)}
+  const lp=a.createBiquadFilter();lp.type='lowpass';lp.frequency.value=420;cvNote(N.ch[1].in,'sawtooth',CVBAS[bar]*(b===3?1.5:1),t,beat*.9,.45,[lp]);
+  if(b===0)CVCHD[bar].forEach(f=>cvNote(N.ch[2].in,'triangle',f,t,beat*3.9,.16));
+  if(b%2===0){const m=CVMEL[(bar*4+b)/2|0];if(m){const f1=a.createBiquadFilter(),f2=a.createBiquadFilter();f1.type='bandpass';f1.frequency.value=800;f1.Q.value=3;f2.type='peaking';f2.frequency.value=1200;f2.gain.value=8;const o=cvNote(N.ch[3].in,'sawtooth',m,t,beat*1.9,.5,[f1,f2]);const v=a.createOscillator(),vg=a.createGain();v.frequency.value=5.5;vg.gain.value=m*.008;v.connect(vg);vg.connect(o.frequency);v.start(t);v.stop(t+beat*2)}}
+  CV.step++;CV.next+=beat}}
+const cvPeak=an=>{const d=new Float32Array(an.fftSize);an.getFloatTimeDomainData(d);let p=0;for(const x of d)p=Math.max(p,Math.abs(x));return p};
+function cvMeters(){const N=CV.nodes;if(!N)return;let clip=false;
+ N.ch.forEach((n,i)=>{const p=cvPeak(n.an),m=document.getElementById('cv-mt'+i),l=document.getElementById('cv-led'+i);if(m){m.style.width=Math.min(100,p*100)+'%';m.style.background=p>.95?'#e0685a':p>.6?'#ffc857':'#5fbf7a'}if(l)l.classList.toggle('on',p>.95);if(p>.95)CV.cl=Date.now();if(p>.6)(CV.pk=CV.pk||[])[i]=Date.now()});
+ const pm=cvPeak(N.man),mm=document.getElementById('cv-mtM');if(mm){mm.style.width=Math.min(100,pm*160)+'%';mm.style.background='#6fb1ff'}
+ /* misiones */
+ const quiet=!CV.cl||Date.now()-CV.cl>3000;const now=Date.now();if(quiet&&CV.play>8&&CVCH.every((c,i)=>!c.m&&CV.pk&&now-(CV.pk[i]||0)<3000))cvOk('gain');
+ const v=CVCH[3];if(!v.m&&v.f>CVCH[2].f&&v.f>CVCH[1].f)cvOk('voz');if(CVCH[2].lo<=-6)cvOk('tec');CV.play++}
+function cvOk(k){if(CV.ok[k])return;CV.ok[k]=1;const li=document.getElementById('cv-ms-'+k);if(li)li.textContent='✅ '+li.textContent.slice(2);toast('¡Misión cumplida!');if(Object.keys(CV.ok).length===3&&typeof party==='function')party()}
+function cvStart(){const a=AC();if(a.state==='suspended')a.resume();CV.nodes=cvBuild();CV.step=0;CV.cl=0;CV.pk=[];CV.next=a.currentTime+.1;CV.play=1;CV.t=setInterval(cvSched,90);CV.mt=setInterval(cvMeters,120);cvSched()}
+function cvStop(){if(CV.t)clearInterval(CV.t);if(CV.mt)clearInterval(CV.mt);CV.t=CV.mt=null;if(CV.nodes){try{CV.nodes.mg.gain.setTargetAtTime(0,AC().currentTime,.03);const N=CV.nodes;setTimeout(()=>{try{N.lim.disconnect()}catch(e){}},200)}catch(e){}}CV.nodes=null;CV.play=0;const b=document.getElementById('cv-play');if(b)b.textContent='▶ Escuchar'}
+function cvSet(el){const[c,k]=el.dataset.cv.split(':'),v=+el.value;if(c==='M'){CVM.f=v;if(CV.nodes)CV.nodes.mg.gain.setTargetAtTime((v/100)*.5,AC().currentTime,.03);return}
+ const ch=CVCH[+c];ch[k]=v;const n=CV.nodes&&CV.nodes.ch[+c];if(!n)return;const t=AC().currentTime;
+ if(k==='g')n.g.gain.setTargetAtTime(cvDb(v),t,.03);else if(k==='f')n.f.gain.setTargetAtTime(ch.m?0:v/100,t,.03);else n[k].gain.setTargetAtTime(v,t,.03)}
+document.addEventListener('click',e=>{const t=e.target;if(!t.closest('#v-cabina'))return;let x;
+ if(x=t.closest('[data-cvt]'))cvTurn(+x.dataset.cvt);
+ else if(x=t.closest('[data-cvs]'))cvEnter(+x.dataset.cvs);
+ else if(t.closest('[data-cvback]')){CV.z=0;cvCam();document.getElementById('cv-stage').scrollIntoView({behavior:'smooth'})}
+ else if(x=t.closest('[data-cvi]')){const p=document.getElementById('cv-info');if(p)p.textContent=x.dataset.t;x.parentNode.querySelectorAll('.chip').forEach(c=>c.setAttribute('aria-pressed',c===x))}
+ else if(x=t.closest('[data-cvm]')){const i=+x.dataset.cvm,c=CVCH[i];c.m=c.m?0:1;x.setAttribute('aria-pressed',!!c.m);x.textContent=c.m?'🔇 Silenciado':'🔈 Mute';const n=CV.nodes&&CV.nodes.ch[i];if(n)n.f.gain.setTargetAtTime(c.m?0:c.f/100,AC().currentTime,.03)}
+ else if(t.closest('#cv-play')){if(CV.nodes){cvStop()}else{cvStart();t.closest('#cv-play').textContent='⏸ Detener'}}});
+document.addEventListener('input',e=>{if(e.target.dataset&&e.target.dataset.cv)cvSet(e.target)});
+
 revBar();
 const atLvlLocked=l=>!atRev()&&l>0&&!atEvPass(l-1);
 function atLocked(k){if(atRev())return false;const[l,,i]=k.split('-');if(atLvlLocked(+l))return true;if(i==='ev')return !atKeys(+l).every(atModDone);const p=atPos(k);return p>0&&!atModDone(atKeys(+l)[p-1])}
@@ -3136,7 +3231,7 @@ function atView(){const T=atStats(),R=atRule(),nx=atNext();
    +'<p class="mute" style="margin-top:8px">'+L0.d+'</p>'+atBar(pc)+'<p class="mute" style="font-size:13px">'+pc+' % · '+dn+' de '+L0.m.length+' semanas'+(g!==null?' · nota: '+g+' %':'')+'</p>'
    +'<details class="atobj"><summary>🎯 Objetivos del nivel</summary><ul>'+L0.obj.map(o=>'<li>'+o+'</li>').join('')+'</ul></details>'
    +'<details class="atwl"'+(st==='disponible'||st==='progreso'?' open':'')+'><summary>📅 Ver las '+L0.m.length+' semanas y la evaluación</summary><div class="atws">'+weeks+ev+'</div></details></section>'}).join('');
- $('#at-body').innerHTML='<h2>🎚️ '+AT_NAME+'</h2><p class="mute">'+AUD+'</p>'+prog+info+met+lv+'<p class="mute" style="margin-top:12px;font-size:14px">Completa las semanas en orden. Al aprobar la evaluación de un nivel se abre el siguiente.</p>'}
+ $('#at-body').innerHTML='<h2>🎚️ '+AT_NAME+'</h2><p class="mute">'+AUD+'</p>'+prog+'<button class="m4home cvhome" data-go="cabina"><span class="em" aria-hidden="true">🎛️</span><span>Cabina virtual 3D<small>Recorre una cabina de sonido y mezcla una canción</small></span></button>'+info+met+lv+'<p class="mute" style="margin-top:12px;font-size:14px">Completa las semanas en orden. Al aprobar la evaluación de un nivel se abre el siguiente.</p>'}
 $('#at-body').addEventListener('click',e=>{const b=e.target.closest('[data-atk]');if(!b)return;const k=b.dataset.atk;if(atLocked(k)){toast('🔒 Completa primero lo anterior');return}if(!LD[k]){toast('🚧 Contenido en preparación');return}S.cur=k;go('leccion')});
 $('#at-body').addEventListener('toggle',e=>{const o=e.target.dataset&&e.target.dataset.ato;if(o==='info'){S.open.atinfo=e.target.open;save()}},true);
 $('#kn-worlds').addEventListener('click',e=>{const b=e.target.closest('[data-k]');if(b&&LD[b.dataset.k]){S.cur=b.dataset.k;go('leccion')}});

@@ -68,6 +68,12 @@ Ojo: escribe «ponderación <span data-nn>C</span>» y letras sueltas parecidas 
 
 Git: rama `at-semana-N` → commit con mensaje claro → `git fetch origin` (otra sesión pudo subir cambios) → merge `--no-ff` a `main` → probar de nuevo → push.
 
+### Cabina virtual 3D (vista `cabina`)
+Se entra desde el botón «Cabina virtual 3D» en la vista de la carrera (`atView`). Bloque JS que empieza con `CABINA VIRTUAL`; CSS con prefijo `cv-`; sección `#v-cabina` con `data-nn`.
+- Sala en 3D con CSS (`cvRoom`, `cvCam`, `cvTurn`, `cvEnter`): 4 paredes en `CVW` (consola, rack, escenario, conexiones). Se gira con flechas, chips o deslizando.
+- La consola suena (`cvMixer`, `cvBuild`, `cvSched`): música original sintetizada en 4 canales (`CVCH`) con ganancia, EQ de 3 bandas, volumen y mute; principal con limitador. `cvStop()` se llama en `go()`.
+- Misiones (`cvMeters`, `cvOk`): ganancia a amarillo sin luz roja, voz adelante, quitar graves al teclado.
+
 ## Juegos de práctica (vista Práctica)
 Bloque JS que empieza con el comentario `Juegos de práctica`; CSS con prefijo `jg-`; HTML dentro de `<div data-nn>` en `#v-practica` (para que el pintor no toque los textos de Arpi).
 - Racha (`jgRacha`): usa `streak()` y los días de `S.min`, igual que el cronómetro. Recompensas en `JG_RW` (3, 7, 14, 21 y 30 días).
