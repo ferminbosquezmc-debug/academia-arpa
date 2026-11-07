@@ -4,8 +4,14 @@ Responde en español, breve y claro. El dueño del proyecto es principiante: exp
 
 ## Archivos
 - `plataforma-arp.html`: plataforma del estudiante. Un solo archivo HTML + CSS + JS puro, sin librerías. Estado en `localStorage` (clave `arp`, objeto `S`). Vistas: home, clases, practica, biblioteca, leccion, perfil, ninos, asig. Se navega con `go('vista')`.
-- `landing/Main.dc.html`: página pública (diseño de Claude).
+- La página pública no está aquí: vive en el repositorio `academia-musica-ama`.
 - `herramientas/probar-semana.js`: prueba rápida de una semana.
+
+## Versión oficial (una sola)
+- La versión oficial es `plataforma-arp.html` en `main` de GitHub. Todo cambio se hace aquí primero (rama → pruebas → merge a `main` → push).
+- El enlace de claude.ai (https://claude.ai/artifact/WJNwYKDShseYxAFLTbHmxS) es solo una copia publicada: se actualiza publicando este archivo desde `main`, sin pasar `capabilities` (así se conserva la base de datos del Nivel 4). Nunca se edita ahí directamente.
+- Antes de publicar: `git pull origin main` y lee el enlace (acción read). Si el enlace tiene algo que no está en `main`, primero tráelo a `main` y después publica.
+- No crees copias nuevas (otros archivos, otros enlaces o carpetas) de la plataforma ni de la página pública.
 
 ## Reglas generales
 - Lee solo la parte del código que vas a tocar (usa `grep -n` para ubicarla). No leas el archivo completo.
