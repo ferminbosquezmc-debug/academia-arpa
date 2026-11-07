@@ -34,14 +34,14 @@ Antes «Audio Técnica Básica para Músicos». Es una **carrera aparte** de las
 - Nivel 3 · Sonido profesional: Acoples · *Sistemas de sala* · *Acústica de iglesias y salones* · Trabajo en equipo · Prueba de sonido · *Lista de canales y rider* · *Transmisión en vivo* · *Fallas y mantenimiento* · *Dirigir un equipo de sonido* · *Eventos especiales* · Repaso final · Proyecto final.
 (En cursiva, semanas nuevas.) Las claves existentes no cambian; el progreso guardado de los estudiantes debe conservarse.
 
-Avance del plan: Nivel 1 con 6 de 12 semanas (hecha: *Oído y cuidado auditivo*, clave `0-5-b1`). Total actual: 15 semanas.
-- Cada nivel de `AT` tiene descripción (`d`), objetivos (`obj`), títulos (`m`), temas por semana (`tm`) y, si tiene semanas nuevas, `ks`: la lista de claves en orden (las originales conservan su número; las nuevas usan `b1`, `b2`…). Ejemplo Nivel 1: `ks:['0','b1','1','2','3','4']`.
+Avance del plan: Nivel 1 con 7 de 12 semanas (hechas: *Oído y cuidado auditivo* `0-5-b1`, *Electricidad y seguridad* `0-5-b2`). Total actual: 16 semanas. Siguiente: *Altavoces y amplificadores* (`b3`, va antes de la consola).
+- Cada nivel de `AT` tiene descripción (`d`), objetivos (`obj`), títulos (`m`), temas por semana (`tm`) y, si tiene semanas nuevas, `ks`: la lista de claves en orden (las originales conservan su número; las nuevas usan `b1`, `b2`…). Ejemplo Nivel 1: `ks:['0','b1','1','2','3','b2','4']`.
 - **Para insertar una semana nueva:** agrega su título en `m`, sus temas en `tm` y su clave en `ks`, todos en la misma posición; usa la siguiente clave libre (`b2`, `b3`…). Nunca renombres las claves existentes.
 - Claves originales (no cambiarlas): Nivel 1 `0-5-0`…`0-5-4` y `0-5-ev`; Nivel 2 `1-6-0`…`1-6-4` y `1-6-ev`; Nivel 3 `2-6-0`…`2-6-3` y `2-6-ev`. `atKeys(nivel)` las devuelve en orden; `atPos(clave)` da la posición; `atTotal()` el total de semanas.
 - Numeración: las semanas se numeran solas en toda la carrera. El contenido antiguo dice «Semana N» con la numeración original (1 a 14) y `atLoad` lo traduce (`AT_OLD`). **En contenido nuevo no escribas «Semana N»: usa `{{w:clave}}`** (por ejemplo `{{w:0-5-b1}}`), que se convierte en el número actual. Marca el objeto nuevo con `nw:1`.
 - Si una semana nueva entra en un nivel, agrega 4 preguntas sobre ella en la evaluación del nivel y una línea en su repaso.
 - Reglas en `ACAD_DEF` (aprobar 70 %, intentos ilimitados; configurable con la clave `arp-config` del navegador). Las semanas se abren en orden; aprobar la evaluación de un nivel abre el siguiente.
-- Estado actual: 14 semanas completas, Evaluaciones de los Niveles 1 y 2, y Proyecto práctico y evaluación final (`2-6-ev`, con `proyecto`; se completa al aprobar y entregar el proyecto).
+- Estado: todas las semanas listadas en `AT` tienen contenido, más las Evaluaciones de los Niveles 1 y 2, y Proyecto práctico y evaluación final (`2-6-ev`, con `proyecto`; se completa al aprobar y entregar el proyecto).
 
 ### Cómo agregar una semana
 1. Busca el final de la semana anterior: `grep -n "^ATC\['0-5-" plataforma-arp.html` y ubica su última línea `e:'…'};`. Revisa que los nombres de tus variables no existan ya (`grep -n "const NOMBRE"`).
