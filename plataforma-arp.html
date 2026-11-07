@@ -326,6 +326,10 @@ nav button[aria-current=page]{background:rgba(242,163,27,.14);border-radius:14px
 .cv-l{display:block;font-size:13px;margin-top:4px}.cv-l input{width:100%}.cv-eq{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
 .cv-ms{padding-left:4px;list-style:none;margin:6px 0}.cv-ms li{margin:6px 0;font-size:14px}
 .cvhome{border-color:var(--gold);margin-top:12px}
+.cv-sv{width:100%;height:auto;display:block;border-radius:12px;margin-top:8px;animation:cvf .45s ease}@keyframes cvf{from{opacity:0;transform:scale(.97)}}
+.cv-z{cursor:pointer}.cv-z.on{filter:drop-shadow(0 0 5px #fff)}.cv-cov{opacity:0;transition:opacity .35s;pointer-events:none}.cv-cov.on{opacity:1}
+.cv-seg{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}.cv-wave{animation:cvw 2.4s infinite;opacity:0}@keyframes cvw{30%{opacity:.8}100%{opacity:0}}
+@media (prefers-reduced-motion:reduce){.cv-wave{animation:none;opacity:.5}.cv-sv{animation:none}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}.cf{display:none}}
 </style>
 </head>
@@ -3132,7 +3136,7 @@ function cvCam(){const r=document.getElementById('cv-room');if(r)r.style.transfo
 function cvTurn(d){CV.a+=d;CV.z=0;cvCam()}
 function cvEnter(i){const cur=((CV.a%4)+4)%4;let d=i-cur;if(d>2)d-=4;if(d<-2)d+=4;CV.a+=d;CV.z=110;CV.st=i;cvCam();const p=document.getElementById('cv-panel');if(p){p.innerHTML=cvPanel(i);p.scrollIntoView({behavior:'smooth',block:'start'})}}
 function cvView(){const b=document.getElementById('cv-body');if(!b)return;
- b.innerHTML='<h2>🎛️ Cabina virtual</h2><p class="mute">Gira con las flechas o deslizando el dedo sobre la imagen. Toca «Entrar» para trabajar en cada estación.</p><div class="cv-stage" id="cv-stage"><div class="cv-room" id="cv-room">'+cvRoom()+'</div></div><div class="cv-nav"><button class="btn ghost" data-cvt="-1" aria-label="Girar a la izquierda">◀</button><span id="cv-now" class="mute" aria-live="polite"></span><button class="btn ghost" data-cvt="1" aria-label="Girar a la derecha">▶</button></div><div class="cv-dots">'+CVW.map((w,i)=>'<button class="chip" data-cvs="'+i+'">'+w[1]+' '+w[2].replace(/^(La|El|Las) /,'')+'</button>').join('')+'</div><div id="cv-panel"></div>';
+ b.innerHTML='<h2>🎛️ Cabina virtual</h2><p class="mute">Gira con las flechas o deslizando el dedo sobre la imagen. Toca «Entrar» para trabajar en cada estación.</p><div class="cv-stage" id="cv-stage"><div class="cv-room" id="cv-room">'+cvRoom()+'</div></div><div class="cv-nav"><button class="btn ghost" data-cvt="-1" aria-label="Girar a la izquierda">◀</button><span id="cv-now" class="mute" aria-live="polite"></span><button class="btn ghost" data-cvt="1" aria-label="Girar a la derecha">▶</button></div><div class="cv-dots">'+CVW.map((w,i)=>'<button class="chip" data-cvs="'+i+'">'+w[1]+' '+w[2].replace(/^(La|El|Las) /,'')+'</button>').join('')+'<button class="chip" data-cvsala="1">🏛️ Sala</button></div><div id="cv-panel"></div>';
  CV.z=0;cvCam();
  const s=document.getElementById('cv-stage');let x0=null;s.addEventListener('touchstart',e=>{x0=e.touches[0].clientX},{passive:true});s.addEventListener('touchend',e=>{if(x0===null)return;const dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>40)cvTurn(dx<0?1:-1);x0=null})}
 /* ----- Paneles de cada estación ----- */
@@ -3140,9 +3144,87 @@ function cvPanel(i){
  if(i===0)return cvMixer();
  const box=(t,h)=>'<div class="card"><h3>'+t+'</h3>'+h+'<button class="link" data-cvback="1">⬅ Volver a la vista general</button></div>';
  if(i===1)return box('🗄️ El rack de equipos','<div class="mug">'+[['🧠','Procesador del sistema','Reparte frecuencias entre subwoofers y principales, corrige la sala, retarda los altavoces de apoyo y protege con limitadores. Se ajusta una vez y se protege.'],['🔊','Amplificadores','Dan potencia a los altavoces pasivos. Cuida que la luz roja de saturación no se quede encendida.'],['📡','Receptores inalámbricos','Reciben los micrófonos sin cable. Revisa pilas, antenas y frecuencias coordinadas.'],['🎧','Transmisores de in-ear','Envían a cada músico su mezcla personal.'],['💾','Grabadora','Graba la mezcla o cada canal por separado. Picos cerca de −6 dBFS.']].map(r=>'<div class="muc"><span class="em" aria-hidden="true">'+r[0]+'</span><div><b>'+r[1]+'</b><div style="font-size:14px">'+r[2]+'</div></div></div>').join('')+'</div>');
- if(i===2)return box('🎤 La ventana al escenario','<p>Desde la cabina debes ver el escenario. Toca cada elemento para recordar qué revisar:</p><div class="cv-dots">'+[['Micrófono de la voz','Dinámico cardioide, a pocos centímetros de la boca y con el monitor detrás.'],['Monitores de piso','En la zona de menor captación del micrófono, apuntando a la cabeza del músico.'],['Batería','Bombo, caja y overheads; cuida la fase entre los micrófonos de arriba.'],['Caja de escenario','Recibe todos los micrófonos y los envía a la consola por un solo cable.'],['Altavoces de sala','Delante de la línea de micrófonos, apuntando al público.']].map((x,k)=>'<button class="chip" data-cvi="'+k+'" data-t="'+x[1]+'">'+x[0]+'</button>').join('')+'</div><p id="cv-info" class="atnext" aria-live="polite">Toca un elemento.</p>');
+ if(i===2)return box('🎤 La ventana al escenario','<p>Desde la cabina debes ver el escenario. Toca cada elemento para recordar qué revisar:</p><div class="cv-dots">'+[['Micrófono de la voz','Dinámico cardioide, a pocos centímetros de la boca y con el monitor detrás.'],['Monitores de piso','En la zona de menor captación del micrófono, apuntando a la cabeza del músico.'],['Batería','Bombo, caja y overheads; cuida la fase entre los micrófonos de arriba.'],['Caja de escenario','Recibe todos los micrófonos y los envía a la consola por un solo cable.'],['Altavoces de sala','Delante de la línea de micrófonos, apuntando al público.']].map((x,k)=>'<button class="chip" data-cvi="'+k+'" data-t="'+x[1]+'">'+x[0]+'</button>').join('')+'</div><p id="cv-info" class="atnext" aria-live="polite">Toca un elemento.</p><button class="btn" data-cvsala="1" style="margin-top:10px">🏛️ Ver la sala completa</button>');
  return box('🔌 Las conexiones',flow(['Micrófono o instrumento (con caja directa si hace falta)','Cable balanceado hasta la caja de escenario','Caja de escenario hasta la consola','Consola: ganancia, ecualizador, envíos y volumen','Salidas: principal, monitores y grabación','Procesador y amplificadores','Altavoces'],'El camino de la señal')+'<p class="mute" style="font-size:14px;margin-top:8px">Cuando algo no suena, sigue este camino un punto a la vez.</p>');
 }
+/* ----- La sala: vista desde la consola y corte lateral (dibujos originales en SVG) ----- */
+const CVZ=[['main','Principales','#ffc857','Bocinas principales (izquierda y derecha)','Cubren a la mayor parte del público. Van elevadas o colgadas por encima de las cabezas y se apuntan al centro y al fondo de la sala, no a las paredes. En salas grandes se cuelgan varias cajas en línea, en forma de J.','Ejemplo: a unos 15–25 m de la consola.'],
+['sub','Subwoofers','#f2833a','Subwoofers','Dan los graves del bombo y del bajo. Van en el piso, debajo de las principales o al centro del frente del escenario. Los graves se reparten por toda la sala.','Van en el piso; no se cuelgan junto a las principales en salas pequeñas.'],
+['lat','Laterales','#5fd18a','Refuerzo lateral','Cubren los lados y las esquinas que las principales no alcanzan. Llevan menos volumen y un poco de retardo para sumarse a las principales sin notarse.','Ejemplo: a unos 10–15 m de la consola.'],
+['rear','Traseras (retardo)','#b88cff','Bocinas traseras de retardo','Ayudan a las últimas filas y a quienes están debajo de un balcón. Llevan un retardo para que su sonido llegue junto con el de las principales; sin retardo se escucha un eco.','Calcula su retardo abajo, en «Calcula el retardo».'],
+['mon','Monitores','#6fb1ff','Monitores de escenario','Apuntan a los músicos para que se escuchen a sí mismos. No son para el público. Cada uno recibe su propia mezcla desde un envío auxiliar.','Van en el piso del escenario, frente a cada músico.'],
+['foh','Consola (FOH)','#4fd1e8','Puesto de mezcla (FOH)','La consola va entre el público, en el centro y a unos dos tercios de la sala, para escuchar lo mismo que la gente. Nunca en un rincón, debajo de un balcón ni detrás de una pared.','Ejemplo: a unos 12–20 m del escenario.'],
+['balc','Sombra del balcón','#e0685a','La sombra del balcón','El balcón tapa el sonido de las principales: las personas que están debajo escuchan poco y opaco. Por eso se ponen bocinas de retardo debajo del balcón.','Se ve mejor en el corte lateral.']];
+const cvLbl=(x,y,t,c)=>{const w=t.length*5.6+10;return '<rect x="'+(x-w/2)+'" y="'+(y-8)+'" width="'+w+'" height="15" rx="4" fill="#000" fill-opacity=".8" stroke="'+c+'"/><text x="'+x+'" y="'+(y+3)+'" font-size="10" fill="#fff" text-anchor="middle" font-family="Jost,sans-serif">'+t+'</text>'};
+const cvLine=(x1,y1,x2,y2,c)=>'<path d="M'+x1+' '+y1+' L'+x2+' '+y2+'" stroke="'+c+'" stroke-width="2" stroke-dasharray="5 4" fill="none"/>';
+const cvCov=(k,h)=>'<g class="cv-cov" data-k="'+k+'">'+h+'</g>';
+const cvZg=(k,h,lab)=>'<g class="cv-z" data-cvz="'+k+'" data-k="'+k+'" role="button" aria-label="'+lab+'">'+h+'</g>';
+function cvSalaF(){const C=k=>CVZ.find(z=>z[0]===k)[2];let s='<svg viewBox="0 0 400 260" class="cv-sv" role="img" aria-label="La sala vista desde la consola"><defs><linearGradient id="cvgW" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1d1a26"/><stop offset="1" stop-color="#0c0a08"/></linearGradient><radialGradient id="cvgS" cx=".5" cy=".35" r=".7"><stop offset="0" stop-color="#6a4bd6" stop-opacity=".55"/><stop offset="1" stop-color="#6a4bd6" stop-opacity="0"/></radialGradient></defs>';
+ s+='<rect width="400" height="260" fill="url(#cvgW)"/><path d="M0 0 L400 0 L305 30 L95 30Z" fill="#100d0a"/><path d="M0 0 L95 30 L95 140 L0 200Z" fill="#1c1813"/><path d="M400 0 L305 30 L305 140 L400 200Z" fill="#1c1813"/>';
+ s+='<rect x="95" y="30" width="210" height="95" fill="#241c14"/><rect x="95" y="30" width="210" height="95" fill="url(#cvgS)"/>';
+ for(let x=99;x<303;x+=7)if(x<142||x>255)s+='<rect x="'+x+'" y="30" width="3" height="95" fill="#5a3d20" opacity=".55"/>';
+ s+='<rect x="148" y="37" width="104" height="54" rx="2" fill="#dde4f2"/><rect x="146" y="35" width="108" height="58" rx="3" fill="none" stroke="#8a7cff" stroke-opacity=".6"/>';
+ s+='<path d="M95 125 L305 125 L330 142 L70 142Z" fill="#7a5530"/><path d="M70 142 L330 142 L330 148 L70 148Z" fill="#3e2a17"/>';
+ s+='<rect x="186" y="99" width="28" height="24" fill="#a6c8e8" fill-opacity=".08" stroke="#a6c8e8" stroke-opacity=".5"/><circle cx="200" cy="117" r="6" fill="#e8e3da" stroke="#333"/><ellipse cx="190" cy="108" rx="5" ry="1.5" fill="#d9b04a"/><ellipse cx="211" cy="106" rx="5" ry="1.5" fill="#d9b04a"/><circle cx="193" cy="114" r="2.5" fill="#ccc"/>';
+ s+='<rect x="244" y="110" width="28" height="4" fill="#e8e3da"/><path d="M247 114 L251 124 M269 114 L265 124" stroke="#888"/><path d="M140 96 L140 111" stroke="#c9a46a" stroke-width="1.5"/><ellipse cx="140" cy="115" rx="4" ry="5" fill="#c9884a"/><path d="M160 104 L160 124 M156 124 L164 124" stroke="#999"/><path d="M228 104 L228 124 M224 124 L232 124" stroke="#999"/>';
+ /* butacas */
+ for(let r=0;r<8;r++){const y=150+r*11.5,k=1+r*.13,w=10*k,g=2*k,a=12+r*3;for(let j=0;j<9;j++){[200-a-(j+1)*(w+g),200+a+j*(w+g)+g].forEach(x=>{s+='<rect x="'+x.toFixed(1)+'" y="'+y.toFixed(1)+'" width="'+w.toFixed(1)+'" height="'+(8*k).toFixed(1)+'" rx="2" fill="#2b2830" stroke="#3d3844" stroke-width=".6"/>'})}}
+ /* coberturas y distancias (se ven al elegir) */
+ s+=cvCov('main','<path d="M70 148 L330 148 L385 236 L15 236Z" fill="'+C('main')+'" fill-opacity=".2"/>'+cvLine(200,220,112,82,C('main'))+cvLine(200,220,288,82,C('main'))+cvLbl(140,170,'≈15–25 m',C('main'))+cvLbl(260,170,'≈15–25 m',C('main')));
+ s+=cvCov('sub','<path d="M70 148 L330 148 L400 260 L0 260Z" fill="'+C('sub')+'" fill-opacity=".16"/>'+cvLbl(200,160,'Graves en toda la sala',C('sub')));
+ s+=cvCov('lat','<path d="M0 150 L72 148 L60 222 L0 232Z" fill="'+C('lat')+'" fill-opacity=".25"/><path d="M400 150 L328 148 L340 222 L400 232Z" fill="'+C('lat')+'" fill-opacity=".25"/>'+cvLine(200,220,34,140,C('lat'))+cvLine(200,220,366,140,C('lat'))+cvLbl(100,195,'≈10–15 m',C('lat'))+cvLbl(300,195,'≈10–15 m',C('lat')));
+ s+=cvCov('rear','<path d="M0 210 L125 214 L135 260 L0 260Z" fill="'+C('rear')+'" fill-opacity=".28"/><path d="M400 210 L275 214 L265 260 L400 260Z" fill="'+C('rear')+'" fill-opacity=".28"/>'+cvLine(150,240,40,222,C('rear'))+cvLine(250,240,360,222,C('rear'))+cvLbl(95,250,'≈5–8 m',C('rear'))+cvLbl(305,250,'≈5–8 m',C('rear')));
+ s+=cvCov('mon','<path d="M95 125 L305 125 L330 142 L70 142Z" fill="'+C('mon')+'" fill-opacity=".35"/>'+cvLbl(200,96,'Solo para los músicos',C('mon')));
+ s+=cvCov('foh','<ellipse cx="200" cy="232" rx="78" ry="26" fill="none" stroke="'+C('foh')+'" stroke-width="2"/>'+cvLine(200,214,200,146,C('foh'))+cvLbl(200,182,'≈12–20 m',C('foh')));
+ s+=cvCov('balc',cvLbl(200,200,'Míralo en el corte lateral',C('balc')));
+ /* equipos (se pueden tocar) */
+ const arr=x=>'<path d="M'+(x+10)+' 0 L'+(x+10)+' 34" stroke="#777"/>'+[0,1,2,3,4].map(i=>'<rect x="'+(x+(i>2?(i-2)*1.5:0))+'" y="'+(34+i*10)+'" width="20" height="9" rx="1" fill="#16141a" stroke="#4a4652"/>').join('');
+ s+=cvZg('main',arr(100)+arr(280),'Bocinas principales');
+ s+=cvZg('sub','<rect x="74" y="128" width="20" height="13" rx="1" fill="#16141a" stroke="#4a4652"/><rect x="306" y="128" width="20" height="13" rx="1" fill="#16141a" stroke="#4a4652"/>','Subwoofers');
+ const st=(x,y)=>'<rect x="'+(x-9)+'" y="'+y+'" width="18" height="24" rx="2" fill="#16141a" stroke="#4a4652"/><circle cx="'+x+'" cy="'+(y+16)+'" r="4" fill="#2c2932"/><path d="M'+x+' '+(y+24)+' L'+x+' '+(y+62)+' M'+(x-9)+' '+(y+66)+' L'+x+' '+(y+62)+' L'+(x+9)+' '+(y+66)+'" stroke="#666" stroke-width="2" fill="none"/>';
+ s+=cvZg('lat',st(34,116)+st(366,116),'Refuerzo lateral');
+ const rb=(x)=>'<rect x="'+(x-11)+'" y="206" width="22" height="30" rx="2" fill="#16141a" stroke="#4a4652"/><circle cx="'+x+'" cy="226" r="6" fill="#2c2932"/><path d="M'+x+' 236 L'+x+' 250 M'+(x-8)+' 252 L'+(x+8)+' 252" stroke="#666" stroke-width="2"/>';
+ s+=cvZg('rear',rb(28)+rb(372),'Bocinas traseras de retardo');
+ s+=cvZg('mon',[128,172,228,272].map(x=>'<path d="M'+(x-8)+' 139 L'+(x+8)+' 139 L'+(x+6)+' 131 L'+(x-6)+' 133Z" fill="#111" stroke="#555"/>').join(''),'Monitores de escenario');
+ s+=cvZg('foh','<path d="M128 228 L272 228 L282 260 L118 260Z" fill="#5a3d20"/><path d="M150 212 L250 212 L258 230 L142 230Z" fill="#1d1f2a" stroke="#4fd1e8" stroke-opacity=".6"/>'+[0,1,2,3,4,5,6,7,8,9,10,11].map(i=>'<rect x="'+(156+i*7.6)+'" y="'+(220+(i*5)%6)+'" width="3" height="3" fill="'+['#5fbf7a','#ffc857','#6fb1ff'][i%3]+'"/>').join('')+'<rect x="186" y="214" width="28" height="7" fill="#6fb1ff" fill-opacity=".7"/><path d="M190 250 Q200 236 210 250Z" fill="#111"/>','Consola de mezcla');
+ return s+'</svg>'}
+function cvSalaC(){const C=k=>CVZ.find(z=>z[0]===k)[2];let s='<svg viewBox="0 0 400 260" class="cv-sv" role="img" aria-label="Corte lateral de la sala"><rect width="400" height="260" fill="#0e0c12"/>';
+ s+='<path d="M20 30 L390 30 L390 236 L20 236Z" fill="#17141c" stroke="#3a3542"/>';
+ for(let x=60;x<380;x+=48)s+='<rect x="'+x+'" y="30" width="38" height="6" fill="#5a3d20" opacity=".7"/>';
+ s+='<rect x="20" y="198" width="100" height="38" fill="#7a5530"/><rect x="20" y="40" width="6" height="158" fill="#2a2018"/><text x="70" y="226" font-size="10" fill="#e8dcc5" text-anchor="middle" font-family="Jost,sans-serif">Escenario</text>';
+ [44,68,92].forEach((x,i)=>{s+='<circle cx="'+x+'" cy="176" r="5" fill="#c9b79a"/><path d="M'+x+' 181 L'+x+' 196 M'+(x-6)+' 186 L'+(x+6)+' 186" stroke="#c9b79a" stroke-width="3"/>'});
+ s+='<path d="M120 236 L120 228 L290 216 L390 208 L390 236Z" fill="#241d16"/>';
+ for(let x=160;x<386;x+=13){const y=228-(x-120)*(x<290?12/170:0)-(x>=290?12+(x-290)*.08:0);s+='<circle cx="'+x+'" cy="'+(y-6).toFixed(1)+'" r="3.2" fill="#8a7a6a"/>'}
+ s+='<path d="M290 128 L390 120 L390 140 L290 142Z" fill="#3a3542"/><path d="M290 142 L290 150" stroke="#555"/>';
+ for(let x=300;x<386;x+=12)s+='<circle cx="'+x+'" cy="'+(122-(x-290)*.08-4).toFixed(1)+'" r="3" fill="#8a7a6a"/>';
+ s+='<text x="345" y="112" font-size="10" fill="#e8dcc5" text-anchor="middle" font-family="Jost,sans-serif">Balcón</text>';
+ /* coberturas */
+ s+=cvCov('main','<path d="M140 62 L390 96 L390 118 L290 126 L290 142 L170 226 L140 100Z" fill="'+C('main')+'" fill-opacity=".22"/>'+cvLbl(225,150,'Cubre piso y balcón',C('main')));
+ s+=cvCov('sub','<path d="M140 222 L290 214 L390 206 L390 236 L140 236Z" fill="'+C('sub')+'" fill-opacity=".3"/>'+cvLbl(255,196,'Graves por todo el piso',C('sub')));
+ s+=cvCov('rear','<path d="M306 150 L390 160 L390 206 L306 178Z" fill="'+C('rear')+'" fill-opacity=".35"/>'+cvLbl(340,170,'Llena la sombra',C('rear')));
+ s+=cvCov('mon','<path d="M112 192 L30 168 L30 196Z" fill="'+C('mon')+'" fill-opacity=".35"/>'+cvLbl(70,150,'Hacia los músicos',C('mon')));
+ s+=cvCov('foh',cvLine(240,196,122,196,C('foh'))+cvLbl(180,188,'≈12–20 m',C('foh')));
+ s+=cvCov('balc','<path d="M290 143 L390 141 L390 207 L290 215Z" fill="'+C('balc')+'" fill-opacity=".3" stroke="'+C('balc')+'" stroke-dasharray="4 3"/>'+cvLbl(340,182,'Aquí casi no llega',C('balc')));
+ s+=cvCov('lat',cvLbl(200,90,'Las laterales se ven desde la consola',C('lat')));
+ /* ondas */
+ s+=[0,1,2].map(i=>'<path class="cv-wave" style="animation-delay:'+(i*.8)+'s" d="M'+(165+i*35)+' '+(60+i*6)+' Q'+(180+i*40)+' '+(120+i*8)+' '+(160+i*35)+' '+(175+i*14)+'" stroke="#ffc857" stroke-width="2" fill="none"/>').join('');
+ /* equipos */
+ s+='<path d="M115 30 L150 30" stroke="#888" stroke-width="3"/>';
+ s+=cvZg('main',[0,1,2,3,4,5].map(i=>'<rect x="'+(126+(i>2?(i-2)*2:0))+'" y="'+(40+i*10)+'" width="16" height="9" rx="1" fill="#16141a" stroke="#4a4652" transform="rotate('+(i>2?(i-2)*4:0)+' '+(134)+' '+(44+i*10)+')"/>').join('')+'<path d="M134 30 L134 40" stroke="#777"/>','Bocinas principales');
+ s+=cvZg('sub','<rect x="122" y="214" width="22" height="20" rx="1" fill="#16141a" stroke="#4a4652"/>','Subwoofer');
+ s+=cvZg('mon','<path d="M100 198 L116 198 L114 190 L104 192Z" fill="#111" stroke="#555"/>','Monitor de escenario');
+ s+=cvZg('rear','<rect x="294" y="143" width="14" height="11" rx="1" fill="#16141a" stroke="#4a4652"/>','Bocina de retardo bajo el balcón');
+ s+=cvZg('foh','<rect x="226" y="208" width="34" height="8" fill="#5a3d20"/><path d="M228 208 L258 208 L254 200 L232 200Z" fill="#1d1f2a" stroke="#4fd1e8" stroke-opacity=".7"/><circle cx="268" cy="196" r="5" fill="#c9b79a"/><path d="M268 201 L268 214" stroke="#c9b79a" stroke-width="3"/>'+cvLbl(243,184,'Consola',C('foh')),'Consola de mezcla');
+ s+=cvZg('balc','<rect x="291" y="158" width="96" height="40" fill="#000" fill-opacity="0"/>','Zona debajo del balcón');
+ return s+'</svg>'}
+function cvZinfo(){const z=CVZ.find(x=>x[0]===CV.sel);const n=Object.keys(CV.seen||{}).length;if(!z)return 'Toca un equipo en el dibujo o en los botones.';return '<b style="color:'+z[2]+'">'+z[3]+'</b><br>'+z[4]+'<br><small class="mute">'+z[5]+'</small><br><small class="mute">Has explorado '+n+' de '+CVZ.length+'.</small>'}
+function cvMark(){document.querySelectorAll('#cv-sw [data-k]').forEach(x=>x.classList.toggle('on',x.dataset.k===CV.sel));document.querySelectorAll('[data-cvz].chip').forEach(c=>c.setAttribute('aria-pressed',c.dataset.cvz===CV.sel));const i=document.getElementById('cv-zi');if(i)i.innerHTML=cvZinfo()}
+function cvSala(){CV.ang=CV.ang||0;return '<div class="card"><h3>🏛️ La sala</h3><p class="mute" style="font-size:14px">Cambia el ángulo y toca cada equipo para ver a quién le llega su sonido. Las medidas son un ejemplo aproximado de una sala mediana.</p><div class="cv-seg">'+['🎚️ Desde la consola','📐 Corte lateral'].map((t,i)=>'<button class="chip" data-cva="'+i+'" aria-pressed="'+(CV.ang===i)+'">'+t+'</button>').join('')+'</div><div id="cv-sw">'+(CV.ang?cvSalaC():cvSalaF())+'</div><div class="cv-dots">'+CVZ.map(z=>'<button class="chip" data-cvz="'+z[0]+'" aria-pressed="false"><span style="color:'+z[2]+'" aria-hidden="true">●</span> '+z[1]+'</button>').join('')+'</div><div id="cv-zi" class="atnext" aria-live="polite">'+cvZinfo()+'</div>'+
+ '<div class="cv-ch"><b>⏱️ Calcula el retardo</b><p style="font-size:14px;margin-top:4px">Distancia entre las principales y una bocina trasera:</p><input type="range" id="cv-dl" min="3" max="40" step="1" value="'+(CV.dl||20)+'" aria-label="Distancia en metros"><div class="sg-out"><div><b id="cv-dm"></b><small>distancia</small></div><div><b id="cv-dms"></b><small>retardo</small></div></div><p class="mute" style="font-size:13px">El sonido recorre unos 343 metros por segundo (cerca de 2,9 ms por metro). Muchos técnicos suman unos 5–10 ms más para que el sonido parezca venir del escenario (valores aproximados).</p></div><button class="link" data-cvback="1">⬅ Volver a la vista general</button></div>'}
+function cvDl(){const d=CV.dl||20,m=document.getElementById('cv-dm'),t=document.getElementById('cv-dms');if(m)m.textContent=d+' m';if(t)t.textContent='≈ '+Math.round(d/343*1000)+' ms'}
+function cvOpenSala(){CV.st=4;const p=document.getElementById('cv-panel');if(!p)return;p.innerHTML=cvSala();cvMark();cvDl();p.scrollIntoView({behavior:'smooth',block:'start'})}
+function cvPick(k){if(k==='balc'&&!CV.ang){CV.ang=1;cvAng()}CV.sel=k;(CV.seen=CV.seen||{})[k]=1;cvMark();if(Object.keys(CV.seen).length===CVZ.length&&!CV.salaOk){CV.salaOk=1;toast('¡Recorriste toda la sala!');if(typeof party==='function')party()}}
+function cvAng(){const w=document.getElementById('cv-sw');if(w)w.innerHTML=CV.ang?cvSalaC():cvSalaF();document.querySelectorAll('[data-cva]').forEach(b=>b.setAttribute('aria-pressed',+b.dataset.cva===CV.ang));cvMark()}
 /* ----- La consola que suena ----- */
 function cvMixer(){
  const sl=(c,k,lab,min,max,val)=>'<label class="cv-l">'+lab+'<input type="range" data-cv="'+c+':'+k+'" min="'+min+'" max="'+max+'" step="1" value="'+val+'"></label>';
@@ -3186,10 +3268,13 @@ document.addEventListener('click',e=>{const t=e.target;if(!t.closest('#v-cabina'
  if(x=t.closest('[data-cvt]'))cvTurn(+x.dataset.cvt);
  else if(x=t.closest('[data-cvs]'))cvEnter(+x.dataset.cvs);
  else if(t.closest('[data-cvback]')){CV.z=0;cvCam();document.getElementById('cv-stage').scrollIntoView({behavior:'smooth'})}
+ else if(t.closest('[data-cvsala]'))cvOpenSala();
+ else if(x=t.closest('[data-cva]')){CV.ang=+x.dataset.cva;cvAng()}
+ else if(x=t.closest('[data-cvz]'))cvPick(x.dataset.cvz);
  else if(x=t.closest('[data-cvi]')){const p=document.getElementById('cv-info');if(p)p.textContent=x.dataset.t;x.parentNode.querySelectorAll('.chip').forEach(c=>c.setAttribute('aria-pressed',c===x))}
  else if(x=t.closest('[data-cvm]')){const i=+x.dataset.cvm,c=CVCH[i];c.m=c.m?0:1;x.setAttribute('aria-pressed',!!c.m);x.textContent=c.m?'🔇 Silenciado':'🔈 Mute';const n=CV.nodes&&CV.nodes.ch[i];if(n)n.f.gain.setTargetAtTime(c.m?0:c.f/100,AC().currentTime,.03)}
  else if(t.closest('#cv-play')){if(CV.nodes){cvStop()}else{cvStart();t.closest('#cv-play').textContent='⏸ Detener'}}});
-document.addEventListener('input',e=>{if(e.target.dataset&&e.target.dataset.cv)cvSet(e.target)});
+document.addEventListener('input',e=>{if(e.target.dataset&&e.target.dataset.cv)cvSet(e.target);else if(e.target.id==='cv-dl'){CV.dl=+e.target.value;cvDl()}});
 
 revBar();
 const atLvlLocked=l=>!atRev()&&l>0&&!atEvPass(l-1);
