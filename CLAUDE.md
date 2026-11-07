@@ -25,12 +25,20 @@ Responde en español, breve y claro. El dueño del proyecto es principiante: exp
 - Prueba solo la semana nueva (`probar-semana.js`), no toda la plataforma.
 - Une cada semana a `main` cuando sus pruebas pasen, sin pedir confirmación, y da un resumen corto al final.
 
-## Asignatura «Audio Técnica Básica para Músicos»
-Bloque en `plataforma-arp.html` que empieza con el comentario `AUDIO TÉCNICA BÁSICA PARA MÚSICOS`.
+## Carrera «Audio Técnica · Sonido en Vivo»
+Antes «Audio Técnica Básica para Músicos». Es una **carrera aparte** de las carreras de instrumentos: no aparece en Clases ni cuenta en el avance de instrumentos (`isAT(l,si)`); se entra desde el botón de Inicio (`.athome`, vista `asig`). En el código sigue en `LEV` solo para conservar sus claves. Bloque en `plataforma-arp.html` que empieza con el comentario `AUDIO TÉCNICA BÁSICA PARA MÚSICOS`.
+
+**Plan aprobado por el dueño:** 3 niveles de 12 semanas (3 meses) cada uno; la semana 12 es la evaluación del nivel. Hoy hay 14 semanas escritas; faltan 19 nuevas. Orden de trabajo: completar el Nivel 1, luego el 2 y el 3.
+- Nivel 1 · Fundamentos: Sonido · *Oído y cuidado auditivo* · Micrófonos · Uso de micrófonos · Cables · *Electricidad y seguridad* · *Altavoces y amplificadores* · Consola · *Consola digital* · *Montar un sistema pequeño* · *Práctica integradora* · Evaluación.
+- Nivel 2 · Control y mezcla: Ganancia · Ecualización · Ecualización práctica · *Compresor y compuerta* · Efectos · Monitores · *In-ear a fondo* · *Microfonía de batería y coro* · *Mezcla en vivo* · *Grabar el evento* · *Práctica integradora* · Evaluación.
+- Nivel 3 · Sonido profesional: Acoples · *Sistemas de sala* · *Acústica de iglesias y salones* · Trabajo en equipo · Prueba de sonido · *Lista de canales y rider* · *Transmisión en vivo* · *Fallas y mantenimiento* · *Dirigir un equipo de sonido* · *Eventos especiales* · Repaso final · Proyecto final.
+(En cursiva, semanas nuevas.) Las claves existentes no cambian; el progreso guardado de los estudiantes debe conservarse.
+
+Estructura actual (14 semanas):
 - 14 semanas en 3 niveles (`AT`): N1 semanas 1–5, N2 semanas 6–10, N3 semanas 11–14. Cada nivel tiene descripción (`d`), objetivos (`obj`), títulos (`m`) y temas por semana (`tm`).
 - Claves (no cambiarlas, conservan el registro original): Nivel 1 `0-5-0`…`0-5-4` y `0-5-ev`; Nivel 2 `1-6-0`…`1-6-4` y `1-6-ev`; Nivel 3 `2-6-0`…`2-6-3` y `2-6-ev`. `atKeys(nivel)` y `atEv(nivel)` las devuelven.
 - Reglas en `ACAD_DEF` (aprobar 70 %, intentos ilimitados; configurable con la clave `arp-config` del navegador). Las semanas se abren en orden; aprobar la evaluación de un nivel abre el siguiente.
-- Estado actual: asignatura completa: 14 semanas, Evaluaciones de los Niveles 1 y 2, y Proyecto práctico y evaluación final (`2-6-ev`, con `proyecto`; se completa al aprobar y entregar el proyecto).
+- Estado actual: 14 semanas completas, Evaluaciones de los Niveles 1 y 2, y Proyecto práctico y evaluación final (`2-6-ev`, con `proyecto`; se completa al aprobar y entregar el proyecto).
 
 ### Cómo agregar una semana
 1. Busca el final de la semana anterior: `grep -n "^ATC\['1-6-" plataforma-arp.html` y ubica su última línea `e:'…'};`.
