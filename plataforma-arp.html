@@ -679,6 +679,8 @@ function go(v){
  if(v==='home')home();if(v==='clases')clases();if(v==='ninos')ninos();if(v==='asig')atView();if(v==='biblioteca')biblio();if(v==='leccion'){S.last=S.cur;save();lec()}if(v==='perfil')perfil();if(v==='practica'&&typeof jgRacha==='function')jgRacha();if(v==='n4')n4();if(v==='u4')u4();if(v==='a4')a4();if(v==='m4')m4();
  window.scrollTo(0,0);
 }
+/* Modo revisión: 5 toques seguidos al logo de Inicio lo activan o desactivan */
+let revTaps=[];document.addEventListener('click',e=>{if(!e.target.closest('#v-home .logo'))return;const n=Date.now();revTaps=revTaps.filter(x=>n-x<3000);revTaps.push(n);if(revTaps.length>=5){revTaps=[];atRevSet(!atRev())}});
 document.addEventListener('click',e=>{const g=e.target.closest('[data-go]');if(g)go(g.dataset.go)});
 
 /* Símbolo según el tema de la lección */
@@ -3088,8 +3090,15 @@ const atRenum=(v,old)=>typeof v==='string'?(old?v.replace(/(Semanas? )(\d+)( y )
 const atBest=(L,Q)=>{const all=(L.hist||[]).map(h=>h.score/h.total);if(typeof L.score==='number')all.push(L.score/Q.length);return all.length?Math.round(Math.max(...all)*100):null};
 const atModDone=k=>{const L=S.ls[k]||{},D=LD[k];return !!S.done[k]||(!!D&&solved(L,D.q)&&(L.status==='review'||L.status==='ok'))};
 const atEvPass=l=>{const k=atEv(l),D=LD[k],L=S.ls[k]||{};if(!D)return false;const b=atBest(L,D.q);return b!==null&&b>=atRule().aprobar&&(!AT[l].proj||L.status==='review'||L.status==='ok')};
-const atLvlLocked=l=>l>0&&!atEvPass(l-1);
-function atLocked(k){const[l,,i]=k.split('-');if(atLvlLocked(+l))return true;if(i==='ev')return !atKeys(+l).every(atModDone);const p=atPos(k);return p>0&&!atModDone(atKeys(+l)[p-1])}
+/* Modo revisión (docente): abre todas las semanas de Audio Técnica para revisar el contenido.
+   Se activa con ?revision=1 en el enlace o tocando 5 veces seguidas el logo de Inicio. Se guarda en este navegador. */
+const atRev=()=>{try{return localStorage.getItem('arp-rev')==='1'}catch(e){return false}};
+(()=>{try{const q=new URLSearchParams(location.search);if(q.get('revision')==='1')localStorage.setItem('arp-rev','1');if(q.get('revision')==='0')localStorage.removeItem('arp-rev')}catch(e){}})();
+function atRevSet(on){try{on?localStorage.setItem('arp-rev','1'):localStorage.removeItem('arp-rev')}catch(e){}toast(on?'Modo revisión activado: todas las semanas abiertas':'Modo revisión desactivado');revBar()}
+function revBar(){let b=document.getElementById('rev-bar');if(!atRev()){if(b)b.remove();return}if(!b){b=document.createElement('div');b.id='rev-bar';b.setAttribute('data-nn','');b.style.cssText='position:fixed;top:0;left:0;right:0;z-index:45;background:#5fbf7a;color:#000;font:600 13px Jost,system-ui,sans-serif;display:flex;align-items:center;justify-content:center;gap:10px;padding:6px 10px';b.innerHTML='👁️ Modo revisión: semanas abiertas <button id="rev-off" style="border:1px solid #000;border-radius:99px;padding:2px 10px;min-height:32px;font:inherit">Salir</button>';document.body.appendChild(b);b.querySelector('#rev-off').onclick=()=>{atRevSet(false);if(document.querySelector('#v-asig:not([hidden])'))atView()}}}
+revBar();
+const atLvlLocked=l=>!atRev()&&l>0&&!atEvPass(l-1);
+function atLocked(k){if(atRev())return false;const[l,,i]=k.split('-');if(atLvlLocked(+l))return true;if(i==='ev')return !atKeys(+l).every(atModDone);const p=atPos(k);return p>0&&!atModDone(atKeys(+l)[p-1])}
 function atLvlState(l){if(atLvlLocked(l))return 'bloqueado';if(atEvPass(l))return 'completado';return atKeys(l).concat(atEv(l)).some(k=>S.ls[k]&&(S.ls[k].step>0||typeof S.ls[k].score==='number'))?'progreso':'disponible'}
 const AT_STN={bloqueado:'🔒 Bloqueado',disponible:'🟢 Disponible',progreso:'▶ En progreso',completado:'✅ Completado'};
 function atStats(){let w=0,ev=0,lt=0,ld=0,grades=[];AT.forEach((L0,l)=>{atKeys(l).forEach(k=>{if(atModDone(k))w++;const C=ATC[k];if(C&&C.lecciones){lt+=C.lecciones.length;ld+=Object.values((S.ls[k]||{}).lr||{}).filter(Boolean).length}});const D=LD[atEv(l)],b=D?atBest(S.ls[atEv(l)]||{},D.q):null;grades.push(b);if(atEvPass(l))ev++});return{w,ev,lt,ld,grades,p:Math.round((w+ev)/(atTotal()+AT.length)*100)}}
