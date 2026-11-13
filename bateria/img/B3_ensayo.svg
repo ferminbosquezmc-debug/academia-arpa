@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="1350" viewBox="0 0 2400 1350" role="img" aria-label="Montaje del kit y lista del ensayo general">
+<title>Montaje del kit y lista del ensayo general</title>
+<rect width="2400" height="1350" fill="#FFFFFF"/>
+<text x="40.0" y="72.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="48" font-weight="700" fill="#1A1A1A" text-anchor="start" >Ensayo general</text>
+<text x="40.0" y="124.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="32" font-weight="500" fill="#5F6368" text-anchor="start" >Monto el kit en orden · repaso por secciones · cuido los nervios y el oído</text>
+<circle cx="620.0" cy="1180.0" r="100.0" fill="#F1EDE4" stroke="#1A1A1A" stroke-width="3"/>
+<text x="620.0" y="1172.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="24" font-weight="700" fill="#1A1A1A" text-anchor="middle" >Banco</text>
+<circle cx="620.0" cy="1214.0" r="22.0" fill="#C9A227" stroke="#1A1A1A" stroke-width="2"/>
+<text x="620.0" y="1223.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="26" font-weight="700" fill="#1A1A1A" text-anchor="middle" >1</text>
+<circle cx="640.0" cy="780.0" r="110.0" fill="#F1EDE4" stroke="#1A1A1A" stroke-width="3"/>
+<text x="640.0" y="772.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="24" font-weight="700" fill="#1A1A1A" text-anchor="middle" >Bombo</text>
+<circle cx="640.0" cy="814.0" r="22.0" fill="#C9A227" stroke="#1A1A1A" stroke-width="2"/>
+<text x="640.0" y="823.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="26" font-weight="700" fill="#1A1A1A" text-anchor="middle" >2</text>
+<circle cx="330.0" cy="960.0" r="85.0" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="3"/>
+<text x="330.0" y="952.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="24" font-weight="700" fill="#1A1A1A" text-anchor="middle" >Hi-hat</text>
+<circle cx="330.0" cy="994.0" r="22.0" fill="#C9A227" stroke="#1A1A1A" stroke-width="2"/>
+<text x="330.0" y="1003.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="26" font-weight="700" fill="#1A1A1A" text-anchor="middle" >3</text>
+<circle cx="560.0" cy="990.0" r="85.0" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="3"/>
+<text x="560.0" y="982.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="24" font-weight="700" fill="#1A1A1A" text-anchor="middle" >Redoblante</text>
+<circle cx="560.0" cy="1024.0" r="22.0" fill="#C9A227" stroke="#1A1A1A" stroke-width="2"/>
+<text x="560.0" y="1033.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="26" font-weight="700" fill="#1A1A1A" text-anchor="middle" >4</text>
+<circle cx="500.0" cy="600.0" r="70.0" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="3"/>
+<text x="500.0" y="592.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="20" font-weight="700" fill="#1A1A1A" text-anchor="middle" >Tom 1</text>
+<circle cx="500.0" cy="634.0" r="22.0" fill="#C9A227" stroke="#1A1A1A" stroke-width="2"/>
+<text x="500.0" y="643.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="26" font-weight="700" fill="#1A1A1A" text-anchor="middle" >5</text>
+<circle cx="720.0" cy="590.0" r="70.0" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="3"/>
+<text x="720.0" y="582.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="20" font-weight="700" fill="#1A1A1A" text-anchor="middle" >Tom 2</text>
+<circle cx="720.0" cy="624.0" r="22.0" fill="#C9A227" stroke="#1A1A1A" stroke-width="2"/>
+<text x="720.0" y="633.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="26" font-weight="700" fill="#1A1A1A" text-anchor="middle" >5</text>
+<circle cx="880.0" cy="960.0" r="95.0" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="3"/>
+<text x="880.0" y="952.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="24" font-weight="700" fill="#1A1A1A" text-anchor="middle" >Tom de piso</text>
+<circle cx="880.0" cy="994.0" r="22.0" fill="#C9A227" stroke="#1A1A1A" stroke-width="2"/>
+<text x="880.0" y="1003.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="26" font-weight="700" fill="#1A1A1A" text-anchor="middle" >6</text>
+<circle cx="280.0" cy="620.0" r="100.0" fill="#E9D9A6" stroke="#1A1A1A" stroke-width="3"/>
+<text x="280.0" y="612.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="24" font-weight="700" fill="#1A1A1A" text-anchor="middle" >Crash</text>
+<circle cx="280.0" cy="654.0" r="22.0" fill="#C9A227" stroke="#1A1A1A" stroke-width="2"/>
+<text x="280.0" y="663.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="26" font-weight="700" fill="#1A1A1A" text-anchor="middle" >7</text>
+<circle cx="980.0" cy="660.0" r="110.0" fill="#E9D9A6" stroke="#1A1A1A" stroke-width="3"/>
+<text x="980.0" y="652.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="24" font-weight="700" fill="#1A1A1A" text-anchor="middle" >Ride</text>
+<circle cx="980.0" cy="694.0" r="22.0" fill="#C9A227" stroke="#1A1A1A" stroke-width="2"/>
+<text x="980.0" y="703.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="26" font-weight="700" fill="#1A1A1A" text-anchor="middle" >7</text>
+<text x="620.0" y="400.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="26" font-weight="600" fill="#5F6368" text-anchor="middle" >Vista desde arriba · los números dan el orden</text>
+<rect x="1240.0" y="260.0" width="1100.0" height="220.0" rx="20" fill="#EEF0F4" stroke="none" stroke-width="0"/>
+<rect x="1270.0" y="300.0" width="46.0" height="46.0" rx="8" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="3"/>
+<text x="1350.0" y="340.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="38" font-weight="700" fill="#1A1A1A" text-anchor="start" >Montaje</text>
+<text x="1270.0" y="410.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="24" font-weight="600" fill="#1A1A1A" text-anchor="start" >banco a la altura de las rodillas · pedales cómodos · todo al alcance sin estirarme</text>
+<rect x="1240.0" y="520.0" width="1100.0" height="220.0" rx="20" fill="#EEF0F4" stroke="none" stroke-width="0"/>
+<rect x="1270.0" y="560.0" width="46.0" height="46.0" rx="8" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="3"/>
+<text x="1350.0" y="600.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="38" font-weight="700" fill="#1A1A1A" text-anchor="start" >Memoria</text>
+<text x="1270.0" y="670.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="24" font-weight="600" fill="#1A1A1A" text-anchor="start" >repaso por secciones: intro, estrofa, coro, final · sé qué viene después</text>
+<rect x="1240.0" y="780.0" width="1100.0" height="220.0" rx="20" fill="#EEF0F4" stroke="none" stroke-width="0"/>
+<rect x="1270.0" y="820.0" width="46.0" height="46.0" rx="8" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="3"/>
+<text x="1350.0" y="860.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="38" font-weight="700" fill="#1A1A1A" text-anchor="start" >Nervios</text>
+<text x="1270.0" y="930.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="24" font-weight="600" fill="#1A1A1A" text-anchor="start" >respiro: 4 tiempos dentro, 4 fuera · cuento antes de empezar</text>
+<rect x="1240.0" y="1040.0" width="1100.0" height="220.0" rx="20" fill="#EEF0F4" stroke="none" stroke-width="0"/>
+<rect x="1270.0" y="1080.0" width="46.0" height="46.0" rx="8" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="3"/>
+<text x="1350.0" y="1120.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="38" font-weight="700" fill="#1A1A1A" text-anchor="start" >Oído</text>
+<text x="1270.0" y="1190.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="24" font-weight="600" fill="#1A1A1A" text-anchor="start" >uso tapones para músicos · pido volumen moderado en el ensayo</text>
+</svg>
