@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="900" viewBox="0 0 2400 900" role="img" aria-label="Programa del recital final de canto">
+<title>Programa del recital final de canto</title>
+<rect width="2400" height="900" fill="#FFFFFF"/>
+<text x="40.0" y="72.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="48" font-weight="700" fill="#1A1A1A" text-anchor="start">¡Recital final! · Canto</text>
+<text x="40.0" y="124.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="32" font-weight="500" fill="#5F6368" text-anchor="start">El programa de mi recital · Nivel 3</text>
+<rect x="80.0" y="220.0" width="540.0" height="460.0" rx="24" fill="#2AA7E8" stroke="#1A1A1A" stroke-width="2"/>
+<circle cx="350.0" cy="320.0" r="50.0" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="2"/>
+<text x="350.0" y="340.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="52" font-weight="700" fill="#1A1A1A" text-anchor="middle">1</text>
+<text x="350.0" y="460.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="44" font-weight="700" fill="#FFFFFF" text-anchor="middle">Vocalización</text>
+<text x="350.0" y="540.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="22" font-weight="600" fill="#FFFFFF" text-anchor="middle">escalas, arpegios y registros</text>
+<rect x="650.0" y="220.0" width="540.0" height="460.0" rx="24" fill="#2E9E4F" stroke="#1A1A1A" stroke-width="2"/>
+<circle cx="920.0" cy="320.0" r="50.0" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="2"/>
+<text x="920.0" y="340.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="52" font-weight="700" fill="#1A1A1A" text-anchor="middle">2</text>
+<text x="920.0" y="460.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="44" font-weight="700" fill="#FFFFFF" text-anchor="middle">Canción solista</text>
+<text x="920.0" y="540.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="22" font-weight="600" fill="#FFFFFF" text-anchor="middle">con micrófono y acompañamiento</text>
+<rect x="1220.0" y="220.0" width="540.0" height="460.0" rx="24" fill="#F57C00" stroke="#1A1A1A" stroke-width="2"/>
+<circle cx="1490.0" cy="320.0" r="50.0" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="2"/>
+<text x="1490.0" y="340.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="52" font-weight="700" fill="#1A1A1A" text-anchor="middle">3</text>
+<text x="1490.0" y="460.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="44" font-weight="700" fill="#FFFFFF" text-anchor="middle">Canción a voces</text>
+<text x="1490.0" y="540.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="22" font-weight="600" fill="#FFFFFF" text-anchor="middle">a dos o tres voces, en coro</text>
+<rect x="1790.0" y="220.0" width="540.0" height="460.0" rx="24" fill="#E5312B" stroke="#1A1A1A" stroke-width="2"/>
+<circle cx="2060.0" cy="320.0" r="50.0" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="2"/>
+<text x="2060.0" y="340.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="52" font-weight="700" fill="#1A1A1A" text-anchor="middle">4</text>
+<text x="2060.0" y="460.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="44" font-weight="700" fill="#FFFFFF" text-anchor="middle">Improvisación</text>
+<text x="2060.0" y="540.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="22" font-weight="600" fill="#FFFFFF" text-anchor="middle">pregunta y respuesta con la banda</text>
+<text x="1200.0" y="790.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="30" font-weight="600" fill="#5F6368" text-anchor="middle">Antes: caliento, tomo agua y respiro · Después: enfrío la voz, saludo y agradezco</text>
+</svg>
