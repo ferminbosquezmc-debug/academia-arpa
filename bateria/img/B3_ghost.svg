@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="1150" viewBox="0 0 2400 1150" role="img" aria-label="Notas fantasma, flam y drag">
+<title>Notas fantasma, flam y drag</title>
+<rect width="2400" height="1150" fill="#FFFFFF"/>
+<text x="40.0" y="72.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="48" font-weight="700" fill="#1A1A1A" text-anchor="start" >Notas fantasma, flam y drag</text>
+<text x="40.0" y="124.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="32" font-weight="500" fill="#5F6368" text-anchor="start" >Golpes muy suaves (entre paréntesis) alrededor de los golpes fuertes</text>
+<text x="60.0" y="250.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="34" font-weight="700" fill="#1A1A1A" text-anchor="start" >Notas fantasma en el redoblante</text>
+<rect x="404.0" y="280.0" width="464.0" height="190.0" rx="14" fill="#EEF0F4" stroke="none" stroke-width="0"/>
+<rect x="876.0" y="280.0" width="464.0" height="190.0" rx="14" fill="#EEF0F4" stroke="none" stroke-width="0"/>
+<rect x="1348.0" y="280.0" width="464.0" height="190.0" rx="14" fill="#EEF0F4" stroke="none" stroke-width="0"/>
+<rect x="1820.0" y="280.0" width="464.0" height="190.0" rx="14" fill="#EEF0F4" stroke="none" stroke-width="0"/>
+<text x="459.0" y="330.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32" font-weight="700" fill="#1A1A1A" text-anchor="middle" >1</text>
+<text x="577.0" y="330.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32" font-weight="700" fill="#5F6368" text-anchor="middle" >e</text>
+<text x="695.0" y="330.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32" font-weight="700" fill="#5F6368" text-anchor="middle" >y</text>
+<text x="813.0" y="330.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32" font-weight="700" fill="#5F6368" text-anchor="middle" >a</text>
+<text x="931.0" y="330.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32" font-weight="700" fill="#1A1A1A" text-anchor="middle" >2</text>
+<text x="1049.0" y="330.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32" font-weight="700" fill="#5F6368" text-anchor="middle" >e</text>
+<text x="1167.0" y="330.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32" font-weight="700" fill="#5F6368" text-anchor="middle" >y</text>
+<text x="1285.0" y="330.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32" font-weight="700" fill="#5F6368" text-anchor="middle" >a</text>
+<text x="1403.0" y="330.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32" font-weight="700" fill="#1A1A1A" text-anchor="middle" >3</text>
+<text x="1521.0" y="330.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32" font-weight="700" fill="#5F6368" text-anchor="middle" >e</text>
+<text x="1639.0" y="330.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32" font-weight="700" fill="#5F6368" text-anchor="middle" >y</text>
+<text x="1757.0" y="330.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32" font-weight="700" fill="#5F6368" text-anchor="middle" >a</text>
+<text x="1875.0" y="330.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32" font-weight="700" fill="#1A1A1A" text-anchor="middle" >4</text>
+<text x="1993.0" y="330.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32" font-weight="700" fill="#5F6368" text-anchor="middle" >e</text>
+<text x="2111.0" y="330.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32" font-weight="700" fill="#5F6368" text-anchor="middle" >y</text>
+<text x="2229.0" y="330.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32" font-weight="700" fill="#5F6368" text-anchor="middle" >a</text>
+<text x="370.0" y="421.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="30" font-weight="700" fill="#1A1A1A" text-anchor="end" >Redoblante</text>
+<line x1="400.0" y1="410.0" x2="2288.0" y2="410.0" stroke="#D5D9E0" stroke-width="2" />
+<circle cx="931.0" cy="410.0" r="36.0" fill="#2370D6" stroke="#C9A227" stroke-width="6"/>
+<text x="931.0" y="423.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32.4" font-weight="700" fill="#FFFFFF" text-anchor="middle" >I</text>
+<circle cx="1875.0" cy="410.0" r="36.0" fill="#2370D6" stroke="#C9A227" stroke-width="6"/>
+<text x="1875.0" y="423.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32.4" font-weight="700" fill="#FFFFFF" text-anchor="middle" >I</text>
+<circle cx="1285.0" cy="410.0" r="36.0" fill="#2370D6" stroke="#1A1A1A" stroke-width="2"/>
+<text x="1285.0" y="423.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32.4" font-weight="700" fill="#FFFFFF" text-anchor="middle" >( )</text>
+<circle cx="1521.0" cy="410.0" r="36.0" fill="#2370D6" stroke="#1A1A1A" stroke-width="2"/>
+<text x="1521.0" y="423.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32.4" font-weight="700" fill="#FFFFFF" text-anchor="middle" >( )</text>
+<circle cx="2111.0" cy="410.0" r="36.0" fill="#2370D6" stroke="#1A1A1A" stroke-width="2"/>
+<text x="2111.0" y="423.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32.4" font-weight="700" fill="#FFFFFF" text-anchor="middle" >( )</text>
+<text x="1200.0" y="520.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="26" font-weight="600" fill="#5F6368" text-anchor="middle" >Los golpes acentuados (borde dorado) suenan fuerte; los fantasma, apenas se oyen: baqueta a 1–2 cm (aproximado).</text>
+<text x="300.0" y="700.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="44" font-weight="700" fill="#1A1A1A" text-anchor="start" >Flam</text>
+<text x="300.0" y="750.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="26" font-weight="600" fill="#5F6368" text-anchor="start" >una nota de adorno pegada a la principal</text>
+<circle cx="420.0" cy="900.0" r="24.0" fill="#FFFFFF" stroke="#2370D6" stroke-width="4"/>
+<text x="420.0" y="909.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="22" font-weight="700" fill="#2370D6" text-anchor="middle" >I</text>
+<circle cx="580.0" cy="900.0" r="52.0" fill="#E5312B" stroke="#C9A227" stroke-width="6"/>
+<text x="580.0" y="918.7" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="46.800000000000004" font-weight="700" fill="#FFFFFF" text-anchor="middle" >D</text>
+<text x="630.0" y="1020.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="24" font-weight="600" fill="#5F6368" text-anchor="middle" >baqueta baja (I) + baqueta alta (D) casi juntas</text>
+<text x="1400.0" y="700.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="44" font-weight="700" fill="#1A1A1A" text-anchor="start" >Drag</text>
+<text x="1400.0" y="750.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="26" font-weight="600" fill="#5F6368" text-anchor="start" >dos notas de adorno pegadas a la principal</text>
+<circle cx="1520.0" cy="900.0" r="24.0" fill="#FFFFFF" stroke="#2370D6" stroke-width="4"/>
+<text x="1520.0" y="909.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="22" font-weight="700" fill="#2370D6" text-anchor="middle" >I</text>
+<circle cx="1590.0" cy="900.0" r="24.0" fill="#FFFFFF" stroke="#2370D6" stroke-width="4"/>
+<text x="1590.0" y="909.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="22" font-weight="700" fill="#2370D6" text-anchor="middle" >I</text>
+<circle cx="1750.0" cy="900.0" r="52.0" fill="#E5312B" stroke="#C9A227" stroke-width="6"/>
+<text x="1750.0" y="918.7" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="46.800000000000004" font-weight="700" fill="#FFFFFF" text-anchor="middle" >D</text>
+<text x="1730.0" y="1020.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="24" font-weight="600" fill="#5F6368" text-anchor="middle" >baqueta baja (I) + baqueta alta (D) casi juntas</text>
+</svg>
