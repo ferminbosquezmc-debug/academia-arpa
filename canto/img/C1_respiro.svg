@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="900" viewBox="0 0 2400 900" role="img" aria-label="Dónde respirar al cantar">
+<title>Dónde respirar al cantar</title>
+<rect width="2400" height="900" fill="#FFFFFF"/>
+<text x="40.0" y="72.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="48" font-weight="700" fill="#1A1A1A" text-anchor="start">¿Dónde respiro?</text>
+<text x="40.0" y="124.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="32" font-weight="500" fill="#5F6368" text-anchor="start">En los silencios y al final de cada frase · la marca de respiración es una comita (’)</text>
+<path d="M 120 420 Q 570 230 1020 420" fill="none" stroke="#2370D6" stroke-width="10" stroke-linecap="round"/>
+<text x="570.0" y="380.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="40" font-weight="700" fill="#2370D6" text-anchor="middle">Frase 1</text>
+<text x="570.0" y="440.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="26" font-weight="600" fill="#5F6368" text-anchor="middle">compases 1 a 4</text>
+<text x="1080.0" y="330.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="120" font-weight="700" fill="#E5312B" text-anchor="middle">’</text>
+<text x="1080.0" y="470.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="24" font-weight="700" fill="#E5312B" text-anchor="middle">respiro</text>
+<path d="M 1220 420 Q 1670 230 2120 420" fill="none" stroke="#2E9E4F" stroke-width="10" stroke-linecap="round"/>
+<text x="1670.0" y="380.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="40" font-weight="700" fill="#2E9E4F" text-anchor="middle">Frase 2</text>
+<text x="1670.0" y="440.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="26" font-weight="600" fill="#5F6368" text-anchor="middle">compases 5 a 8</text>
+<text x="2180.0" y="330.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="120" font-weight="700" fill="#E5312B" text-anchor="middle">’</text>
+<text x="2180.0" y="470.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="24" font-weight="700" fill="#E5312B" text-anchor="middle">respiro</text>
+<rect x="120.0" y="560.0" width="2160.0" height="260.0" rx="20" fill="#EEF0F4" stroke="none" stroke-width="0"/>
+<text x="170.0" y="630.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="28" font-weight="600" fill="#1A1A1A" text-anchor="start">1. Respiro ANTES de empezar, con calma, contando la entrada</text>
+<text x="170.0" y="700.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="28" font-weight="600" fill="#1A1A1A" text-anchor="start">2. No respiro en medio de una palabra</text>
+<text x="170.0" y="770.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="28" font-weight="600" fill="#1A1A1A" text-anchor="start">3. En los silencios largos tomo aire lleno; en los cortos, «aire rápido» por la boca</text>
+</svg>

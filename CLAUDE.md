@@ -104,7 +104,7 @@ Se entra desde el botón «Cabina virtual 3D» en la vista de la carrera (`atVie
 - Fuente: `contenido/canto/nivel-N/clase-M.md`. Cargar: `python3 herramientas/canto.py ../academia-musica-ama/contenido/canto` (reescribe `const CNC=`). Claves `<nivel>-0canto-<i>`. Láminas: `contenido/canto/generador/laminas.py` → `canto/img/C1_*.svg` (`gImg` acepta `canto/img`). Reutiliza láminas comunes de `guitarra/img` y `piano/img`.
 - **VibraVoice 12D** (app del dueño, versión oficial: https://ferminbosquezmc-debug.github.io/vibravoice/, repo `vibravoice`): se enlaza, no se copia. Tarjeta `VVCARD` en Práctica y marcador `[[vibravoice]]` en los `.md`.
 - Abierto a los estudiantes cuando `CNC` tenga 12 clases (`AVAIL.canto`); antes, solo en modo revisión.
-- Avance: **mes 1 (clases 1–4) listo**.
+- Avance: **meses 1 y 2 (clases 1–8) listos**. Letra AMA del «Himno de la alegría» en la clase 8 (tabla sílaba–nota).
 
 ## Juegos de práctica (vista Práctica)
 Bloque JS que empieza con el comentario `Juegos de práctica`; CSS con prefijo `jg-`; HTML dentro de `<div data-nn>` en `#v-practica` (para que el pintor no toque los textos de Arpi).
