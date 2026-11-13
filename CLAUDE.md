@@ -85,7 +85,7 @@ Se entra desde el botón «Cabina virtual 3D» en la vista de la carrera (`atVie
 - En los `.md` de las clases, `[[nn:texto]]` evita que el pintor coloree letras sueltas (por ejemplo la forma «A – B – A»). No funciona en el título, el objetivo ni las preguntas: ahí, reescribe sin letras sueltas.
 
 ## Batería (Método Integral AMA, 3 niveles · mapa en `academia-musica-ama/contenido/bateria/MAPA.md`)
-- Nivel 1 (clases 1–12) lo escribió otra sesión; el Nivel 2 sigue el mapa (libro AMA «Batería 2»): clases 13–24. Avance: **Nivel 2 completo** (clases 13–24). Nivel 3: **meses 7 y 8 (clases 25–32) listos** (láminas `B3_*.svg` en el mismo generador); siguen 33–36 según MAPA.md. Letras sueltas de ejercicios o patrones (A, B, C) van con `[[nn:…]]` en el texto y se evitan en objetivo y preguntas.
+- Nivel 1 (clases 1–12) lo escribió otra sesión; el Nivel 2 sigue el mapa (libro AMA «Batería 2»): clases 13–24. Avance: **Nivel 2 completo** (clases 13–24). **Nivel 3 completo** (clases 25–36; láminas `B3_*.svg` en el mismo generador). **Batería completa** (clases 1–36). Letras sueltas de ejercicios o patrones (A, B, C) van con `[[nn:…]]` en el texto y se evitan en objetivo y preguntas.
 - Fuente: `contenido/bateria/nivel-N/clase-M.md` (mismo formato que piano). Cargar: `python3 herramientas/bateria.py ../academia-musica-ama/contenido/bateria` (reescribe `const BNC=`; `--check` compara sin escribir). Claves `<nivel>-0bateria-<i>`.
 - Láminas: `contenido/bateria/generador/laminas_n2.py` → `bateria/img/B2_*.svg`. Colores por extremidad: D rojo, I azul, PD verde, PI morado.
 - Reproductor de ritmos: `[[ritmos:b5,disco]]` en el `.md` (ids en `RY`: b1–b7, marcha, vals, balada, disco, b68, shuffle y los del N3). Batería digital: `[[bateria-digital]]`.

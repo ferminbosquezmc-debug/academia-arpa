@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="1300" viewBox="0 0 2400 1300" role="img" aria-label="Tocar con la banda">
+<title>Tocar con la banda</title>
+<rect width="2400" height="1300" fill="#FFFFFF"/>
+<text x="40.0" y="72.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="48" font-weight="700" fill="#1A1A1A" text-anchor="start" >Tocamos juntos</text>
+<text x="40.0" y="124.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="32" font-weight="500" fill="#5F6368" text-anchor="start" >El bombo camina con el bajo · el click marca el pulso · el director avisa con señales</text>
+<text x="60.0" y="250.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="36" font-weight="700" fill="#1A1A1A" text-anchor="start" >Bombo y bajo: juntos</text>
+<rect x="484.0" y="270.0" width="452.0" height="340.0" rx="14" fill="#EEF0F4" stroke="none" stroke-width="0"/>
+<rect x="944.0" y="270.0" width="452.0" height="340.0" rx="14" fill="#EEF0F4" stroke="none" stroke-width="0"/>
+<rect x="1404.0" y="270.0" width="452.0" height="340.0" rx="14" fill="#EEF0F4" stroke="none" stroke-width="0"/>
+<rect x="1864.0" y="270.0" width="452.0" height="340.0" rx="14" fill="#EEF0F4" stroke="none" stroke-width="0"/>
+<text x="595.0" y="320.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32" font-weight="700" fill="#1A1A1A" text-anchor="middle" >1</text>
+<text x="825.0" y="320.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32" font-weight="700" fill="#5F6368" text-anchor="middle" >y</text>
+<text x="1055.0" y="320.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32" font-weight="700" fill="#1A1A1A" text-anchor="middle" >2</text>
+<text x="1285.0" y="320.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32" font-weight="700" fill="#5F6368" text-anchor="middle" >y</text>
+<text x="1515.0" y="320.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32" font-weight="700" fill="#1A1A1A" text-anchor="middle" >3</text>
+<text x="1745.0" y="320.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32" font-weight="700" fill="#5F6368" text-anchor="middle" >y</text>
+<text x="1975.0" y="320.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32" font-weight="700" fill="#1A1A1A" text-anchor="middle" >4</text>
+<text x="2205.0" y="320.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32" font-weight="700" fill="#5F6368" text-anchor="middle" >y</text>
+<text x="450.0" y="396.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="30" font-weight="700" fill="#1A1A1A" text-anchor="end" >Bajo</text>
+<line x1="480.0" y1="385.0" x2="2320.0" y2="385.0" stroke="#D5D9E0" stroke-width="2" />
+<circle cx="595.0" cy="385.0" r="36.0" fill="#8E3BB8" stroke="#1A1A1A" stroke-width="2"/>
+<text x="595.0" y="398.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32.4" font-weight="700" fill="#FFFFFF" text-anchor="middle" >♪</text>
+<circle cx="1285.0" cy="385.0" r="36.0" fill="#8E3BB8" stroke="#1A1A1A" stroke-width="2"/>
+<text x="1285.0" y="398.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32.4" font-weight="700" fill="#FFFFFF" text-anchor="middle" >♪</text>
+<circle cx="1515.0" cy="385.0" r="36.0" fill="#8E3BB8" stroke="#1A1A1A" stroke-width="2"/>
+<text x="1515.0" y="398.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32.4" font-weight="700" fill="#FFFFFF" text-anchor="middle" >♪</text>
+<text x="450.0" y="486.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="30" font-weight="700" fill="#1A1A1A" text-anchor="end" >Bombo</text>
+<line x1="480.0" y1="475.0" x2="2320.0" y2="475.0" stroke="#D5D9E0" stroke-width="2" />
+<circle cx="595.0" cy="475.0" r="36.0" fill="#2E9E4F" stroke="#1A1A1A" stroke-width="2"/>
+<text x="595.0" y="488.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32.4" font-weight="700" fill="#FFFFFF" text-anchor="middle" >PD</text>
+<circle cx="1285.0" cy="475.0" r="36.0" fill="#2E9E4F" stroke="#1A1A1A" stroke-width="2"/>
+<text x="1285.0" y="488.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32.4" font-weight="700" fill="#FFFFFF" text-anchor="middle" >PD</text>
+<circle cx="1515.0" cy="475.0" r="36.0" fill="#2E9E4F" stroke="#1A1A1A" stroke-width="2"/>
+<text x="1515.0" y="488.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32.4" font-weight="700" fill="#FFFFFF" text-anchor="middle" >PD</text>
+<text x="450.0" y="576.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="30" font-weight="700" fill="#1A1A1A" text-anchor="end" >Click</text>
+<line x1="480.0" y1="565.0" x2="2320.0" y2="565.0" stroke="#D5D9E0" stroke-width="2" />
+<circle cx="595.0" cy="565.0" r="36.0" fill="#2370D6" stroke="#1A1A1A" stroke-width="2"/>
+<text x="595.0" y="578.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32.4" font-weight="700" fill="#FFFFFF" text-anchor="middle" >·</text>
+<circle cx="1055.0" cy="565.0" r="36.0" fill="#2370D6" stroke="#1A1A1A" stroke-width="2"/>
+<text x="1055.0" y="578.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32.4" font-weight="700" fill="#FFFFFF" text-anchor="middle" >·</text>
+<circle cx="1515.0" cy="565.0" r="36.0" fill="#2370D6" stroke="#1A1A1A" stroke-width="2"/>
+<text x="1515.0" y="578.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32.4" font-weight="700" fill="#FFFFFF" text-anchor="middle" >·</text>
+<circle cx="1975.0" cy="565.0" r="36.0" fill="#2370D6" stroke="#1A1A1A" stroke-width="2"/>
+<text x="1975.0" y="578.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32.4" font-weight="700" fill="#FFFFFF" text-anchor="middle" >·</text>
+<text x="1400.0" y="655.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="28" font-weight="600" fill="#5F6368" text-anchor="middle" >Cuando el bajo y el bombo coinciden, la banda suena «pegada»</text>
+<text x="60.0" y="760.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="36" font-weight="700" fill="#1A1A1A" text-anchor="start" >Señales del director (acuérdenlas antes del ensayo)</text>
+<rect x="60.0" y="800.0" width="440.0" height="380.0" rx="22" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="3"/>
+<text x="280.0" y="940.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="100" font-weight="700" fill="#1A1A1A" text-anchor="middle" >✊</text>
+<text x="280.0" y="1040.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="40" font-weight="700" fill="#1A1A1A" text-anchor="middle" >Corte</text>
+<text x="280.0" y="1100.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="22" font-weight="600" fill="#5F6368" text-anchor="middle" >puño cerrado: todos paran juntos</text>
+<rect x="522.0" y="800.0" width="440.0" height="380.0" rx="22" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="3"/>
+<text x="742.0" y="940.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="100" font-weight="700" fill="#1A1A1A" text-anchor="middle" >🔁</text>
+<text x="742.0" y="1040.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="40" font-weight="700" fill="#1A1A1A" text-anchor="middle" >Repetir</text>
+<text x="742.0" y="1100.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="22" font-weight="600" fill="#5F6368" text-anchor="middle" >dedo que gira: otra vuelta</text>
+<rect x="984.0" y="800.0" width="440.0" height="380.0" rx="22" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="3"/>
+<text x="1204.0" y="940.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="100" font-weight="700" fill="#1A1A1A" text-anchor="middle" >⬇</text>
+<text x="1204.0" y="1040.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="40" font-weight="700" fill="#1A1A1A" text-anchor="middle" >Más suave</text>
+<text x="1204.0" y="1100.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="22" font-weight="600" fill="#5F6368" text-anchor="middle" >palma hacia abajo</text>
+<rect x="1446.0" y="800.0" width="440.0" height="380.0" rx="22" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="3"/>
+<text x="1666.0" y="940.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="100" font-weight="700" fill="#1A1A1A" text-anchor="middle" >⬆</text>
+<text x="1666.0" y="1040.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="40" font-weight="700" fill="#1A1A1A" text-anchor="middle" >Más fuerte</text>
+<text x="1666.0" y="1100.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="22" font-weight="600" fill="#5F6368" text-anchor="middle" >palma hacia arriba</text>
+<rect x="1908.0" y="800.0" width="440.0" height="380.0" rx="22" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="3"/>
+<text x="2128.0" y="940.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="100" font-weight="700" fill="#1A1A1A" text-anchor="middle" >☝</text>
+<text x="2128.0" y="1040.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="40" font-weight="700" fill="#1A1A1A" text-anchor="middle" >Al inicio</text>
+<text x="2128.0" y="1100.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="22" font-weight="600" fill="#5F6368" text-anchor="middle" >señala arriba: vuelve al principio</text>
+<text x="1200.0" y="1250.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="26" font-weight="600" fill="#8A6A0A" text-anchor="middle" >Las señales pueden cambiar en cada banda: lo importante es acordarlas antes</text>
+</svg>
