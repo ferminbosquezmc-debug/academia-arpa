@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="1200" viewBox="0 0 2400 1200" role="img" aria-label="Tipos de voz y sus rangos aproximados">
+<title>Tipos de voz y sus rangos aproximados</title>
+<rect width="2400" height="1200" fill="#FFFFFF"/>
+<text x="40.0" y="72.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="48" font-weight="700" fill="#1A1A1A" text-anchor="start">Tipos de voz · rangos aproximados</text>
+<text x="40.0" y="124.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="32" font-weight="500" fill="#5F6368" text-anchor="start">Cada voz es distinta: estos rangos son una guía, no una regla · el número indica la octava (DO4 = DO central)</text>
+<rect x="269.0" y="230.0" width="62.0" height="90.0" rx="6" fill="#F4E9C7" stroke="#1A1A1A" stroke-width="1.5"/>
+<text x="300.0" y="290.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="18" font-weight="700" fill="#1A1A1A" text-anchor="middle">DO2</text>
+<rect x="335.0" y="230.0" width="62.0" height="90.0" rx="6" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="1.5"/>
+<rect x="401.0" y="230.0" width="62.0" height="90.0" rx="6" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="1.5"/>
+<rect x="467.0" y="230.0" width="62.0" height="90.0" rx="6" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="1.5"/>
+<rect x="533.0" y="230.0" width="62.0" height="90.0" rx="6" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="1.5"/>
+<rect x="599.0" y="230.0" width="62.0" height="90.0" rx="6" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="1.5"/>
+<rect x="665.0" y="230.0" width="62.0" height="90.0" rx="6" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="1.5"/>
+<rect x="731.0" y="230.0" width="62.0" height="90.0" rx="6" fill="#F4E9C7" stroke="#1A1A1A" stroke-width="1.5"/>
+<text x="762.0" y="290.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="18" font-weight="700" fill="#1A1A1A" text-anchor="middle">DO3</text>
+<rect x="797.0" y="230.0" width="62.0" height="90.0" rx="6" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="1.5"/>
+<rect x="863.0" y="230.0" width="62.0" height="90.0" rx="6" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="1.5"/>
+<rect x="929.0" y="230.0" width="62.0" height="90.0" rx="6" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="1.5"/>
+<rect x="995.0" y="230.0" width="62.0" height="90.0" rx="6" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="1.5"/>
+<rect x="1061.0" y="230.0" width="62.0" height="90.0" rx="6" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="1.5"/>
+<rect x="1127.0" y="230.0" width="62.0" height="90.0" rx="6" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="1.5"/>
+<rect x="1193.0" y="230.0" width="62.0" height="90.0" rx="6" fill="#F4E9C7" stroke="#1A1A1A" stroke-width="1.5"/>
+<text x="1224.0" y="290.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="18" font-weight="700" fill="#1A1A1A" text-anchor="middle">DO4</text>
+<rect x="1259.0" y="230.0" width="62.0" height="90.0" rx="6" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="1.5"/>
+<rect x="1325.0" y="230.0" width="62.0" height="90.0" rx="6" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="1.5"/>
+<rect x="1391.0" y="230.0" width="62.0" height="90.0" rx="6" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="1.5"/>
+<rect x="1457.0" y="230.0" width="62.0" height="90.0" rx="6" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="1.5"/>
+<rect x="1523.0" y="230.0" width="62.0" height="90.0" rx="6" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="1.5"/>
+<rect x="1589.0" y="230.0" width="62.0" height="90.0" rx="6" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="1.5"/>
+<rect x="1655.0" y="230.0" width="62.0" height="90.0" rx="6" fill="#F4E9C7" stroke="#1A1A1A" stroke-width="1.5"/>
+<text x="1686.0" y="290.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="18" font-weight="700" fill="#1A1A1A" text-anchor="middle">DO5</text>
+<rect x="1721.0" y="230.0" width="62.0" height="90.0" rx="6" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="1.5"/>
+<rect x="1787.0" y="230.0" width="62.0" height="90.0" rx="6" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="1.5"/>
+<rect x="1853.0" y="230.0" width="62.0" height="90.0" rx="6" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="1.5"/>
+<rect x="1919.0" y="230.0" width="62.0" height="90.0" rx="6" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="1.5"/>
+<rect x="1985.0" y="230.0" width="62.0" height="90.0" rx="6" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="1.5"/>
+<rect x="2051.0" y="230.0" width="62.0" height="90.0" rx="6" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="1.5"/>
+<rect x="2117.0" y="230.0" width="62.0" height="90.0" rx="6" fill="#F4E9C7" stroke="#1A1A1A" stroke-width="1.5"/>
+<text x="2148.0" y="290.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="18" font-weight="700" fill="#1A1A1A" text-anchor="middle">DO6</text>
+<text x="1224.0" y="350.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="20" font-weight="700" fill="#E5312B" text-anchor="middle">▲ DO central</text>
+<rect x="1204.0" y="420.0" width="832.0" height="70.0" rx="35" fill="#E5312B" stroke="#1A1A1A" stroke-width="2"/>
+<text x="1184.0" y="466.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="28" font-weight="700" fill="#1A1A1A" text-anchor="end">Soprano</text>
+<text x="1620.0" y="466.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="24" font-weight="700" fill="#FFFFFF" text-anchor="middle">DO4 – LA5</text>
+<rect x="1072.0" y="525.0" width="832.0" height="70.0" rx="35" fill="#F57C00" stroke="#1A1A1A" stroke-width="2"/>
+<text x="1052.0" y="571.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="28" font-weight="700" fill="#1A1A1A" text-anchor="end">Mezzosoprano</text>
+<text x="1488.0" y="571.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="24" font-weight="700" fill="#FFFFFF" text-anchor="middle">LA3 – FA5</text>
+<rect x="940.0" y="630.0" width="832.0" height="70.0" rx="35" fill="#C9A227" stroke="#1A1A1A" stroke-width="2"/>
+<text x="920.0" y="676.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="28" font-weight="700" fill="#1A1A1A" text-anchor="end">Contralto</text>
+<text x="1356.0" y="676.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="24" font-weight="700" fill="#1A1A1A" text-anchor="middle">FA3 – RE5</text>
+<rect x="742.0" y="735.0" width="832.0" height="70.0" rx="35" fill="#2E9E4F" stroke="#1A1A1A" stroke-width="2"/>
+<text x="722.0" y="781.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="28" font-weight="700" fill="#1A1A1A" text-anchor="end">Tenor</text>
+<text x="1158.0" y="781.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="24" font-weight="700" fill="#FFFFFF" text-anchor="middle">DO3 – LA4</text>
+<rect x="610.0" y="840.0" width="832.0" height="70.0" rx="35" fill="#2370D6" stroke="#1A1A1A" stroke-width="2"/>
+<text x="590.0" y="886.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="28" font-weight="700" fill="#1A1A1A" text-anchor="end">Barítono</text>
+<text x="1026.0" y="886.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="24" font-weight="700" fill="#FFFFFF" text-anchor="middle">LA2 – FA4</text>
+<rect x="412.0" y="945.0" width="898.0" height="70.0" rx="35" fill="#8E3BB8" stroke="#1A1A1A" stroke-width="2"/>
+<text x="392.0" y="991.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="28" font-weight="700" fill="#1A1A1A" text-anchor="end">Bajo</text>
+<text x="861.0" y="991.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="24" font-weight="700" fill="#FFFFFF" text-anchor="middle">MI2 – RE4</text>
+<text x="1200.0" y="1100.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="24" font-weight="600" fill="#8A6A0A" text-anchor="middle">Las voces de niños y niñas suelen estar entre DO4 y DO5, y crecen con los años · VibraVoice y tu profesor te ayudan a conocer la tuya</text>
+</svg>

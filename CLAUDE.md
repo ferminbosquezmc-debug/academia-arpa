@@ -103,8 +103,8 @@ Se entra desde el botón «Cabina virtual 3D» en la vista de la carrera (`atVie
 - Teoría: Nivel 1 común; Niveles 2 y 3 siguen la línea de piano y guitarra. Los 12 temas antiguos de canto quedan dentro del mapa. Salud vocal en todo el curso (calentar, enfriar, no forzar; con dolor o ronquera que no se va, parar y consultar a un especialista; sin diagnósticos). Repertorio tradicional o de dominio público con letras AMA; no copiar letras protegidas. Rangos de voz «aproximados».
 - Fuente: `contenido/canto/nivel-N/clase-M.md`. Cargar: `python3 herramientas/canto.py ../academia-musica-ama/contenido/canto` (reescribe `const CNC=`). Claves `<nivel>-0canto-<i>`. Láminas: `contenido/canto/generador/laminas.py` → `canto/img/C1_*.svg` (`gImg` acepta `canto/img`). Reutiliza láminas comunes de `guitarra/img` y `piano/img`.
 - **VibraVoice 12D** (app del dueño, versión oficial: https://ferminbosquezmc-debug.github.io/vibravoice/, repo `vibravoice`): se enlaza, no se copia. Tarjeta `VVCARD` en Práctica y marcador `[[vibravoice]]` en los `.md`.
-- Abierto a los estudiantes cuando `CNC` tenga 12 clases (`AVAIL.canto`); antes, solo en modo revisión.
-- Avance: **meses 1 y 2 (clases 1–8) listos**. Letra AMA del «Himno de la alegría» en la clase 8 (tabla sílaba–nota).
+- Abierto a los estudiantes (`AVAIL.canto=1` cuando `CNC` tiene 12 clases o más).
+- Avance: **Nivel 1 completo (clases 1–12)**; siguen 13–36 según MAPA.md. Canciones AMA: «Mi voz» (clase 12); «Estrellita» con letra AMA. Letra AMA del «Himno de la alegría» en la clase 8 (tabla sílaba–nota).
 
 ## Juegos de práctica (vista Práctica)
 Bloque JS que empieza con el comentario `Juegos de práctica`; CSS con prefijo `jg-`; HTML dentro de `<div data-nn>` en `#v-practica` (para que el pintor no toque los textos de Arpi).
