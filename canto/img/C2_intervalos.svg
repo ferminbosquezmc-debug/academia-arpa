@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="1050" viewBox="0 0 2400 1050" role="img" aria-label="Intervalos con melodías de referencia">
+<title>Intervalos con melodías de referencia</title>
+<rect width="2400" height="1050" fill="#FFFFFF"/>
+<text x="40.0" y="72.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="48" font-weight="700" fill="#1A1A1A" text-anchor="start">3.ª, 5.ª y 8.ª: las recuerdo con canciones</text>
+<text x="40.0" y="124.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="32" font-weight="500" fill="#5F6368" text-anchor="start">Si recuerdo cómo empieza una canción, recuerdo el intervalo</text>
+<rect x="60.0" y="220.0" width="600.0" height="640.0" rx="22" fill="#EEF0F4" stroke="none" stroke-width="0"/>
+<text x="360.0" y="290.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="40" font-weight="700" fill="#2E9E4F" text-anchor="middle">3.ª mayor</text>
+<rect x="195.0" y="749.6" width="130.0" height="54.4" rx="27.2" fill="#E5312B" stroke="#1A1A1A" stroke-width="2.5"/>
+<text x="260.0" y="792.2" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32" font-weight="700" fill="#FFFFFF" text-anchor="middle">DO</text>
+<rect x="395.0" y="489.6" width="130.0" height="54.4" rx="27.2" fill="#FFD21F" stroke="#1A1A1A" stroke-width="2.5"/>
+<text x="460.0" y="532.2" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32" font-weight="700" fill="#1A1A1A" text-anchor="middle">MI</text>
+<path d="M 260 730 Q 300 650.0 420 540" fill="none" stroke="#2E9E4F" stroke-width="8" stroke-linecap="round"/>
+<text x="360.0" y="940.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="24" font-weight="600" fill="#1A1A1A" text-anchor="middle">«Mi voz» (clase 12): «Ca-da dí-a…»</text>
+<rect x="820.0" y="220.0" width="600.0" height="640.0" rx="22" fill="#EEF0F4" stroke="none" stroke-width="0"/>
+<text x="1120.0" y="290.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="40" font-weight="700" fill="#2370D6" text-anchor="middle">5.ª justa</text>
+<rect x="955.0" y="749.6" width="130.0" height="54.4" rx="27.2" fill="#E5312B" stroke="#1A1A1A" stroke-width="2.5"/>
+<text x="1020.0" y="792.2" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32" font-weight="700" fill="#FFFFFF" text-anchor="middle">DO</text>
+<rect x="1155.0" y="329.6" width="130.0" height="54.4" rx="27.2" fill="#2AA7E8" stroke="#1A1A1A" stroke-width="2.5"/>
+<text x="1220.0" y="372.2" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32" font-weight="700" fill="#1A1A1A" text-anchor="middle">SOL</text>
+<path d="M 1020 730 Q 1060 570.0 1180 380" fill="none" stroke="#2370D6" stroke-width="8" stroke-linecap="round"/>
+<text x="1120.0" y="940.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="24" font-weight="600" fill="#1A1A1A" text-anchor="middle">«Estrellita»: «Bri-lla, bri-lla…»</text>
+<rect x="1580.0" y="220.0" width="600.0" height="640.0" rx="22" fill="#EEF0F4" stroke="none" stroke-width="0"/>
+<text x="1880.0" y="290.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="40" font-weight="700" fill="#8E3BB8" text-anchor="middle">8.ª justa</text>
+<rect x="1715.0" y="749.6" width="130.0" height="54.4" rx="27.2" fill="#E5312B" stroke="#1A1A1A" stroke-width="2.5"/>
+<text x="1780.0" y="792.2" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32" font-weight="700" fill="#FFFFFF" text-anchor="middle">DO</text>
+<rect x="1915.0" y="189.6" width="130.0" height="54.4" rx="27.2" fill="#E5312B" stroke="#1A1A1A" stroke-width="2.5"/>
+<text x="1980.0" y="232.2" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32" font-weight="700" fill="#FFFFFF" text-anchor="middle">DO↑</text>
+<path d="M 1780 730 Q 1820 500.0 1940 240" fill="none" stroke="#8E3BB8" stroke-width="8" stroke-linecap="round"/>
+<text x="1880.0" y="940.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="24" font-weight="600" fill="#1A1A1A" text-anchor="middle">la escala de Do: del primero al último</text>
+<text x="1200.0" y="1010.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="22" font-weight="600" fill="#5F6368" text-anchor="middle">↑ = la nota de la octava de arriba</text>
+</svg>
