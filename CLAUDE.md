@@ -84,6 +84,13 @@ Se entra desde el botón «Cabina virtual 3D» en la vista de la carrera (`atVie
 - Avance: **Guitarra completa** (clases 1–36). Todas las lecciones antiguas de los Niveles 2 y 3 quedaron dentro de su clase nueva como «Práctica interactiva». La clase 33 usa un estudio original AMA «al estilo de Sor» (no una obra de Sor copiada); el docente puede traer una edición original de dominio público.
 - En los `.md` de las clases, `[[nn:texto]]` evita que el pintor coloree letras sueltas (por ejemplo la forma «A – B – A»). No funciona en el título, el objetivo ni las preguntas: ahí, reescribe sin letras sueltas.
 
+## Batería (Método Integral AMA, 3 niveles · mapa en `academia-musica-ama/contenido/bateria/MAPA.md`)
+- Nivel 1 (clases 1–12) lo escribió otra sesión; el Nivel 2 sigue el mapa (libro AMA «Batería 2»): clases 13–24. Avance: **mes 4 (clases 13–16) listo**.
+- Fuente: `contenido/bateria/nivel-N/clase-M.md` (mismo formato que piano). Cargar: `python3 herramientas/bateria.py ../academia-musica-ama/contenido/bateria` (reescribe `const BNC=`; `--check` compara sin escribir). Claves `<nivel>-0bateria-<i>`.
+- Láminas: `contenido/bateria/generador/laminas_n2.py` → `bateria/img/B2_*.svg`. Colores por extremidad: D rojo, I azul, PD verde, PI morado.
+- Reproductor de ritmos: `[[ritmos:b5,disco]]` en el `.md` (ids en `RY`: b1–b7, marcha, vals, balada, disco, b68, shuffle y los del N3). Batería digital: `[[bateria-digital]]`.
+- Las extremidades D, I, PD, PI no son notas: `bNN()` las marca para que el pintor no las coloree (secuencias, «D», (D), «la D», celdas «| D |», **D**), y la regla del pintor ignora D junto a otras extremidades. `.drp` y `.drk` están fuera del pintor.
+
 ## Juegos de práctica (vista Práctica)
 Bloque JS que empieza con el comentario `Juegos de práctica`; CSS con prefijo `jg-`; HTML dentro de `<div data-nn>` en `#v-practica` (para que el pintor no toque los textos de Arpi).
 - Racha (`jgRacha`): usa `streak()` y los días de `S.min`, igual que el cronómetro. Recompensas en `JG_RW` (3, 7, 14, 21 y 30 días).

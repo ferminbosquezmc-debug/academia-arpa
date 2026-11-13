@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="760" viewBox="0 0 2400 760" role="img" aria-label="Redobles alternados en tresillos">
+<title>Redobles alternados en tresillos</title>
+<rect width="2400" height="760" fill="#FFFFFF"/>
+<text x="40.0" y="72.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="48" font-weight="700" fill="#1A1A1A" text-anchor="start" >Redobles alternados en tresillos</text>
+<text x="40.0" y="124.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="32" font-weight="500" fill="#5F6368" text-anchor="start" >Tres golpes en cada pulso: tri-o-la · el acento (borde dorado) cambia de mano en cada pulso</text>
+<rect x="304.0" y="230.0" width="502.0" height="210.0" rx="14" fill="#EEF0F4" stroke="none" stroke-width="0"/>
+<rect x="814.0" y="230.0" width="502.0" height="210.0" rx="14" fill="#EEF0F4" stroke="none" stroke-width="0"/>
+<rect x="1324.0" y="230.0" width="502.0" height="210.0" rx="14" fill="#EEF0F4" stroke="none" stroke-width="0"/>
+<rect x="1834.0" y="230.0" width="502.0" height="210.0" rx="14" fill="#EEF0F4" stroke="none" stroke-width="0"/>
+<text x="385.0" y="280.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32" font-weight="700" fill="#1A1A1A" text-anchor="middle" >tri</text>
+<text x="555.0" y="280.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32" font-weight="700" fill="#5F6368" text-anchor="middle" >o</text>
+<text x="725.0" y="280.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32" font-weight="700" fill="#5F6368" text-anchor="middle" >la</text>
+<text x="895.0" y="280.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32" font-weight="700" fill="#1A1A1A" text-anchor="middle" >tri</text>
+<text x="1065.0" y="280.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32" font-weight="700" fill="#5F6368" text-anchor="middle" >o</text>
+<text x="1235.0" y="280.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32" font-weight="700" fill="#5F6368" text-anchor="middle" >la</text>
+<text x="1405.0" y="280.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32" font-weight="700" fill="#1A1A1A" text-anchor="middle" >tri</text>
+<text x="1575.0" y="280.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32" font-weight="700" fill="#5F6368" text-anchor="middle" >o</text>
+<text x="1745.0" y="280.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32" font-weight="700" fill="#5F6368" text-anchor="middle" >la</text>
+<text x="1915.0" y="280.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32" font-weight="700" fill="#1A1A1A" text-anchor="middle" >tri</text>
+<text x="2085.0" y="280.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32" font-weight="700" fill="#5F6368" text-anchor="middle" >o</text>
+<text x="2255.0" y="280.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32" font-weight="700" fill="#5F6368" text-anchor="middle" >la</text>
+<text x="270.0" y="381.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="30" font-weight="700" fill="#1A1A1A" text-anchor="end" >Redoblante</text>
+<line x1="300.0" y1="370.0" x2="2340.0" y2="370.0" stroke="#D5D9E0" stroke-width="2" />
+<circle cx="385.0" cy="370.0" r="36.0" fill="#E5312B" stroke="#C9A227" stroke-width="6"/>
+<text x="385.0" y="383.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32.4" font-weight="700" fill="#FFFFFF" text-anchor="middle" >D</text>
+<circle cx="555.0" cy="370.0" r="36.0" fill="#2370D6" stroke="#1A1A1A" stroke-width="2"/>
+<text x="555.0" y="383.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32.4" font-weight="700" fill="#FFFFFF" text-anchor="middle" >I</text>
+<circle cx="725.0" cy="370.0" r="36.0" fill="#E5312B" stroke="#1A1A1A" stroke-width="2"/>
+<text x="725.0" y="383.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32.4" font-weight="700" fill="#FFFFFF" text-anchor="middle" >D</text>
+<circle cx="895.0" cy="370.0" r="36.0" fill="#2370D6" stroke="#C9A227" stroke-width="6"/>
+<text x="895.0" y="383.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32.4" font-weight="700" fill="#FFFFFF" text-anchor="middle" >I</text>
+<circle cx="1065.0" cy="370.0" r="36.0" fill="#E5312B" stroke="#1A1A1A" stroke-width="2"/>
+<text x="1065.0" y="383.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32.4" font-weight="700" fill="#FFFFFF" text-anchor="middle" >D</text>
+<circle cx="1235.0" cy="370.0" r="36.0" fill="#2370D6" stroke="#1A1A1A" stroke-width="2"/>
+<text x="1235.0" y="383.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32.4" font-weight="700" fill="#FFFFFF" text-anchor="middle" >I</text>
+<circle cx="1405.0" cy="370.0" r="36.0" fill="#E5312B" stroke="#C9A227" stroke-width="6"/>
+<text x="1405.0" y="383.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32.4" font-weight="700" fill="#FFFFFF" text-anchor="middle" >D</text>
+<circle cx="1575.0" cy="370.0" r="36.0" fill="#2370D6" stroke="#1A1A1A" stroke-width="2"/>
+<text x="1575.0" y="383.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32.4" font-weight="700" fill="#FFFFFF" text-anchor="middle" >I</text>
+<circle cx="1745.0" cy="370.0" r="36.0" fill="#E5312B" stroke="#1A1A1A" stroke-width="2"/>
+<text x="1745.0" y="383.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32.4" font-weight="700" fill="#FFFFFF" text-anchor="middle" >D</text>
+<circle cx="1915.0" cy="370.0" r="36.0" fill="#2370D6" stroke="#C9A227" stroke-width="6"/>
+<text x="1915.0" y="383.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32.4" font-weight="700" fill="#FFFFFF" text-anchor="middle" >I</text>
+<circle cx="2085.0" cy="370.0" r="36.0" fill="#E5312B" stroke="#1A1A1A" stroke-width="2"/>
+<text x="2085.0" y="383.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32.4" font-weight="700" fill="#FFFFFF" text-anchor="middle" >D</text>
+<circle cx="2255.0" cy="370.0" r="36.0" fill="#2370D6" stroke="#1A1A1A" stroke-width="2"/>
+<text x="2255.0" y="383.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32.4" font-weight="700" fill="#FFFFFF" text-anchor="middle" >I</text>
+<text x="385.0" y="200.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="34" font-weight="700" fill="#8A6A0A" text-anchor="middle" >1</text>
+<text x="895.0" y="200.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="34" font-weight="700" fill="#8A6A0A" text-anchor="middle" >2</text>
+<text x="1405.0" y="200.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="34" font-weight="700" fill="#8A6A0A" text-anchor="middle" >3</text>
+<text x="1915.0" y="200.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="34" font-weight="700" fill="#8A6A0A" text-anchor="middle" >4</text>
+<text x="1200.0" y="620.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="34" font-weight="700" fill="#1A1A1A" text-anchor="middle" >D I D · I D I · D I D · I D I — las manos siempre se alternan</text>
+<text x="1200.0" y="680.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="28" font-weight="600" fill="#5F6368" text-anchor="middle" >Di «tri-o-la» en voz alta: las tres sílabas igual de largas</text>
+</svg>
