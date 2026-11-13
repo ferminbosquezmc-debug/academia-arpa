@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="1200" viewBox="0 0 2400 1200" role="img" aria-label="Tonos y semitonos en el bajo y la cuerda SI">
+<title>Tonos y semitonos en el bajo y la cuerda SI</title>
+<rect width="2400" height="1200" fill="#FFFFFF"/>
+<text x="40.0" y="72.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="48" font-weight="700" fill="#1A1A1A" text-anchor="start" >Un traste = un semitono · dos trastes = un tono</text>
+<text x="40.0" y="124.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="32" font-weight="500" fill="#5F6368" text-anchor="start" >Cuerda SI (5.ª): SI al aire · DO traste 1 · RE traste 3</text>
+<rect x="300.0" y="258.0" width="1250.0" height="84.0" rx="10" fill="#F4E9D8" stroke="#8C8279" stroke-width="2"/>
+<line x1="550.0" y1="258.0" x2="550.0" y2="342.0" stroke="#8C8279" stroke-width="5" />
+<line x1="800.0" y1="258.0" x2="800.0" y2="342.0" stroke="#8C8279" stroke-width="5" />
+<line x1="1050.0" y1="258.0" x2="1050.0" y2="342.0" stroke="#8C8279" stroke-width="5" />
+<line x1="1300.0" y1="258.0" x2="1300.0" y2="342.0" stroke="#8C8279" stroke-width="5" />
+<line x1="1550.0" y1="258.0" x2="1550.0" y2="342.0" stroke="#8C8279" stroke-width="5" />
+<rect x="288.0" y="258.0" width="14.0" height="84.0" rx="0" fill="#1A1A1A" stroke="none" stroke-width="0"/>
+<line x1="240.0" y1="300.0" x2="1550.0" y2="300.0" stroke="#4E453D" stroke-width="7.5" />
+<text x="115.0" y="310.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="26" font-weight="600" fill="#5F6368" text-anchor="middle" >5.ª</text>
+<rect x="147.0" y="281.0" width="66.0" height="34.0" rx="17.0" fill="#8E3BB8" stroke="#1A1A1A" stroke-width="2.5"/>
+<text x="180.0" y="307.6" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF" text-anchor="middle" >SI</text>
+<circle cx="925.0" cy="300.0" r="10.0" fill="#D8CBB4" stroke="none" stroke-width="0"/>
+<circle cx="1425.0" cy="300.0" r="10.0" fill="#D8CBB4" stroke="none" stroke-width="0"/>
+<text x="425.0" y="382.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="24" font-weight="600" fill="#5F6368" text-anchor="middle" >1</text>
+<text x="675.0" y="382.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="24" font-weight="600" fill="#5F6368" text-anchor="middle" >2</text>
+<text x="925.0" y="382.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="24" font-weight="600" fill="#5F6368" text-anchor="middle" >3</text>
+<text x="1175.0" y="382.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="24" font-weight="600" fill="#5F6368" text-anchor="middle" >4</text>
+<text x="1425.0" y="382.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="24" font-weight="600" fill="#5F6368" text-anchor="middle" >5</text>
+<circle cx="260.0" cy="300.0" r="26.0" fill="#8E3BB8" stroke="#1A1A1A" stroke-width="2"/>
+<text x="260.0" y="308.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="middle" >SI</text>
+<rect x="382.0" y="279.1" width="86.0" height="37.4" rx="18.7" fill="#E5312B" stroke="#1A1A1A" stroke-width="2.5"/>
+<text x="425.0" y="308.4" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="22" font-weight="700" fill="#FFFFFF" text-anchor="middle" >DO</text>
+<rect x="632.0" y="279.1" width="86.0" height="37.4" rx="18.7" fill="#1A1A1A" stroke="#1A1A1A" stroke-width="2.5"/>
+<text x="675.0" y="308.4" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="22" font-weight="700" fill="#FFFFFF" text-anchor="middle" >DO♯</text>
+<rect x="882.0" y="279.1" width="86.0" height="37.4" rx="18.7" fill="#F57C00" stroke="#1A1A1A" stroke-width="2.5"/>
+<text x="925.0" y="308.4" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="22" font-weight="700" fill="#1A1A1A" text-anchor="middle" >RE</text>
+<rect x="1132.0" y="279.1" width="86.0" height="37.4" rx="18.7" fill="#1A1A1A" stroke="#1A1A1A" stroke-width="2.5"/>
+<text x="1175.0" y="308.4" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="22" font-weight="700" fill="#FFFFFF" text-anchor="middle" >RE♯</text>
+<rect x="1382.0" y="279.1" width="86.0" height="37.4" rx="18.7" fill="#FFD21F" stroke="#1A1A1A" stroke-width="2.5"/>
+<text x="1425.0" y="308.4" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="22" font-weight="700" fill="#1A1A1A" text-anchor="middle" >MI</text>
+<path d="M 260 410 Q 342 480 425 410" fill="none" stroke="#E5312B" stroke-width="5"/>
+<text x="342.5" y="510.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="28" font-weight="700" fill="#E5312B" text-anchor="middle" >semitono</text>
+<path d="M 425 410 Q 675 480 925 410" fill="none" stroke="#2370D6" stroke-width="5"/>
+<text x="675.0" y="510.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="28" font-weight="700" fill="#2370D6" text-anchor="middle" >tono</text>
+<path d="M 925 410 Q 1175 480 1425 410" fill="none" stroke="#2370D6" stroke-width="5"/>
+<text x="1175.0" y="510.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="28" font-weight="700" fill="#2370D6" text-anchor="middle" >tono</text>
+<text x="1800.0" y="300.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="30" font-weight="700" fill="#1A1A1A" text-anchor="start" >MI–FA y SI–DO:</text>
+<text x="1800.0" y="345.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="26" font-weight="600" fill="#5F6368" text-anchor="start" >semitonos naturales</text>
+<text x="80.0" y="600.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32" font-weight="700" fill="#1A1A1A" text-anchor="start" >En el pentagrama (clave de fa): debajo, con líneas adicionales</text>
+<line x1="140.0" y1="680.0" x2="1300.0" y2="680.0" stroke="#1A1A1A" stroke-width="3" />
+<line x1="140.0" y1="720.0" x2="1300.0" y2="720.0" stroke="#1A1A1A" stroke-width="3" />
+<line x1="140.0" y1="760.0" x2="1300.0" y2="760.0" stroke="#1A1A1A" stroke-width="3" />
+<line x1="140.0" y1="800.0" x2="1300.0" y2="800.0" stroke="#1A1A1A" stroke-width="3" />
+<line x1="140.0" y1="840.0" x2="1300.0" y2="840.0" stroke="#1A1A1A" stroke-width="3" />
+<circle cx="168.0" cy="720.0" r="12.8" fill="#1A1A1A" stroke="none" stroke-width="0"/>
+<path d="M 158.0 720.0 C 158.0 668.0, 230.0 668.0, 230.0 728.0 C 230.0 784.0, 190.0 824.0, 154.0 844.0" fill="none" stroke="#1A1A1A" stroke-width="8.8" stroke-linecap="round"/>
+<circle cx="250.0" cy="700.0" r="5.6" fill="#1A1A1A" stroke="none" stroke-width="0"/>
+<circle cx="250.0" cy="740.0" r="5.6" fill="#1A1A1A" stroke="none" stroke-width="0"/>
+<line x1="486.0" y1="880.0" x2="554.0" y2="880.0" stroke="#1A1A1A" stroke-width="3" />
+<line x1="486.0" y1="920.0" x2="554.0" y2="920.0" stroke="#1A1A1A" stroke-width="3" />
+<ellipse cx="520.0" cy="940.0" rx="24.8" ry="17.6" transform="rotate(-20 520.0 940.0)" fill="#8E3BB8" stroke="#1A1A1A" stroke-width="2.5"/>
+<line x1="542.0" y1="940.0" x2="542.0" y2="808.0" stroke="#1A1A1A" stroke-width="3.5" />
+<line x1="726.0" y1="880.0" x2="794.0" y2="880.0" stroke="#1A1A1A" stroke-width="3" />
+<line x1="726.0" y1="920.0" x2="794.0" y2="920.0" stroke="#1A1A1A" stroke-width="3" />
+<ellipse cx="760.0" cy="920.0" rx="24.8" ry="17.6" transform="rotate(-20 760.0 920.0)" fill="#E5312B" stroke="#1A1A1A" stroke-width="2.5"/>
+<line x1="782.0" y1="920.0" x2="782.0" y2="788.0" stroke="#1A1A1A" stroke-width="3.5" />
+<line x1="966.0" y1="880.0" x2="1034.0" y2="880.0" stroke="#1A1A1A" stroke-width="3" />
+<ellipse cx="1000.0" cy="900.0" rx="24.8" ry="17.6" transform="rotate(-20 1000.0 900.0)" fill="#F57C00" stroke="#1A1A1A" stroke-width="2.5"/>
+<line x1="1022.0" y1="900.0" x2="1022.0" y2="768.0" stroke="#1A1A1A" stroke-width="3.5" />
+<text x="1700.0" y="760.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="26" font-weight="600" fill="#5F6368" text-anchor="start" >SI cuelga de la 2.ª línea adicional</text>
+<text x="1700.0" y="810.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="26" font-weight="600" fill="#5F6368" text-anchor="start" >DO va sobre la 2.ª línea adicional</text>
+<text x="1700.0" y="860.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="26" font-weight="600" fill="#5F6368" text-anchor="start" >RE va entre las dos líneas adicionales</text>
+<text x="1200.0" y="1150.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="26" font-weight="600" fill="#8A6A0A" text-anchor="middle" >Bajo de 4 cuerdas: estas notas graves no existen; tócalas una octava arriba (DO: cuerda LA, traste 3)</text>
+</svg>
