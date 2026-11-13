@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="1000" viewBox="0 0 2400 1000" role="img" aria-label="Armonía a tres voces">
+<title>Armonía a tres voces</title>
+<rect width="2400" height="1000" fill="#FFFFFF"/>
+<text x="40.0" y="72.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="48" font-weight="700" fill="#1A1A1A" text-anchor="start">Tres voces sobre C – F – G7 – C</text>
+<text x="40.0" y="124.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="32" font-weight="500" fill="#5F6368" text-anchor="start">Cada voz canta una nota del acorde y se mueve lo menos posible · en G7, la voz media canta la séptima (FA)</text>
+<rect x="220.0" y="200.0" width="400.0" height="640.0" rx="22" fill="#EEF0F4" stroke="none" stroke-width="0"/>
+<text x="420.0" y="270.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="48" font-weight="700" fill="#1A1A1A" text-anchor="middle">C</text>
+<rect x="355.0" y="390.0" width="130.0" height="54.0" rx="27" fill="#2AA7E8" stroke="#1A1A1A" stroke-width="2.5"/>
+<text x="420.0" y="430.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="30" font-weight="700" fill="#1A1A1A" text-anchor="middle">SOL</text>
+<rect x="355.0" y="540.0" width="130.0" height="54.0" rx="27" fill="#FFD21F" stroke="#1A1A1A" stroke-width="2.5"/>
+<text x="420.0" y="580.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="30" font-weight="700" fill="#1A1A1A" text-anchor="middle">MI</text>
+<rect x="355.0" y="690.0" width="130.0" height="54.0" rx="27" fill="#E5312B" stroke="#1A1A1A" stroke-width="2.5"/>
+<text x="420.0" y="730.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="30" font-weight="700" fill="#FFFFFF" text-anchor="middle">DO</text>
+<rect x="720.0" y="200.0" width="400.0" height="640.0" rx="22" fill="#EEF0F4" stroke="none" stroke-width="0"/>
+<text x="920.0" y="270.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="48" font-weight="700" fill="#1A1A1A" text-anchor="middle">F</text>
+<rect x="855.0" y="390.0" width="130.0" height="54.0" rx="27" fill="#283593" stroke="#1A1A1A" stroke-width="2.5"/>
+<text x="920.0" y="430.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="30" font-weight="700" fill="#FFFFFF" text-anchor="middle">LA</text>
+<rect x="855.0" y="540.0" width="130.0" height="54.0" rx="27" fill="#2E9E4F" stroke="#1A1A1A" stroke-width="2.5"/>
+<text x="920.0" y="580.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="30" font-weight="700" fill="#1A1A1A" text-anchor="middle">FA</text>
+<rect x="855.0" y="690.0" width="130.0" height="54.0" rx="27" fill="#E5312B" stroke="#1A1A1A" stroke-width="2.5"/>
+<text x="920.0" y="730.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="30" font-weight="700" fill="#FFFFFF" text-anchor="middle">DO</text>
+<rect x="1220.0" y="200.0" width="400.0" height="640.0" rx="22" fill="#EEF0F4" stroke="none" stroke-width="0"/>
+<text x="1420.0" y="270.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="48" font-weight="700" fill="#1A1A1A" text-anchor="middle">G7</text>
+<rect x="1355.0" y="390.0" width="130.0" height="54.0" rx="27" fill="#2AA7E8" stroke="#1A1A1A" stroke-width="2.5"/>
+<text x="1420.0" y="430.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="30" font-weight="700" fill="#1A1A1A" text-anchor="middle">SOL</text>
+<rect x="1355.0" y="540.0" width="130.0" height="54.0" rx="27" fill="#2E9E4F" stroke="#1A1A1A" stroke-width="2.5"/>
+<text x="1420.0" y="580.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="30" font-weight="700" fill="#1A1A1A" text-anchor="middle">FA</text>
+<rect x="1355.0" y="690.0" width="130.0" height="54.0" rx="27" fill="#8E3BB8" stroke="#1A1A1A" stroke-width="2.5"/>
+<text x="1420.0" y="730.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="30" font-weight="700" fill="#FFFFFF" text-anchor="middle">SI</text>
+<rect x="1720.0" y="200.0" width="400.0" height="640.0" rx="22" fill="#EEF0F4" stroke="none" stroke-width="0"/>
+<text x="1920.0" y="270.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="48" font-weight="700" fill="#1A1A1A" text-anchor="middle">C</text>
+<rect x="1855.0" y="390.0" width="130.0" height="54.0" rx="27" fill="#2AA7E8" stroke="#1A1A1A" stroke-width="2.5"/>
+<text x="1920.0" y="430.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="30" font-weight="700" fill="#1A1A1A" text-anchor="middle">SOL</text>
+<rect x="1855.0" y="540.0" width="130.0" height="54.0" rx="27" fill="#FFD21F" stroke="#1A1A1A" stroke-width="2.5"/>
+<text x="1920.0" y="580.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="30" font-weight="700" fill="#1A1A1A" text-anchor="middle">MI</text>
+<rect x="1855.0" y="690.0" width="130.0" height="54.0" rx="27" fill="#E5312B" stroke="#1A1A1A" stroke-width="2.5"/>
+<text x="1920.0" y="730.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="30" font-weight="700" fill="#FFFFFF" text-anchor="middle">DO</text>
+<text x="60.0" y="430.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="28" font-weight="700" fill="#2370D6" text-anchor="start">alta</text>
+<text x="60.0" y="580.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="28" font-weight="700" fill="#2E9E4F" text-anchor="start">media</text>
+<text x="60.0" y="730.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="28" font-weight="700" fill="#F57C00" text-anchor="start">baja</text>
+<text x="1200.0" y="920.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="28" font-weight="700" fill="#8A6A0A" text-anchor="middle">En G7 → C: FA baja a MI y SI sube a DO · así se resuelve la tensión</text>
+</svg>
