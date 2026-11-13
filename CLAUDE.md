@@ -95,8 +95,8 @@ Se entra desde el botón «Cabina virtual 3D» en la vista de la carrera (`atVie
 - Teoría: Nivel 1 común a todas las carreras; Niveles 2 y 3 siguen la línea de batería (libros de referencia Bj2 y Bj3: solo el orden de los temas, todo el contenido es original). Cada clase dice «Si tu bajo es de 4 cuerdas, omite la cuerda SI»; tablatura de 5 líneas.
 - Fuente: `contenido/bajo/nivel-N/clase-M.md` (formato de piano/batería). Cargar: `python3 herramientas/bajo.py ../academia-musica-ama/contenido/bajo` (reescribe `const JNC=`). Claves `<nivel>-0bajo-<i>`. `INS.bajo` trae los 36 títulos del mapa.
 - Láminas: `contenido/bajo/generador/laminas.py` → `bajo/img/J1_*.svg` (`gImg` acepta `bajo/img`).
-- Visible para estudiantes cuando el Nivel 1 esté completo (`AVAIL.bajo`); antes solo en modo revisión (`arp-rev`).
-- Avance: **meses 1 y 2 (clases 1–8) listos**.
+- Abierto a los estudiantes (`AVAIL.bajo=1` cuando `JNC` tiene 12 clases o más).
+- Avance: **Nivel 1 completo (clases 1–12)**; siguen las clases 13–36 según MAPA.md (láminas del N2: `J2_*.svg`).
 
 ## Juegos de práctica (vista Práctica)
 Bloque JS que empieza con el comentario `Juegos de práctica`; CSS con prefijo `jg-`; HTML dentro de `<div data-nn>` en `#v-practica` (para que el pintor no toque los textos de Arpi).
