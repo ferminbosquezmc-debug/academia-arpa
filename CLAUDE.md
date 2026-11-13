@@ -5,7 +5,7 @@ Responde en español, breve y claro. El dueño del proyecto es principiante: exp
 ## Archivos
 - `plataforma-arp.html`: plataforma del estudiante. Un solo archivo HTML + CSS + JS puro, sin librerías. Estado en `localStorage` (clave `arp`, objeto `S`). Vistas: home, clases, practica, biblioteca, leccion, perfil, ninos, asig. Se navega con `go('vista')`.
 - La página pública no está aquí: vive en el repositorio `academia-musica-ama`.
-- Láminas de las clases: `guitarra/img`, `guitarra/atlas` y `piano/img` (se publican junto al HTML como archivos del enlace). Las fuentes de las clases (`.md`) y sus scripts viven en `academia-musica-ama/contenido`; lo que esos scripts generen debe terminar aquí, en `plataforma-arp.html` de `main`, antes de publicar.
+- Láminas de las clases: `guitarra/img`, `guitarra/atlas`, `piano/img` y `bateria/img` (se publican junto al HTML como archivos del enlace). Las fuentes de las clases (`.md`) y sus scripts viven en `academia-musica-ama/contenido`; lo que esos scripts generen debe terminar aquí, en `plataforma-arp.html` de `main`, antes de publicar.
 - `herramientas/probar-semana.js`: prueba rápida de una semana.
 
 ## Versión oficial (una sola)
