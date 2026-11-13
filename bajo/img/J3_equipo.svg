@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="900" viewBox="0 0 2400 900" role="img" aria-label="El camino del sonido del bajo">
+<title>El camino del sonido del bajo</title>
+<rect width="2400" height="900" fill="#FFFFFF"/>
+<text x="40.0" y="72.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="48" font-weight="700" fill="#1A1A1A" text-anchor="start" >Mi equipo: el camino del sonido</text>
+<text x="40.0" y="124.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="32" font-weight="500" fill="#5F6368" text-anchor="start" >Del bajo a la sala · revisa cada paso antes del ensayo</text>
+<rect x="80.0" y="280.0" width="400.0" height="300.0" rx="22" fill="#C9A227" stroke="#1A1A1A" stroke-width="2"/>
+<text x="280.0" y="400.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="38" font-weight="700" fill="#1A1A1A" text-anchor="middle" >Bajo</text>
+<text x="280.0" y="470.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="20" font-weight="600" fill="#1A1A1A" text-anchor="middle" >volumen arriba, tono a gusto</text>
+<text x="510.0" y="445.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="50" font-weight="700" fill="#5F6368" text-anchor="middle" >→</text>
+<rect x="540.0" y="280.0" width="400.0" height="300.0" rx="22" fill="#EEF0F4" stroke="#1A1A1A" stroke-width="2"/>
+<text x="740.0" y="400.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="38" font-weight="700" fill="#1A1A1A" text-anchor="middle" >Cable</text>
+<text x="740.0" y="470.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="20" font-weight="600" fill="#1A1A1A" text-anchor="middle" >sin nudos, bien conectado</text>
+<text x="970.0" y="445.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="50" font-weight="700" fill="#5F6368" text-anchor="middle" >→</text>
+<rect x="1000.0" y="280.0" width="400.0" height="300.0" rx="22" fill="#EEF0F4" stroke="#1A1A1A" stroke-width="2"/>
+<text x="1200.0" y="400.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="38" font-weight="700" fill="#1A1A1A" text-anchor="middle" >Afinador</text>
+<text x="1200.0" y="470.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="20" font-weight="600" fill="#1A1A1A" text-anchor="middle" >afino antes de empezar</text>
+<text x="1430.0" y="445.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="50" font-weight="700" fill="#5F6368" text-anchor="middle" >→</text>
+<rect x="1460.0" y="280.0" width="400.0" height="300.0" rx="22" fill="#EEF0F4" stroke="#1A1A1A" stroke-width="2"/>
+<text x="1660.0" y="400.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="38" font-weight="700" fill="#1A1A1A" text-anchor="middle" >Amplificador</text>
+<text x="1660.0" y="470.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="20" font-weight="600" fill="#1A1A1A" text-anchor="middle" >volumen moderado, graves sin exceso</text>
+<text x="1890.0" y="445.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="50" font-weight="700" fill="#5F6368" text-anchor="middle" >→</text>
+<rect x="1920.0" y="280.0" width="400.0" height="300.0" rx="22" fill="#EEF0F4" stroke="#1A1A1A" stroke-width="2"/>
+<text x="2120.0" y="400.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="38" font-weight="700" fill="#1A1A1A" text-anchor="middle" >Caja directa</text>
+<text x="2120.0" y="470.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="20" font-weight="600" fill="#1A1A1A" text-anchor="middle" >envía la señal a la consola</text>
+<text x="1200.0" y="700.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="28" font-weight="700" fill="#1A1A1A" text-anchor="middle" >Encender: primero el bajo y los cables, al final el amplificador · apagar: primero el amplificador</text>
+<text x="1200.0" y="770.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="26" font-weight="600" fill="#8A6A0A" text-anchor="middle" >Cuida tu oído: tapones para músicos y volumen moderado en el escenario</text>
+</svg>

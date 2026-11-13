@@ -97,7 +97,7 @@ Se entra desde el botón «Cabina virtual 3D» en la vista de la carrera (`atVie
 - Láminas: `contenido/bajo/generador/laminas.py` → `bajo/img/J1_*.svg` (`gImg` acepta `bajo/img`).
 - Abierto a los estudiantes (`AVAIL.bajo=1` cuando `JNC` tiene 12 clases o más).
 - Patrones AMA de la escala mayor (cajas de 4 trastes, un dedo por traste): desplazamiento desde el patrón 1 = 0, +2, +5, +7, +10 trastes para los patrones 1 a 5. Patrón 1 = raíz en la cuerda MI con el dedo 2; patrón 4 = raíz en la cuerda LA con el dedo 2 (en SOL: cajas 2–5, 4–7, 7–10, 9–12, 12–15). `scale_box` del generador los dibuja.
-- Avance: **Nivel 1 completo (clases 1–12)** y **meses 4 y 5 (clases 13–20) listos**; siguen las clases 21–36 según MAPA.md (láminas del N2: `J2_*.svg`).
+- Avance: **Bajo completo (clases 1–36)**. Láminas `J1_*` (N1), `J2_*` (N2) y `J3_*` (N3). La clase 34 usa también `bateria/img/B3_banda.svg`.
 
 ## Juegos de práctica (vista Práctica)
 Bloque JS que empieza con el comentario `Juegos de práctica`; CSS con prefijo `jg-`; HTML dentro de `<div data-nn>` en `#v-practica` (para que el pintor no toque los textos de Arpi).

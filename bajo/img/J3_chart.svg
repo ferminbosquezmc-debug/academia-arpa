@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="1400" viewBox="0 0 2400 1400" role="img" aria-label="Un chart de bajo en clave de fa">
+<title>Un chart de bajo en clave de fa</title>
+<rect width="2400" height="1400" fill="#FFFFFF"/>
+<text x="40.0" y="72.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="48" font-weight="700" fill="#1A1A1A" text-anchor="start" >Leo un chart completo de bajo</text>
+<text x="40.0" y="124.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="32" font-weight="500" fill="#5F6368" text-anchor="start" >Secciones, cifrado, repeticiones, casillas y saltos · sin colores, como en la banda</text>
+<line x1="140.0" y1="330.0" x2="2280.0" y2="330.0" stroke="#1A1A1A" stroke-width="3" />
+<line x1="140.0" y1="360.0" x2="2280.0" y2="360.0" stroke="#1A1A1A" stroke-width="3" />
+<line x1="140.0" y1="390.0" x2="2280.0" y2="390.0" stroke="#1A1A1A" stroke-width="3" />
+<line x1="140.0" y1="420.0" x2="2280.0" y2="420.0" stroke="#1A1A1A" stroke-width="3" />
+<line x1="140.0" y1="450.0" x2="2280.0" y2="450.0" stroke="#1A1A1A" stroke-width="3" />
+<circle cx="168.0" cy="360.0" r="9.6" fill="#1A1A1A" stroke="none" stroke-width="0"/>
+<path d="M 158.0 360.0 C 158.0 321.0, 211.0 321.0, 211.0 366.0 C 211.0 408.0, 181.0 438.0, 154.0 453.0" fill="none" stroke="#1A1A1A" stroke-width="6.6" stroke-linecap="round"/>
+<circle cx="226.0" cy="345.0" r="4.2" fill="#1A1A1A" stroke="none" stroke-width="0"/>
+<circle cx="226.0" cy="375.0" r="4.2" fill="#1A1A1A" stroke="none" stroke-width="0"/>
+<text x="140.0" y="260.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32" font-weight="700" fill="#1A1A1A" text-anchor="start" >Intro</text>
+<line x1="765.0" y1="330.0" x2="765.0" y2="450.0" stroke="#1A1A1A" stroke-width="3" />
+<text x="290.0" y="308.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="30" font-weight="700" fill="#1A1A1A" text-anchor="start" >C</text>
+<line x1="308.0" y1="415.0" x2="332.0" y2="365.0" stroke="#1A1A1A" stroke-width="8" />
+<line x1="414.2" y1="415.0" x2="438.2" y2="365.0" stroke="#1A1A1A" stroke-width="8" />
+<line x1="520.5" y1="415.0" x2="544.5" y2="365.0" stroke="#1A1A1A" stroke-width="8" />
+<line x1="626.8" y1="415.0" x2="650.8" y2="365.0" stroke="#1A1A1A" stroke-width="8" />
+<line x1="1270.0" y1="330.0" x2="1270.0" y2="450.0" stroke="#1A1A1A" stroke-width="3" />
+<text x="795.0" y="308.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="30" font-weight="700" fill="#1A1A1A" text-anchor="start" >G</text>
+<line x1="813.0" y1="415.0" x2="837.0" y2="365.0" stroke="#1A1A1A" stroke-width="8" />
+<line x1="919.2" y1="415.0" x2="943.2" y2="365.0" stroke="#1A1A1A" stroke-width="8" />
+<line x1="1025.5" y1="415.0" x2="1049.5" y2="365.0" stroke="#1A1A1A" stroke-width="8" />
+<line x1="1131.8" y1="415.0" x2="1155.8" y2="365.0" stroke="#1A1A1A" stroke-width="8" />
+<line x1="1775.0" y1="330.0" x2="1775.0" y2="450.0" stroke="#1A1A1A" stroke-width="3" />
+<text x="1300.0" y="308.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="30" font-weight="700" fill="#1A1A1A" text-anchor="start" >Am</text>
+<line x1="1318.0" y1="415.0" x2="1342.0" y2="365.0" stroke="#1A1A1A" stroke-width="8" />
+<line x1="1424.2" y1="415.0" x2="1448.2" y2="365.0" stroke="#1A1A1A" stroke-width="8" />
+<line x1="1530.5" y1="415.0" x2="1554.5" y2="365.0" stroke="#1A1A1A" stroke-width="8" />
+<line x1="1636.8" y1="415.0" x2="1660.8" y2="365.0" stroke="#1A1A1A" stroke-width="8" />
+<line x1="2280.0" y1="330.0" x2="2280.0" y2="450.0" stroke="#1A1A1A" stroke-width="3" />
+<text x="1805.0" y="308.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="30" font-weight="700" fill="#1A1A1A" text-anchor="start" >F</text>
+<line x1="1823.0" y1="415.0" x2="1847.0" y2="365.0" stroke="#1A1A1A" stroke-width="8" />
+<line x1="1929.2" y1="415.0" x2="1953.2" y2="365.0" stroke="#1A1A1A" stroke-width="8" />
+<line x1="2035.5" y1="415.0" x2="2059.5" y2="365.0" stroke="#1A1A1A" stroke-width="8" />
+<line x1="2141.8" y1="415.0" x2="2165.8" y2="365.0" stroke="#1A1A1A" stroke-width="8" />
+<line x1="140.0" y1="650.0" x2="2280.0" y2="650.0" stroke="#1A1A1A" stroke-width="3" />
+<line x1="140.0" y1="680.0" x2="2280.0" y2="680.0" stroke="#1A1A1A" stroke-width="3" />
+<line x1="140.0" y1="710.0" x2="2280.0" y2="710.0" stroke="#1A1A1A" stroke-width="3" />
+<line x1="140.0" y1="740.0" x2="2280.0" y2="740.0" stroke="#1A1A1A" stroke-width="3" />
+<line x1="140.0" y1="770.0" x2="2280.0" y2="770.0" stroke="#1A1A1A" stroke-width="3" />
+<circle cx="168.0" cy="680.0" r="9.6" fill="#1A1A1A" stroke="none" stroke-width="0"/>
+<path d="M 158.0 680.0 C 158.0 641.0, 211.0 641.0, 211.0 686.0 C 211.0 728.0, 181.0 758.0, 154.0 773.0" fill="none" stroke="#1A1A1A" stroke-width="6.6" stroke-linecap="round"/>
+<circle cx="226.0" cy="665.0" r="4.2" fill="#1A1A1A" stroke="none" stroke-width="0"/>
+<circle cx="226.0" cy="695.0" r="4.2" fill="#1A1A1A" stroke="none" stroke-width="0"/>
+<text x="140.0" y="580.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32" font-weight="700" fill="#1A1A1A" text-anchor="start" >Estrofa (2 veces)</text>
+<line x1="765.0" y1="650.0" x2="765.0" y2="770.0" stroke="#1A1A1A" stroke-width="3" />
+<text x="290.0" y="628.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="30" font-weight="700" fill="#1A1A1A" text-anchor="start" >C</text>
+<line x1="308.0" y1="735.0" x2="332.0" y2="685.0" stroke="#1A1A1A" stroke-width="8" />
+<line x1="414.2" y1="735.0" x2="438.2" y2="685.0" stroke="#1A1A1A" stroke-width="8" />
+<line x1="520.5" y1="735.0" x2="544.5" y2="685.0" stroke="#1A1A1A" stroke-width="8" />
+<line x1="626.8" y1="735.0" x2="650.8" y2="685.0" stroke="#1A1A1A" stroke-width="8" />
+<line x1="1270.0" y1="650.0" x2="1270.0" y2="770.0" stroke="#1A1A1A" stroke-width="3" />
+<text x="795.0" y="628.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="30" font-weight="700" fill="#1A1A1A" text-anchor="start" >F</text>
+<line x1="813.0" y1="735.0" x2="837.0" y2="685.0" stroke="#1A1A1A" stroke-width="8" />
+<line x1="919.2" y1="735.0" x2="943.2" y2="685.0" stroke="#1A1A1A" stroke-width="8" />
+<line x1="1025.5" y1="735.0" x2="1049.5" y2="685.0" stroke="#1A1A1A" stroke-width="8" />
+<line x1="1131.8" y1="735.0" x2="1155.8" y2="685.0" stroke="#1A1A1A" stroke-width="8" />
+<line x1="1775.0" y1="650.0" x2="1775.0" y2="770.0" stroke="#1A1A1A" stroke-width="3" />
+<text x="1300.0" y="628.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="30" font-weight="700" fill="#1A1A1A" text-anchor="start" >G</text>
+<line x1="1318.0" y1="735.0" x2="1342.0" y2="685.0" stroke="#1A1A1A" stroke-width="8" />
+<line x1="1424.2" y1="735.0" x2="1448.2" y2="685.0" stroke="#1A1A1A" stroke-width="8" />
+<line x1="1530.5" y1="735.0" x2="1554.5" y2="685.0" stroke="#1A1A1A" stroke-width="8" />
+<line x1="1636.8" y1="735.0" x2="1660.8" y2="685.0" stroke="#1A1A1A" stroke-width="8" />
+<line x1="2280.0" y1="650.0" x2="2280.0" y2="770.0" stroke="#1A1A1A" stroke-width="7" />
+<text x="1805.0" y="628.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="30" font-weight="700" fill="#1A1A1A" text-anchor="start" >C</text>
+<line x1="1823.0" y1="735.0" x2="1847.0" y2="685.0" stroke="#1A1A1A" stroke-width="8" />
+<line x1="1929.2" y1="735.0" x2="1953.2" y2="685.0" stroke="#1A1A1A" stroke-width="8" />
+<line x1="2035.5" y1="735.0" x2="2059.5" y2="685.0" stroke="#1A1A1A" stroke-width="8" />
+<line x1="2141.8" y1="735.0" x2="2165.8" y2="685.0" stroke="#1A1A1A" stroke-width="8" />
+<rect x="266.0" y="650.0" width="8.0" height="120.0" rx="0" fill="#1A1A1A" stroke="none" stroke-width="0"/>
+<circle cx="290.0" cy="695.0" r="5.0" fill="#1A1A1A" stroke="none" stroke-width="0"/>
+<circle cx="290.0" cy="725.0" r="5.0" fill="#1A1A1A" stroke="none" stroke-width="0"/>
+<rect x="1763.0" y="650.0" width="8.0" height="120.0" rx="0" fill="#1A1A1A" stroke="none" stroke-width="0"/>
+<circle cx="1747.0" cy="695.0" r="5.0" fill="#1A1A1A" stroke="none" stroke-width="0"/>
+<circle cx="1747.0" cy="725.0" r="5.0" fill="#1A1A1A" stroke="none" stroke-width="0"/>
+<line x1="1270.0" y1="590.0" x2="1745.0" y2="590.0" stroke="#1A1A1A" stroke-width="3" />
+<line x1="1270.0" y1="590.0" x2="1270.0" y2="610.0" stroke="#1A1A1A" stroke-width="3" />
+<text x="1430.0" y="584.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="26" font-weight="700" fill="#1A1A1A" text-anchor="start" >1.</text>
+<line x1="1775.0" y1="590.0" x2="2280.0" y2="590.0" stroke="#1A1A1A" stroke-width="3" />
+<line x1="1775.0" y1="590.0" x2="1775.0" y2="610.0" stroke="#1A1A1A" stroke-width="3" />
+<text x="1935.0" y="584.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="26" font-weight="700" fill="#1A1A1A" text-anchor="start" >2.</text>
+<text x="2280.0" y="825.0" font-family="'DejaVu Serif', serif" font-size="30" font-weight="700" fill="#1A1A1A" text-anchor="end" font-style="italic">Fine</text>
+<line x1="140.0" y1="970.0" x2="2280.0" y2="970.0" stroke="#1A1A1A" stroke-width="3" />
+<line x1="140.0" y1="1000.0" x2="2280.0" y2="1000.0" stroke="#1A1A1A" stroke-width="3" />
+<line x1="140.0" y1="1030.0" x2="2280.0" y2="1030.0" stroke="#1A1A1A" stroke-width="3" />
+<line x1="140.0" y1="1060.0" x2="2280.0" y2="1060.0" stroke="#1A1A1A" stroke-width="3" />
+<line x1="140.0" y1="1090.0" x2="2280.0" y2="1090.0" stroke="#1A1A1A" stroke-width="3" />
+<circle cx="168.0" cy="1000.0" r="9.6" fill="#1A1A1A" stroke="none" stroke-width="0"/>
+<path d="M 158.0 1000.0 C 158.0 961.0, 211.0 961.0, 211.0 1006.0 C 211.0 1048.0, 181.0 1078.0, 154.0 1093.0" fill="none" stroke="#1A1A1A" stroke-width="6.6" stroke-linecap="round"/>
+<circle cx="226.0" cy="985.0" r="4.2" fill="#1A1A1A" stroke="none" stroke-width="0"/>
+<circle cx="226.0" cy="1015.0" r="4.2" fill="#1A1A1A" stroke="none" stroke-width="0"/>
+<text x="140.0" y="900.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32" font-weight="700" fill="#1A1A1A" text-anchor="start" >Coro</text>
+<line x1="765.0" y1="970.0" x2="765.0" y2="1090.0" stroke="#1A1A1A" stroke-width="3" />
+<text x="290.0" y="948.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="30" font-weight="700" fill="#1A1A1A" text-anchor="start" >F</text>
+<line x1="308.0" y1="1055.0" x2="332.0" y2="1005.0" stroke="#1A1A1A" stroke-width="8" />
+<line x1="414.2" y1="1055.0" x2="438.2" y2="1005.0" stroke="#1A1A1A" stroke-width="8" />
+<line x1="520.5" y1="1055.0" x2="544.5" y2="1005.0" stroke="#1A1A1A" stroke-width="8" />
+<line x1="626.8" y1="1055.0" x2="650.8" y2="1005.0" stroke="#1A1A1A" stroke-width="8" />
+<line x1="1270.0" y1="970.0" x2="1270.0" y2="1090.0" stroke="#1A1A1A" stroke-width="3" />
+<text x="795.0" y="948.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="30" font-weight="700" fill="#1A1A1A" text-anchor="start" >G</text>
+<line x1="813.0" y1="1055.0" x2="837.0" y2="1005.0" stroke="#1A1A1A" stroke-width="8" />
+<line x1="919.2" y1="1055.0" x2="943.2" y2="1005.0" stroke="#1A1A1A" stroke-width="8" />
+<line x1="1025.5" y1="1055.0" x2="1049.5" y2="1005.0" stroke="#1A1A1A" stroke-width="8" />
+<line x1="1131.8" y1="1055.0" x2="1155.8" y2="1005.0" stroke="#1A1A1A" stroke-width="8" />
+<line x1="1775.0" y1="970.0" x2="1775.0" y2="1090.0" stroke="#1A1A1A" stroke-width="3" />
+<text x="1300.0" y="948.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="30" font-weight="700" fill="#1A1A1A" text-anchor="start" >C</text>
+<line x1="1318.0" y1="1055.0" x2="1342.0" y2="1005.0" stroke="#1A1A1A" stroke-width="8" />
+<line x1="1424.2" y1="1055.0" x2="1448.2" y2="1005.0" stroke="#1A1A1A" stroke-width="8" />
+<line x1="1530.5" y1="1055.0" x2="1554.5" y2="1005.0" stroke="#1A1A1A" stroke-width="8" />
+<line x1="1636.8" y1="1055.0" x2="1660.8" y2="1005.0" stroke="#1A1A1A" stroke-width="8" />
+<line x1="2280.0" y1="970.0" x2="2280.0" y2="1090.0" stroke="#1A1A1A" stroke-width="7" />
+<text x="1805.0" y="948.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="30" font-weight="700" fill="#1A1A1A" text-anchor="start" >C</text>
+<line x1="1823.0" y1="1055.0" x2="1847.0" y2="1005.0" stroke="#1A1A1A" stroke-width="8" />
+<line x1="1929.2" y1="1055.0" x2="1953.2" y2="1005.0" stroke="#1A1A1A" stroke-width="8" />
+<line x1="2035.5" y1="1055.0" x2="2059.5" y2="1005.0" stroke="#1A1A1A" stroke-width="8" />
+<line x1="2141.8" y1="1055.0" x2="2165.8" y2="1005.0" stroke="#1A1A1A" stroke-width="8" />
+<text x="2280.0" y="1145.0" font-family="'DejaVu Serif', serif" font-size="30" font-weight="700" fill="#1A1A1A" text-anchor="end" font-style="italic">D.C. al Fine</text>
+<text x="1200.0" y="1330.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="26" font-weight="600" fill="#8A6A0A" text-anchor="middle" >Barras inclinadas = toco raíces o mi línea, siguiendo el cifrado · Fine está al final de la estrofa</text>
+</svg>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="900" viewBox="0 0 2400 900" role="img" aria-label="Programa de la presentación final de bajo">
+<title>Programa de la presentación final de bajo</title>
+<rect width="2400" height="900" fill="#FFFFFF"/>
+<text x="40.0" y="72.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="48" font-weight="700" fill="#1A1A1A" text-anchor="start" >¡Presentación final! · Bajo</text>
+<text x="40.0" y="124.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="32" font-weight="500" fill="#5F6368" text-anchor="start" >El programa de mi concierto · Nivel 3</text>
+<rect x="80.0" y="220.0" width="540.0" height="460.0" rx="24" fill="#2AA7E8" stroke="#1A1A1A" stroke-width="2"/>
+<circle cx="350.0" cy="320.0" r="50.0" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="2"/>
+<text x="350.0" y="340.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="52" font-weight="700" fill="#1A1A1A" text-anchor="middle" >1</text>
+<text x="350.0" y="460.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="44" font-weight="700" fill="#FFFFFF" text-anchor="middle" >Escalas</text>
+<text x="350.0" y="540.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="22" font-weight="600" fill="#FFFFFF" text-anchor="middle" >los 5 patrones y la pentatónica</text>
+<rect x="650.0" y="220.0" width="540.0" height="460.0" rx="24" fill="#2E9E4F" stroke="#1A1A1A" stroke-width="2"/>
+<circle cx="920.0" cy="320.0" r="50.0" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="2"/>
+<text x="920.0" y="340.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="52" font-weight="700" fill="#1A1A1A" text-anchor="middle" >2</text>
+<text x="920.0" y="460.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="44" font-weight="700" fill="#FFFFFF" text-anchor="middle" >Tres estilos</text>
+<text x="920.0" y="540.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="22" font-weight="600" fill="#FFFFFF" text-anchor="middle" >balada, rock, cumbia o reggae</text>
+<rect x="1220.0" y="220.0" width="540.0" height="460.0" rx="24" fill="#F57C00" stroke="#1A1A1A" stroke-width="2"/>
+<circle cx="1490.0" cy="320.0" r="50.0" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="2"/>
+<text x="1490.0" y="340.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="52" font-weight="700" fill="#1A1A1A" text-anchor="middle" >3</text>
+<text x="1490.0" y="460.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="44" font-weight="700" fill="#FFFFFF" text-anchor="middle" >Canción con banda</text>
+<text x="1490.0" y="540.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="22" font-weight="600" fill="#FFFFFF" text-anchor="middle" >leo el chart y sigo las señales</text>
+<rect x="1790.0" y="220.0" width="540.0" height="460.0" rx="24" fill="#E5312B" stroke="#1A1A1A" stroke-width="2"/>
+<circle cx="2060.0" cy="320.0" r="50.0" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="2"/>
+<text x="2060.0" y="340.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="52" font-weight="700" fill="#1A1A1A" text-anchor="middle" >4</text>
+<text x="2060.0" y="460.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="44" font-weight="700" fill="#FFFFFF" text-anchor="middle" >Groove de slap</text>
+<text x="2060.0" y="540.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="22" font-weight="600" fill="#FFFFFF" text-anchor="middle" >mi groove de funk con slap</text>
+<text x="1200.0" y="790.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="30" font-weight="600" fill="#5F6368" text-anchor="middle" >Antes: afino, reviso cables y amplificador · Después: saludo, agradezco y guardo mi equipo</text>
+</svg>

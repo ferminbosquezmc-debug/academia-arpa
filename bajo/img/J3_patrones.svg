@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="900" viewBox="0 0 2400 900" role="img" aria-label="Los cinco patrones de la escala mayor en el mástil">
+<title>Los cinco patrones de la escala mayor en el mástil</title>
+<rect width="2400" height="900" fill="#FFFFFF"/>
+<text x="40.0" y="72.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="48" font-weight="700" fill="#1A1A1A" text-anchor="start" >Los 5 patrones cubren todo el mástil (SOL mayor)</text>
+<text x="40.0" y="124.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="32" font-weight="500" fill="#5F6368" text-anchor="start" >Cada patrón es una caja de 4 trastes · se encadenan uno detrás del otro</text>
+<rect x="160.0" y="300.0" width="2240.0" height="330.0" rx="10" fill="#F4E9D8" stroke="#8C8279" stroke-width="2"/>
+<line x1="300.0" y1="300.0" x2="300.0" y2="630.0" stroke="#8C8279" stroke-width="4" />
+<line x1="440.0" y1="300.0" x2="440.0" y2="630.0" stroke="#8C8279" stroke-width="4" />
+<line x1="580.0" y1="300.0" x2="580.0" y2="630.0" stroke="#8C8279" stroke-width="4" />
+<line x1="720.0" y1="300.0" x2="720.0" y2="630.0" stroke="#8C8279" stroke-width="4" />
+<line x1="860.0" y1="300.0" x2="860.0" y2="630.0" stroke="#8C8279" stroke-width="4" />
+<line x1="1000.0" y1="300.0" x2="1000.0" y2="630.0" stroke="#8C8279" stroke-width="4" />
+<line x1="1140.0" y1="300.0" x2="1140.0" y2="630.0" stroke="#8C8279" stroke-width="4" />
+<line x1="1280.0" y1="300.0" x2="1280.0" y2="630.0" stroke="#8C8279" stroke-width="4" />
+<line x1="1420.0" y1="300.0" x2="1420.0" y2="630.0" stroke="#8C8279" stroke-width="4" />
+<line x1="1560.0" y1="300.0" x2="1560.0" y2="630.0" stroke="#8C8279" stroke-width="4" />
+<line x1="1700.0" y1="300.0" x2="1700.0" y2="630.0" stroke="#8C8279" stroke-width="4" />
+<line x1="1840.0" y1="300.0" x2="1840.0" y2="630.0" stroke="#8C8279" stroke-width="4" />
+<line x1="1980.0" y1="300.0" x2="1980.0" y2="630.0" stroke="#8C8279" stroke-width="4" />
+<line x1="2120.0" y1="300.0" x2="2120.0" y2="630.0" stroke="#8C8279" stroke-width="4" />
+<line x1="2260.0" y1="300.0" x2="2260.0" y2="630.0" stroke="#8C8279" stroke-width="4" />
+<line x1="2400.0" y1="300.0" x2="2400.0" y2="630.0" stroke="#8C8279" stroke-width="4" />
+<text x="230.0" y="670.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="22" font-weight="600" fill="#5F6368" text-anchor="middle" >1</text>
+<text x="370.0" y="670.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="22" font-weight="600" fill="#5F6368" text-anchor="middle" >2</text>
+<text x="510.0" y="670.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="22" font-weight="600" fill="#5F6368" text-anchor="middle" >3</text>
+<text x="650.0" y="670.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="22" font-weight="600" fill="#5F6368" text-anchor="middle" >4</text>
+<text x="790.0" y="670.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="22" font-weight="600" fill="#5F6368" text-anchor="middle" >5</text>
+<text x="930.0" y="670.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="22" font-weight="600" fill="#5F6368" text-anchor="middle" >6</text>
+<text x="1070.0" y="670.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="22" font-weight="600" fill="#5F6368" text-anchor="middle" >7</text>
+<text x="1210.0" y="670.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="22" font-weight="600" fill="#5F6368" text-anchor="middle" >8</text>
+<text x="1350.0" y="670.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="22" font-weight="600" fill="#5F6368" text-anchor="middle" >9</text>
+<text x="1490.0" y="670.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="22" font-weight="600" fill="#5F6368" text-anchor="middle" >10</text>
+<text x="1630.0" y="670.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="22" font-weight="600" fill="#5F6368" text-anchor="middle" >11</text>
+<text x="1770.0" y="670.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="22" font-weight="600" fill="#5F6368" text-anchor="middle" >12</text>
+<text x="1910.0" y="670.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="22" font-weight="600" fill="#5F6368" text-anchor="middle" >13</text>
+<text x="2050.0" y="670.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="22" font-weight="600" fill="#5F6368" text-anchor="middle" >14</text>
+<text x="2190.0" y="670.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="22" font-weight="600" fill="#5F6368" text-anchor="middle" >15</text>
+<text x="2330.0" y="670.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="22" font-weight="600" fill="#5F6368" text-anchor="middle" >16</text>
+<rect x="306.0" y="320.0" width="548.0" height="130.0" rx="16" fill="#E5312B" stroke="#1A1A1A" stroke-width="2"/>
+<text x="580.0" y="402.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32" font-weight="700" fill="#FFFFFF" text-anchor="middle" >Patrón 1</text>
+<rect x="586.0" y="470.0" width="548.0" height="130.0" rx="16" fill="#F57C00" stroke="#1A1A1A" stroke-width="2"/>
+<text x="860.0" y="552.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32" font-weight="700" fill="#FFFFFF" text-anchor="middle" >Patrón 2</text>
+<rect x="1006.0" y="320.0" width="548.0" height="130.0" rx="16" fill="#2E9E4F" stroke="#1A1A1A" stroke-width="2"/>
+<text x="1280.0" y="402.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32" font-weight="700" fill="#FFFFFF" text-anchor="middle" >Patrón 3</text>
+<rect x="1286.0" y="470.0" width="548.0" height="130.0" rx="16" fill="#2370D6" stroke="#1A1A1A" stroke-width="2"/>
+<text x="1560.0" y="552.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32" font-weight="700" fill="#FFFFFF" text-anchor="middle" >Patrón 4</text>
+<rect x="1706.0" y="320.0" width="548.0" height="130.0" rx="16" fill="#8E3BB8" stroke="#1A1A1A" stroke-width="2"/>
+<text x="1980.0" y="402.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32" font-weight="700" fill="#FFFFFF" text-anchor="middle" >Patrón 5</text>
+<text x="1200.0" y="760.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="26" font-weight="700" fill="#1A1A1A" text-anchor="middle" >Patrón 1: trastes 2–5 · 2: 4–7 · 3: 7–10 · 4: 9–12 · 5: 12–15 · después del 5 vuelve el 1 (trastes 14–17)</text>
+<text x="1200.0" y="820.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="24" font-weight="600" fill="#8A6A0A" text-anchor="middle" >Para otra tonalidad, toda la cadena se mueve junta</text>
+</svg>

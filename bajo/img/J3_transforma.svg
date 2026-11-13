@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="1100" viewBox="0 0 2400 1100" role="img" aria-label="Transformar intervalos en el mástil">
+<title>Transformar intervalos en el mástil</title>
+<rect width="2400" height="1100" fill="#FFFFFF"/>
+<text x="40.0" y="72.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="48" font-weight="700" fill="#1A1A1A" text-anchor="start" >Transformo intervalos: un traste cambia todo</text>
+<text x="40.0" y="124.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="32" font-weight="500" fill="#5F6368" text-anchor="start" >Mayor – 1 traste = menor · justo + 1 traste = aumentado · justo – 1 traste = disminuido</text>
+<rect x="100.0" y="250.0" width="420.0" height="330.0" rx="20" fill="#EEF0F4" stroke="none" stroke-width="0"/>
+<text x="310.0" y="340.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="38" font-weight="700" fill="#1A1A1A" text-anchor="middle" >3M → 3m</text>
+<text x="310.0" y="420.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="30" font-weight="700" fill="#2370D6" text-anchor="middle" >MI → MI♭</text>
+<text x="310.0" y="490.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="24" font-weight="600" fill="#5F6368" text-anchor="middle" >un traste atrás</text>
+<rect x="550.0" y="250.0" width="420.0" height="330.0" rx="20" fill="#EEF0F4" stroke="none" stroke-width="0"/>
+<text x="760.0" y="340.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="38" font-weight="700" fill="#1A1A1A" text-anchor="middle" >6M → 6m</text>
+<text x="760.0" y="420.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="30" font-weight="700" fill="#2370D6" text-anchor="middle" >LA → LA♭</text>
+<text x="760.0" y="490.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="24" font-weight="600" fill="#5F6368" text-anchor="middle" >un traste atrás</text>
+<rect x="1000.0" y="250.0" width="420.0" height="330.0" rx="20" fill="#EEF0F4" stroke="none" stroke-width="0"/>
+<text x="1210.0" y="340.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="38" font-weight="700" fill="#1A1A1A" text-anchor="middle" >7M → 7m</text>
+<text x="1210.0" y="420.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="30" font-weight="700" fill="#2370D6" text-anchor="middle" >SI → SI♭</text>
+<text x="1210.0" y="490.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="24" font-weight="600" fill="#5F6368" text-anchor="middle" >un traste atrás</text>
+<rect x="1450.0" y="250.0" width="420.0" height="330.0" rx="20" fill="#EEF0F4" stroke="none" stroke-width="0"/>
+<text x="1660.0" y="340.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="38" font-weight="700" fill="#1A1A1A" text-anchor="middle" >5J → 5dim</text>
+<text x="1660.0" y="420.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="30" font-weight="700" fill="#2370D6" text-anchor="middle" >SOL → SOL♭</text>
+<text x="1660.0" y="490.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="24" font-weight="600" fill="#5F6368" text-anchor="middle" >un traste atrás</text>
+<rect x="1900.0" y="250.0" width="420.0" height="330.0" rx="20" fill="#EEF0F4" stroke="none" stroke-width="0"/>
+<text x="2110.0" y="340.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="38" font-weight="700" fill="#1A1A1A" text-anchor="middle" >4J → 4aum</text>
+<text x="2110.0" y="420.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="30" font-weight="700" fill="#2370D6" text-anchor="middle" >FA → FA♯</text>
+<text x="2110.0" y="490.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="24" font-weight="600" fill="#5F6368" text-anchor="middle" >un traste adelante</text>
+<text x="80.0" y="700.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32" font-weight="700" fill="#1A1A1A" text-anchor="start" >Transportar: muevo toda la forma y la canción suena en otra tonalidad</text>
+<rect x="140.0" y="760.0" width="700.0" height="220.0" rx="20" fill="#EEF0F4" stroke="none" stroke-width="0"/>
+<text x="490.0" y="840.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32" font-weight="700" fill="#1A1A1A" text-anchor="middle" >misma línea en DO</text>
+<text x="490.0" y="910.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="26" font-weight="600" fill="#5F6368" text-anchor="middle" >raíz: cuerda LA, traste 3</text>
+<rect x="880.0" y="760.0" width="700.0" height="220.0" rx="20" fill="#EEF0F4" stroke="none" stroke-width="0"/>
+<text x="1230.0" y="840.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32" font-weight="700" fill="#1A1A1A" text-anchor="middle" >misma línea en RE</text>
+<text x="1230.0" y="910.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="26" font-weight="600" fill="#5F6368" text-anchor="middle" >raíz: cuerda LA, traste 5</text>
+<rect x="1620.0" y="760.0" width="700.0" height="220.0" rx="20" fill="#EEF0F4" stroke="none" stroke-width="0"/>
+<text x="1970.0" y="840.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32" font-weight="700" fill="#1A1A1A" text-anchor="middle" >misma línea en MI</text>
+<text x="1970.0" y="910.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="26" font-weight="600" fill="#5F6368" text-anchor="middle" >raíz: cuerda LA, traste 7</text>
+</svg>
