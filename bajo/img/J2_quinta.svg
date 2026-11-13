@@ -60,7 +60,7 @@
 <line x1="290.0" y1="1000.0" x2="390.0" y2="1000.0" stroke="#E5312B" stroke-width="8" />
 <circle cx="500.0" cy="1000.0" r="40.0" fill="#2370D6" stroke="#1A1A1A" stroke-width="2"/>
 <text x="500.0" y="1012.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32" font-weight="700" fill="#FFFFFF" text-anchor="middle" >5</text>
-<line x1="610.0" y1="1000.0" x2="710.0" y2="1000.0" stroke="#E5312B" stroke-width="8" />
+<line x1="610.0" y1="1000.0" x2="710.0" y2="1000.0" stroke="#2370D6" stroke-width="8" />
 <text x="880.0" y="920.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="26" font-weight="600" fill="#5F6368" text-anchor="start" >negras</text>
 <circle cx="940.0" cy="1000.0" r="40.0" fill="#E5312B" stroke="#1A1A1A" stroke-width="2"/>
 <text x="940.0" y="1012.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32" font-weight="700" fill="#FFFFFF" text-anchor="middle" >R</text>
