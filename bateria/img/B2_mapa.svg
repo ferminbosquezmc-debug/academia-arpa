@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="900" viewBox="0 0 2400 900" role="img" aria-label="Mapa de una canción para la batería">
+<title>Mapa de una canción para la batería</title>
+<rect width="2400" height="900" fill="#FFFFFF"/>
+<text x="40.0" y="72.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="48" font-weight="700" fill="#1A1A1A" text-anchor="start" >El mapa de la canción</text>
+<text x="40.0" y="124.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="32" font-weight="500" fill="#5F6368" text-anchor="start" >Antes de tocar, dibujo las partes, el ritmo de cada una y dónde van los fills</text>
+<rect x="60.0" y="230.0" width="360.0" height="340.0" rx="20" fill="#C9C3B6" stroke="#1A1A1A" stroke-width="2"/>
+<text x="240.0" y="300.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="40" font-weight="700" fill="#1A1A1A" text-anchor="middle" >Intro</text>
+<text x="240.0" y="350.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="28" font-weight="600" fill="#1A1A1A" text-anchor="middle" >4 comp.</text>
+<text x="240.0" y="420.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="26" font-weight="600" fill="#1A1A1A" text-anchor="middle" >hi-hat solo</text>
+<text x="240.0" y="510.0" font-family="'DejaVu Serif', 'Times New Roman', serif" font-size="44" font-weight="700" fill="#1A1A1A" text-anchor="middle" font-style="italic">p</text>
+<rect x="445.0" y="230.0" width="360.0" height="340.0" rx="20" fill="#2AA7E8" stroke="#1A1A1A" stroke-width="2"/>
+<text x="625.0" y="300.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="40" font-weight="700" fill="#FFFFFF" text-anchor="middle" >Estrofa</text>
+<text x="625.0" y="350.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="28" font-weight="600" fill="#FFFFFF" text-anchor="middle" >8 comp.</text>
+<text x="625.0" y="420.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="26" font-weight="600" fill="#FFFFFF" text-anchor="middle" >ritmo suave</text>
+<text x="625.0" y="510.0" font-family="'DejaVu Serif', 'Times New Roman', serif" font-size="44" font-weight="700" fill="#FFFFFF" text-anchor="middle" font-style="italic">mp</text>
+<path d="M427 640 l18 -40 l18 40 Z" fill="#C9A227" stroke="#1A1A1A" stroke-width="2"/>
+<rect x="830.0" y="230.0" width="360.0" height="340.0" rx="20" fill="#F57C00" stroke="#1A1A1A" stroke-width="2"/>
+<text x="1010.0" y="300.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="40" font-weight="700" fill="#FFFFFF" text-anchor="middle" >Coro</text>
+<text x="1010.0" y="350.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="28" font-weight="600" fill="#FFFFFF" text-anchor="middle" >8 comp.</text>
+<text x="1010.0" y="420.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="26" font-weight="600" fill="#FFFFFF" text-anchor="middle" >ritmo con crash</text>
+<text x="1010.0" y="510.0" font-family="'DejaVu Serif', 'Times New Roman', serif" font-size="44" font-weight="700" fill="#FFFFFF" text-anchor="middle" font-style="italic">f</text>
+<path d="M812 640 l18 -40 l18 40 Z" fill="#C9A227" stroke="#1A1A1A" stroke-width="2"/>
+<rect x="1215.0" y="230.0" width="360.0" height="340.0" rx="20" fill="#2AA7E8" stroke="#1A1A1A" stroke-width="2"/>
+<text x="1395.0" y="300.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="40" font-weight="700" fill="#FFFFFF" text-anchor="middle" >Estrofa</text>
+<text x="1395.0" y="350.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="28" font-weight="600" fill="#FFFFFF" text-anchor="middle" >8 comp.</text>
+<text x="1395.0" y="420.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="26" font-weight="600" fill="#FFFFFF" text-anchor="middle" >ritmo suave</text>
+<text x="1395.0" y="510.0" font-family="'DejaVu Serif', 'Times New Roman', serif" font-size="44" font-weight="700" fill="#FFFFFF" text-anchor="middle" font-style="italic">mp</text>
+<path d="M1197 640 l18 -40 l18 40 Z" fill="#C9A227" stroke="#1A1A1A" stroke-width="2"/>
+<rect x="1600.0" y="230.0" width="360.0" height="340.0" rx="20" fill="#F57C00" stroke="#1A1A1A" stroke-width="2"/>
+<text x="1780.0" y="300.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="40" font-weight="700" fill="#FFFFFF" text-anchor="middle" >Coro</text>
+<text x="1780.0" y="350.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="28" font-weight="600" fill="#FFFFFF" text-anchor="middle" >8 comp.</text>
+<text x="1780.0" y="420.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="26" font-weight="600" fill="#FFFFFF" text-anchor="middle" >ritmo con crash</text>
+<text x="1780.0" y="510.0" font-family="'DejaVu Serif', 'Times New Roman', serif" font-size="44" font-weight="700" fill="#FFFFFF" text-anchor="middle" font-style="italic">f</text>
+<path d="M1582 640 l18 -40 l18 40 Z" fill="#C9A227" stroke="#1A1A1A" stroke-width="2"/>
+<rect x="1985.0" y="230.0" width="360.0" height="340.0" rx="20" fill="#2E9E4F" stroke="#1A1A1A" stroke-width="2"/>
+<text x="2165.0" y="300.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="40" font-weight="700" fill="#FFFFFF" text-anchor="middle" >Final</text>
+<text x="2165.0" y="350.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="28" font-weight="600" fill="#FFFFFF" text-anchor="middle" >2 comp.</text>
+<text x="2165.0" y="420.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="26" font-weight="600" fill="#FFFFFF" text-anchor="middle" >crash + bombo</text>
+<text x="2165.0" y="510.0" font-family="'DejaVu Serif', 'Times New Roman', serif" font-size="44" font-weight="700" fill="#FFFFFF" text-anchor="middle" font-style="italic">ff</text>
+<path d="M1967 640 l18 -40 l18 40 Z" fill="#C9A227" stroke="#1A1A1A" stroke-width="2"/>
+<text x="60.0" y="720.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="30" font-weight="700" fill="#8A6A0A" text-anchor="start" >▲ = fill antes de la parte nueva</text>
+<text x="60.0" y="790.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="30" font-weight="600" fill="#5F6368" text-anchor="start" >Las letras p, mp, f y ff son las dinámicas: de suave a muy fuerte.</text>
+</svg>

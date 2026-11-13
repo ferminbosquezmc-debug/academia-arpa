@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="1250" viewBox="0 0 2400 1250" role="img" aria-label="El puntillo y el shuffle">
+<title>El puntillo y el shuffle</title>
+<rect width="2400" height="1250" fill="#FFFFFF"/>
+<text x="40.0" y="72.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="48" font-weight="700" fill="#1A1A1A" text-anchor="start" >El puntillo</text>
+<text x="40.0" y="124.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="32" font-weight="500" fill="#5F6368" text-anchor="start" >El puntillo suma la mitad del valor de la figura · el shuffle «largo-corto» sale del tresillo</text>
+<text x="60.0" y="250.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32" font-weight="700" fill="#1A1A1A" text-anchor="start" >Negra con puntillo + corchea  ·  «ta-a-ti»  (2 pulsos)</text>
+<rect x="524.0" y="280.0" width="592.0" height="180.0" rx="14" fill="#EEF0F4" stroke="none" stroke-width="0"/>
+<rect x="1124.0" y="280.0" width="592.0" height="180.0" rx="14" fill="#EEF0F4" stroke="none" stroke-width="0"/>
+<text x="670.0" y="330.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32" font-weight="700" fill="#1A1A1A" text-anchor="middle" >1</text>
+<text x="970.0" y="330.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32" font-weight="700" fill="#5F6368" text-anchor="middle" >y</text>
+<text x="1270.0" y="330.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32" font-weight="700" fill="#1A1A1A" text-anchor="middle" >2</text>
+<text x="1570.0" y="330.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32" font-weight="700" fill="#5F6368" text-anchor="middle" >y</text>
+<text x="490.0" y="416.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="30" font-weight="700" fill="#1A1A1A" text-anchor="end" >Redoblante</text>
+<line x1="520.0" y1="405.0" x2="1720.0" y2="405.0" stroke="#D5D9E0" stroke-width="2" />
+<circle cx="670.0" cy="405.0" r="36.0" fill="#E5312B" stroke="#C9A227" stroke-width="6"/>
+<text x="670.0" y="418.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32.4" font-weight="700" fill="#FFFFFF" text-anchor="middle" >D</text>
+<circle cx="1570.0" cy="405.0" r="36.0" fill="#2370D6" stroke="#1A1A1A" stroke-width="2"/>
+<text x="1570.0" y="418.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32.4" font-weight="700" fill="#FFFFFF" text-anchor="middle" >I</text>
+<text x="1800.0" y="360.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="30" font-weight="700" fill="#8A6A0A" text-anchor="middle" >1½ + ½ = 2 pulsos</text>
+<text x="60.0" y="560.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32" font-weight="700" fill="#1A1A1A" text-anchor="start" >Corchea con puntillo + semicorchea  ·  «taa-ri»  (1 pulso)</text>
+<rect x="524.0" y="590.0" width="592.0" height="180.0" rx="14" fill="#EEF0F4" stroke="none" stroke-width="0"/>
+<rect x="1124.0" y="590.0" width="592.0" height="180.0" rx="14" fill="#EEF0F4" stroke="none" stroke-width="0"/>
+<text x="670.0" y="640.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32" font-weight="700" fill="#1A1A1A" text-anchor="middle" >1</text>
+<text x="970.0" y="640.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32" font-weight="700" fill="#5F6368" text-anchor="middle" >e</text>
+<text x="1270.0" y="640.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32" font-weight="700" fill="#1A1A1A" text-anchor="middle" >y</text>
+<text x="1570.0" y="640.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32" font-weight="700" fill="#5F6368" text-anchor="middle" >a</text>
+<text x="490.0" y="726.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="30" font-weight="700" fill="#1A1A1A" text-anchor="end" >Redoblante</text>
+<line x1="520.0" y1="715.0" x2="1720.0" y2="715.0" stroke="#D5D9E0" stroke-width="2" />
+<circle cx="670.0" cy="715.0" r="36.0" fill="#E5312B" stroke="#C9A227" stroke-width="6"/>
+<text x="670.0" y="728.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32.4" font-weight="700" fill="#FFFFFF" text-anchor="middle" >D</text>
+<circle cx="1570.0" cy="715.0" r="36.0" fill="#2370D6" stroke="#1A1A1A" stroke-width="2"/>
+<text x="1570.0" y="728.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32.4" font-weight="700" fill="#FFFFFF" text-anchor="middle" >I</text>
+<text x="1800.0" y="670.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="30" font-weight="700" fill="#8A6A0A" text-anchor="middle" >¾ + ¼ = 1 pulso</text>
+<text x="60.0" y="870.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32" font-weight="700" fill="#1A1A1A" text-anchor="start" >Shuffle  ·  tresillo sin la nota del medio: «tri – la»  (1 pulso)</text>
+<rect x="524.0" y="900.0" width="1192.0" height="180.0" rx="14" fill="#EEF0F4" stroke="none" stroke-width="0"/>
+<text x="720.0" y="950.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32" font-weight="700" fill="#1A1A1A" text-anchor="middle" >tri</text>
+<text x="1120.0" y="950.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32" font-weight="700" fill="#5F6368" text-anchor="middle" >o</text>
+<text x="1520.0" y="950.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32" font-weight="700" fill="#5F6368" text-anchor="middle" >la</text>
+<text x="490.0" y="1036.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="30" font-weight="700" fill="#1A1A1A" text-anchor="end" >Hi-hat</text>
+<line x1="520.0" y1="1025.0" x2="1720.0" y2="1025.0" stroke="#D5D9E0" stroke-width="2" />
+<circle cx="720.0" cy="1025.0" r="36.0" fill="#E5312B" stroke="#C9A227" stroke-width="6"/>
+<text x="720.0" y="1038.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32.4" font-weight="700" fill="#FFFFFF" text-anchor="middle" >D</text>
+<circle cx="1520.0" cy="1025.0" r="36.0" fill="#E5312B" stroke="#1A1A1A" stroke-width="2"/>
+<text x="1520.0" y="1038.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32.4" font-weight="700" fill="#FFFFFF" text-anchor="middle" >D</text>
+<text x="1800.0" y="980.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="30" font-weight="700" fill="#8A6A0A" text-anchor="middle" >largo – corto</text>
+</svg>
