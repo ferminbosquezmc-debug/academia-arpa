@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="1180" viewBox="0 0 2400 1180" role="img" aria-label="Las cinco cuerdas del bajo">
+<title>Las cinco cuerdas del bajo</title>
+<rect width="2400" height="1180" fill="#FFFFFF"/>
+<text x="40.0" y="72.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="48" font-weight="700" fill="#1A1A1A" text-anchor="start" >Las cuerdas de mi bajo</text>
+<text x="40.0" y="124.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="32" font-weight="500" fill="#5F6368" text-anchor="start" >Bajo de 5 cuerdas: de la más aguda (1.ª, arriba) a la más grave (5.ª, abajo)</text>
+<rect x="420.0" y="228.0" width="1500.0" height="624.0" rx="10" fill="#F4E9D8" stroke="#8C8279" stroke-width="2"/>
+<line x1="720.0" y1="228.0" x2="720.0" y2="852.0" stroke="#8C8279" stroke-width="5" />
+<line x1="1020.0" y1="228.0" x2="1020.0" y2="852.0" stroke="#8C8279" stroke-width="5" />
+<line x1="1320.0" y1="228.0" x2="1320.0" y2="852.0" stroke="#8C8279" stroke-width="5" />
+<line x1="1620.0" y1="228.0" x2="1620.0" y2="852.0" stroke="#8C8279" stroke-width="5" />
+<line x1="1920.0" y1="228.0" x2="1920.0" y2="852.0" stroke="#8C8279" stroke-width="5" />
+<rect x="408.0" y="228.0" width="14.0" height="624.0" rx="0" fill="#1A1A1A" stroke="none" stroke-width="0"/>
+<line x1="360.0" y1="300.0" x2="1920.0" y2="300.0" stroke="#4E453D" stroke-width="3.1" />
+<text x="235.0" y="310.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="26" font-weight="600" fill="#5F6368" text-anchor="middle" >1.ª</text>
+<rect x="267.0" y="281.0" width="66.0" height="34.0" rx="17.0" fill="#2AA7E8" stroke="#1A1A1A" stroke-width="2.5"/>
+<text x="300.0" y="307.6" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="20" font-weight="700" fill="#1A1A1A" text-anchor="middle" >SOL</text>
+<line x1="360.0" y1="420.0" x2="1920.0" y2="420.0" stroke="#4E453D" stroke-width="4.2" />
+<text x="235.0" y="430.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="26" font-weight="600" fill="#5F6368" text-anchor="middle" >2.ª</text>
+<rect x="267.0" y="401.0" width="66.0" height="34.0" rx="17.0" fill="#F57C00" stroke="#1A1A1A" stroke-width="2.5"/>
+<text x="300.0" y="427.6" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="20" font-weight="700" fill="#1A1A1A" text-anchor="middle" >RE</text>
+<line x1="360.0" y1="540.0" x2="1920.0" y2="540.0" stroke="#4E453D" stroke-width="5.300000000000001" />
+<text x="235.0" y="550.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="26" font-weight="600" fill="#5F6368" text-anchor="middle" >3.ª</text>
+<rect x="267.0" y="521.0" width="66.0" height="34.0" rx="17.0" fill="#283593" stroke="#1A1A1A" stroke-width="2.5"/>
+<text x="300.0" y="547.6" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF" text-anchor="middle" >LA</text>
+<line x1="360.0" y1="660.0" x2="1920.0" y2="660.0" stroke="#4E453D" stroke-width="6.4" />
+<text x="235.0" y="670.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="26" font-weight="600" fill="#5F6368" text-anchor="middle" >4.ª</text>
+<rect x="267.0" y="641.0" width="66.0" height="34.0" rx="17.0" fill="#FFD21F" stroke="#1A1A1A" stroke-width="2.5"/>
+<text x="300.0" y="667.6" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="20" font-weight="700" fill="#1A1A1A" text-anchor="middle" >MI</text>
+<line x1="360.0" y1="780.0" x2="1920.0" y2="780.0" stroke="#4E453D" stroke-width="7.5" />
+<text x="235.0" y="790.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="26" font-weight="600" fill="#5F6368" text-anchor="middle" >5.ª</text>
+<rect x="267.0" y="761.0" width="66.0" height="34.0" rx="17.0" fill="#8E3BB8" stroke="#1A1A1A" stroke-width="2.5"/>
+<text x="300.0" y="787.6" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF" text-anchor="middle" >SI</text>
+<circle cx="1170.0" cy="540.0" r="10.0" fill="#D8CBB4" stroke="none" stroke-width="0"/>
+<circle cx="1770.0" cy="540.0" r="10.0" fill="#D8CBB4" stroke="none" stroke-width="0"/>
+<text x="570.0" y="892.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="24" font-weight="600" fill="#5F6368" text-anchor="middle" >1</text>
+<text x="870.0" y="892.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="24" font-weight="600" fill="#5F6368" text-anchor="middle" >2</text>
+<text x="1170.0" y="892.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="24" font-weight="600" fill="#5F6368" text-anchor="middle" >3</text>
+<text x="1470.0" y="892.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="24" font-weight="600" fill="#5F6368" text-anchor="middle" >4</text>
+<text x="1770.0" y="892.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="24" font-weight="600" fill="#5F6368" text-anchor="middle" >5</text>
+<text x="2000.0" y="312.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="28" font-weight="600" fill="#5F6368" text-anchor="middle" >la más aguda</text>
+<text x="2000.0" y="432.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="28" font-weight="600" fill="#5F6368" text-anchor="middle" ></text>
+<text x="2000.0" y="552.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="28" font-weight="600" fill="#5F6368" text-anchor="middle" ></text>
+<text x="2000.0" y="672.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="28" font-weight="600" fill="#5F6368" text-anchor="middle" ></text>
+<text x="2000.0" y="792.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="28" font-weight="600" fill="#5F6368" text-anchor="middle" >la más grave</text>
+<rect x="120.0" y="900.0" width="2160.0" height="200.0" rx="20" fill="#EEF0F4" stroke="none" stroke-width="0"/>
+<text x="160.0" y="970.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="34" font-weight="700" fill="#1A1A1A" text-anchor="start" >Para recordarlas, de la 5.ª a la 1.ª:  SI · MI · LA · RE · SOL</text>
+<text x="160.0" y="1040.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="28" font-weight="600" fill="#8A6A0A" text-anchor="start" >Bajo de 4 cuerdas: igual, pero sin la cuerda SI. Si tu bajo es de 4, omite siempre la cuerda SI.</text>
+</svg>
