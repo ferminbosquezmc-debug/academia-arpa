@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="900" viewBox="0 0 2400 900" role="img" aria-label="Ligados: martillo y tirón">
+<title>Ligados: martillo y tirón</title>
+<rect width="2400" height="900" fill="#FFFFFF"/>
+<text x="40.0" y="72.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="48" font-weight="700" fill="#1A1A1A" text-anchor="start">Los ligados</text>
+<text x="40.0" y="124.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="32" font-weight="500" fill="#5F6368" text-anchor="start">Dos notas con un solo ataque de la mano derecha · H = martillo (sube) · P = tirón (baja)</text>
+<text x="160.0" y="260.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="36" font-weight="700" fill="#1A1A1A" text-anchor="start">Martillo (H): toco 0 y «martillo» el traste 2</text>
+<line x1="160.0" y1="330.0" x2="1160.0" y2="330.0" stroke="#5F6368" stroke-width="2" />
+<line x1="160.0" y1="370.0" x2="1160.0" y2="370.0" stroke="#5F6368" stroke-width="2" />
+<line x1="160.0" y1="410.0" x2="1160.0" y2="410.0" stroke="#5F6368" stroke-width="2" />
+<line x1="160.0" y1="450.0" x2="1160.0" y2="450.0" stroke="#5F6368" stroke-width="2" />
+<line x1="160.0" y1="490.0" x2="1160.0" y2="490.0" stroke="#5F6368" stroke-width="2" />
+<line x1="160.0" y1="530.0" x2="1160.0" y2="530.0" stroke="#5F6368" stroke-width="2" />
+<text x="120.0" y="339.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="22" font-weight="600" fill="#5F6368" text-anchor="middle">1ª</text>
+<text x="120.0" y="379.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="22" font-weight="600" fill="#5F6368" text-anchor="middle">2ª</text>
+<text x="120.0" y="419.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="22" font-weight="600" fill="#5F6368" text-anchor="middle">3ª</text>
+<text x="120.0" y="459.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="22" font-weight="600" fill="#5F6368" text-anchor="middle">4ª</text>
+<text x="120.0" y="499.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="22" font-weight="600" fill="#5F6368" text-anchor="middle">5ª</text>
+<text x="120.0" y="539.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="22" font-weight="600" fill="#5F6368" text-anchor="middle">6ª</text>
+<rect x="258.0" y="310.0" width="44.0" height="40.0" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<text x="280.0" y="341.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32" font-weight="700" fill="#1A1A1A" text-anchor="middle">0</text>
+<path d="M280 306 Q360.0 250 440 306" stroke="#8A6A0A" stroke-width="4" fill="none"/>
+<text x="360.0" y="260.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="26" font-weight="700" fill="#8A6A0A" text-anchor="middle">H</text>
+<rect x="418.0" y="310.0" width="44.0" height="40.0" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<text x="440.0" y="341.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32" font-weight="700" fill="#1A1A1A" text-anchor="middle">2</text>
+<rect x="658.0" y="310.0" width="44.0" height="40.0" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<text x="680.0" y="341.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32" font-weight="700" fill="#1A1A1A" text-anchor="middle">0</text>
+<path d="M680 306 Q760.0 250 840 306" stroke="#8A6A0A" stroke-width="4" fill="none"/>
+<text x="760.0" y="260.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="26" font-weight="700" fill="#8A6A0A" text-anchor="middle">H</text>
+<rect x="818.0" y="310.0" width="44.0" height="40.0" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<text x="840.0" y="341.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32" font-weight="700" fill="#1A1A1A" text-anchor="middle">3</text>
+<text x="1300.0" y="260.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="36" font-weight="700" fill="#1A1A1A" text-anchor="start">Tirón (P): toco 2 y tiro del dedo hacia abajo</text>
+<line x1="1300.0" y1="330.0" x2="2300.0" y2="330.0" stroke="#5F6368" stroke-width="2" />
+<line x1="1300.0" y1="370.0" x2="2300.0" y2="370.0" stroke="#5F6368" stroke-width="2" />
+<line x1="1300.0" y1="410.0" x2="2300.0" y2="410.0" stroke="#5F6368" stroke-width="2" />
+<line x1="1300.0" y1="450.0" x2="2300.0" y2="450.0" stroke="#5F6368" stroke-width="2" />
+<line x1="1300.0" y1="490.0" x2="2300.0" y2="490.0" stroke="#5F6368" stroke-width="2" />
+<line x1="1300.0" y1="530.0" x2="2300.0" y2="530.0" stroke="#5F6368" stroke-width="2" />
+<text x="1260.0" y="339.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="22" font-weight="600" fill="#5F6368" text-anchor="middle">1ª</text>
+<text x="1260.0" y="379.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="22" font-weight="600" fill="#5F6368" text-anchor="middle">2ª</text>
+<text x="1260.0" y="419.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="22" font-weight="600" fill="#5F6368" text-anchor="middle">3ª</text>
+<text x="1260.0" y="459.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="22" font-weight="600" fill="#5F6368" text-anchor="middle">4ª</text>
+<text x="1260.0" y="499.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="22" font-weight="600" fill="#5F6368" text-anchor="middle">5ª</text>
+<text x="1260.0" y="539.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="22" font-weight="600" fill="#5F6368" text-anchor="middle">6ª</text>
+<rect x="1398.0" y="310.0" width="44.0" height="40.0" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<text x="1420.0" y="341.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32" font-weight="700" fill="#1A1A1A" text-anchor="middle">2</text>
+<path d="M1420 306 Q1500.0 250 1580 306" stroke="#8A6A0A" stroke-width="4" fill="none"/>
+<text x="1500.0" y="260.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="26" font-weight="700" fill="#8A6A0A" text-anchor="middle">P</text>
+<rect x="1558.0" y="310.0" width="44.0" height="40.0" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<text x="1580.0" y="341.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32" font-weight="700" fill="#1A1A1A" text-anchor="middle">0</text>
+<rect x="1798.0" y="310.0" width="44.0" height="40.0" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<text x="1820.0" y="341.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32" font-weight="700" fill="#1A1A1A" text-anchor="middle">3</text>
+<path d="M1820 306 Q1900.0 250 1980 306" stroke="#8A6A0A" stroke-width="4" fill="none"/>
+<text x="1900.0" y="260.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="26" font-weight="700" fill="#8A6A0A" text-anchor="middle">P</text>
+<rect x="1958.0" y="310.0" width="44.0" height="40.0" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<text x="1980.0" y="341.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32" font-weight="700" fill="#1A1A1A" text-anchor="middle">0</text>
+<circle cx="160.0" cy="700.0" r="16.0" fill="#C9A227" stroke="#1A1A1A" stroke-width="2"/>
+<text x="195.0" y="710.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="30" font-weight="600" fill="#1A1A1A" text-anchor="start">Martillo: el dedo cae con fuerza justo detrás del traste, como un martillo pequeño.</text>
+<circle cx="160.0" cy="760.0" r="16.0" fill="#C9A227" stroke="#1A1A1A" stroke-width="2"/>
+<text x="195.0" y="770.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="30" font-weight="600" fill="#1A1A1A" text-anchor="start">Tirón: el dedo jala la cuerda un poco hacia el piso al soltarla, para que siga sonando.</text>
+<circle cx="160.0" cy="820.0" r="16.0" fill="#C9A227" stroke="#1A1A1A" stroke-width="2"/>
+<text x="195.0" y="830.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="30" font-weight="600" fill="#1A1A1A" text-anchor="start">Las dos notas deben sonar parejas: escucha que la segunda no se apague.</text>
+</svg>
