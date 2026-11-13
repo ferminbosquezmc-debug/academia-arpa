@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="1000" viewBox="0 0 2400 1000" role="img" aria-label="Cómo se produce la voz: cuatro partes">
+<title>Cómo se produce la voz: cuatro partes</title>
+<rect width="2400" height="1000" fill="#FFFFFF"/>
+<text x="40.0" y="72.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="48" font-weight="700" fill="#1A1A1A" text-anchor="start">Mi voz en 4 partes</text>
+<text x="40.0" y="124.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="32" font-weight="500" fill="#5F6368" text-anchor="start">El aire sube, los pliegues vocales vibran, el sonido crece en las cavidades y la boca forma las palabras</text>
+<rect x="80.0" y="230.0" width="520.0" height="460.0" rx="26" fill="#2370D6" stroke="#1A1A1A" stroke-width="2"/>
+<circle cx="340.0" cy="320.0" r="50.0" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="2"/>
+<text x="340.0" y="340.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="52" font-weight="700" fill="#1A1A1A" text-anchor="middle">1</text>
+<text x="340.0" y="450.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="44" font-weight="700" fill="#FFFFFF" text-anchor="middle">Respiración</text>
+<text x="340.0" y="520.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="22" font-weight="700" fill="#FFFFFF" text-anchor="middle">pulmones y diafragma</text>
+<text x="340.0" y="600.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="22" font-weight="600" fill="#FFFFFF" text-anchor="middle">el aire es la «gasolina» de la voz</text>
+<text x="625.0" y="470.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="50" font-weight="700" fill="#5F6368" text-anchor="middle">→</text>
+<rect x="650.0" y="230.0" width="520.0" height="460.0" rx="26" fill="#E5312B" stroke="#1A1A1A" stroke-width="2"/>
+<circle cx="910.0" cy="320.0" r="50.0" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="2"/>
+<text x="910.0" y="340.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="52" font-weight="700" fill="#1A1A1A" text-anchor="middle">2</text>
+<text x="910.0" y="450.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="44" font-weight="700" fill="#FFFFFF" text-anchor="middle">Vibración</text>
+<text x="910.0" y="520.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="22" font-weight="700" fill="#FFFFFF" text-anchor="middle">pliegues vocales (en la laringe)</text>
+<text x="910.0" y="600.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="22" font-weight="600" fill="#FFFFFF" text-anchor="middle">vibran muy rápido y crean el sonido</text>
+<text x="1195.0" y="470.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="50" font-weight="700" fill="#5F6368" text-anchor="middle">→</text>
+<rect x="1220.0" y="230.0" width="520.0" height="460.0" rx="26" fill="#F57C00" stroke="#1A1A1A" stroke-width="2"/>
+<circle cx="1480.0" cy="320.0" r="50.0" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="2"/>
+<text x="1480.0" y="340.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="52" font-weight="700" fill="#1A1A1A" text-anchor="middle">3</text>
+<text x="1480.0" y="450.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="44" font-weight="700" fill="#FFFFFF" text-anchor="middle">Resonancia</text>
+<text x="1480.0" y="520.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="22" font-weight="700" fill="#FFFFFF" text-anchor="middle">garganta, boca y nariz</text>
+<text x="1480.0" y="600.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="22" font-weight="600" fill="#FFFFFF" text-anchor="middle">agrandan y dan color al sonido</text>
+<text x="1765.0" y="470.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="50" font-weight="700" fill="#5F6368" text-anchor="middle">→</text>
+<rect x="1790.0" y="230.0" width="520.0" height="460.0" rx="26" fill="#2E9E4F" stroke="#1A1A1A" stroke-width="2"/>
+<circle cx="2050.0" cy="320.0" r="50.0" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="2"/>
+<text x="2050.0" y="340.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="52" font-weight="700" fill="#1A1A1A" text-anchor="middle">4</text>
+<text x="2050.0" y="450.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="44" font-weight="700" fill="#FFFFFF" text-anchor="middle">Articulación</text>
+<text x="2050.0" y="520.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="22" font-weight="700" fill="#FFFFFF" text-anchor="middle">lengua, labios, dientes y paladar</text>
+<text x="2050.0" y="600.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="22" font-weight="600" fill="#FFFFFF" text-anchor="middle">forman las vocales y consonantes</text>
+<text x="1200.0" y="800.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="30" font-weight="700" fill="#1A1A1A" text-anchor="middle">Los pliegues vocales son delicados: no se grita, no se fuerza y se descansa la voz</text>
+<text x="1200.0" y="870.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="26" font-weight="600" fill="#8A6A0A" text-anchor="middle">Si hay dolor o ronquera que no se va, se para y se consulta a un especialista</text>
+</svg>

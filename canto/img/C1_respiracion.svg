@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="1100" viewBox="0 0 2400 1100" role="img" aria-label="La respiración baja para cantar">
+<title>La respiración baja para cantar</title>
+<rect width="2400" height="1100" fill="#FFFFFF"/>
+<text x="40.0" y="72.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="48" font-weight="700" fill="#1A1A1A" text-anchor="start">La respiración baja (costo-diafragmática)</text>
+<text x="40.0" y="124.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="32" font-weight="500" fill="#5F6368" text-anchor="start">El aire entra hacia abajo: se abren las costillas y la cintura, los hombros no suben</text>
+<ellipse cx="500" cy="560" rx="160.0" ry="210" fill="#2370D6" opacity=".18" stroke="#2370D6" stroke-width="5"/>
+<line x1="360.0" y1="300.0" x2="640.0" y2="300.0" stroke="#1A1A1A" stroke-width="6" stroke-linecap="round" />
+<text x="500.0" y="280.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="22" font-weight="600" fill="#5F6368" text-anchor="middle">hombros quietos</text>
+<text x="290.0" y="575.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="46" font-weight="700" fill="#2370D6" text-anchor="middle">←</text>
+<text x="710.0" y="575.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="46" font-weight="700" fill="#2370D6" text-anchor="middle">→</text>
+<text x="500.0" y="850.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="40" font-weight="700" fill="#2370D6" text-anchor="middle">Inhalo</text>
+<text x="500.0" y="905.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="24" font-weight="600" fill="#1A1A1A" text-anchor="middle">el diafragma baja, la cintura se abre</text>
+<ellipse cx="1400" cy="560" rx="115.0" ry="210" fill="#2E9E4F" opacity=".18" stroke="#2E9E4F" stroke-width="5"/>
+<line x1="1260.0" y1="300.0" x2="1540.0" y2="300.0" stroke="#1A1A1A" stroke-width="6" stroke-linecap="round" />
+<text x="1400.0" y="280.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="22" font-weight="600" fill="#5F6368" text-anchor="middle">hombros quietos</text>
+<text x="1235.0" y="575.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="46" font-weight="700" fill="#2E9E4F" text-anchor="middle">→</text>
+<text x="1565.0" y="575.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="46" font-weight="700" fill="#2E9E4F" text-anchor="middle">←</text>
+<text x="1400.0" y="850.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="40" font-weight="700" fill="#2E9E4F" text-anchor="middle">Exhalo cantando</text>
+<text x="1400.0" y="905.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="24" font-weight="600" fill="#1A1A1A" text-anchor="middle">el aire sale despacio y parejo</text>
+<rect x="1900.0" y="360.0" width="420.0" height="400.0" rx="20" fill="#EEF0F4" stroke="none" stroke-width="0"/>
+<text x="2110.0" y="430.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32" font-weight="700" fill="#1A1A1A" text-anchor="middle">Ejercicio</text>
+<text x="1940.0" y="510.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="26" font-weight="600" fill="#1A1A1A" text-anchor="start">1. inhalo en 4</text>
+<text x="1940.0" y="570.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="26" font-weight="600" fill="#1A1A1A" text-anchor="start">2. sostengo 4</text>
+<text x="1940.0" y="630.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="26" font-weight="600" fill="#1A1A1A" text-anchor="start">3. exhalo con «sss» en 8</text>
+<text x="1940.0" y="690.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="26" font-weight="600" fill="#1A1A1A" text-anchor="start">4. subo a 12 y 16</text>
+<text x="1200.0" y="1030.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="28" font-weight="700" fill="#8A6A0A" text-anchor="middle">Pon una mano en la cintura: al inhalar se mueve hacia afuera</text>
+</svg>
