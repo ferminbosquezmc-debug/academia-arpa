@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="1000" viewBox="0 0 2400 1000" role="img" aria-label="La guitarra en la banda">
+<title>La guitarra en la banda</title>
+<rect width="2400" height="1000" fill="#FFFFFF"/>
+<text x="40.0" y="72.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="48" font-weight="700" fill="#1A1A1A" text-anchor="start">Tocamos en banda</text>
+<text x="40.0" y="124.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="32" font-weight="500" fill="#5F6368" text-anchor="start">Cada instrumento tiene su tarea; la guitarra no tiene que tocarlo todo</text>
+<rect x="35.0" y="240.0" width="430.0" height="420.0" rx="24" fill="#FAFAF7" stroke="#E5312B" stroke-width="6"/>
+<text x="250.0" y="380.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="96" font-weight="400" fill="#1A1A1A" text-anchor="middle">🎤</text>
+<text x="250.0" y="470.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="44" font-weight="700" fill="#1A1A1A" text-anchor="middle">Voz</text>
+<text x="250.0" y="530.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="26" font-weight="600" fill="#5F6368" text-anchor="middle">la melodía y la letra</text>
+<rect x="510.0" y="240.0" width="430.0" height="420.0" rx="24" fill="#FAFAF7" stroke="#2AA7E8" stroke-width="6"/>
+<text x="725.0" y="380.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="96" font-weight="400" fill="#1A1A1A" text-anchor="middle">🎸</text>
+<text x="725.0" y="470.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="44" font-weight="700" fill="#1A1A1A" text-anchor="middle">Guitarra</text>
+<text x="725.0" y="530.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="26" font-weight="600" fill="#5F6368" text-anchor="middle">acordes y ritmo</text>
+<rect x="985.0" y="240.0" width="430.0" height="420.0" rx="24" fill="#FAFAF7" stroke="#2E9E4F" stroke-width="6"/>
+<text x="1200.0" y="380.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="96" font-weight="400" fill="#1A1A1A" text-anchor="middle">🎹</text>
+<text x="1200.0" y="470.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="44" font-weight="700" fill="#1A1A1A" text-anchor="middle">Teclado</text>
+<text x="1200.0" y="530.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="26" font-weight="600" fill="#5F6368" text-anchor="middle">acordes largos de fondo</text>
+<rect x="1460.0" y="240.0" width="430.0" height="420.0" rx="24" fill="#FAFAF7" stroke="#283593" stroke-width="6"/>
+<text x="1675.0" y="380.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="96" font-weight="400" fill="#1A1A1A" text-anchor="middle">🎸</text>
+<text x="1675.0" y="470.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="44" font-weight="700" fill="#1A1A1A" text-anchor="middle">Bajo</text>
+<text x="1675.0" y="530.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="26" font-weight="600" fill="#5F6368" text-anchor="middle">las notas graves de cada acorde</text>
+<rect x="1935.0" y="240.0" width="430.0" height="420.0" rx="24" fill="#FAFAF7" stroke="#F57C00" stroke-width="6"/>
+<text x="2150.0" y="380.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="96" font-weight="400" fill="#1A1A1A" text-anchor="middle">🥁</text>
+<text x="2150.0" y="470.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="44" font-weight="700" fill="#1A1A1A" text-anchor="middle">Batería</text>
+<text x="2150.0" y="530.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="26" font-weight="600" fill="#5F6368" text-anchor="middle">el pulso y la energía</text>
+<circle cx="160.0" cy="760.0" r="18.0" fill="#C9A227" stroke="#1A1A1A" stroke-width="2"/>
+<text x="200.0" y="770.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="32" font-weight="600" fill="#1A1A1A" text-anchor="start">Escucha a la batería: ella marca el pulso de todos.</text>
+<circle cx="160.0" cy="830.0" r="18.0" fill="#C9A227" stroke="#1A1A1A" stroke-width="2"/>
+<text x="200.0" y="840.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="32" font-weight="600" fill="#1A1A1A" text-anchor="start">Si hay teclado, toca más suave o con arpegios: no tapes al cantante.</text>
+<circle cx="160.0" cy="900.0" r="18.0" fill="#C9A227" stroke="#1A1A1A" stroke-width="2"/>
+<text x="200.0" y="910.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="32" font-weight="600" fill="#1A1A1A" text-anchor="start">Mira al líder: él indica la entrada, el coro y el final.</text>
+</svg>

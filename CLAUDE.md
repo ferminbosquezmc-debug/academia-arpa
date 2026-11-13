@@ -81,7 +81,8 @@ Se entra desde el botón «Cabina virtual 3D» en la vista de la carrera (`atVie
 - Misma teoría que piano en cada clase; cambia la parte de guitarra. Mapa aprobado: N2 13 alteraciones · 14 bordones e intervalos · 15 escala mayor (Sol) · 16 acordes G C D Em Am y evaluación mes 4 · 17 rasgueos · 18 arpegios · 19 grados y lectura sin color · 20 acordes de la tonalidad · 21 cejilla · 22 I–IV–V y séptimas · 23 semicorcheas, síncopa, forma · 24 repertorio y banda. N3 25 menor y armadura · 26 intervalos y power chords · 27 ligados · 28 séptimas con cejilla y tríadas · 29 cadencias · 30 estilos · 31 escala móvil y capo · 32 pentatónica y blues · 33 estudio de Sor · 34 dúo · 35 ensayo · 36 presentación.
 - Fuente: `academia-musica-ama/contenido/guitarra/nivel-2|nivel-3/clase-N.md` (formato de piano, preguntas con ✔ en posiciones variadas). Láminas: `contenido/guitarra/generador/laminas_n2.py` → `guitarra/img/G2_*.svg`.
 - Cargar: `python3 herramientas/guitarra_n23.py ../academia-musica-ama/contenido/guitarra` (reescribe `const GNC23=`). Código: bloque «Guitarra Niveles 2 y 3». `G23MAP` une cada clase con las lecciones antiguas (quedan como «Práctica interactiva» y conservan el avance con `S.gmig`); las lecciones antiguas sin clase escrita siguen en la lista. `lk()` usa `G1K/G2K/G3K`.
-- Avance: meses 4 y 5 (clases 13–20) listos.
+- Avance: **Nivel 2 completo** (clases 13–24). Solo queda en la lista del N2 la lección antigua «Pentatónica» (`1-0guitarra-4`), que pasa a la clase 32. Sigue el Nivel 3 (clases 25–36).
+- En los `.md` de las clases, `[[nn:texto]]` evita que el pintor coloree letras sueltas (por ejemplo la forma «A – B – A»). No funciona en el título, el objetivo ni las preguntas: ahí, reescribe sin letras sueltas.
 
 ## Juegos de práctica (vista Práctica)
 Bloque JS que empieza con el comentario `Juegos de práctica`; CSS con prefijo `jg-`; HTML dentro de `<div data-nn>` en `#v-practica` (para que el pintor no toque los textos de Arpi).
