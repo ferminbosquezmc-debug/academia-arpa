@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="1250" viewBox="0 0 2400 1250" role="img" aria-label="Las cuerdas del bajo en el pentagrama y las líneas adicionales">
+<title>Las cuerdas del bajo en el pentagrama y las líneas adicionales</title>
+<rect width="2400" height="1250" fill="#FFFFFF"/>
+<text x="40.0" y="72.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="48" font-weight="700" fill="#1A1A1A" text-anchor="start" >Las cuerdas en el pentagrama</text>
+<text x="40.0" y="124.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="32" font-weight="500" fill="#5F6368" text-anchor="start" >Las 5 cuerdas al aire en clave de fa · las notas graves usan líneas adicionales</text>
+<line x1="140.0" y1="330.0" x2="2280.0" y2="330.0" stroke="#1A1A1A" stroke-width="3" />
+<line x1="140.0" y1="370.0" x2="2280.0" y2="370.0" stroke="#1A1A1A" stroke-width="3" />
+<line x1="140.0" y1="410.0" x2="2280.0" y2="410.0" stroke="#1A1A1A" stroke-width="3" />
+<line x1="140.0" y1="450.0" x2="2280.0" y2="450.0" stroke="#1A1A1A" stroke-width="3" />
+<line x1="140.0" y1="490.0" x2="2280.0" y2="490.0" stroke="#1A1A1A" stroke-width="3" />
+<circle cx="168.0" cy="370.0" r="12.8" fill="#1A1A1A" stroke="none" stroke-width="0"/>
+<path d="M 158.0 370.0 C 158.0 318.0, 230.0 318.0, 230.0 378.0 C 230.0 434.0, 190.0 474.0, 154.0 494.0" fill="none" stroke="#1A1A1A" stroke-width="8.8" stroke-linecap="round"/>
+<circle cx="250.0" cy="350.0" r="5.6" fill="#1A1A1A" stroke="none" stroke-width="0"/>
+<circle cx="250.0" cy="390.0" r="5.6" fill="#1A1A1A" stroke="none" stroke-width="0"/>
+<text x="300.0" y="404.0" font-family="'DejaVu Serif', serif" font-size="60.0" font-weight="700" fill="#1A1A1A" text-anchor="middle" >4</text>
+<text x="300.0" y="484.0" font-family="'DejaVu Serif', serif" font-size="60.0" font-weight="700" fill="#1A1A1A" text-anchor="middle" >4</text>
+<line x1="526.0" y1="530.0" x2="594.0" y2="530.0" stroke="#1A1A1A" stroke-width="3" />
+<line x1="526.0" y1="570.0" x2="594.0" y2="570.0" stroke="#1A1A1A" stroke-width="3" />
+<ellipse cx="560.0" cy="590.0" rx="24.8" ry="17.6" transform="rotate(-20 560.0 590.0)" fill="#8E3BB8" stroke="#1A1A1A" stroke-width="2.5"/>
+<ellipse cx="560.0" cy="590.0" rx="14.4" ry="6.8" transform="rotate(-35 560.0 590.0)" fill="#FFFFFF"/>
+<line x1="582.0" y1="590.0" x2="582.0" y2="458.0" stroke="#1A1A1A" stroke-width="3.5" />
+<text x="560.0" y="720.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="26" font-weight="700" fill="#5F6368" text-anchor="middle" >5.ª cuerda</text>
+<rect x="518.0" y="759.1" width="84.0" height="37.4" rx="18.7" fill="#8E3BB8" stroke="#1A1A1A" stroke-width="2.5"/>
+<text x="560.0" y="788.4" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="22" font-weight="700" fill="#FFFFFF" text-anchor="middle" >SI</text>
+<line x1="906.0" y1="530.0" x2="974.0" y2="530.0" stroke="#1A1A1A" stroke-width="3" />
+<ellipse cx="940.0" cy="530.0" rx="24.8" ry="17.6" transform="rotate(-20 940.0 530.0)" fill="#FFD21F" stroke="#1A1A1A" stroke-width="2.5"/>
+<ellipse cx="940.0" cy="530.0" rx="14.4" ry="6.8" transform="rotate(-35 940.0 530.0)" fill="#FFFFFF"/>
+<line x1="962.0" y1="530.0" x2="962.0" y2="398.0" stroke="#1A1A1A" stroke-width="3.5" />
+<text x="940.0" y="720.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="26" font-weight="700" fill="#5F6368" text-anchor="middle" >4.ª cuerda</text>
+<rect x="898.0" y="759.1" width="84.0" height="37.4" rx="18.7" fill="#FFD21F" stroke="#1A1A1A" stroke-width="2.5"/>
+<text x="940.0" y="788.4" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="22" font-weight="700" fill="#1A1A1A" text-anchor="middle" >MI</text>
+<ellipse cx="1320.0" cy="470.0" rx="24.8" ry="17.6" transform="rotate(-20 1320.0 470.0)" fill="#283593" stroke="#1A1A1A" stroke-width="2.5"/>
+<ellipse cx="1320.0" cy="470.0" rx="14.4" ry="6.8" transform="rotate(-35 1320.0 470.0)" fill="#FFFFFF"/>
+<line x1="1342.0" y1="470.0" x2="1342.0" y2="338.0" stroke="#1A1A1A" stroke-width="3.5" />
+<text x="1320.0" y="720.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="26" font-weight="700" fill="#5F6368" text-anchor="middle" >3.ª cuerda</text>
+<rect x="1278.0" y="759.1" width="84.0" height="37.4" rx="18.7" fill="#283593" stroke="#1A1A1A" stroke-width="2.5"/>
+<text x="1320.0" y="788.4" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="22" font-weight="700" fill="#FFFFFF" text-anchor="middle" >LA</text>
+<ellipse cx="1700.0" cy="410.0" rx="24.8" ry="17.6" transform="rotate(-20 1700.0 410.0)" fill="#F57C00" stroke="#1A1A1A" stroke-width="2.5"/>
+<ellipse cx="1700.0" cy="410.0" rx="14.4" ry="6.8" transform="rotate(-35 1700.0 410.0)" fill="#FFFFFF"/>
+<line x1="1678.0" y1="410.0" x2="1678.0" y2="542.0" stroke="#1A1A1A" stroke-width="3.5" />
+<text x="1700.0" y="720.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="26" font-weight="700" fill="#5F6368" text-anchor="middle" >2.ª cuerda</text>
+<rect x="1658.0" y="759.1" width="84.0" height="37.4" rx="18.7" fill="#F57C00" stroke="#1A1A1A" stroke-width="2.5"/>
+<text x="1700.0" y="788.4" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="22" font-weight="700" fill="#1A1A1A" text-anchor="middle" >RE</text>
+<ellipse cx="2080.0" cy="350.0" rx="24.8" ry="17.6" transform="rotate(-20 2080.0 350.0)" fill="#2AA7E8" stroke="#1A1A1A" stroke-width="2.5"/>
+<ellipse cx="2080.0" cy="350.0" rx="14.4" ry="6.8" transform="rotate(-35 2080.0 350.0)" fill="#FFFFFF"/>
+<line x1="2058.0" y1="350.0" x2="2058.0" y2="482.0" stroke="#1A1A1A" stroke-width="3.5" />
+<text x="2080.0" y="720.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="26" font-weight="700" fill="#5F6368" text-anchor="middle" >1.ª cuerda</text>
+<rect x="2038.0" y="759.1" width="84.0" height="37.4" rx="18.7" fill="#2AA7E8" stroke="#1A1A1A" stroke-width="2.5"/>
+<text x="2080.0" y="788.4" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="22" font-weight="700" fill="#1A1A1A" text-anchor="middle" >SOL</text>
+<text x="80.0" y="960.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="32" font-weight="700" fill="#1A1A1A" text-anchor="start" >Signo de medida: arriba, cuántos pulsos · abajo, qué figura vale un pulso</text>
+<line x1="80.0" y1="1010.0" x2="320.0" y2="1010.0" stroke="#1A1A1A" stroke-width="2" />
+<line x1="80.0" y1="1036.0" x2="320.0" y2="1036.0" stroke="#1A1A1A" stroke-width="2" />
+<line x1="80.0" y1="1062.0" x2="320.0" y2="1062.0" stroke="#1A1A1A" stroke-width="2" />
+<line x1="80.0" y1="1088.0" x2="320.0" y2="1088.0" stroke="#1A1A1A" stroke-width="2" />
+<line x1="80.0" y1="1114.0" x2="320.0" y2="1114.0" stroke="#1A1A1A" stroke-width="2" />
+<text x="200.0" y="1056.0" font-family="'DejaVu Serif', serif" font-size="39.0" font-weight="700" fill="#1A1A1A" text-anchor="middle" >4</text>
+<text x="200.0" y="1108.0" font-family="'DejaVu Serif', serif" font-size="39.0" font-weight="700" fill="#1A1A1A" text-anchor="middle" >4</text>
+<text x="460.0" y="1075.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="26" font-weight="600" fill="#5F6368" text-anchor="middle" >4 negras</text>
+<line x1="640.0" y1="1010.0" x2="880.0" y2="1010.0" stroke="#1A1A1A" stroke-width="2" />
+<line x1="640.0" y1="1036.0" x2="880.0" y2="1036.0" stroke="#1A1A1A" stroke-width="2" />
+<line x1="640.0" y1="1062.0" x2="880.0" y2="1062.0" stroke="#1A1A1A" stroke-width="2" />
+<line x1="640.0" y1="1088.0" x2="880.0" y2="1088.0" stroke="#1A1A1A" stroke-width="2" />
+<line x1="640.0" y1="1114.0" x2="880.0" y2="1114.0" stroke="#1A1A1A" stroke-width="2" />
+<text x="760.0" y="1056.0" font-family="'DejaVu Serif', serif" font-size="39.0" font-weight="700" fill="#1A1A1A" text-anchor="middle" >3</text>
+<text x="760.0" y="1108.0" font-family="'DejaVu Serif', serif" font-size="39.0" font-weight="700" fill="#1A1A1A" text-anchor="middle" >4</text>
+<text x="1020.0" y="1075.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="26" font-weight="600" fill="#5F6368" text-anchor="middle" >3 negras · vals</text>
+<line x1="1200.0" y1="1010.0" x2="1440.0" y2="1010.0" stroke="#1A1A1A" stroke-width="2" />
+<line x1="1200.0" y1="1036.0" x2="1440.0" y2="1036.0" stroke="#1A1A1A" stroke-width="2" />
+<line x1="1200.0" y1="1062.0" x2="1440.0" y2="1062.0" stroke="#1A1A1A" stroke-width="2" />
+<line x1="1200.0" y1="1088.0" x2="1440.0" y2="1088.0" stroke="#1A1A1A" stroke-width="2" />
+<line x1="1200.0" y1="1114.0" x2="1440.0" y2="1114.0" stroke="#1A1A1A" stroke-width="2" />
+<text x="1320.0" y="1056.0" font-family="'DejaVu Serif', serif" font-size="39.0" font-weight="700" fill="#1A1A1A" text-anchor="middle" >6</text>
+<text x="1320.0" y="1108.0" font-family="'DejaVu Serif', serif" font-size="39.0" font-weight="700" fill="#1A1A1A" text-anchor="middle" >8</text>
+<text x="1580.0" y="1075.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="26" font-weight="600" fill="#5F6368" text-anchor="middle" >6 corcheas</text>
+<line x1="1760.0" y1="1010.0" x2="2000.0" y2="1010.0" stroke="#1A1A1A" stroke-width="2" />
+<line x1="1760.0" y1="1036.0" x2="2000.0" y2="1036.0" stroke="#1A1A1A" stroke-width="2" />
+<line x1="1760.0" y1="1062.0" x2="2000.0" y2="1062.0" stroke="#1A1A1A" stroke-width="2" />
+<line x1="1760.0" y1="1088.0" x2="2000.0" y2="1088.0" stroke="#1A1A1A" stroke-width="2" />
+<line x1="1760.0" y1="1114.0" x2="2000.0" y2="1114.0" stroke="#1A1A1A" stroke-width="2" />
+<text x="1880.0" y="1056.0" font-family="'DejaVu Serif', serif" font-size="39.0" font-weight="700" fill="#1A1A1A" text-anchor="middle" >12</text>
+<text x="1880.0" y="1108.0" font-family="'DejaVu Serif', serif" font-size="39.0" font-weight="700" fill="#1A1A1A" text-anchor="middle" >8</text>
+<text x="2140.0" y="1075.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="26" font-weight="600" fill="#5F6368" text-anchor="middle" >12 corcheas</text>
+</svg>
