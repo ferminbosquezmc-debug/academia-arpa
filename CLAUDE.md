@@ -96,7 +96,7 @@ Se entra desde el botón «Cabina virtual 3D» en la vista de la carrera (`atVie
 - Fuente: `contenido/bajo/nivel-N/clase-M.md` (formato de piano/batería). Cargar: `python3 herramientas/bajo.py ../academia-musica-ama/contenido/bajo` (reescribe `const JNC=`). Claves `<nivel>-0bajo-<i>`. `INS.bajo` trae los 36 títulos del mapa.
 - Láminas: `contenido/bajo/generador/laminas.py` → `bajo/img/J1_*.svg` (`gImg` acepta `bajo/img`).
 - Visible para estudiantes cuando el Nivel 1 esté completo (`AVAIL.bajo`); antes solo en modo revisión (`arp-rev`).
-- Avance: **mes 1 (clases 1–4) listo**.
+- Avance: **meses 1 y 2 (clases 1–8) listos**.
 
 ## Juegos de práctica (vista Práctica)
 Bloque JS que empieza con el comentario `Juegos de práctica`; CSS con prefijo `jg-`; HTML dentro de `<div data-nn>` en `#v-practica` (para que el pintor no toque los textos de Arpi).
