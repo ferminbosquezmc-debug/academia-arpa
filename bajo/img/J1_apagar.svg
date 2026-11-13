@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="1000" viewBox="0 0 2400 1000" role="img" aria-label="Apagar las cuerdas que no suenan">
+<title>Apagar las cuerdas que no suenan</title>
+<rect width="2400" height="1000" fill="#FFFFFF"/>
+<text x="40.0" y="72.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="48" font-weight="700" fill="#1A1A1A" text-anchor="start" >Solo suena la cuerda que toco</text>
+<text x="40.0" y="124.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="32" font-weight="500" fill="#5F6368" text-anchor="start" >Las demás cuerdas se apagan para que el bajo suene limpio</text>
+<line x1="380.0" y1="320.0" x2="1700.0" y2="320.0" stroke="#C9C3B6" stroke-width="4.1" />
+<rect x="262.0" y="299.1" width="76.0" height="37.4" rx="18.7" fill="#2AA7E8" stroke="#1A1A1A" stroke-width="2.5"/>
+<text x="300.0" y="328.4" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="22" font-weight="700" fill="#1A1A1A" text-anchor="middle" >SOL</text>
+<text x="1760.0" y="330.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="30" font-weight="700" fill="#5F6368" text-anchor="start" >apagada</text>
+<line x1="380.0" y1="430.0" x2="1700.0" y2="430.0" stroke="#C9C3B6" stroke-width="5.2" />
+<rect x="262.0" y="409.1" width="76.0" height="37.4" rx="18.7" fill="#F57C00" stroke="#1A1A1A" stroke-width="2.5"/>
+<text x="300.0" y="438.4" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="22" font-weight="700" fill="#1A1A1A" text-anchor="middle" >RE</text>
+<text x="1760.0" y="440.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="30" font-weight="700" fill="#5F6368" text-anchor="start" >apagada</text>
+<line x1="380.0" y1="540.0" x2="1700.0" y2="540.0" stroke="#4E453D" stroke-width="6.300000000000001" />
+<rect x="262.0" y="519.1" width="76.0" height="37.4" rx="18.7" fill="#283593" stroke="#1A1A1A" stroke-width="2.5"/>
+<text x="300.0" y="548.4" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="22" font-weight="700" fill="#FFFFFF" text-anchor="middle" >LA</text>
+<text x="1760.0" y="550.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="30" font-weight="700" fill="#2E9E4F" text-anchor="start" >suena</text>
+<line x1="380.0" y1="650.0" x2="1700.0" y2="650.0" stroke="#C9C3B6" stroke-width="7.4" />
+<rect x="262.0" y="629.1" width="76.0" height="37.4" rx="18.7" fill="#FFD21F" stroke="#1A1A1A" stroke-width="2.5"/>
+<text x="300.0" y="658.4" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="22" font-weight="700" fill="#1A1A1A" text-anchor="middle" >MI</text>
+<text x="1760.0" y="660.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="30" font-weight="700" fill="#5F6368" text-anchor="start" >apagada</text>
+<line x1="380.0" y1="760.0" x2="1700.0" y2="760.0" stroke="#C9C3B6" stroke-width="8.5" />
+<rect x="262.0" y="739.1" width="76.0" height="37.4" rx="18.7" fill="#8E3BB8" stroke="#1A1A1A" stroke-width="2.5"/>
+<text x="300.0" y="768.4" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="22" font-weight="700" fill="#FFFFFF" text-anchor="middle" >SI</text>
+<text x="1760.0" y="770.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="30" font-weight="700" fill="#5F6368" text-anchor="start" >apagada</text>
+<path d="M 900 400 q 30 -40 60 0 q 30 40 60 0 q 30 -40 60 0" fill="none" stroke="#2E9E4F" stroke-width="5"/>
+<rect x="80.0" y="860.0" width="1080.0" height="110.0" rx="18" fill="#EEF0F4" stroke="none" stroke-width="0"/>
+<text x="120.0" y="928.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="26" font-weight="700" fill="#1A1A1A" text-anchor="start" >Mano izquierda: los dedos tocan suave las cuerdas agudas</text>
+<rect x="1240.0" y="860.0" width="1080.0" height="110.0" rx="18" fill="#EEF0F4" stroke="none" stroke-width="0"/>
+<text x="1280.0" y="928.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="26" font-weight="700" fill="#1A1A1A" text-anchor="start" >Pulgar derecho: descansa sobre las cuerdas graves</text>
+</svg>

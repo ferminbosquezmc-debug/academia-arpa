@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="900" viewBox="0 0 2400 900" role="img" aria-label="El bajo en la banda">
+<title>El bajo en la banda</title>
+<rect width="2400" height="900" fill="#FFFFFF"/>
+<text x="40.0" y="72.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="48" font-weight="700" fill="#1A1A1A" text-anchor="start" >El bajo: el puente de la banda</text>
+<text x="40.0" y="124.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="32" font-weight="500" fill="#5F6368" text-anchor="start" >Une el ritmo de la batería con la armonía del piano y la guitarra</text>
+<rect x="120.0" y="260.0" width="640.0" height="330.0" rx="26" fill="#E5312B" stroke="#1A1A1A" stroke-width="2"/>
+<text x="440.0" y="400.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="56" font-weight="700" fill="#FFFFFF" text-anchor="middle" >Batería</text>
+<text x="440.0" y="480.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="30" font-weight="600" fill="#FFFFFF" text-anchor="middle" >el ritmo y el pulso</text>
+<rect x="880.0" y="260.0" width="640.0" height="330.0" rx="26" fill="#C9A227" stroke="#1A1A1A" stroke-width="2"/>
+<text x="1200.0" y="400.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="56" font-weight="700" fill="#1A1A1A" text-anchor="middle" >Bajo</text>
+<text x="1200.0" y="480.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="30" font-weight="600" fill="#1A1A1A" text-anchor="middle" >notas graves con ritmo</text>
+<rect x="1640.0" y="260.0" width="640.0" height="330.0" rx="26" fill="#2AA7E8" stroke="#1A1A1A" stroke-width="2"/>
+<text x="1960.0" y="400.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="56" font-weight="700" fill="#FFFFFF" text-anchor="middle" >Piano y guitarra</text>
+<text x="1960.0" y="480.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="30" font-weight="600" fill="#FFFFFF" text-anchor="middle" >los acordes (armonía)</text>
+<text x="820.0" y="445.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="70" font-weight="700" fill="#1A1A1A" text-anchor="middle" >⟷</text>
+<text x="1580.0" y="445.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="70" font-weight="700" fill="#1A1A1A" text-anchor="middle" >⟷</text>
+<text x="1200.0" y="700.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="32" font-weight="700" fill="#1A1A1A" text-anchor="middle" >El bajo toca con el bombo (ritmo) y sobre la nota principal del acorde (armonía).</text>
+<text x="1200.0" y="770.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="28" font-weight="600" fill="#5F6368" text-anchor="middle" >Si el bajo se detiene, la banda «pierde el piso».</text>
+</svg>
