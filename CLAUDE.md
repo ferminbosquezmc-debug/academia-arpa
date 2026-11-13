@@ -96,7 +96,8 @@ Se entra desde el botón «Cabina virtual 3D» en la vista de la carrera (`atVie
 - Fuente: `contenido/bajo/nivel-N/clase-M.md` (formato de piano/batería). Cargar: `python3 herramientas/bajo.py ../academia-musica-ama/contenido/bajo` (reescribe `const JNC=`). Claves `<nivel>-0bajo-<i>`. `INS.bajo` trae los 36 títulos del mapa.
 - Láminas: `contenido/bajo/generador/laminas.py` → `bajo/img/J1_*.svg` (`gImg` acepta `bajo/img`).
 - Abierto a los estudiantes (`AVAIL.bajo=1` cuando `JNC` tiene 12 clases o más).
-- Avance: **Nivel 1 completo (clases 1–12)** y **mes 4 (clases 13–16) listo**; siguen las clases 17–36 según MAPA.md (láminas del N2: `J2_*.svg`).
+- Patrones AMA de la escala mayor (cajas de 4 trastes, un dedo por traste): desplazamiento desde el patrón 1 = 0, +2, +5, +7, +10 trastes para los patrones 1 a 5. Patrón 1 = raíz en la cuerda MI con el dedo 2; patrón 4 = raíz en la cuerda LA con el dedo 2 (en SOL: cajas 2–5, 4–7, 7–10, 9–12, 12–15). `scale_box` del generador los dibuja.
+- Avance: **Nivel 1 completo (clases 1–12)** y **meses 4 y 5 (clases 13–20) listos**; siguen las clases 21–36 según MAPA.md (láminas del N2: `J2_*.svg`).
 
 ## Juegos de práctica (vista Práctica)
 Bloque JS que empieza con el comentario `Juegos de práctica`; CSS con prefijo `jg-`; HTML dentro de `<div data-nn>` en `#v-practica` (para que el pintor no toque los textos de Arpi).
