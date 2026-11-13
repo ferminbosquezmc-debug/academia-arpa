@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="1050" viewBox="0 0 2400 1050" role="img" aria-label="Plan de un solo de ocho compases">
+<title>Plan de un solo de ocho compases</title>
+<rect width="2400" height="1050" fill="#FFFFFF"/>
+<text x="40.0" y="72.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="48" font-weight="700" fill="#1A1A1A" text-anchor="start" >Mi primer solo · 8 compases</text>
+<text x="40.0" y="124.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="32" font-weight="500" fill="#5F6368" text-anchor="start" >Un solo es una historia corta: idea, repetición, subida y final</text>
+<rect x="80.0" y="220.0" width="540.0" height="360.0" rx="22" fill="#2AA7E8" stroke="#1A1A1A" stroke-width="2"/>
+<text x="350.0" y="300.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="30" font-weight="700" fill="#FFFFFF" text-anchor="middle" >compases 1–2</text>
+<text x="350.0" y="390.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="50" font-weight="700" fill="#FFFFFF" text-anchor="middle" >Idea</text>
+<text x="350.0" y="470.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="24" font-weight="600" fill="#FFFFFF" text-anchor="middle" >un ritmo corto en el redoblante</text>
+<rect x="650.0" y="220.0" width="540.0" height="360.0" rx="22" fill="#2E9E4F" stroke="#1A1A1A" stroke-width="2"/>
+<text x="920.0" y="300.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="30" font-weight="700" fill="#FFFFFF" text-anchor="middle" >compases 3–4</text>
+<text x="920.0" y="390.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="50" font-weight="700" fill="#FFFFFF" text-anchor="middle" >Repetición</text>
+<text x="920.0" y="470.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="24" font-weight="600" fill="#FFFFFF" text-anchor="middle" >la misma idea, cambiando el final</text>
+<rect x="1220.0" y="220.0" width="540.0" height="360.0" rx="22" fill="#F57C00" stroke="#1A1A1A" stroke-width="2"/>
+<text x="1490.0" y="300.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="30" font-weight="700" fill="#FFFFFF" text-anchor="middle" >compases 5–6</text>
+<text x="1490.0" y="390.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="50" font-weight="700" fill="#FFFFFF" text-anchor="middle" >Subida</text>
+<text x="1490.0" y="470.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="24" font-weight="600" fill="#FFFFFF" text-anchor="middle" >más fuerte, por los toms</text>
+<rect x="1790.0" y="220.0" width="540.0" height="360.0" rx="22" fill="#E5312B" stroke="#1A1A1A" stroke-width="2"/>
+<text x="2060.0" y="300.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="30" font-weight="700" fill="#FFFFFF" text-anchor="middle" >compases 7–8</text>
+<text x="2060.0" y="390.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="50" font-weight="700" fill="#FFFFFF" text-anchor="middle" >Final</text>
+<text x="2060.0" y="470.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="24" font-weight="600" fill="#FFFFFF" text-anchor="middle" >redoble de 5 golpes + crash y bombo</text>
+<text x="60.0" y="700.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="30" font-weight="700" fill="#1A1A1A" text-anchor="start" >«Cuatro y cuatro»: el profesor toca 4 compases de solo, yo respondo con 4; la banda mantiene el pulso</text>
+<rect x="80.0" y="760.0" width="265.0" height="140.0" rx="16" fill="#C9C3B6" stroke="#1A1A1A" stroke-width="2"/>
+<text x="212.0" y="820.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="34" font-weight="700" fill="#1A1A1A" text-anchor="middle" >1</text>
+<text x="212.0" y="870.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="26" font-weight="600" fill="#1A1A1A" text-anchor="middle" >profesor</text>
+<rect x="365.0" y="760.0" width="265.0" height="140.0" rx="16" fill="#C9C3B6" stroke="#1A1A1A" stroke-width="2"/>
+<text x="497.0" y="820.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="34" font-weight="700" fill="#1A1A1A" text-anchor="middle" >2</text>
+<text x="497.0" y="870.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="26" font-weight="600" fill="#1A1A1A" text-anchor="middle" >profesor</text>
+<rect x="650.0" y="760.0" width="265.0" height="140.0" rx="16" fill="#C9C3B6" stroke="#1A1A1A" stroke-width="2"/>
+<text x="782.0" y="820.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="34" font-weight="700" fill="#1A1A1A" text-anchor="middle" >3</text>
+<text x="782.0" y="870.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="26" font-weight="600" fill="#1A1A1A" text-anchor="middle" >profesor</text>
+<rect x="935.0" y="760.0" width="265.0" height="140.0" rx="16" fill="#C9C3B6" stroke="#1A1A1A" stroke-width="2"/>
+<text x="1067.0" y="820.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="34" font-weight="700" fill="#1A1A1A" text-anchor="middle" >4</text>
+<text x="1067.0" y="870.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="26" font-weight="600" fill="#1A1A1A" text-anchor="middle" >profesor</text>
+<rect x="1220.0" y="760.0" width="265.0" height="140.0" rx="16" fill="#C9A227" stroke="#1A1A1A" stroke-width="2"/>
+<text x="1352.0" y="820.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="34" font-weight="700" fill="#1A1A1A" text-anchor="middle" >5</text>
+<text x="1352.0" y="870.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="26" font-weight="600" fill="#1A1A1A" text-anchor="middle" >yo</text>
+<rect x="1505.0" y="760.0" width="265.0" height="140.0" rx="16" fill="#C9A227" stroke="#1A1A1A" stroke-width="2"/>
+<text x="1637.0" y="820.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="34" font-weight="700" fill="#1A1A1A" text-anchor="middle" >6</text>
+<text x="1637.0" y="870.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="26" font-weight="600" fill="#1A1A1A" text-anchor="middle" >yo</text>
+<rect x="1790.0" y="760.0" width="265.0" height="140.0" rx="16" fill="#C9A227" stroke="#1A1A1A" stroke-width="2"/>
+<text x="1922.0" y="820.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="34" font-weight="700" fill="#1A1A1A" text-anchor="middle" >7</text>
+<text x="1922.0" y="870.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="26" font-weight="600" fill="#1A1A1A" text-anchor="middle" >yo</text>
+<rect x="2075.0" y="760.0" width="265.0" height="140.0" rx="16" fill="#C9A227" stroke="#1A1A1A" stroke-width="2"/>
+<text x="2207.0" y="820.0" font-family="Poppins, Montserrat, 'Trebuchet MS', Arial, sans-serif" font-size="34" font-weight="700" fill="#1A1A1A" text-anchor="middle" >8</text>
+<text x="2207.0" y="870.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="26" font-weight="600" fill="#1A1A1A" text-anchor="middle" >yo</text>
+<text x="1200.0" y="990.0" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="28" font-weight="600" fill="#5F6368" text-anchor="middle" >Consejo: deja silencios y vuelve siempre al 1 con fuerza</text>
+</svg>
