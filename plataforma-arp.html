@@ -4206,6 +4206,7 @@ function lvView(){const R=LVR[LV.rg],r=LV.res;
   +'<p class="mute" style="font-size:13px;margin-top:8px">Si la nota te queda incómoda, cambia de rango. Nunca fuerces la voz; si sientes molestia, para.</p></div>'}
 function lvNew(){const a=LVR[LV.rg][1];let n;do{n=lbPick(a)}while(a.length>1&&n===LV.tg);LV.tg=n;LV.res=null;lbNote(n,lbNow(),1.6,{vol:.22})}
 function lvStop(){if(LV.it){clearInterval(LV.it);LV.it=null}if(LV.stm){try{LV.stm.getTracks().forEach(t=>t.stop())}catch(e){}LV.stm=null}if(LV.st==='canta')LV.st=''}
+function micNo(){const inF=window.top!==window.self;return '🎙️ <b>El micrófono no está disponible aquí.</b> '+(inF?'Esta página se abre dentro de claude.ai, que por seguridad no le da el micrófono a la plataforma. ':'El navegador no dio el permiso: toca el candado 🔒 junto a la dirección y permite el micrófono. ')+'Para medir tu voz con el micrófono, abre <a href="https://ferminbosquezmc-debug.github.io/vibravoice/" target="_blank" rel="noopener"><b>VibraVoice 12D ↗</b></a> (afinador en vivo). Aquí puedes seguir con los sonidos de referencia y tu oído.'}
 async function lvSing(){if(LV.tg===null)return;const msg=document.getElementById('lv-msg');
  try{if(!navigator.mediaDevices||!navigator.mediaDevices.getUserMedia)throw 0;
   const st=await navigator.mediaDevices.getUserMedia({audio:{echoCancellation:false,noiseSuppression:false,autoGainControl:false}});
@@ -4213,7 +4214,7 @@ async function lvSing(){if(LV.tg===null)return;const msg=document.getElementById
   const buf=new Float32Array(an.fftSize),t0=performance.now();LV.stm=st;LV.fr=[];LV.st='canta';lbView();
   LV.it=setInterval(()=>{if(!visS('v-lab')||LBt!=='voz'){lvStop();return}an.getFloatTimeDomainData(buf);const f=lbPitch(buf,c.sampleRate);if(f>0&&isFinite(f))LV.fr.push(69+12*Math.log2(f/440));
    if(performance.now()-t0>3200){lvStop();lvFin()}},90)}
- catch(e){lvStop();if(msg)msg.textContent='El navegador no dejó usar el micrófono. Revisa el permiso o prueba en otro navegador.'}}
+ catch(e){lvStop();if(msg)msg.innerHTML=micNo()}}
 function lvFin(){const a=LV.fr.slice(Math.floor(LV.fr.length*.3));
  if(a.length<6){LV.res='No te escuché bien. Acércate al micrófono y canta un poco más fuerte, sin gritar.';return lbView()}
  const d=a.map(m=>{let x=m-LV.tg;return x-12*Math.round(x/12)}).sort((p,q)=>p-q),ce=Math.round(d[d.length>>1]*100),ab=Math.abs(ce),ok=ab<=25;
@@ -4242,7 +4243,7 @@ async function lbMicStart(){const msg=document.getElementById('lb-mmsg');
   const st=await navigator.mediaDevices.getUserMedia({audio:{echoCancellation:false,noiseSuppression:false,autoGainControl:false}});
   const c=AC();if(c.state==='suspended')await c.resume();const src=c.createMediaStreamSource(st),an=c.createAnalyser();an.fftSize=4096;src.connect(an);
   LBmic={st:st,an:an,buf:new Float32Array(an.fftSize),hist:[],last:0};lbView();lbLoop()}
- catch(e){LBmic=null;if(msg)msg.innerHTML='El navegador no dejó usar el micrófono en esta vista. Usa los <b>sonidos de referencia</b> de abajo: afinan igual de bien con un poco de práctica.'}}
+ catch(e){LBmic=null;if(msg)msg.innerHTML=micNo()}}
 function lbStop(){if(LBmic){try{LBmic.st.getTracks().forEach(t=>t.stop())}catch(e){}LBmic=null}}
 function lbMicUI(){const m=document.getElementById('lb-mmsg');if(m)m.textContent='Toca una cuerda o una nota cerca del teléfono o la computadora.'}
 function lbPitch(b,sr){const n=b.length;let rms=0;for(let i=0;i<n;i++)rms+=b[i]*b[i];rms=Math.sqrt(rms/n);if(rms<.012)return -1;
