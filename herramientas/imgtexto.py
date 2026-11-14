@@ -15,8 +15,23 @@ def words(f):
         if len(re.findall(r'[A-Za-zÁÉÍÓÚÑáéíóúñü]{2,}', t)) == 0: continue
         if out and out[-1] == t: continue
         out.append(t)
-    s = ' · '.join(dict.fromkeys(out))
-    return s[:600]
+    out = list(dict.fromkeys(out))
+    # un renglón que empieza en minúscula es el detalle del anterior: se unen («Pies planos en el suelo: firmes…»)
+    res, merged = [], set()
+    for t in out:
+        i = len(res) - 1
+        if i >= 1 and i not in merged and t[:1].islower() and len(t.split()) >= 2 and len(res[i].split()) >= 2 and len(res[i]) < 60:
+            res[i] = res[i].rstrip(':') + (', ' if ':' in res[i] else ': ') + t; merged.add(i)
+        else: res.append(t)
+    # 3 o más renglones cortos seguidos (DO, RE, MI…) van en un solo renglón: «DO · RE · MI»
+    fin, run = [], []
+    for t in res + [None]:
+        if t is not None and len(fin) >= 1 and len(t) <= 10: run.append(t); continue
+        if len(run) >= 3: fin.append(' · '.join(run))
+        else: fin.extend(run)
+        run = []
+        if t is not None: fin.append(t)
+    return fin[:30]  # el primero es el título de la lámina
 m = {}
 for d in DIRS:
     for f in sorted(glob.glob(d + '/*.svg')):
