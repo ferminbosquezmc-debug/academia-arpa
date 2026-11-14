@@ -140,6 +140,9 @@ nav button[aria-current=page]{background:rgba(242,163,27,.14);border-radius:14px
 .prog3{display:flex;align-items:center;gap:10px;margin:6px 0 2px;font-weight:600}
 .legend{display:grid;grid-template-columns:36px 1fr;gap:6px 12px;align-items:center;margin-top:12px}
 .legend .em{font-size:26px;text-align:center}
+#back-fab{position:fixed;left:14px;bottom:84px;width:52px;height:52px;border-radius:50%;background:var(--card,#1b1d24);color:var(--gold);border:2px solid var(--gold);font:700 26px/1 Jost,sans-serif;z-index:25;box-shadow:0 4px 16px rgba(0,0,0,.5)}
+#back-fab[hidden]{display:none}
+.lecnav{display:flex;gap:8px;flex-wrap:wrap;justify-content:space-between;margin-top:16px}
 #help-fab{position:fixed;right:14px;bottom:84px;width:52px;height:52px;border-radius:50%;background:var(--gold);color:#000;font:700 26px/1 Jost,sans-serif;z-index:25;box-shadow:0 4px 16px rgba(0,0,0,.5)}
 #help{position:fixed;inset:0;background:rgba(0,0,0,.82);z-index:50;display:flex;align-items:flex-end;justify-content:center}
 #help[hidden]{display:none}
@@ -560,6 +563,7 @@ td .gblk{min-width:3.2em;width:4.2em}
   <button data-go="biblioteca"><span class="ne" aria-hidden="true">📖</span>Biblioteca</button>
   <button data-go="perfil"><span class="ne" aria-hidden="true">👤</span>Perfil</button>
 </nav>
+<button id="back-fab" hidden aria-label="Atrás: página anterior" title="Atrás">⬅</button>
 <button id="help-fab" aria-label="Ayuda: cómo se usa" aria-haspopup="dialog">?</button>
 <div id="help" role="dialog" aria-modal="true" aria-labelledby="help-t" hidden><div class="sheet" id="help-b"></div></div>
 <div id="f4" role="dialog" aria-modal="true" aria-labelledby="f4-t" data-nn hidden><div class="sheet" id="f4-b"></div></div>
@@ -780,7 +784,7 @@ function toast(t){const e=$('#toast');e.textContent=t;e.classList.add('on');setT
 
 function go(v){
  applyMode();if(typeof mmStop==='function')mmStop();if(typeof sgStop==='function')sgStop();if(typeof eqStop==='function')eqStop();if(typeof fxStop==='function')fxStop();if(typeof jgStop==='function')jgStop();if(typeof cvStop==='function')cvStop();if(typeof qsStop==='function')qsStop();try{window.speechSynthesis&&speechSynthesis.cancel();saying=false}catch(e){}
- document.querySelectorAll('.view').forEach(x=>x.hidden=x.id!=='v-'+v);
+ document.querySelectorAll('.view').forEach(x=>x.hidden=x.id!=='v-'+v);{const bf=document.getElementById('back-fab');if(bf)bf.hidden=v!=='leccion'}
  document.querySelectorAll('nav button').forEach(b=>(b.dataset.go===v||(['n4','u4','a4','m4'].includes(v)&&b.dataset.go==='clases')||((v==='asig'||v==='cabina')&&b.dataset.go==='home')||(v==='leccion'&&b.dataset.go===(LD[S.cur]&&LD[S.cur].kidm?'ninos':LD[S.cur]&&LD[S.cur].at?'home':'clases')))?b.setAttribute('aria-current','page'):b.removeAttribute('aria-current'));
  if(v==='home')home();if(v==='clases')clases();if(v==='ninos')ninos();if(v==='asig')atView();if(v==='cabina')cvView();if(v==='biblioteca')biblio();if(v==='leccion'){S.last=S.cur;save();lec()}if(v==='perfil'){perfil();segPerfil()}if(v==='ubic')ubicView();if(v==='seg')segView();if(v==='guia')guiaView();if(v==='lab')lbView();if(v==='port')pfView();if(v==='pistas')ptView();if(v==='score')scView();if(v==='practica'&&typeof jgRacha==='function')jgRacha();if(v==='n4')n4();if(v==='u4')u4();if(v==='a4')a4();if(v==='m4')m4();
  window.scrollTo(0,0);
@@ -3761,6 +3765,21 @@ function glossCard(D){
  const say='<button class="btn ghost say" data-say="g">🔊 Escuchar la explicación</button>';
  return '<div class="card">'+say+(g.length?'<h3 style="margin-top:16px">'+(kid()?'Palabras nuevas 📖':'Vocabulario de la lección')+'</h3>'+g.map(x=>'<div class="gl"><b>'+x[0]+'</b>: '+x[1]+'</div>').join(''):'')+'</div>';
 }
+/* ===== Volver paso a paso (botón ⬅ flotante en las clases) =====
+   Atrás: paso anterior de la clase → al llegar al primer paso, último paso de la clase anterior → … hasta la primera página de la clase 1;
+   desde ahí vuelve a la lista (Clases, la carrera o Misiones). lecList arma el orden de las clases de la carrera del estudiante (niveles 1 a 3). */
+function lecList(K){const D=LD[K];if(!D||D.at||D.kidm)return null;const out=[];
+ for(let l=0;l<3;l++){const x=subj(l,0);if(!x)continue;x[1].forEach((_,i)=>{const k=lk(l,0,i);if(LD[k])out.push([k,l])})}
+ return out.some(a=>a[0]===K)?out:null}
+function lecPrev(K){const a=lecList(K);if(!a)return null;const i=a.findIndex(x=>x[0]===K);return i>0?a[i-1][0]:null}
+function lecNext(K){const a=lecList(K);if(!a)return null;const i=a.findIndex(x=>x[0]===K);return i>=0&&i<a.length-1?a[i+1][0]:null}
+function lecOpen(k,step){const a=lecList(k);if(a){const f=a.find(x=>x[0]===k);if(f)S.lvl=f[1]}const L=(S.ls[k]=S.ls[k]||{});L.step=step;S.cur=k;save();lec();window.scrollTo(0,0)}
+function lecBack(){const K=S.cur,L=S.ls[K]||{};try{mmStop();sgStop();eqStop();fxStop();qsStop()}catch(e){}
+ if((L.step||0)>0){L.step--;save();lec();window.scrollTo(0,0);return}
+ const p=lecPrev(K);if(p){lecOpen(p,4);toast('Clase anterior: '+LD[p].u+' · '+LD[p].t);return}
+ go($('#lec-back').dataset.go||'clases')}
+$('#back-fab').onclick=lecBack;
+document.addEventListener('click',e=>{const b=e.target.closest&&e.target.closest('[data-lecgo]');if(b)lecOpen(b.dataset.lecgo,0)});
 function lec(){DRP.stop();if(R4.on)r4stop();R4root='#v-leccion';setTimeout(r4fill,0);figStop();
  {const b=$('#lec-back'),km=LD[S.cur]&&LD[S.cur].kidm,am=LD[S.cur]&&LD[S.cur].at;b.dataset.go=km?'ninos':am?'asig':'clases';b.textContent=km?'⬅ Volver a Misiones':am?'⬅ Volver a la carrera':'⬅ Volver a Clases'}
  if(LD[S.cur]&&LD[S.cur].at&&atLocked(S.cur)){$('#lec-t').textContent=LD[S.cur].t;$('#lec-s').textContent=LD[S.cur].s;$('#steps').innerHTML='';$('#lec-body').innerHTML='<div class="card"><h3>🔒 Todavía bloqueada</h3><p class="mute" style="margin:6px 0 12px">Completa las semanas anteriores en orden para abrir esta.</p><button class="btn" data-go="asig">Ver la carrera</button></div>';return}
@@ -3789,6 +3808,7 @@ function lec(){DRP.stop();if(R4.on)r4stop();R4root='#v-leccion';setTimeout(r4fil
   else if(L.status==='ok')b=(D.fin?D.fin():'')+'<div class="card"><h3>Lección terminada</h3><p class="mute" style="margin:6px 0 12px">Tu docente revisará tu entrega y te responderá por WhatsApp. Si todavía no la enviaste, puedes hacerlo aquí.</p><button class="btn" data-go="'+(D.at?'asig':'clases')+'">'+(D.at?'Volver a la carrera':'Volver a Clases')+'</button><br>'+waBtn(D,L,'ghost')+'</div>';
   else if(L.status==='review')b=(D.fin?D.fin():'')+'<div class="card"><h3>Respuesta guardada</h3><p class="mute" style="margin:6px 0">Tu respuesta: '+esc(L.text||'')+'</p><p><b>Último paso:</b> envíala a tu docente. Se abrirá WhatsApp con tu respuesta ya escrita; solo pulsa enviar.'+(S.name?'':' Escribe tu nombre en el mensaje.')+'</p>'+waBtn(D,L)+'<br><button class="btn ghost" id="okdemo" style="margin-top:12px">Ya la envié · terminar lección</button></div>';
   else b=(D.fin?D.fin():'')+'<div class="card"><h3>Demuestra lo aprendido</h3><p class="mute" style="margin-top:6px">'+D.e+'</p>'+(D.v?'<p class="mute" style="margin-top:8px;font-size:14px">Si se pide video o audio, mándalo a tu docente por el mismo chat de WhatsApp después de enviar tu respuesta.</p>':'')+'<textarea id="ta" aria-label="Tu respuesta" placeholder="Escribe tu respuesta aquí">'+esc(L.text||'')+'</textarea><p class="mute" style="font-size:14px"><span id="cnt">'+(L.text||'').trim().length+'</span> de 40 caracteres como mínimo</p><button class="btn" id="send" style="margin-top:10px"'+((L.text||'').trim().length<40?' disabled':'')+'>Guardar mi respuesta</button></div>'}
+ {const pv=lecPrev(K),nv=lecNext(K);if(pv||nv)b+='<div class="lecnav" data-nn>'+(pv?'<button class="btn ghost" data-lecgo="'+pv+'">⏮ Clase anterior</button>':'<span></span>')+(nv?'<button class="btn ghost" data-lecgo="'+nv+'">Clase siguiente ⏭</button>':'')+'</div>'}
  $('#lec-body').innerHTML=r4bar4()+b;DRP.mount($('#lec-body'));
  /* Espacios para escribir (____): cada uno se guarda en S.blk con la clave clase|paso|número */
  S.blk=S.blk||{};$('#lec-body').querySelectorAll('.gblk').forEach((x,i)=>{x.dataset.bk=K+'|'+L.step+'|'+i;x.value=S.blk[x.dataset.bk]||''});
