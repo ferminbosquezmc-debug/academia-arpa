@@ -4153,7 +4153,7 @@ const lbNm=m=>LBN[((m%12)+12)%12];
 const LBI=[[1,'Segunda menor',2],[2,'Segunda mayor',0],[3,'Tercera menor',1],[4,'Tercera mayor',0],[5,'Cuarta justa',1],[6,'Tritono',2],[7,'Quinta justa',0],[8,'Sexta menor',2],[9,'Sexta mayor',1],[10,'Séptima menor',2],[11,'Séptima mayor',2],[12,'Octava',0]];
 const LBC=[[[0,4,7],'Mayor',0],[[0,3,7],'Menor',0],[[0,3,6],'Disminuido',2],[[0,4,8],'Aumentado',2]];
 const LBS={guitarra:[[40,'6ª'],[45,'5ª'],[50,'4ª'],[55,'3ª'],[59,'2ª'],[64,'1ª']],bajo:[[28,'4ª'],[33,'3ª'],[38,'2ª'],[43,'1ª']],cromatico:[[60],[62],[64],[65],[67],[69],[71],[72]]};
-const LBT=[['afinar','🎚️ Afinador'],['voz','🎤 Afino mi voz'],['alto','↕️ Alto o bajo'],['int','📏 Intervalos'],['acor','🎹 Mayor o menor'],['pulso','🥁 Pulso']];
+const LBT=[['afinar','🎚️ Afinador'],['voz','🎯 ¿Afinado?'],['alto','↕️ Alto o bajo'],['int','📏 Intervalos'],['acor','🎹 Mayor o menor'],['pulso','🥁 Pulso']];
 const LBL=['Nivel 1','Nivel 2','Nivel 3'];
 let LBt='afinar',LBlv=0,LBq=null,LBr={ok:0,n:0},LBins='guitarra',LBmic=null,LBp=null,LBbpm=80,LBreto=false;
 const lbRnd=(a,b)=>a+Math.floor(Math.random()*(b-a+1));
@@ -4175,93 +4175,65 @@ function lbView(){const v=document.getElementById('v-lab');if(!v)return;if(LBt!=
   +'<div class="chips" role="group" aria-label="Ejercicio" style="margin-top:8px">'+LBT.map(x=>'<button class="chip" data-lt="'+x[0]+'" aria-pressed="'+(LBt===x[0])+'">'+x[1]+'</button>').join('')+'</div>';
  if(LBt!=='voz')lvStop();
  if(LBt==='afinar')h+=lbAfinar();else if(LBt==='voz')h+=lvView();else if(LBt==='pulso')h+=lbPulso();else h+=lbJuego();
- h+=lbResumen();v.innerHTML=h;if(LBt==='afinar'&&LBmic)lbMicUI()}
+ h+=lbResumen();v.innerHTML=h}
 /* Mi progreso: separa lo MEDIDO por la plataforma (Laboratorio), lo EVALUADO por el docente (entregas aprobadas) y la AUTOEVALUACIÓN (clases que el estudiante marcó). No se inventan medidas. */
-function lbResumen(){const o=S.oido||{},v=S.voz,pc=k=>o[k]&&o[k].n?Math.round(100*o[k].ok/o[k].n):null,p=k=>pc(k)===null?'—':pc(k)+'% ('+o[k].n+')';
- const vz=v&&v.n?Math.round(100*v.ok/v.n)+'% afinadas · desvío medio '+Math.round(v.ab/v.n)+' cents ('+v.n+')':'—';
+function lbResumen(){const o=S.oido||{},v=S.afo,pc=k=>o[k]&&o[k].n?Math.round(100*o[k].ok/o[k].n):null,p=k=>pc(k)===null?'—':pc(k)+'% ('+o[k].n+')';
+ const vz=v&&v.n?Math.round(100*v.ok/v.n)+'% ('+v.n+')':'—';
  const ins=getInst(S.lvl)||'canto',re=new RegExp('^\\d-0'+ins+'-'),ks=Object.keys(LD).filter(k=>re.test(k)),apr=ks.filter(k=>(S.ls[k]||{}).status==='ok').length,dn=ks.filter(k=>S.done[k]).length;
- const sug=[];if(v&&v.n>=5&&v.ok/v.n<.6)sug.push('Tu afinación cantada está por debajo del 60 %: practica el unísono (canto, clases 4 y 10) con «Afino mi voz».');
+ const sug=[];if(v&&v.n>=5&&v.ok/v.n<.6)sug.push('En «¿Afinado?» vas por debajo del 60 %: practica en nivel Fácil y el unísono (canto, clases 4 y 10).');
  if(pc('int')!==null&&o.int.n>=5&&pc('int')<60)sug.push('Repasa los intervalos (canto, clases 14 y 26) y el juego de Intervalos.');
  if(pc('acor')!==null&&o.acor.n>=5&&pc('acor')<60)sug.push('Repasa mayor y menor (canto, clase 9) y el juego «Mayor o menor».');
  if(pc('alto')!==null&&o.alto.n>=5&&pc('alto')<60)sug.push('Practica «Alto o bajo» unos minutos al día antes de cantar.');
  if(o.pulso&&o.pulso.pct<60)sug.push('Trabaja el pulso con el metrónomo (clase 5) y el ejercicio de Pulso.');
  if(!sug.length)sug.push(v||o.int||o.acor?'¡Vas bien! Sigue con la clase de esta semana y vuelve al Laboratorio unos minutos al día.':'Haz unos ejercicios del Laboratorio para ver aquí tu avance.');
  return '<div class="card" data-nn><h3>Mi progreso</h3>'
-  +'<p style="margin-top:6px"><b>📏 Medido por la plataforma</b></p><div class="atchips"><span>Afinación cantada: <b>'+vz+'</b></span><span>¿Qué suena?: <b>'+(S.qs?'mejor '+S.qs.best+' de 5':'—')+'</b></span><span>Alto o bajo: <b>'+p('alto')+'</b></span><span>Intervalos: <b>'+p('int')+'</b></span><span>Mayor o menor: <b>'+p('acor')+'</b></span><span>Pulso: <b>'+(o.pulso?'±'+o.pulso.avg+' ms · '+o.pulso.pct+'% a tiempo':'—')+'</b></span></div>'
+  +'<p style="margin-top:6px"><b>📏 Medido por la plataforma</b></p><div class="atchips"><span>¿Afinado?: <b>'+vz+'</b></span><span>¿Qué suena?: <b>'+(S.qs?'mejor '+S.qs.best+' de 5':'—')+'</b></span><span>Alto o bajo: <b>'+p('alto')+'</b></span><span>Intervalos: <b>'+p('int')+'</b></span><span>Mayor o menor: <b>'+p('acor')+'</b></span><span>Pulso: <b>'+(o.pulso?'±'+o.pulso.avg+' ms · '+o.pulso.pct+'% a tiempo':'—')+'</b></span></div>'
   +'<p style="margin-top:10px"><b>👩‍🏫 Evaluado por tu docente</b> · '+(INSN[ins]||ins)+'</p><div class="atchips"><span>Entregas aprobadas: <b>'+apr+'</b></span></div>'
   +'<p style="margin-top:10px"><b>🙋 Tu autoevaluación</b></p><div class="atchips"><span>Clases que marcaste como hechas: <b>'+dn+' de '+ks.length+'</b></span></div>'
   +'<p style="margin-top:10px"><b>💡 Sugerencias</b></p><ul style="padding-left:20px;margin-top:4px">'+sug.map(x=>'<li style="font-size:15px;margin-top:4px">'+x+'</li>').join('')+'</ul>'
-  +'<p class="mute" style="font-size:13px;margin-top:6px">Las medidas con micrófono son aproximadas. Tu docente ve este registro en el seguimiento.</p></div>'}
+  +'<p class="mute" style="font-size:13px;margin-top:6px">Aquí solo cuenta lo que respondiste en la plataforma. Tu docente ve este registro en el seguimiento.</p></div>'}
 
-/* ---- Reto «Afino mi voz»: suena una nota, el estudiante la canta y se mide la desviación en cents (medición aproximada, con el micrófono).
-   Rangos cómodos para elegir (sin forzar notas extremas). Se acepta la misma nota en otra octava. Resultado en S.voz {n, ok, ab}. ---- */
+/* ---- Reto «¿Afinado?» (sin micrófono): suena la nota de referencia y después una «voz» que puede estar afinada, alta o baja.
+   El estudiante decide de oído. Niveles: 40, 20 y 10 cents de diferencia. Resultado en S.afo {n, ok}. Para medir su propia voz: VibraVoice 12D. ---- */
 const LVR={aguda:['Voz aguda (mujeres, niños y niñas)',[60,62,64,65,67,69]],grave:['Voz grave (hombres)',[48,50,52,53,55,57]]};
-let LV={rg:'aguda',tg:null,st:'',fr:[],it:null,stm:null,res:null};
-function lvView(){const R=LVR[LV.rg],r=LV.res;
- return '<div class="card" data-nn><h3>🎤 Afino mi voz</h3><p class="mute" style="font-size:14px;margin:4px 0 8px">1) Elige tu rango cómodo. 2) Toca «Nueva nota» y escúchala. 3) Toca «Cantar» y canta la nota con «u» durante 3 segundos. La plataforma mide cuánto te acercaste (medición aproximada).</p>'
+const LVD=[['Fácil',40],['Medio',20],['Difícil',10]];
+let LV={rg:'aguda',lv:0,q:null,res:null,ok:0,n:0};
+const VVURL='https://ferminbosquezmc-debug.github.io/vibravoice/';
+function lvPlay(){const q=LV.q;if(!q)return;const t=lbNow();lbNote(q.tg,t,1.2,{vol:.22});lbNote(q.tg+q.c/100,t+1.5,1.6,{vol:.16,saw:1})}
+function lvNew(){const a=LVR[LV.rg][1];let n;do{n=lbPick(a)}while(a.length>1&&LV.q&&n===LV.q.tg);const r=Math.random(),d=LVD[LV.lv][1];
+ LV.q={tg:n,c:r<1/3?0:r<2/3?d:-d,done:false};LV.res=null;lvPlay()}
+function lvStop(){}
+function lvAns(x){const q=LV.q;if(!q||q.done)return;q.done=true;const ans=q.c>0?'up':q.c<0?'down':'same',ok=x===ans;
+ LV.n++;if(ok)LV.ok++;S.afo=S.afo||{n:0,ok:0};S.afo.n++;if(ok)S.afo.ok++;save();
+ const real=ans==='same'?'estaba <b>afinada</b>':'estaba <b>'+Math.abs(q.c)+' cents más '+(ans==='up'?'alta':'baja')+'</b>';
+ LV.res=(ok?'✅ ¡Bien! ':'🔴 Casi. ')+'La voz '+real+'. '+(ok?'':'Vuelve a escuchar y fíjate si la segunda nota «sube», «baja» o se queda igual.')}
+function lvView(){const q=LV.q,r=LV.res;
+ return '<div class="card" data-nn><h3>🎯 ¿Afinado?</h3><p class="mute" style="font-size:14px;margin:4px 0 8px">Primero suena la nota de referencia y después una voz que la imita. Escucha y decide: ¿la voz quedó <b>más alta</b>, <b>afinada</b> o <b>más baja</b>? Así entrenas el oído que necesitas para afinar al cantar.</p>'
   +'<div class="chips" role="group" aria-label="Rango">'+Object.keys(LVR).map(k=>'<button class="chip" data-lvr="'+k+'" aria-pressed="'+(LV.rg===k)+'">'+LVR[k][0]+'</button>').join('')+'</div>'
-  +'<div class="row" style="gap:8px;flex-wrap:wrap;margin-top:10px"><button class="btn" id="lv-new">🎵 Nueva nota</button>'+(LV.tg!==null?'<button class="btn" id="lv-rep">🔁 Escuchar otra vez</button><button class="btn" id="lv-sing"'+(LV.st==='canta'?' disabled':'')+'>🎤 Cantar</button>':'')+'</div>'
-  +(LV.tg!==null?'<p style="font-size:20px;margin-top:10px">Nota: <b>'+lbNm(LV.tg)+'</b></p>':'')
-  +'<p id="lv-msg" style="font-size:16px;margin-top:6px">'+(LV.st==='canta'?'Canta ahora… 🎙️':r?r:'')+'</p>'
-  +'<p class="mute" style="font-size:13px;margin-top:8px">Si la nota te queda incómoda, cambia de rango. Nunca fuerces la voz; si sientes molestia, para.</p></div>'}
-function lvNew(){const a=LVR[LV.rg][1];let n;do{n=lbPick(a)}while(a.length>1&&n===LV.tg);LV.tg=n;LV.res=null;lbNote(n,lbNow(),1.6,{vol:.22})}
-function lvStop(){if(LV.it){clearInterval(LV.it);LV.it=null}if(LV.stm){try{LV.stm.getTracks().forEach(t=>t.stop())}catch(e){}LV.stm=null}if(LV.st==='canta')LV.st=''}
-function micNo(){const inF=window.top!==window.self;return '🎙️ <b>El micrófono no está disponible aquí.</b> '+(inF?'Esta página se abre dentro de claude.ai, que por seguridad no le da el micrófono a la plataforma. ':'El navegador no dio el permiso: toca el candado 🔒 junto a la dirección y permite el micrófono. ')+'Para medir tu voz con el micrófono, abre <a href="https://ferminbosquezmc-debug.github.io/vibravoice/" target="_blank" rel="noopener"><b>VibraVoice 12D ↗</b></a> (afinador en vivo). Aquí puedes seguir con los sonidos de referencia y tu oído.'}
-async function lvSing(){if(LV.tg===null)return;const msg=document.getElementById('lv-msg');
- try{if(!navigator.mediaDevices||!navigator.mediaDevices.getUserMedia)throw 0;
-  const st=await navigator.mediaDevices.getUserMedia({audio:{echoCancellation:false,noiseSuppression:false,autoGainControl:false}});
-  const c=AC();if(c.state==='suspended')await c.resume();const an=c.createAnalyser();an.fftSize=4096;c.createMediaStreamSource(st).connect(an);
-  const buf=new Float32Array(an.fftSize),t0=performance.now();LV.stm=st;LV.fr=[];LV.st='canta';lbView();
-  LV.it=setInterval(()=>{if(!visS('v-lab')||LBt!=='voz'){lvStop();return}an.getFloatTimeDomainData(buf);const f=lbPitch(buf,c.sampleRate);if(f>0&&isFinite(f))LV.fr.push(69+12*Math.log2(f/440));
-   if(performance.now()-t0>3200){lvStop();lvFin()}},90)}
- catch(e){lvStop();if(msg)msg.innerHTML=micNo()}}
-function lvFin(){const a=LV.fr.slice(Math.floor(LV.fr.length*.3));
- if(a.length<6){LV.res='No te escuché bien. Acércate al micrófono y canta un poco más fuerte, sin gritar.';return lbView()}
- const d=a.map(m=>{let x=m-LV.tg;return x-12*Math.round(x/12)}).sort((p,q)=>p-q),ce=Math.round(d[d.length>>1]*100),ab=Math.abs(ce),ok=ab<=25;
- S.voz=S.voz||{n:0,ok:0,ab:0};S.voz.n++;if(ok)S.voz.ok++;S.voz.ab+=ab;save();
- LV.res=(ok?'✅ ¡Afinado! ':ab<=50?'🟡 Casi. ':'🔴 Inténtalo otra vez. ')+'Desvío: <b>'+(ce>0?'+':'')+ce+' cents</b> (aprox.) · '+(ab<=10?'justo en la nota.':ce>0?'quedaste un poco alto: baja apenas.':'quedaste un poco bajo: sube apenas.');lbView()}
+  +'<div class="chips" role="group" aria-label="Dificultad">'+LVD.map((x,i)=>'<button class="chip" data-lvd="'+i+'" aria-pressed="'+(LV.lv===i)+'">'+x[0]+' · '+x[1]+' cents</button>').join('')+'</div>'
+  +'<div class="row" style="gap:8px;flex-wrap:wrap;margin-top:10px"><button class="btn" id="lv-new">🎵 '+(q?'Siguiente':'Empezar')+'</button>'+(q?'<button class="btn ghost" id="lv-rep">🔁 Escuchar otra vez</button>':'')+'</div>'
+  +(q?'<div class="row" style="gap:8px;flex-wrap:wrap;margin-top:10px">'+[['up','⬆️ Más alta'],['same','✅ Afinada'],['down','⬇️ Más baja']].map(x=>'<button class="btn'+(q.done?' ghost':'')+'" data-lva="'+x[0]+'"'+(q.done?' disabled':'')+'>'+x[1]+'</button>').join('')+'</div>':'')
+  +'<p style="font-size:16px;margin-top:10px">'+(r||'')+'</p>'
+  +(LV.n?'<p class="mute" style="font-size:14px">Esta vez: '+LV.ok+' de '+LV.n+' correctas.</p>':'')
+  +(q&&q.done?'<p style="font-size:15px;margin-top:8px">🎤 <b>Ahora tú:</b> canta la nota de referencia con «u», suave, junto con el sonido (toca «Escuchar otra vez»). Si sientes que tu voz «choca» con el sonido, sube o baja apenas hasta que se unan.</p>':'')
+  +'</div><div class="card" data-nn style="border-color:var(--gold)"><h3>📏 ¿Quieres medir tu propia voz?</h3><p class="mute" style="font-size:14px;margin:4px 0 10px">La plataforma no puede usar el micrófono. Para ver en vivo si tu voz está afinada, abre VibraVoice 12D (permite el micrófono cuando te lo pida): verde = afinado.</p><a class="btn" href="'+VVURL+'" target="_blank" rel="noopener">Abrir VibraVoice 12D ↗</a>'
+  +'<p class="mute" style="font-size:13px;margin-top:8px">Nunca fuerces la voz; si sientes molestia, para.</p></div>'}
 document.addEventListener('click',e=>{const t=e.target;if(!t.closest||!t.closest('#v-lab'))return;let b;
- if(b=t.closest('[data-lvr]')){LV.rg=b.dataset.lvr;LV.tg=null;LV.res=null;return lbView()}
+ if(b=t.closest('[data-lvr]')){LV.rg=b.dataset.lvr;LV.q=null;LV.res=null;return lbView()}
+ if(b=t.closest('[data-lvd]')){LV.lv=+b.dataset.lvd;LV.q=null;LV.res=null;return lbView()}
+ if(b=t.closest('[data-lva]')){lvAns(b.dataset.lva);return lbView()}
  if(t.closest('#lv-new')){lvNew();return lbView()}
- if(t.closest('#lv-rep'))return lbNote(LV.tg,lbNow(),1.6,{vol:.22});
- if(t.closest('#lv-sing'))return lvSing()});
+ if(t.closest('#lv-rep'))return lvPlay()});
 
 /* ---- Afinador ---- */
 function lbAfinar(){const S2=LBS[LBins];
  return '<div class="card"><h3>Afinador</h3><div class="chips" role="group" aria-label="Instrumento" style="margin-top:8px">'
   +[['guitarra','Guitarra'],['bajo','Bajo'],['cromatico','Piano o voz']].map(x=>'<button class="chip" data-li="'+x[0]+'" aria-pressed="'+(LBins===x[0])+'">'+x[1]+'</button>').join('')+'</div>'
-  +'<div id="lb-tun" style="text-align:center;margin-top:14px"><div id="lb-nt" style="font-size:44px;font-weight:700;line-height:1.1">—</div><div id="lb-hz" class="mute" style="font-size:14px;min-height:20px"></div>'
-  +'<div style="position:relative;height:26px;margin:12px auto 4px;max-width:340px;border-radius:13px;background:rgba(255,255,255,.08)"><div style="position:absolute;left:calc(50% - 1px);top:0;bottom:0;width:2px;background:var(--gold)"></div><div id="lb-nd" style="position:absolute;top:3px;width:20px;height:20px;border-radius:50%;left:calc(50% - 10px);background:#777;transition:left .12s"></div></div>'
-  +'<div class="mute" style="display:flex;justify-content:space-between;max-width:340px;margin:0 auto;font-size:12px"><span>Grave (−50)</span><span>Afinada</span><span>Agudo (+50)</span></div>'
-  +'<p id="lb-hint" style="font-size:16px;margin-top:10px;min-height:24px"></p></div>'
-  +'<div class="row" style="justify-content:center;margin-top:6px"><button class="btn" id="lb-mic">'+(LBmic?'⏹ Detener el micrófono':'🎙️ Afinar con el micrófono')+'</button></div><p id="lb-mmsg" class="mute" style="font-size:14px;margin-top:8px;text-align:center"></p></div>'
+  +'<p class="mute" style="font-size:14px;margin-top:6px;text-align:center">¿Afinador en vivo con el micrófono? Usa <a href="'+VVURL+'" target="_blank" rel="noopener"><b>VibraVoice 12D ↗</b></a>. Aquí afinas de oído con los sonidos de referencia.</p></div>'
   +'<div class="card"><h3>Sonidos de referencia</h3><p class="mute" style="font-size:14px;margin:4px 0 10px">'+(LBins==='cromatico'?'Toca una nota para escucharla y cántala o tócala igual.':'Toca la cuerda al aire junto con su sonido. Gira la clavija despacio hasta que los dos suenen como uno solo, sin «ondas».')+'</p>'
   +'<div class="row" style="flex-wrap:wrap;gap:8px">'+S2.map(x=>'<button class="btn ghost m4mini" data-lr="'+x[0]+'">'+(x[1]?x[1]+' · ':'')+lbNm(x[0])+(LBins==='cromatico'?'':' ('+(Math.floor(x[0]/12)-1)+')')+'</button>').join('')+'</div>'
   +(LBins==='cromatico'?'<p class="mute" style="font-size:13px;margin-top:8px">La de referencia: 440 Hz.</p>':'')+'</div>'}
-async function lbMicStart(){const msg=document.getElementById('lb-mmsg');
- try{if(!navigator.mediaDevices||!navigator.mediaDevices.getUserMedia)throw new Error('sin');
-  const st=await navigator.mediaDevices.getUserMedia({audio:{echoCancellation:false,noiseSuppression:false,autoGainControl:false}});
-  const c=AC();if(c.state==='suspended')await c.resume();const src=c.createMediaStreamSource(st),an=c.createAnalyser();an.fftSize=4096;src.connect(an);
-  LBmic={st:st,an:an,buf:new Float32Array(an.fftSize),hist:[],last:0};lbView();lbLoop()}
- catch(e){LBmic=null;if(msg)msg.innerHTML=micNo()}}
-function lbStop(){if(LBmic){try{LBmic.st.getTracks().forEach(t=>t.stop())}catch(e){}LBmic=null}}
-function lbMicUI(){const m=document.getElementById('lb-mmsg');if(m)m.textContent='Toca una cuerda o una nota cerca del teléfono o la computadora.'}
-function lbPitch(b,sr){const n=b.length;let rms=0;for(let i=0;i<n;i++)rms+=b[i]*b[i];rms=Math.sqrt(rms/n);if(rms<.012)return -1;
- const mn=Math.floor(sr/1200),mx=Math.min(Math.floor(sr/36),n>>1),c=new Float32Array(mx+2);
- for(let l=0;l<=mx+1;l++){let s=0;for(let j=0;j<n-l;j++)s+=b[j]*b[j+l];c[l]=s}
- let d=mn;while(d<mx&&c[d]>c[d+1])d++;let bi=-1,bv=-Infinity;for(let l=d;l<=mx;l++)if(c[l]>bv){bv=c[l];bi=l}
- if(bi<1||bv<c[0]*.3)return -1;const x1=c[bi-1],x2=c[bi],x3=c[bi+1],a=(x1+x3-2*x2)/2,bb=(x3-x1)/2;return sr/(a?bi-bb/(2*a):bi)}
-function lbLoop(){if(!LBmic)return;if(!visS('v-lab')||LBt!=='afinar'){lbStop();return}
- requestAnimationFrame(lbLoop);const t=performance.now();if(t-LBmic.last<90)return;LBmic.last=t;
- LBmic.an.getFloatTimeDomainData(LBmic.buf);const f=lbPitch(LBmic.buf,AC().sampleRate),nt=document.getElementById('lb-nt'),hz=document.getElementById('lb-hz'),nd=document.getElementById('lb-nd'),hi=document.getElementById('lb-hint');if(!nt)return;
- if(f<0||!isFinite(f)){LBmic.hist=[];return}
- LBmic.hist.push(f);if(LBmic.hist.length>5)LBmic.hist.shift();const fs=LBmic.hist.slice().sort((a,b)=>a-b)[LBmic.hist.length>>1];
- const mf=69+12*Math.log2(fs/440);let tg=Math.round(mf),lab='';
- if(LBins!=='cromatico'){let best=null;LBS[LBins].forEach(x=>{if(best===null||Math.abs(mf-x[0])<Math.abs(mf-best[0]))best=x});tg=best[0];lab='Cuerda '+best[1]+' · '}
- const ce=Math.max(-50,Math.min(50,Math.round((mf-tg)*100))),ok=Math.abs(ce)<=5;
- nt.textContent=lbNm(tg);hz.textContent=lab+fs.toFixed(1)+' Hz · '+(ce>0?'+':'')+ce+' cents';
- nd.style.left='calc('+(50+ce)+'% - 10px)';nd.style.background=ok?'#2E9E4F':Math.abs(ce)<=15?'#f2a31b':'#E5312B';
- hi.textContent=Math.abs(mf-tg)>1.5&&LBins!=='cromatico'?'Esa nota está lejos de la cuerda: revisa cuál estás tocando.':ok?'¡Afinada!':ce<0?'Está grave: sube un poco (aprieta).':'Está aguda: baja un poco (afloja).'}
+function lbStop(){LBmic=null}
 
 /* ---- Juegos de oído: alto o bajo, intervalos, mayor o menor ---- */
 const LBTXT={alto:['Alto o bajo','Escucha dos notas. ¿La segunda es más aguda, más grave o igual?'],int:['Intervalos','Escucha dos notas seguidas y di qué distancia hay entre ellas.'],acor:['Mayor o menor','Escucha el acorde. Los mayores suenan luminosos; los menores, más oscuros.']};
@@ -4317,7 +4289,6 @@ document.addEventListener('click',e=>{const t=e.target;if(!t.closest||!t.closest
  if(b=t.closest('[data-lt]')){LBt=b.dataset.lt;LBq=null;LBr={ok:0,n:0};return lbView()}
  if(b=t.closest('[data-li]')){LBins=b.dataset.li;return lbView()}
  if(b=t.closest('[data-lr]')){const m=+b.dataset.lr;return lbNote(m,lbNow(),LBins==='cromatico'?1.6:3,{saw:LBins!=='cromatico',vol:LBins==='bajo'?.3:.2})}
- if(t.closest('#lb-mic')){if(LBmic){lbStop();return lbView()}return lbMicStart()}
  if(b=t.closest('[data-ll]')){LBlv=+b.dataset.ll;LBq=null;LBr={ok:0,n:0};return lbView()}
  if(t.closest('#lb-start')||t.closest('#lb-sig')){lbNueva();return lbView()}
  if(t.closest('#lb-ronda')){LBr={ok:0,n:0};lbNueva();return lbView()}
