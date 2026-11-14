@@ -677,7 +677,7 @@ null, /* Producción musical vive solo como carrera */
 [AT_NAME+' · Nivel 3',AT[2].m,AUD],
 ['Inteligencia artificial aplicada a la música III',['Tu flujo de trabajo: persona + IA','La IA en tu lugar de trabajo: iglesia, estudio, escenario y clases','Proyecto creativo: una canción con apoyo de IA','Presentación final y uso responsable en el ministerio'],IAD]]}
 ];
-const INSN={piano:'Piano',guitarra:'Guitarra',bajo:'Bajo',bateria:'Batería',canto:'Canto',produccion:'Producción musical'};
+const INSN={piano:'Piano',guitarra:'Guitarra',bajo:'Bajo',bateria:'Batería',canto:'Canto'};
 const INS={
 piano:[['Postura y posición de las manos','Notas en el teclado','Cada mano por separado','Tu primera pieza con dos manos'],['Acordes en posición fundamental','Inversiones de acordes','Acompañar una canción','Escalas con ambas manos'],['Acordes con séptimas','Transposición','Acompañamiento para el servicio','Recital de nivel']],
 guitarra:[['Partes de la guitarra y afinación','Primeros acordes abiertos','Rasgueo básico','Cambios de acordes lentos'],['Acordes con cejilla','Rasgueos por estilos','Arpegios','Acompañar una canción completa'],['Escalas y digitación en el mástil','Solos e improvisación básica','Acompañamiento para el servicio','Recital de nivel']],
@@ -685,7 +685,6 @@ bajo:[['Postura y afinación del bajo','Notas en el mástil','Raíces y pulso','
 bateria:[['Postura y agarre de las baquetas','Rudimentos básicos','Ritmo base en cuatro tiempos','Tu primer ritmo completo'],['Coordinación de manos y pies','Rellenos básicos','Ritmos de gospel y merengue','Tocar con el bajo y la banda'],['Dinámica y control del volumen','Ritmos latinos y timba','Dirigir la banda desde la batería','Recital de nivel']],
 canto:[['Respiración y postura','Afinación y oído','Registro y resonancia','Tu primera canción completa'],['Dicción y fraseo','Armonías a dos voces','Cantar con micrófono','Presentación ante la clase'],['Interpretación y expresión','Dirigir las voces del equipo','Cuidado de la voz','Recital de nivel']]
 };
-INS.produccion=[['Qué es una estación de trabajo digital (DAW)','Ritmo y MIDI','Grabar voz e instrumento','Tu primera canción'],['Arreglos y estructura de una canción','Edición y mezcla','Instrumentos virtuales','Masterización básica'],['Producción de un EP','Géneros: gospel, merengue y timba','Distribución y derechos de autor','Proyecto final']];
 const AVAIL={guitarra:1},LAV=[1,1,0];
 const getInst=l=>{const v=S.inst[l]||S.inst[l-1]||S.inst[l-2];return AVAIL[v]?v:(!v||l===0?'guitarra':null)};
 function subj(l,si){if(si!==0)return LEV[l].s[si];const k=getInst(l);return k?[INSN[k]+' '+['I','II','III'][l],INS[k][l]]:null}
@@ -700,7 +699,7 @@ const kid=()=>S.mode==='kid';
 const applyMode=()=>{document.body.classList.toggle('kid',kid());document.body.classList.toggle('big',!!S.big);
  /* En modo Explorador, la pestaña Clases lleva a las misiones */
  const n=document.getElementById('nav-cl');if(n){n.dataset.go=kid()?'ninos':'clases';n.querySelector('.ne').textContent=kid()?'🚀':'📚';n.querySelector('.nl').textContent=kid()?'Misiones':'Clases'}};
-const EMO={piano:'🎹',guitarra:'🎸',bajo:'🎸',bateria:'🥁',canto:'🎤',produccion:'🎧'};
+const EMO={piano:'🎹',guitarra:'🎸',bajo:'🎸',bateria:'🥁',canto:'🎤'};
 const STPK=['¡Mira!','Lee','Practica','¡Reto!','Muéstranos'];
 const GLOSS=[
 ['pulso','El «latido» de la música: golpes constantes, como los de tu corazón.'],
@@ -855,7 +854,7 @@ function clases(){
   for(let w=1;w<=12;w++){const l=ls.find(a=>w>=a[1][0]&&w<=a[1][a[1].length-1]),d=l&&S.done[l[0]],now=l&&l[0]===cur,ic=d?'⭐':now?'▶':l?(LD[l[0]].icon||l[2]):'🔁',lab='Semana '+w+': '+(l?'lección '+l[2]+', '+LD[l[0]].t+(d?', hecha':now?', ahora':''):'repaso');
    c+=(l?'<button class="wk'+(d?' d':'')+(now?' now':'')+'" data-k="'+l[0]+'" aria-label="'+esc(lab)+'">':'<div class="wk rp" role="img" aria-label="'+lab+'">')+'<span class="wn" aria-hidden="true">'+ic+'</span><small aria-hidden="true">Sem '+w+'</small>'+(l?'</button>':'</div>')}
   return '<div class="card"><h3>🗺️ Ruta de 3 meses</h3><p class="mute" style="font-size:14px">Una lección por semana. Toca una semana para abrirla.</p><div class="wkg">'+c+'</div><p class="mute" style="font-size:13px;margin-top:8px;text-align:center">⭐ hecha · ▶ ahora · 🔁 repaso</p></div>'})();
- const carr='<div class="card"><h3>Carrera en preparación</h3><p class="mute" style="font-size:14px;margin:4px 0 8px">Temas propuestos; el plan oficial lo definirá la academia.</p>'+['produccion'].map(k=>'<details class="sub" style="margin-top:8px"><summary><span class="grow">'+INSN[k]+'</span><span class="tag">En preparación</span></summary>'+INS[k].map((a,i)=>'<p style="margin-top:8px"><b>Nivel '+(i+1)+'</b></p><ul style="padding-left:20px;margin:2px 0">'+a.map(t=>'<li style="font-size:14px">'+t+'</li>').join('')+'</ul>').join('')+'</details>').join('')+'</div>';
+ const carr=''; /* Producción musical se eliminó por decisión del dueño */
  const EMPTY=[];const rows=L.s.map((_,si)=>{const x=subj(S.lvl,si);if(!x)return '';if(isAT(S.lvl,si))return '';
   const ks=x[1].map((t,i)=>[lk(S.lvl,si,i),t]).filter(a=>LD[a[0]]);
   if(!ks.length&&si>0){EMPTY.push(x[0]);return ''}if(!ks.length)return x[2]?'<details class="card sub"><summary><span class="grow">'+x[0]+'</span><span class="tag">🚧 En preparación</span></summary><p class="mute" style="font-size:14px;margin:2px 0 6px">'+x[2]+'</p><ul style="padding-left:20px;margin:2px 0 12px">'+x[1].map(t=>'<li style="font-size:15px;margin-top:4px">'+t+'</li>').join('')+'</ul></details>':'<div class="card"><div class="row"><span class="grow st">'+x[0]+'</span><span class="tag">🚧 En preparación</span></div></div>';
@@ -3807,7 +3806,7 @@ let DBS=null,UIDS=null,ADMS=false,SEGst='espera',SEGt=null,PROGS=[],EVALS={},SEG
 const visS=id=>{const e=document.getElementById(id);return !!e&&!e.hidden};
 const RBC=['Técnica y postura','Pulso y ritmo','Lectura y teoría','Interpretación y musicalidad'];
 const RBN=['','En inicio','En proceso','Logrado','Destacado'];
-const CARN={guitarra:'Guitarra',piano:'Piano',bateria:'Batería',bajo:'Bajo',canto:'Canto',produccion:'Producción musical'};
+const CARN={guitarra:'Guitarra',piano:'Piano',bateria:'Batería',bajo:'Bajo',canto:'Canto'};
 const segTot=c=>Object.keys(LD).filter(k=>k.indexOf('-0'+c+'-')>0).length;
 function segSum(){const done=Object.keys(S.done||{}).filter(k=>S.done[k]),car={};
  done.forEach(k=>{const m=k.match(/^\d-0([a-z]+)-/);if(m)car[m[1]]=(car[m[1]]||0)+1});
