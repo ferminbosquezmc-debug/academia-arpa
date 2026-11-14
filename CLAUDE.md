@@ -113,6 +113,11 @@ Se entra desde el botón «Cabina virtual 3D» en la vista de la carrera (`atVie
 ## Producción musical
 - **Eliminada por decisión del dueño** (noviembre 2026): se quitaron `INS.produccion`, `INSN`/`EMO`/`CARN.produccion` y la tarjeta «Carrera en preparación». El mapa aprobado se borró de `academia-musica-ama/contenido/produccion` (queda en el historial de GitHub). No volver a agregarla sin que el dueño lo pida.
 
+## Carrera elegida, bienvenida y lector
+- `myCarr()` = carrera que el estudiante eligió (no la guitarra por defecto de `getInst`). En Clases, si hay carrera elegida, `carrHTML` muestra solo esa carrera y el botón «🔄 Cambiar de carrera» (`data-chg`, `CRCHG`); al elegir otra se vuelve a ocultar el resto.
+- Inicio (`home`) muestra «Te damos la bienvenida a tu carrera de …» con el nivel. La clase 1 de cada carrera saluda con «Nivel 1 de <carrera>».
+- El lector en voz alta (`readAloud` y el lector del Nivel 4) pasa el texto por `noEmo()`: no lee emojis ni símbolos de adorno (los cambia por espacios del mismo largo).
+
 ## Juegos de práctica (vista Práctica)
 Bloque JS que empieza con el comentario `Juegos de práctica`; CSS con prefijo `jg-`; HTML dentro de `<div data-nn>` en `#v-practica` (para que el pintor no toque los textos de Arpi).
 - Racha (`jgRacha`): usa `streak()` y los días de `S.min`, igual que el cronómetro. Recompensas en `JG_RW` (3, 7, 14, 21 y 30 días).
