@@ -595,6 +595,11 @@ const isAT=(l,si)=>si===atSi(l); /* Audio Técnica es una carrera aparte: no cue
  aprobar: % mínimo en un intento de la evaluación de nivel (0 a 100).  intentos: máximo por evaluación (0 = ilimitados).
  La nota del nivel es el mejor intento. */
 const ACAD_DEF={asignaturas:{'audio-tecnica':{aprobar:70,intentos:0}}};
+/* Acceso a los niveles de las carreras (Niveles 1–3) y al Nivel 4 ministerial (opcional).
+   enOrden: un nivel se abre al completar todas las clases de la carrera en el nivel anterior.
+   pago: AÚN APAGADO (etapa de prueba). Cuando la academia cobre, cada nivel (y el Nivel 4) se abrirá solo si el pago está confirmado.
+   PENDIENTE para activarlo: que la academia confirme los pagos desde el servidor (base de datos), no desde el navegador. */
+const NIV={enOrden:true,pago:false};
 const ACAD=(()=>{const c=JSON.parse(JSON.stringify(ACAD_DEF));try{const o=JSON.parse(localStorage.getItem('arp-config')||'{}');Object.entries(o.asignaturas||{}).forEach(([k,v])=>{const r=c.asignaturas[k]=c.asignaturas[k]||{};if(Number.isFinite(+v.aprobar)&&+v.aprobar>=0&&+v.aprobar<=100)r.aprobar=+v.aprobar;if(Number.isInteger(+v.intentos)&&+v.intentos>=0)r.intentos=+v.intentos})}catch(e){}return c})();
 const atRule=()=>ACAD.asignaturas['audio-tecnica'];
 const AT_MET=[['📖','Teoría',30],['🎬','Demostraciones',20],['🎚️','Prácticas',35],['✅','Evaluación y retroalimentación',15]];
@@ -797,8 +802,14 @@ document.addEventListener('click',e=>{const g=e.target.closest('[data-go]');if(g
 const ICONS=[[/taller/i,'🏆'],[/banda/i,'👥'],[/blues/i,'🎷'],[/\barmon|grados|progresi/i,'🧩'],[/ritmo|pulso|rasgueo|semicorchea|síncopa|tresillo/i,'🥁'],[/escala|tonos|semitono|sostenido|pentatónica|caja/i,'🪜'],[/acorde|cejilla|séptima|poder/i,'🎸'],[/mano|arpegio|cambios/i,'✋'],[/./,'🎼']];
 const licon=t=>ICONS.find(x=>x[0].test(t))[1];
 const lk=(l,s,i)=>{const GK=s===0&&getInst(l)==='guitarra'&&[window.G1K,window.G2K,window.G3K][l];return (GK&&GK.length)?GK[i]:l+'-'+(s===0?'0'+(getInst(l)||'x'):s)+'-'+i}; /* Guitarra I usa las claves de las clases del Método Integral (G1K) */
+function lvKeys(l){const x=subj(l,0);if(!x)return [];return x[1].map((_,i)=>lk(l,0,i)).filter(k=>LD[k]&&!/^0-0guitarra-\d+$/.test(k))}
+function lvPass(l){const ks=lvKeys(l);return ks.length>0&&ks.every(k=>S.done[k])}
+function lvPaid(l){if(!NIV.pago)return true;return false /* PENDIENTE: leer el pago confirmado por la academia */}
+function lvOpen(l){if(!LAV[l])return false;if(typeof atRev==='function'&&atRev())return true;if(!lvPaid(l))return false;return l===0||!NIV.enOrden||lvPass(l-1)}
+function lvFix(){if(!lvOpen(S.lvl)){let l=0;while(l<2&&lvOpen(l+1))l++;S.lvl=l}}
+function lvWhy(l){return !lvPaid(l)?'🔒 El Nivel '+(l+1)+' se abre cuando la academia confirme tu pago.':'🔒 El Nivel '+(l+1)+' se abre cuando completes todas las clases del Nivel '+l+'.'}
 function cnt(l){let t=0,d=0;LEV[l].s.forEach((_,si)=>{const x=subj(l,si);if(!x||isAT(l,si))return;x[1].forEach((_,i)=>{const k=lk(l,si,i);if(LD[k]){t++;if(S.done[k])d++}})});return{t,d,p:t?Math.round(d/t*100):0}}
-function home(){if(!LAV[S.lvl])S.lvl=0;applyMode();setTimeout(()=>{if(typeof segHome==="function")segHome()},0);
+function home(){lvFix();applyMode();setTimeout(()=>{if(typeof segHome==="function")segHome()},0);
  const g=$('#greet'),K=kid();
  const myC=myCarr(),cTx=myC?'<p style="margin-top:4px;font-size:17px">Te damos la bienvenida a tu carrera de <b>'+esc(INSN[myC])+'</b> · '+esc(LEV[S.lvl].n.split(' · ')[0])+'</p>':'';
  if(S.name){g.innerHTML='<h1>'+(K?'¡Hola, ':'Hola, ')+esc(S.name)+(K?'! 👋':'')+'</h1>'+cTx+'<button class="link" id="chg">Cambiar nombre</button>';$('#chg').onclick=()=>{S.name='';save();home()}}
@@ -857,10 +868,10 @@ function carrHTML(ci){
  if(k&&INSN[k]&&!AVAIL[k])h+='<div class="crp"><h4>'+(EMO[k]||'')+' '+esc(INSN[k])+' · en preparación</h4><p class="mute" style="font-size:14px;margin:4px 0 8px">'+esc(CRMSG[k]||'La academia está preparando sus clases. Este es el plan propuesto de 3 niveles.')+'</p>'+(INS[k]||[]).map((a,i)=>'<p style="margin-top:6px"><b>Nivel '+(i+1)+'</b></p><ul>'+a.map(t=>'<li>'+esc(t)+'</li>').join('')+'</ul>').join('')+'<button class="link" data-cx="1" style="min-height:44px">Cerrar</button></div>';
  return h}
 function clases(){
- if(!LAV[S.lvl])S.lvl=0;
- $('#chips').innerHTML=LEV.map((v,i)=>'<button class="chip" data-l="'+i+'" aria-pressed="'+(i===S.lvl)+'"'+(LAV[i]?'':' disabled style="opacity:.55"')+'>'+v.n.split(' · ')[0]+(LAV[i]?'':' · Próximamente')+'</button>').join('')+'<button class="chip m4c" data-go="n4">🕊️ Nivel 4 · Ministerial</button>';
+ lvFix();
+ $('#chips').innerHTML=LEV.map((v,i)=>{const op=lvOpen(i);return '<button class="chip" data-l="'+i+'" aria-pressed="'+(i===S.lvl)+'"'+(op?'':' aria-disabled="true" style="opacity:.55"')+'>'+(op||!LAV[i]?'':'🔒 ')+v.n.split(' · ')[0]+(LAV[i]?'':' · Próximamente')+'</button>'}).join('')+'<button class="chip m4c" data-go="n4">🕊️ Nivel 4 · Ministerial (opcional)</button>';
  const L=LEV[S.lvl],c=cnt(S.lvl),ci=getInst(S.lvl);
- $('#lv-d').textContent=L.d+' Duración: 3 meses (12 semanas).';$('#lv-t').textContent=L.n.split(' · ')[1];$('#lv-n').textContent=c.d+'/'+c.t;$('#lv-bar').style.width=c.p+'%';
+ $('#lv-d').textContent=L.d+' Duración: 3 meses (12 semanas).'+(S.lvl<2&&LAV[S.lvl+1]&&!lvOpen(S.lvl+1)?' '+lvWhy(S.lvl+1):'');$('#lv-t').textContent=L.n.split(' · ')[1];$('#lv-n').textContent=c.d+'/'+c.t;$('#lv-bar').style.width=c.p+'%';
  $('#inst').innerHTML=carrHTML(ci);
  $('#inst-t').textContent=kid()?'¿Qué quieres aprender? 🎶':'¿Qué instrumento o carrera estás estudiando?';
  $('#inst-h').textContent=myCarr()&&!CRCHG?'Estás estudiando '+INSN[myCarr()]+'. Abajo están tus clases.':(ci?'Estás estudiando '+INSN[ci]+'. ':'')+'Toca cualquier carrera para abrirla.';
@@ -877,7 +888,7 @@ function clases(){
   return '<details class="card sub" data-o="'+o+'"'+(S.open[o]?' open':'')+'><summary><span class="grow">'+x[0]+'</span><span class="mute">'+d+'/'+ks.length+'</span></summary>'+ks.map(a=>'<button class="lesson" data-k="'+a[0]+'" aria-pressed="'+!!S.done[a[0]]+'"><span class="tick">'+(S.done[a[0]]?'✓':'')+'</span><span class="li" aria-hidden="true">'+(LD[a[0]].icon||'')+'</span><span class="lt">'+a[1]+'</span><span class="tag" style="margin-left:auto">'+({review:'💾 Guardada',ok:'✅ Aprobada'}[(S.ls[a[0]]||{}).status]||'▶ Abrir')+'</span></button>').join('')+(ks.length<x[1].length?'<p class="mute" style="font-size:14px;padding:10px 4px">Más lecciones en preparación.</p>':'')+'</details>'});$('#lec0').innerHTML=(rows[0]||'').replace('<details class="card sub"','<details class="card sub" open');$('#subs').innerHTML=wkc+rows.slice(1).join('')+segEmpty(EMPTY);
 }
 $('#inst').addEventListener('click',e=>{if(e.target.closest('[data-chg]')){CRCHG=true;INSPRV=null;clases();return}const b=e.target.closest('[data-i]');if(b){const k=b.dataset.i;if(AVAIL[k]){S.inst[S.lvl]=k;INSPRV=null;CRCHG=false;save()}else INSPRV=INSPRV===k?null:k;clases();return}if(e.target.closest('[data-cx]')){INSPRV=null;clases()}});
-$('#chips').addEventListener('click',e=>{const c=e.target.closest('[data-l]');if(c){S.lvl=+c.dataset.l;save();clases()}});
+$('#chips').addEventListener('click',e=>{const c=e.target.closest('[data-l]');if(c){const l=+c.dataset.l;if(!LAV[l])return;if(!lvOpen(l)){toast(lvWhy(l));return}S.lvl=l;save();clases()}});
 $('#lec0').addEventListener('click',e=>{const b=e.target.closest('[data-k]');if(b&&LD[b.dataset.k]){S.cur=b.dataset.k;go('leccion')}});
 $('#subs').addEventListener('click',e=>{const b=e.target.closest('[data-k]');if(b){if(LD[b.dataset.k]){S.cur=b.dataset.k;go('leccion');return}S.done[b.dataset.k]=!S.done[b.dataset.k];save();clases()}});
 $('#subs').addEventListener('toggle',e=>{const o=e.target.dataset.o;if(o){S.open[o]=e.target.open;save()}},true);
@@ -3773,7 +3784,7 @@ function lecList(K){const D=LD[K];if(!D||D.at||D.kidm)return null;const out=[];
  return out.some(a=>a[0]===K)?out:null}
 function lecPrev(K){const a=lecList(K);if(!a)return null;const i=a.findIndex(x=>x[0]===K);return i>0?a[i-1][0]:null}
 function lecNext(K){const a=lecList(K);if(!a)return null;const i=a.findIndex(x=>x[0]===K);return i>=0&&i<a.length-1?a[i+1][0]:null}
-function lecOpen(k,step){const a=lecList(k);if(a){const f=a.find(x=>x[0]===k);if(f)S.lvl=f[1]}const L=(S.ls[k]=S.ls[k]||{});L.step=step;S.cur=k;save();lec();window.scrollTo(0,0)}
+function lecOpen(k,step){const a=lecList(k);if(a){const f=a.find(x=>x[0]===k);if(f){if(!lvOpen(f[1])){toast(lvWhy(f[1]));return go('clases')}S.lvl=f[1]}}const L=(S.ls[k]=S.ls[k]||{});L.step=step;S.cur=k;save();lec();window.scrollTo(0,0)}
 function lecBack(){const K=S.cur,L=S.ls[K]||{};try{mmStop();sgStop();eqStop();fxStop();qsStop()}catch(e){}
  if((L.step||0)>0){L.step--;save();lec();window.scrollTo(0,0);return}
  const p=lecPrev(K);if(p){lecOpen(p,4);toast('Clase anterior: '+LD[p].u+' · '+LD[p].t);return}
@@ -3782,6 +3793,7 @@ $('#back-fab').onclick=lecBack;
 document.addEventListener('click',e=>{const b=e.target.closest&&e.target.closest('[data-lecgo]');if(b)lecOpen(b.dataset.lecgo,0)});
 function lec(){DRP.stop();if(R4.on)r4stop();R4root='#v-leccion';setTimeout(r4fill,0);figStop();
  {const b=$('#lec-back'),km=LD[S.cur]&&LD[S.cur].kidm,am=LD[S.cur]&&LD[S.cur].at;b.dataset.go=km?'ninos':am?'asig':'clases';b.textContent=km?'⬅ Volver a Misiones':am?'⬅ Volver a la carrera':'⬅ Volver a Clases'}
+ {const D=LD[S.cur],m=D&&!D.at&&!D.kidm&&/^(\d)-/.exec(S.cur);if(m&&+m[1]<3&&!lvOpen(+m[1])){$('#lec-t').textContent=D.t;$('#lec-s').textContent=D.s||'';$('#steps').innerHTML='';$('#lec-body').innerHTML='<div class="card"><h3>🔒 Nivel bloqueado</h3><p class="mute" style="margin:6px 0 12px">'+lvWhy(+m[1])+'</p><button class="btn" data-go="clases">Ir a mis clases</button></div>';return}}
  if(LD[S.cur]&&LD[S.cur].at&&atLocked(S.cur)){$('#lec-t').textContent=LD[S.cur].t;$('#lec-s').textContent=LD[S.cur].s;$('#steps').innerHTML='';$('#lec-body').innerHTML='<div class="card"><h3>🔒 Todavía bloqueada</h3><p class="mute" style="margin:6px 0 12px">Completa las semanas anteriores en orden para abrir esta.</p><button class="btn" data-go="asig">Ver la carrera</button></div>';return}
  if(MM.t&&MM.k!==S.cur)mmStop();
  const K=S.cur||'0-1-0',D=LD[K],L=(S.ls[K]=S.ls[K]||{});L.step=L.step||0;
@@ -5119,7 +5131,7 @@ const opts4=(L,v)=>L.map(o=>'<option'+(o===v?' selected':'')+'>'+esc(o)+'</optio
  rr4()}catch(e){}})();
 
 /* Acceso: 'ok' matrícula confirmada, 'prov' solicitud hecha (acceso provisional), 'no' sin solicitud o no admitida */
-function acc4(){if(ADM4)return 'ok';/* la dirección revisa las clases sin matrícula */if(EST4)return ['no admitida','retirada'].includes(EST4.estado)?'no':['confirmada','egresada','en pausa'].includes(EST4.estado)?'ok':'prov';return S.n4.sol?'prov':'no'}
+function acc4(){if(ADM4)return 'ok';if(!lvPaid(3))return 'no';/* Nivel 4 opcional: cuando se active el cobro, sin pago confirmado no hay acceso *//* la dirección revisa las clases sin matrícula */if(EST4)return ['no admitida','retirada'].includes(EST4.estado)?'no':['confirmada','egresada','en pausa'].includes(EST4.estado)?'ok':'prov';return S.n4.sol?'prov':'no'}
 function st4(){const E=EST4,s=S.n4.sol;
  if(E)return({confirmada:['ok','Matrícula confirmada'],egresada:['ok','Egresado del diplomado'],'en pausa':['wait','Matrícula en pausa'],retirada:['','Retirado del diplomado'],'no admitida':['','Solicitud no admitida'],pendiente:['wait','Solicitud en revisión'],verificando:['wait','La academia está verificando tu egreso de los tres niveles']})[E.estado]||['wait',E.estado];
  if(s)return s.enviada?['wait','Solicitud enviada · en revisión']:['wait','Solicitud guardada en este dispositivo'];
