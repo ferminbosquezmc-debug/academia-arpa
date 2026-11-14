@@ -110,6 +110,9 @@ Se entra desde el botón «Cabina virtual 3D» en la vista de la carrera (`atVie
 - `gCat` cuenta «### 🎤 …» como práctica (paso «Practica»).
 - Avance: **Canto completo (clases 1–36)**. Láminas `C1_*`, `C2_*` y `C3_*`; el N2 reutiliza muchas `piano/img/P2_*` (Noche de paz, Cascabeles, dinámicas). Canciones AMA: «Mi voz» (clase 12), «Canción de la luna» con letra AMA (clase 25); «Estrellita» con letra AMA. Letra AMA del «Himno de la alegría» en la clase 8 (tabla sílaba–nota).
 
+## Producción musical
+- **Eliminada por decisión del dueño** (noviembre 2026): se quitaron `INS.produccion`, `INSN`/`EMO`/`CARN.produccion` y la tarjeta «Carrera en preparación». El mapa aprobado se borró de `academia-musica-ama/contenido/produccion` (queda en el historial de GitHub). No volver a agregarla sin que el dueño lo pida.
+
 ## Juegos de práctica (vista Práctica)
 Bloque JS que empieza con el comentario `Juegos de práctica`; CSS con prefijo `jg-`; HTML dentro de `<div data-nn>` en `#v-practica` (para que el pintor no toque los textos de Arpi).
 - Racha (`jgRacha`): usa `streak()` y los días de `S.min`, igual que el cronómetro. Recompensas en `JG_RW` (3, 7, 14, 21 y 30 días).
