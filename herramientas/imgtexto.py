@@ -21,7 +21,7 @@ def words(f):
     for t in out:
         i = len(res) - 1
         if i >= 1 and i not in merged and t[:1].islower() and len(t.split()) >= 2 and len(res[i].split()) >= 2 and len(res[i]) < 60:
-            res[i] = res[i].rstrip(':') + (', ' if ':' in res[i] else ': ') + t; merged.add(i)
+            res[i] = res[i].rstrip(':') + (' ' if res[i].endswith(',') else ', ' if ':' in res[i] else ': ') + t; merged.add(i)
         else: res.append(t)
     # 3 o más renglones cortos seguidos (DO, RE, MI…) van en un solo renglón: «DO · RE · MI»
     fin, run = [], []
