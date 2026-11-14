@@ -113,6 +113,10 @@ Se entra desde el botón «Cabina virtual 3D» en la vista de la carrera (`atVie
 ## Producción musical
 - **Eliminada por decisión del dueño** (noviembre 2026): se quitaron `INS.produccion`, `INSN`/`EMO`/`CARN.produccion` y la tarjeta «Carrera en preparación». El mapa aprobado se borró de `academia-musica-ama/contenido/produccion` (queda en el historial de GitHub). No volver a agregarla sin que el dueño lo pida.
 
+## Acceso a los niveles (decisión del dueño)
+- **Ahora (etapa de prueba):** los Niveles 1–3 de cada carrera se abren en orden. Un nivel se abre cuando el estudiante completa todas las clases de su carrera en el nivel anterior (`NIV.enOrden`, `lvKeys`, `lvPass`, `lvOpen`, `lvFix`, `lvWhy`). Los niveles cerrados muestran 🔒 en Clases, y `lec()` y `lecOpen()` no abren clases de un nivel cerrado. La prueba de ubicación convalida las clases anteriores, así que abre los niveles que correspondan. El modo revisión (`atRev()`) abre todo para el docente.
+- **Después (cuando se institucionalice):** además de pasar el nivel anterior, el estudiante debe **pagar cada nivel** antes de cursarlo. El **Nivel 4 ministerial es opcional** y no se abre sin pago (`acc4` usa `lvPaid(3)`). Interruptor `NIV.pago` (hoy `false`). **PENDIENTE:** `lvPaid` debe leer el pago confirmado por la academia desde el servidor (base de datos con reglas de solo administrador), nunca desde el navegador. Mientras no exista eso, no encender `NIV.pago`, porque cerraría todos los niveles.
+
 ## Carrera elegida, bienvenida y lector
 - `myCarr()` = carrera que el estudiante eligió (no la guitarra por defecto de `getInst`). En Clases, si hay carrera elegida, `carrHTML` muestra solo esa carrera y el botón «🔄 Cambiar de carrera» (`data-chg`, `CRCHG`); al elegir otra se vuelve a ocultar el resto.
 - Inicio (`home`) muestra «Te damos la bienvenida a tu carrera de …» con el nivel. La clase 1 de cada carrera saluda con «Nivel 1 de <carrera>».
