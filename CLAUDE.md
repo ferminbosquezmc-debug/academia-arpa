@@ -118,6 +118,7 @@ Se entra desde el botón «Cabina virtual 3D» en la vista de la carrera (`atVie
 - Inicio (`home`) muestra «Te damos la bienvenida a tu carrera de …» con el nivel. La clase 1 de cada carrera saluda con «Nivel 1 de <carrera>».
 - El lector en voz alta (`readAloud` y el lector del Nivel 4) pasa el texto por `noEmo()`: no lee emojis ni símbolos de adorno (los cambia por espacios del mismo largo).
 - En las clases, el lector («Escuchar la clase», `r4build`) no lee el título de la clase (`#lec-t`): empieza por el contenido de `#lec-body`.
+- **«¿Qué suena?»** (`[[que-suena]]`, `qsCard`, `qsPlay`, `qsRev`, `qsStop` en `go()`): canción original AMA (C–Am–F–G, 100 BPM) en 5 fragmentos (ritmo · melodía · armonía+ritmo · melodía+armonía · todo); el estudiante marca lo que oye y se corrige. Resultado en `S.qs {best,last}` y en «Mi progreso». Está en la clase 1 de las 5 carreras; las tareas de esa clase usan esta canción (no una canción a elección del estudiante).
 - **Espacios para escribir:** en los `.md`, `___` (3 o más guiones bajos) se convierte en un campo (`.gblk`) donde el estudiante escribe; se guarda en `S.blk` con la clave `clase|paso|número` (se asigna al pintar `#lec-body`).
 
 ## Juegos de práctica (vista Práctica)
