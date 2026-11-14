@@ -5320,8 +5320,9 @@ function r4ui(){const g=$('#r4-go'),x=$('#r4-stop');if(!g)return;$('#r4-bar').cl
 /* Texto de un bloque sin el número de sección, con la posición de cada nodo para resaltar */
 function r4nodes(el){const L=[],w=document.createTreeWalker(el,NodeFilter.SHOW_TEXT,{acceptNode:n=>n.parentElement.closest('.m4n')?2:1});let t='';while(w.nextNode()){L.push([w.currentNode,t.length]);t+=w.currentNode.nodeValue}return{L,t}}
 function r4range(L,a,b){const r=document.createRange();let ok=0;for(const[n,o]of L){const e=o+n.nodeValue.length;if(!ok&&a>=o&&a<e){r.setStart(n,a-o);ok=1}if(ok&&b>o&&b<=e){r.setEnd(n,b-o);return r}}return null}
+/* En las clases no se lee el título de la clase (#lec-t): se empieza por el contenido. */
 function r4build(){const q=[];
- document.querySelectorAll(R4root==='#v-leccion'?'#lec-t,#lec-body h3,#lec-body h4,#lec-body p,#lec-body li':'#v-u4 h2,#v-u4 .m4rdz h3,#v-u4 .m4rdz h4,#v-u4 .m4rdz p,#v-u4 .m4rdz li').forEach(el=>{if(el.closest('#r4-bar,button,.ph'))return;const{L,t}=r4nodes(el),re=/[^.!?…]+[.!?…]*[»"”)]*\s*|[.!?…]+\s*/g;let m;
+ document.querySelectorAll(R4root==='#v-leccion'?'#lec-body h3,#lec-body h4,#lec-body p,#lec-body li':'#v-u4 h2,#v-u4 .m4rdz h3,#v-u4 .m4rdz h4,#v-u4 .m4rdz p,#v-u4 .m4rdz li').forEach(el=>{if(el.closest('#r4-bar,button,.ph'))return;const{L,t}=r4nodes(el),re=/[^.!?…]+[.!?…]*[»"”)]*\s*|[.!?…]+\s*/g;let m;
   while((m=re.exec(t))){const s=m[0],a=m.index+(s.length-s.trimStart().length),b=m.index+s.trimEnd().length;if(/[\p{L}\p{N}]/u.test(s))q.push({el,L,a,b,tx:t.slice(a,b)})}});
  return q}
 function r4mark(it,w){if(R4.blk!==it.el){if(R4.blk)R4.blk.classList.remove('m4rd');R4.blk=it.el;it.el.classList.add('m4rd');it.el.scrollIntoView({block:'center',behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'})}

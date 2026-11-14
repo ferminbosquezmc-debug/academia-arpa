@@ -117,6 +117,7 @@ Se entra desde el botón «Cabina virtual 3D» en la vista de la carrera (`atVie
 - `myCarr()` = carrera que el estudiante eligió (no la guitarra por defecto de `getInst`). En Clases, si hay carrera elegida, `carrHTML` muestra solo esa carrera y el botón «🔄 Cambiar de carrera» (`data-chg`, `CRCHG`); al elegir otra se vuelve a ocultar el resto.
 - Inicio (`home`) muestra «Te damos la bienvenida a tu carrera de …» con el nivel. La clase 1 de cada carrera saluda con «Nivel 1 de <carrera>».
 - El lector en voz alta (`readAloud` y el lector del Nivel 4) pasa el texto por `noEmo()`: no lee emojis ni símbolos de adorno (los cambia por espacios del mismo largo).
+- En las clases, el lector («Escuchar la clase», `r4build`) no lee el título de la clase (`#lec-t`): empieza por el contenido de `#lec-body`.
 
 ## Juegos de práctica (vista Práctica)
 Bloque JS que empieza con el comentario `Juegos de práctica`; CSS con prefijo `jg-`; HTML dentro de `<div data-nn>` en `#v-practica` (para que el pintor no toque los textos de Arpi).
